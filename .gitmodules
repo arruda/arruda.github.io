@@ -1,6 +1,0 @@
-[submodule "themes/pelican-alchemy"]
-	path = themes/pelican-alchemy
-	url = git@github.com:arruda/pelican-alchemy.git
-[submodule "plugins/bootstrapify"]
-	path = plugins/bootstrapify
-	url = https://github.com/ingwinlu/pelican-bootstrapify.git
