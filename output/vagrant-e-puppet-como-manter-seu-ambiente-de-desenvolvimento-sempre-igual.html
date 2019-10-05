@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Vagrant e Puppet - Como manter seu ambiente de desenvolvimento sempre igual | Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida
+</title>
+  <link rel="canonical" href="/vagrant-e-puppet-como-manter-seu-ambiente-de-desenvolvimento-sempre-igual.html">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  
+  <meta name="description" content="Bom dia a todos! Voltando agora a ativa no meu blog, decidi escrever sobre algo que andei estudando(conforme já havia mencionado em um post anterior) sobre uma forma mais fácil de desenvolver projetos em equipe. Problemas Comuns Quem já fez algum sistema web com mais de uma pessoa já …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="/">
+        <img class="img-fluid rounded" src=images/logo.png alt="Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="/">Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</a></h1>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Vagrant e Puppet - Como manter seu ambiente de desenvolvimento sempre igual
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-09-12T15:18:00+01:00">
+          <i class="fa fa-clock-o"></i>
+          Qui 12 setembro 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="/category/ambiente-de-trabalho-programacao-selecionados.html">Ambiente de Trabalho, programação, Selecionados</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="/tag/ambiente-de-trabalho.html">#ambiente de trabalho</a>,               <a href="/tag/igual.html">#igual</a>,               <a href="/tag/puppet.html">#puppet</a>,               <a href="/tag/vagrant.html">#vagrant</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Bom dia a todos!<br/>
+Voltando agora a ativa no meu blog, decidi escrever sobre algo que andei estudando(conforme já havia mencionado em um <a href="http://www.arruda.blog.br/aleatoriedades/voltando-aos-estudos-de-verdade/" title="Voltando aos estudos… de verdade…">post anterior</a>) sobre uma forma mais fácil de desenvolver projetos em equipe.</p>
+<h2>Problemas Comuns</h2>
+<p>Quem já fez algum sistema web com mais de uma pessoa já viu que sempre acontece de você instalar e configurar todo o ambiente na sua máquina e tudo ta indo as mil maravilhas, mas quando seu colega vai instalar na máquina dele... de repente começam a aparecer erros e mais erros loucos, e depois de 1 semana de luta você finalmente consegue ganhar essa batalha. Mas, 2 dias depois, outra pessoa entra na equipe e lá vai você novamente, até o ponto em que você já está compilando manualmente algumas bibliotecas é que você pensa como seria bom se todos tivessem a mesma máquina.</p>
+<p>Ou então, depois de um bom tempo, quando todos as máquinas ficaram prontas, e o desenvolvimento está correndo solto, ninguém pode parar vocês... até que na hora do deploy pra produção vocês percebem que as consultas ao banco não estão fazendo o menor sentido... depois de investigar um pouco, descobre-se que em produção vocês estão usando um banco de dados na versão X e em desenvolvimento estão usando na versão X+1. E novamente vocês pensam : "Seria tão bom se em produção também fosse o mesmo ambiente que eu uso em desenvolvimento".</p>
+<h2>Solução</h2>
+<p>Conheçam o <a href="http://www.vagrantup.com/" title="Vagrant">Vagrant</a>!<br/>
+Essa ferramente permite replicar um ambiente de trabalho facilmente entre os desenvolvedores e o ambiente de produção.<br/>
+Basicamente ele cria para você uma maquina virtual com a partir de um arquivo texto que possuí diversas configurações da máquina, como o sistema operacional dela, quantidade de memória, nome, endereço ip e etc...</p>
+<p>E para ter sua máquina pronta para o uso é bem simples, uma vez instalado o Vagrant, basta que, dentro diretório em que está o arquivo de configuração do vagrant, rode o comando:</p>
+<p>``` {lang="shell"}
+$ vagrant up</p>
+<div class="highlight"><pre><span></span><span class="n">Pronto</span><span class="o">!</span> <span class="n">Ele</span> <span class="n">vai</span> <span class="n">montar</span> <span class="n">tudo</span> <span class="n">sozinho</span> <span class="n">pra</span> <span class="n">você</span> <span class="n">e</span> <span class="n">em</span> <span class="n">pouco</span> <span class="n">tempo</span> <span class="n">você</span> <span class="n">tem</span> <span class="n">a</span> <span class="n">máquina</span> <span class="n">que</span> <span class="n">está</span> <span class="n">descrita</span> <span class="n">no</span> <span class="n">arquivo</span> <span class="n">de</span> <span class="n">configuração</span><span class="p">.</span>
+
+<span class="n">Agora</span> <span class="n">se</span> <span class="n">você</span> <span class="n">quiser</span> <span class="n">que</span> <span class="n">seu</span> <span class="n">colega</span> <span class="n">tenha</span> <span class="n">o</span> <span class="n">mesmo</span> <span class="n">ambiente</span> <span class="n">que</span> <span class="n">você</span><span class="p">,</span> <span class="n">basta</span> <span class="n">ele</span> <span class="n">pegar</span> <span class="n">o</span> <span class="n">mesmo</span> <span class="n">arquivo</span> <span class="n">de</span> <span class="n">configuração</span> <span class="n">que</span> <span class="n">você</span> <span class="n">e</span> <span class="n">rodar</span> <span class="n">o</span> <span class="n">comando</span> <span class="o">*</span><span class="s">"vagrant up"</span><span class="o">*!</span>
+
+<span class="n">Como</span> <span class="n">o</span> <span class="n">Vagrant</span> <span class="n">funciona</span> <span class="n">a</span> <span class="n">princípio</span> <span class="n">em</span> <span class="n">cima</span> <span class="k">do</span> <span class="p">[</span><span class="n">VirtualBox</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//www.virtualbox.org/ "VirtualBox") (Maquina Virtual da Oracle, que é de graça), é possível ter a mesma máquina independente do sistema operacional que você estiver usando na sua maquina, Linux, Mac ou Windows (esse tem suas ressalvas, pra variar)!</span>
+
+<span class="n">Instalando</span> <span class="n">Programas</span> <span class="n">e</span> <span class="n">Configurando</span> <span class="n">Sua</span> <span class="n">Máquina</span>
+<span class="o">-----------------------------------------------</span>
+
+<span class="n">O</span> <span class="n">arquivo</span> <span class="n">de</span> <span class="n">configuração</span> <span class="k">do</span> <span class="n">Vagrant</span> <span class="n">permite</span> <span class="n">algumas</span> <span class="n">coisas</span> <span class="n">da</span> <span class="n">máquina</span> <span class="n">virtual</span><span class="p">,</span> <span class="n">mas</span> <span class="n">outras</span> <span class="n">coisas</span> <span class="n">como</span> <span class="n">quais</span> <span class="n">programas</span> <span class="n">serão</span> <span class="n">instalados</span> <span class="n">e</span> <span class="n">as</span> <span class="n">configurações</span> <span class="n">dos</span> <span class="n">mesmos</span> <span class="n">não</span> <span class="n">são</span> <span class="n">feitas</span> <span class="n">diretamente</span> <span class="n">pelo</span> <span class="n">Vagrant</span><span class="p">.</span>  
+<span class="n">Os</span> <span class="n">programas</span> <span class="n">que</span> <span class="n">são</span> <span class="n">responsáveis</span> <span class="n">por</span> <span class="n">isso</span> <span class="n">são</span> <span class="n">chamados</span> <span class="n">de</span> <span class="s">"Provisioning"</span><span class="p">,</span> <span class="n">os</span> <span class="mi">3</span> <span class="n">principais</span> <span class="n">que</span> <span class="n">trabalham</span> <span class="n">bem</span> <span class="n">com</span> <span class="n">o</span> <span class="n">Vagrant</span> <span class="nl">são</span><span class="p">:</span> <span class="n">Shell</span> <span class="p">(</span><span class="n">simples</span> <span class="n">shellscripts</span> <span class="n">que</span> <span class="n">devem</span> <span class="n">ser</span> <span class="n">executados</span><span class="p">),</span> <span class="p">[</span><span class="n">Chef</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//www.opscode.com/chef/ "Chef") e [Puppet](http://puppetlabs.com/puppet/puppet-open-source "Puppet Open Source"). Vou falar aqui sobre o Puppet.</span>
+
+<span class="cp">### Puppet</span>
+
+<span class="n">Para</span> <span class="n">configurar</span> <span class="n">os</span> <span class="n">programas</span> <span class="n">no</span> <span class="n">Puppet</span> <span class="err">é</span> <span class="n">bem</span> <span class="n">interessante</span><span class="p">.</span> <span class="n">Ao</span> <span class="n">invés</span> <span class="n">de</span> <span class="n">se</span> <span class="n">descrever</span> <span class="n">as</span> <span class="n">configurações</span> <span class="n">de</span> <span class="n">forma</span> <span class="n">imperativa</span><span class="p">,</span> <span class="n">você</span> <span class="n">descreve</span> <span class="n">usando</span> <span class="n">uma</span> <span class="n">forma</span> <span class="n">declarativa</span><span class="p">.</span> <span class="n">Ex</span> <span class="p">(</span><span class="n">traduzido</span> <span class="nl">de</span><span class="p">:</span>
+
+<span class="o">**</span><span class="n">Me</span> <span class="n">Faça</span> <span class="n">um</span> <span class="n">Sanduiche</span><span class="o">!</span> <span class="p">(</span><span class="n">Imperativo</span><span class="p">)</span><span class="o">**</span>  
+<span class="n">Espalhe</span> <span class="n">manteiga</span> <span class="n">em</span> <span class="n">uma</span> <span class="n">fatia</span> <span class="k">do</span> <span class="n">pão</span><span class="p">.</span> <span class="n">Deixe</span> <span class="n">essa</span> <span class="n">fatia</span> <span class="n">no</span> <span class="n">prato</span> <span class="n">com</span> <span class="n">a</span> <span class="n">face</span> <span class="n">para</span> <span class="n">cima</span><span class="p">;</span>  
+<span class="n">Espalhe</span> <span class="n">requeijão</span> <span class="n">em</span> <span class="n">uma</span> <span class="n">outra</span> <span class="n">fatia</span> <span class="n">de</span> <span class="n">pão</span><span class="p">.</span> <span class="n">Coloque</span> <span class="n">esta</span> <span class="n">fatia</span> <span class="n">em</span> <span class="n">cima</span> <span class="n">da</span> <span class="n">primeira</span><span class="p">,</span> <span class="n">com</span> <span class="n">a</span> <span class="n">face</span> <span class="n">voltada</span> <span class="n">para</span> <span class="n">baixo</span><span class="p">;</span>  
+<span class="n">Me</span> <span class="n">traga</span> <span class="n">o</span> <span class="n">sanduiche</span><span class="p">;</span>
+
+<span class="o">**</span><span class="n">O</span> <span class="n">Sanduiche</span> <span class="n">Que</span> <span class="n">Eu</span> <span class="n">Quero</span><span class="p">.</span> <span class="p">(</span><span class="n">Declarativo</span><span class="p">)</span><span class="o">**</span>  
+<span class="n">Deve</span> <span class="n">haver</span> <span class="n">um</span> <span class="n">sanduiche</span> <span class="n">no</span> <span class="n">prato</span> <span class="n">na</span> <span class="n">minha</span> <span class="n">frente</span> <span class="n">em</span> <span class="mi">5</span> <span class="n">minutos</span><span class="p">;</span>  
+<span class="n">Este</span> <span class="n">deve</span> <span class="n">ter</span> <span class="n">apenas</span> <span class="n">manteiga</span> <span class="n">e</span> <span class="n">requeijão</span> <span class="n">entre</span> <span class="n">as</span> <span class="n">duas</span> <span class="n">fatias</span> <span class="n">de</span> <span class="n">pão</span><span class="p">;</span>
+
+<span class="o">*</span><span class="n">Esses</span> <span class="n">exemplos</span> <span class="n">foram</span> <span class="n">baseados</span> <span class="n">nos</span> <span class="n">exemplos</span> <span class="k">do</span> <span class="n">post</span> <span class="n">a</span> <span class="nl">seguir</span><span class="p">:</span> <span class="p">[</span><span class="n">From</span> <span class="n">Imperative</span> <span class="n">to</span> <span class="n">Declarative</span> <span class="n">System</span> <span class="n">Configuration</span> <span class="n">with</span> <span class="n">Puppet</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//spin.atomicobject.com/2012/09/13/from-imperative-to-declarative-system-configuration-with-puppet/ "From Imperative to Declarative System Configuration with Puppet")*</span>
+
+<span class="n">Assim</span><span class="p">,</span> <span class="n">fica</span> <span class="n">muito</span> <span class="n">mais</span> <span class="n">simples</span> <span class="n">configurar</span> <span class="n">suas</span> <span class="n">dependências</span><span class="p">,</span> <span class="n">além</span> <span class="n">disso</span> <span class="n">o</span> <span class="n">Puppet</span> <span class="n">possui</span> <span class="n">diversos</span> <span class="p">[</span><span class="n">Módulos</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//forge.puppetlabs.com/ "Puppet Forge") já prontos para diversas aplicações, basta usa-los e configurar os detalhes.</span>
+
+<span class="err">\</span><span class="p">[</span><span class="n">adsense</span><span class="err">\</span><span class="p">]</span>
+
+<span class="n">Instalando</span> <span class="n">Tudo</span>
+<span class="o">---------------</span>
+
+<span class="n">Primeiramente</span> <span class="n">deve</span><span class="o">-</span><span class="n">se</span> <span class="n">instalar</span> <span class="n">o</span> <span class="n">VirtualBox</span><span class="p">,</span> <span class="n">que</span> <span class="n">será</span> <span class="n">o</span> <span class="n">responsável</span> <span class="n">pelas</span> <span class="n">Maquinas</span> <span class="n">virtuais</span> <span class="n">criadas</span> <span class="n">pelo</span> <span class="n">Vagrant</span><span class="p">.</span>  
+<span class="n">Para</span> <span class="n">isso</span> <span class="n">basta</span> <span class="n">ir</span> <span class="n">no</span> <span class="n">site</span> <span class="k">do</span> <span class="n">VirtualBox</span><span class="p">,</span> <span class="n">e</span> <span class="n">procurar</span> <span class="n">o</span> <span class="k">release</span> <span class="n">compatível</span> <span class="n">com</span> <span class="n">seu</span> <span class="n">Sistema</span> <span class="nl">Operacional</span><span class="p">:</span>  
+<span class="p">[</span><span class="n">Download</span> <span class="n">VirtualBox</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//www.virtualbox.org/wiki/Downloads "Download VirtualBox")</span>
+
+<span class="n">Agora</span> <span class="err">é</span> <span class="n">necessário</span> <span class="n">instalar</span> <span class="n">o</span> <span class="n">Vagrant</span><span class="p">,</span> <span class="n">para</span> <span class="n">isso</span> <span class="n">vá</span> <span class="n">ao</span> <span class="n">site</span> <span class="n">de</span> <span class="n">downloads</span> <span class="k">do</span> <span class="n">Vagrant</span><span class="p">,</span> <span class="n">e</span> <span class="n">baixe</span> <span class="n">a</span> <span class="n">ultima</span> <span class="n">versão</span> <span class="n">e</span> <span class="k">release</span> <span class="n">que</span> <span class="n">seja</span> <span class="n">compatível</span> <span class="n">com</span> <span class="n">seu</span> <span class="n">Sistema</span> <span class="nl">Operacional</span><span class="p">:</span> <span class="p">[</span><span class="n">Download</span> <span class="n">Vagrant</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//downloads.vagrantup.com/ "Download Vagrant")</span>
+
+<span class="n">Por</span> <span class="n">fim</span> <span class="n">devemos</span> <span class="n">instalar</span> <span class="n">o</span> <span class="n">Puppet</span><span class="p">,</span> <span class="n">para</span> <span class="n">isso</span> <span class="n">existem</span> <span class="n">instruções</span> <span class="n">bem</span> <span class="n">completas</span> <span class="n">no</span> <span class="p">[</span><span class="n">site</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//docs.puppetlabs.com/guides/installation.html#installing-puppet-1 "Instalar o Puppet"), para cada tipo de plataforma.  </span>
+<span class="err">É</span> <span class="n">importante</span> <span class="n">entender</span> <span class="n">que</span> <span class="n">nesse</span> <span class="n">tipo</span> <span class="n">de</span> <span class="n">cenário</span><span class="p">,</span> <span class="n">o</span> <span class="n">que</span> <span class="n">você</span> <span class="n">deseja</span> <span class="n">instalar</span> <span class="err">é</span> <span class="n">o</span> <span class="o">**</span><span class="n">Puppet</span> <span class="n">Standalone</span><span class="o">**</span>  
+<span class="n">Vou</span> <span class="n">colocar</span> <span class="n">aqui</span> <span class="n">a</span> <span class="n">maneira</span> <span class="n">em</span> <span class="n">que</span> <span class="n">instalei</span> <span class="n">o</span> <span class="n">Puppet</span> <span class="n">Standalone</span> <span class="n">no</span> <span class="n">meu</span> <span class="n">Ubuntu</span> <span class="mf">12.04</span><span class="p">.</span> <span class="n">Para</span> <span class="n">isso</span> <span class="n">executei</span> <span class="n">os</span> <span class="n">seguintes</span> <span class="nl">comandos</span><span class="p">:</span>
+
+<span class="err">```</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s">"shell"</span><span class="p">}</span>
+    <span class="n">wget</span> <span class="nl">http</span><span class="p">:</span><span class="c1">//apt.puppetlabs.com/puppetlabs-release-precise.deb</span>
+    <span class="n">sudo</span> <span class="n">dpkg</span> <span class="o">-</span><span class="n">i</span> <span class="n">puppetlabs</span><span class="o">-</span><span class="k">release</span><span class="o">-</span><span class="n">precise</span><span class="p">.</span><span class="n">deb</span>
+    <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+    <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">up</span>
+    <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">puppet</span><span class="o">-</span><span class="n">common</span>
+</pre></div>
+<p>Isso vai instalar o Puppet Standalone em sua máquina, mas faltará fazer algumas ultimas configurações para ele ficar 100%. Entretanto, como desejo usar o Puppet apenas para instalar facilmente os Módulos (mencionados anteriormente) no Vagrant, não é necessário terminar a configuração do mesmo.</p>
+<p><em>Para os curiosos: essa configuração tem haver com alterar alguma coisa no cron-tab, conforme a <a href="http://docs.puppetlabs.com/guides/installation.html#with-cron" title="Terminar de configurar Puppet Standalone">documentação</a></em></p>
+<p>Agora já tem tudo pronto pra você começar seu projeto com o Vagrant e o Puppet.</p>
+<h2>Exemplo Simples</h2>
+<p>Vamos criar uma maquina virtual, e instalar nela os pacotes: <strong>build-essential, vim, curl e git-core</strong>.<br/>
+E vamos fazer com que toda vez que a máquina for ligada, esta execute updates com o apt.</p>
+<h3>Vagrantfile</h3>
+<p>Primeiramente, dentro da pasta do novo projeto, usamos o comando:</p>
+<p>``` {lang="shell"}
+$ vagrant init</p>
+<div class="highlight"><pre><span></span><span class="no">Em</span> <span class="n">seguida</span> <span class="n">deixamos</span> <span class="n">o</span> <span class="n">conteúdo</span> <span class="k">do</span> <span class="n">arquivo</span> <span class="n">com</span> <span class="n">a</span> <span class="n">seguinte</span> <span class="ss">cara</span><span class="p">:</span>
+
+<span class="sb">``` {lang="ruby"}</span>
+<span class="sb"># -*- mode: ruby -*-</span>
+<span class="sb"># vi: set ft=ruby :</span>
+
+<span class="sb">Vagrant.configure("2") do |config|</span>
+<span class="sb">  config.vm.box = "precise64.box"</span>
+<span class="sb">  config.vm.box_url = "http://files.vagrantup.com/precise64.box"</span>
+
+<span class="sb">  # definimos um ip para essa máquina (usando NAT aqui).</span>
+<span class="sb">  config.vm.network :private_network, ip: "192.168.56.101"</span>
+
+<span class="sb">  config.vm.provider :virtualbox do |vb|</span>
+<span class="sb">    # esse é um bug conhecido ao usar NAT em alguns casos no virtualbox, ele fica sem dns</span>
+<span class="sb">    # e pra resolver isso colocamos essa linha</span>
+<span class="sb">    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]</span>
+
+<span class="sb">    # Colocando mais memoria e mudando o nome da maquina virtual</span>
+<span class="sb">    vb.customize ["modifyvm", :id, "--memory", 1024]</span>
+<span class="sb">    vb.customize ["modifyvm", :id, "--name", "treinamento_ej"]</span>
+<span class="sb">  end</span>
+
+<span class="sb">  # Garante que o apt-get update é rodado antes das configurações do puppet</span>
+<span class="sb">  # tive que fazer isso, outra vez por conta do dns não aparecer para o Puppet</span>
+<span class="sb">  config.vm.provision :shell, :inline =&gt;</span>
+<span class="sb">    "if [[ ! -f /apt-get-run ]]; then sudo apt-get update &amp;&amp; sudo touch /apt-get-run; fi"</span>
+
+<span class="sb">  # definindo configurações do puppet</span>
+<span class="sb">  config.vm.provision :puppet do |puppet|</span>
+<span class="sb">    # pasta onde fica seus manifests</span>
+<span class="sb">    puppet.manifests_path = "manifests"</span>
+
+<span class="sb">    # arquivo manifest que você quer que seja chamado de começo</span>
+<span class="sb">    puppet.manifest_file  = "mymanifest.pp"</span>
+
+<span class="sb">    # pasta onde ficam os modulos do puppet</span>
+<span class="sb">    puppet.module_path = "./modules"</span>
+
+<span class="sb">    # melhor logging do puppet na execução do vagrant, é bom pra debugar coisas</span>
+<span class="sb">    puppet.options = "--verbose"</span>
+<span class="sb">  end</span>
+<span class="sb">end</span>
+</pre></div>
+<h3>Manifests do Puppet</h3>
+<p>Como descrito no arquivo Vagrantfile, devemos criar nosso arquivo <strong>mymanifest.pp</strong>, dentro de uma pasta chamada <strong>manifests</strong>, e este será o ponto de partida para as ações do Puppet:</p>
+<p>``` {lang="shell"}
+$ mkdir manifests</p>
+<div class="highlight"><pre><span></span><span class="nv">e</span> <span class="nv">dentro</span> <span class="nv">desta</span> <span class="nv">nova</span> <span class="nv">pasta</span> <span class="nv">criada</span> <span class="nv">o</span> <span class="nv">arquivo</span> <span class="o">**</span><span class="nv">mymanifest</span>.<span class="nv">pp</span><span class="o">**</span> <span class="nv">deve</span> <span class="nv">ter</span> <span class="nv">o</span> <span class="nv">seguinte</span> <span class="nv">conte</span>ú<span class="nv">do</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">ruby</span><span class="s2">"</span>}
+<span class="nv">group</span> { <span class="s1">'</span><span class="s">puppet</span><span class="s1">'</span>: <span class="nv">ensure</span> <span class="o">=&gt;</span> <span class="nv">present</span> }
+<span class="k">Exec</span> { <span class="nv">path</span> <span class="o">=&gt;</span> [ <span class="s1">'</span><span class="s">/bin/</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">/sbin/</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">/usr/bin/</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">/usr/sbin/</span><span class="s1">'</span>] }
+<span class="nv">File</span> { <span class="nv">owner</span> <span class="o">=&gt;</span> <span class="mi">0</span>, <span class="nv">group</span> <span class="o">=&gt;</span> <span class="mi">0</span>, <span class="nv">mode</span> <span class="o">=&gt;</span> <span class="mi">0644</span> }
+
+<span class="nv">class</span> {<span class="s1">'</span><span class="s">apt</span><span class="s1">'</span>:
+  <span class="nv">always_apt_update</span> <span class="o">=&gt;</span> <span class="nv">true</span>,
+}
+
+<span class="nv">package</span> { [
+    <span class="s1">'</span><span class="s">build-essential</span><span class="s1">'</span>,
+    <span class="s1">'</span><span class="s">vim</span><span class="s1">'</span>,
+    <span class="s1">'</span><span class="s">curl</span><span class="s1">'</span>,
+    <span class="s1">'</span><span class="s">git-core</span><span class="s1">'</span>
+  ]:
+  <span class="nv">ensure</span>  <span class="o">=&gt;</span> <span class="s1">'</span><span class="s">installed</span><span class="s1">'</span>,
+}
+</pre></div>
+<h3>Instalando Módulos do Puppet</h3>
+<p>No arquivo mymanifest.pp utilizamos o módulo APT do Puppet, portanto devemos instala-lo na pasta modules do projeto.<br/>
+Devemos primeiro criar essa pasta:</p>
+<p>``` {lang="shell"}
+$ mkdir modules</p>
+<div class="highlight"><pre><span></span><span class="n">Em</span> <span class="n">seguida</span> <span class="n">rodamos</span> <span class="n">o</span> <span class="n">comando</span><span class="p">:</span>
+
+<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"shell"</span><span class="err">}</span>
+<span class="err">$</span> <span class="n">puppet</span> <span class="n">module</span> <span class="n">install</span> <span class="n">puppetlabs</span><span class="o">/</span><span class="n">apt</span> <span class="c1">--modulepath modules</span>
+</pre></div>
+<p>Isso fará o download desse módulo e de suas dependências (nesse caso o stdlib) dentro da pasta recém criada.</p>
+<h3>Rodando Tudo</h3>
+<p>Para terminar e ter sua máquina pronta, basta usar o comando:</p>
+<p>``` {lang="shell"}
+$ vagrant up</p>
+<div class="highlight"><pre><span></span><span class="nv">Isso</span> <span class="nv">carregar</span>á <span class="nv">sua</span> <span class="nv">m</span>á<span class="nv">quina</span> <span class="nv">virtual</span> <span class="nv">e</span> <span class="nv">em</span> <span class="nv">seguida</span> <span class="nv">ir</span>á <span class="nv">chamar</span> <span class="nv">o</span> <span class="nv">mymanifest</span>.<span class="nv">pp</span>, <span class="nv">que</span> <span class="nv">por</span> <span class="nv">sua</span> <span class="nv">vez</span> <span class="nv">d</span>á <span class="nv">instru</span>çõ<span class="nv">es</span> <span class="nv">ao</span> <span class="nv">Puppet</span> <span class="nv">da</span> <span class="nv">maquina</span> <span class="nv">virtual</span> <span class="k">do</span> <span class="nv">que</span> <span class="nv">deve</span> <span class="nv">ser</span> <span class="nv">feito</span>.
+
+<span class="nv">Caso</span> <span class="nv">deseje</span> <span class="nv">acessar</span> <span class="nv">sua</span> <span class="nv">m</span>á<span class="nv">quina</span> <span class="nv">virtual</span>, <span class="nv">basta</span> <span class="nv">executar</span> <span class="nv">o</span> <span class="nv">comando</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">shell</span><span class="s2">"</span>}
+$ <span class="nv">vagrant</span> <span class="nv">ssh</span>
+</pre></div>
+<p>Assim você fica logado como o usuário vagrant e pode fazer o que bem entender dentro da máquina.</p>
+<p>Outra coisa interessante, é que a pasta do seu host (máquina real) onde tem o arquivo Vagrantfile, fica sendo uma pasta compartilhada com a nova máquina virtual no caminho <strong>"/vagrant/"</strong>. Ou seja: todo código fonte que houver dentro da pasta do projeto, irá aparecer também dentro da máquina virtual na pasta "/vagrant/". Que moleza, não?</p>
+<p>Caso queira consultar melhor o código desse exemplo, ele encontra-se disponível no github: <a href="https://github.com/arruda/exemplo-vagrant-puppet">https://github.com/arruda/exemplo-vagrant-puppet</a></p>
+<p>Abraços!</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

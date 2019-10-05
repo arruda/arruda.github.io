@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Sublime Text 3 - Python, VirtualEnv e Autocomplete | Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida
+</title>
+  <link rel="canonical" href="/sublime-text-3-python-virtualenv-e-autocomplete.html">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  
+  <meta name="description" content="Aproveitando que muitas pessoas vem me perguntando como integrar facilmente o Python no SublimeText 3, e como meu post anterior não funciona mais para essa nova versão da IDE, foi que decidi fazer esse post explicando como integrar essas maravilhas. [adsense] Sublime Text 3 Para fazer download é simples, basta …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="/">
+        <img class="img-fluid rounded" src=images/logo.png alt="Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="/">Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</a></h1>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Sublime Text 3 - Python,  VirtualEnv e Autocomplete
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2015-01-31T18:28:00+00:00">
+          <i class="fa fa-clock-o"></i>
+          Sáb 31 janeiro 2015
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="/category/ambiente-de-trabalho-programacao-python-selecionados.html">Ambiente de Trabalho, programação, Python, Selecionados</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="/tag/anaconda.html">#anaconda</a>,               <a href="/tag/auto-complete.html">#auto complete</a>,               <a href="/tag/flakes.html">#flakes</a>,               <a href="/tag/lint.html">#lint</a>,               <a href="/tag/nicki-minaj.html">#nicki minaj</a>,               <a href="/tag/pep.html">#pep</a>,               <a href="/tag/python.html">#python</a>,               <a href="/tag/sublime.html">#sublime</a>,               <a href="/tag/sublime-text-3.html">#sublime text 3</a>,               <a href="/tag/text.html">#text</a>,               <a href="/tag/virtualenv.html">#virtualenv</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p><a href="/wp-content/uploads/2015/01/python_anaconda.jpg"><img alt="Python Anaconda" class="img-fluid wp-image-2411 aligncenter size-full" height="272" src="/wp-content/uploads/2015/01/python_anaconda.jpg" width="283"/></a></p>
+<p>Aproveitando que muitas pessoas vem me perguntando como integrar facilmente o Python no SublimeText 3, e como meu <a href="http://www.arruda.blog.br/programacao/sublime-text-2-python-virtualenv-e-auto-complete/" title="Sublime Text 2 – Python, VirtualEnv e Auto Complete">post anterior</a> não funciona mais para essa nova versão da IDE, foi que decidi fazer esse post explicando como integrar essas maravilhas.</p>
+<p>[adsense]</p>
+<h2>Sublime Text 3</h2>
+<p>Para fazer download é simples, basta ir em <a href="http://www.sublimetext.com/3">http://www.sublimetext.com/3</a> e baixar a ultima versão da IDE compatível com seu sistema operacional.</p>
+<h2>Package Control</h2>
+<p>Esse carinha chamado <a href="https://packagecontrol.io/installation#st3" title="Package control">Package Control</a> facilita a instalação de novos pacotes no sublime text, e é muito simples de instalar:</p>
+<ul>
+<li>Abra o console do sublime text(<strong>ctrl+`</strong> normalmente, ou acessível em <strong>View-&gt;Show Console</strong>)</li>
+<li>Cole o seguinte texto e de enter:</li>
+</ul>
+<p>``` {lang="python"}
+import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)</p>
+<div class="highlight"><pre><span></span><span class="nv">Em</span> <span class="nv">seguida</span> <span class="nv">reinicie</span> <span class="nv">o</span> <span class="nv">Sublime</span> <span class="nv">Text</span>.
+
+<span class="nv">Anaconda</span>
+<span class="o">--------</span>
+
+[<span class="nv">Anaconda</span>]<span class="ss">(</span><span class="nv">http</span>:<span class="o">//</span><span class="nv">damnwidget</span>.<span class="nv">github</span>.<span class="nv">io</span><span class="o">/</span><span class="nv">anaconda</span> <span class="s2">"</span><span class="s">Sublime Text Anaconda</span><span class="s2">"</span><span class="ss">)</span> <span class="ss">(</span><span class="nv">n</span>ã<span class="nv">o</span>, <span class="nv">n</span>ã<span class="nv">o</span> <span class="nv">tem</span> <span class="nv">nada</span> <span class="nv">haver</span> <span class="nv">com</span> <span class="nv">a</span> <span class="nv">musica</span> <span class="nv">da</span> <span class="nv">Nicki</span> <span class="nv">Minaj</span><span class="ss">)</span> é <span class="nv">o</span> <span class="nv">package</span> <span class="k">do</span> <span class="nv">Sublime</span> <span class="nv">que</span> <span class="nv">tem</span> <span class="nv">diversas</span> <span class="nv">coisas</span> <span class="nv">para</span> <span class="nv">facilitar</span> <span class="nv">sua</span> <span class="nv">vida</span> <span class="nv">na</span> <span class="nv">hora</span> <span class="nv">de</span> <span class="nv">desenvolver</span> <span class="nv">aplica</span>çõ<span class="nv">es</span> <span class="nv">em</span> <span class="nv">Python</span> <span class="nv">no</span> <span class="nv">Sublime</span>.
+
+<span class="nv">Com</span> <span class="nv">ele</span> é <span class="nv">poss</span>í<span class="nv">vel</span> <span class="nv">utilizar</span> <span class="nv">a</span> <span class="nv">fun</span>çã<span class="nv">o</span> <span class="nv">de</span> <span class="nv">Autocompletar</span> <span class="nv">e</span> <span class="nv">navegar</span> <span class="nv">nos</span> <span class="nv">fontes</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">determinado</span> <span class="nv">c</span>ó<span class="nv">digo</span> <span class="nv">em</span> <span class="nv">Python</span>, <span class="nv">al</span>é<span class="nv">m</span> <span class="nv">de</span> <span class="nv">usar</span> <span class="nv">os</span> <span class="nv">linters</span> <span class="ss">(</span><span class="nv">PyFlakes</span> <span class="nv">ou</span> <span class="nv">PyLint</span><span class="ss">)</span> <span class="nv">j</span>á <span class="s2">"</span><span class="s">direto de fábrica</span><span class="s2">"</span>.
+
+<span class="nv">Para</span> <span class="nv">instalar</span> <span class="nv">esse</span> <span class="nv">package</span> <span class="nv">vamos</span> <span class="nv">usar</span> <span class="nv">o</span> <span class="nv">Package</span> <span class="nv">Control</span> <span class="nv">rec</span>é<span class="nv">m</span> <span class="nv">instalado</span>, <span class="nv">aperte</span><span class="ss">(</span><span class="o">**</span><span class="nv">Shift</span> <span class="o">+</span> <span class="nv">ctrl</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span> <span class="nv">ou</span> <span class="nv">no</span> <span class="nv">mac</span>: <span class="o">**</span><span class="nv">shit</span> <span class="o">+</span> <span class="nv">cmd</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span><span class="ss">)</span>  
+<span class="nv">Selecione</span> <span class="nv">na</span> <span class="nv">lista</span>: <span class="o">**</span><span class="s2">"</span><span class="s">Package Control: Install Package</span><span class="s2">"</span><span class="o">**</span>, <span class="nv">e</span> <span class="nv">na</span> <span class="nv">pr</span>ó<span class="nv">xima</span> <span class="nv">lista</span> <span class="nv">que</span> <span class="nv">aparecer</span>, <span class="nv">procure</span> <span class="nv">por</span> <span class="nv">Anaconda</span> <span class="nv">e</span> <span class="nv">instale</span>.
+
+<span class="nv">Usando</span> <span class="nv">o</span> <span class="nv">Anaconda</span> <span class="nv">em</span> <span class="nv">um</span> <span class="nv">Projeto</span>
+<span class="o">-------------------------------</span>
+
+<span class="nv">Para</span> <span class="nv">fazer</span> <span class="nv">isso</span> é <span class="nv">muito</span> <span class="nv">simples</span>, <span class="nv">basta</span> <span class="nv">abrir</span> <span class="nv">uma</span> <span class="nv">pasta</span> <span class="nv">de</span> <span class="nv">algum</span> <span class="nv">projeto</span> <span class="nv">Python</span> <span class="nv">que</span> <span class="nv">esteja</span> <span class="nv">trabalhando</span>, <span class="nv">e</span> <span class="nv">salvar</span> <span class="nv">a</span> <span class="nv">mesma</span> <span class="nv">como</span> <span class="nv">sendo</span> <span class="nv">um</span> <span class="nv">Projeto</span> <span class="k">do</span> <span class="nv">pr</span>ó<span class="nv">prio</span> <span class="nv">Sublime</span> <span class="nv">Text</span>.
+
+<span class="nv">Isso</span> <span class="nv">pode</span> <span class="nv">ser</span> <span class="nv">feito</span> <span class="nv">na</span> <span class="nv">op</span>çã<span class="nv">o</span>: <span class="o">**</span><span class="nv">Project</span><span class="o">-</span>\<span class="o">&gt;</span><span class="nv">Save</span> <span class="nv">Project</span> <span class="nv">As</span>...<span class="o">**</span>.
+
+<span class="nv">Salve</span> <span class="nv">o</span> <span class="nv">arquivo</span> <span class="k">do</span> <span class="nv">projeto</span> <span class="nv">dentro</span> <span class="nv">da</span> <span class="nv">pasta</span> <span class="k">do</span> <span class="nv">pr</span>ó<span class="nv">prio</span> <span class="nv">projeto</span>.
+
+<span class="nv">Em</span> <span class="nv">seguida</span> <span class="nv">abra</span> <span class="nv">o</span> <span class="nv">arquivo</span> <span class="k">do</span> <span class="nv">projeto</span> <span class="k">do</span> <span class="nv">sublime</span> <span class="nv">text</span> <span class="ss">(</span><span class="o">**</span><span class="nv">seuprojeto</span>.<span class="nv">sublime</span><span class="o">-</span><span class="nv">project</span><span class="o">**</span><span class="ss">)</span>.
+
+<span class="nv">Ele</span> <span class="nv">dever</span>á <span class="nv">ter</span> <span class="nv">uma</span> <span class="nv">cara</span> <span class="nv">parecida</span> <span class="nv">com</span> <span class="nv">a</span> <span class="nv">seguinte</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">json</span><span class="s2">"</span>}
+{
+    <span class="s2">"</span><span class="s">folders</span><span class="s2">"</span>:
+    [
+        {
+            <span class="s2">"</span><span class="s">follow_symlinks</span><span class="s2">"</span>: <span class="nv">true</span>,
+            <span class="s2">"</span><span class="s">path</span><span class="s2">"</span>: <span class="s2">"</span><span class="s">.</span><span class="s2">"</span>
+        }
+    ]
+}
+</pre></div>
+<p>O que você vai fazer agora é colocar uma nova propriedade que vai dizer ao SublimePythonIDE onde está o seu interpretador Python:</p>
+<p>``` {lang="json"}
+{
+    "folders":
+    [
+        {
+            "follow_symlinks": true,
+            "path": "."
+        }
+    ],</p>
+<div class="highlight"><pre><span></span><span class="ss">"settings"</span><span class="p">:</span> <span class="err">{</span>
+    <span class="ss">"python_interpreter"</span><span class="p">:</span> <span class="ss">"/home/seu_usuario/.virtualenvs/seu_projeto/bin/python"</span>
+<span class="err">}</span>
+</pre></div>
+<p>}</p>
+<div class="highlight"><pre><span></span><span class="n">Para</span> <span class="n">saber</span> <span class="n">onde</span> <span class="n">está</span> <span class="n">o</span> <span class="n">seu</span> <span class="n">interpretador</span> <span class="n">Python</span><span class="p">,</span> <span class="k">no</span> <span class="n">linux</span> <span class="n">digite</span><span class="p">:</span>
+
+<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"bash"</span><span class="err">}</span>
+<span class="err">$</span> <span class="n">which</span> <span class="n">python</span>
+</pre></div>
+<p>Com isso se você estiver usando um <strong>VirtualEnv</strong> (caso não esteja, aconselho ler esse post aqui e começar a usar: <a href="http://www.arruda.blog.br/programacao/python/usando-virtualenvwrapper/" title="Usando VirtualEnvWrapper">Usando VirtualEnvWrapper</a>), você precisa apenas ativar o seu virtualenv e rodar o mesmo comando que ele vai te mostrar onde está o interpretador Python do ambiente virtual python em questão.</p>
+<h2>HotKeys</h2>
+<p>Uma vez instalado o Anaconda podemos usar o AutoComplete usando <strong>Ctrl + Space</strong>, mas existe outra funcionalidade muito boa presente no que podemos aproveitar agora no Sublime também, o <strong>Go to Definition</strong>(Navegamos diretamente para o fonte da seleção atual).</p>
+<p>Para utilizar o <strong>Go to Definition</strong> no <strong>linux</strong> basta selecionar o bloco de codigo python que se deseja inspecionar e apertar as teclas: <strong>Super + g</strong>, ou no mac/windows: <strong>ctrl+alt+g</strong>.</p>
+<p>Caso queira, você pode configurar outros atalhos do Anaconda ou trocar outros para que fiquem de acordo com seu gosto (eu prefiro utilizar o <strong>Go to Definition</strong> com <strong>Super + a + g</strong> por exemplo).</p>
+<h2>Linting</h2>
+<p>Esse package já vem com uma série de Lints do Python built-in, como o PyFlakes e Pylint.<br/>
+Mas caso queira é possivel configurar para ele não rodar essas verificações, ou para ignorar apenas algumas, colocando nas settings a chave <strong>anaconda_linting</strong> como <strong>false</strong>.</p>
+<p>Existem muitas outras opções e formas de tornar o sublime text uma IDE Python bem personalizada usando o Anaconda, porém o post iria ficar imenso, se você gostou do que viu, sugiro que de uma olhada no site e veja o que mais você pode fazer para se divertir.</p>
+<p><strong>OBS</strong>: Só recomendo ser especifico na hora de buscar algo no google, ja que os primeiros resultados apontam para <a href="http://pt.wikipedia.org/wiki/Anaconda_(can%C3%A7%C3%A3o_de_Nicki_Minaj)" title="Nicki Minaji na Wiki">Nicki Minaj</a> xD<br/>
+Abraços.</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

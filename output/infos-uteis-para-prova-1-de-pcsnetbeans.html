@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Atalhos Úteis de NetBeans, e outros detalhes. | Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida
+</title>
+  <link rel="canonical" href="/infos-uteis-para-prova-1-de-pcsnetbeans.html">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  
+  <meta name="description" content="Decidi fazer um post para ajudar quem for fazer a prova de PCS , são só algumas dicas basicas do netBeans e alguns detalhes de java. Não sei se ajudará muito. HotKeys Ctrl+Shift+i : Resolver problemas de imports na classe Ctrl+K / Ctrl + L : Auto-complete melhorado Ctrl + R: Renomear Ctrl …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="/">
+        <img class="img-fluid rounded" src=images/logo.png alt="Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="/">Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</a></h1>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Atalhos Úteis de NetBeans, e outros detalhes.
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2011-04-25T00:02:00+01:00">
+          <i class="fa fa-clock-o"></i>
+          Seg 25 abril 2011
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="/category/java-programacao.html">Java, programação</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="/tag/java.html">#Java</a>,               <a href="/tag/netbeans.html">#netbeans</a>,               <a href="/tag/pcs.html">#pcs</a>,               <a href="/tag/prova.html">#prova</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Decidi fazer um post para ajudar quem for fazer a prova de PCS , são só algumas dicas basicas do netBeans e alguns detalhes de java. Não sei se ajudará muito.</p>
+<h2>HotKeys</h2>
+<p><strong>Ctrl+Shift+i</strong> : Resolver problemas de imports na classe<br/>
+<strong>Ctrl+K / Ctrl + L :</strong> Auto-complete melhorado<br/>
+<strong>Ctrl + R:</strong> Renomear<br/>
+<strong>Ctrl + shit + f:</strong> procurar nos projetos<br/>
+<strong>ctrl + e:</strong> deletar linha<br/>
+<strong>Alt+shift + f:</strong> formatar código<br/>
+psvm -&gt; cria um método main (public static void main)</p>
+<h2>Code Templates</h2>
+<p>No netBeans escreva o codigo em negrito e aperte tab, ele irá imprimir o texto correspondente:<br/>
+<strong>sout</strong> =&gt; System.out.println("");<br/>
+<strong>psvm</strong> =&gt; public static void main(String[] args)<br/>
+<strong>fore</strong> =&gt; foreach pre montado.</p>
+<p><strong>Bom para contruir a classe:</strong><br/>
+<strong>Alt+Insert :</strong> Inserir código(em classes permite atalho para gerar gets e sets, construtores e o que você quiser)</p>
+<h2>Comandos</h2>
+<p><strong>Scanner</strong>, usando o metodo next(ou nextTipoVariavel), para pegar a próxima entrada do tipo desejado, ou apenas a próxima entrada:</p>
+<p>``` {lang="JAVA" line="1"}
+import java.util.Scanner;
+        Scanner scan = new Scanner(System.in);
+        String linha = scan.nextLine();
+        int inteiro = scan.nextInt();
+        double db = scan.nextDouble();
+        BigDecimal bigd = scan.nextBigDecimal();</p>
+<div class="highlight"><pre><span></span><span class="n">Detalhes</span> <span class="n">do</span> <span class="o">**</span><span class="n">BigDecimal</span><span class="p">:</span><span class="o">**</span>
+
+<span class="sb">``</span><span class="err">`</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"JAVA"</span> <span class="n">line</span><span class="o">=</span><span class="s2">"1"</span><span class="p">}</span>
+<span class="kn">import</span> <span class="nn">java.math.BigDecimal</span><span class="p">;</span>
+
+<span class="n">BigDecimal</span> <span class="n">bigD</span><span class="p">;</span>
+<span class="o">//</span><span class="n">Diferentes</span> <span class="n">modos</span> <span class="n">de</span> <span class="n">instanciar</span>
+<span class="n">bigD</span> <span class="o">=</span> <span class="n">new</span> <span class="n">BigDecimal</span><span class="p">();</span>
+<span class="n">bigD</span> <span class="o">=</span> <span class="n">new</span> <span class="n">BigDecimal</span><span class="p">(</span><span class="s2">"0.0"</span><span class="p">);</span>
+<span class="n">bigD</span> <span class="o">=</span> <span class="n">new</span> <span class="n">BigDecimal</span><span class="p">(</span><span class="mf">0.00</span><span class="p">);</span>
+<span class="o">//</span><span class="n">Soma</span> <span class="n">de</span> <span class="n">BigDecimals</span>
+<span class="n">bigD</span> <span class="o">=</span> <span class="n">bigD</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">bigD</span><span class="p">);</span>
+<span class="o">//</span><span class="n">Divisao</span> <span class="n">de</span> <span class="n">BigDecimals</span>
+<span class="n">bigD</span> <span class="o">=</span> <span class="n">bigD</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">bigD</span><span class="p">);</span>
+<span class="o">//</span><span class="n">Divisao</span> <span class="n">de</span> <span class="n">BigDecimals</span>
+<span class="n">bigD</span> <span class="o">=</span> <span class="n">bigD</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">bigD</span><span class="p">);</span>
+<span class="o">//</span><span class="n">Multiplicacao</span> <span class="n">de</span> <span class="n">BigDecimals</span>
+<span class="n">bigD</span> <span class="o">=</span> <span class="n">bigD</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">bigD</span><span class="p">);</span>
+<span class="o">//</span><span class="n">Comparacao</span> <span class="n">de</span> <span class="n">BigDecimals</span><span class="p">,</span> <span class="n">retorno</span> <span class="err">é</span> <span class="n">um</span> <span class="n">inteiro</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">bigD</span><span class="o">.</span><span class="n">compareTo</span><span class="p">(</span><span class="n">bigD</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">"Igual"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>[adsense]</p>
+<p>Infos de <strong>String:</strong></p>
+<p>``` {lang="JAVA" line="1"}
+String str = "Essa é uma string bem doida. Não é?"</p>
+<p>String stringsDivididasPorEspaco [] = str.split(" ");
+String stringsDivididasPorPonto [] = str.split(".");</p>
+<p>String strComFraseNoFim = str.concat("Frase");</p>
+<p>//em comparacao de strings se utilize o metodo equals
+if(str.equals("String Diferente")){
+    System.out.println("Não será verdadeiro, logo não vai entrar aqui.");
+}
+```</p>
+<p>Ainda estou tentando lembrar como faz no netbeans pra que crie uma classe automaticamente como filha de outra, ou implementando alguma interface(sem ser na mão).<br/>
+Mas é isso ai, espero que isso ajude.</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

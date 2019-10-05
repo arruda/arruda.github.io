@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Eclipse Debugging - Salvando Vidas | Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida
+</title>
+  <link rel="canonical" href="/eclipse-debugging-salvando-vidas.html">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  
+  <meta name="description" content="Mais uma vez vou falar dessa ferramenta(dessa vez bem rápido, só para relatar o ocorrido recente). Estava ajudando minha namorada com um exercício de C no PC. Até que depois de um bom tempo tentando entender por que raios o printf não printava(nada como um fflush(stdout) para …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="/">
+        <img class="img-fluid rounded" src=images/logo.png alt="Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="/">Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</a></h1>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Eclipse Debugging - Salvando Vidas
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2012-03-24T17:58:00+00:00">
+          <i class="fa fa-clock-o"></i>
+          Sáb 24 março 2012
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="/category/cc-django-java-programacao-python-selecionados.html">C/C++, Django, Java, programação, Python, Selecionados</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="/tag/c.html">#C</a>,               <a href="/tag/cpp.html">#CPP</a>,               <a href="/tag/debug.html">#debug</a>,               <a href="/tag/debugging.html">#debugging</a>,               <a href="/tag/django.html">#Django</a>,               <a href="/tag/eclipse.html">#Eclipse</a>,               <a href="/tag/java.html">#Java</a>,               <a href="/tag/pydev.html">#pydev</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Mais uma vez vou falar dessa ferramenta(dessa vez bem rápido, só para relatar o ocorrido recente).<br/>
+Estava ajudando minha namorada com um exercício de C no PC.<br/>
+Até que depois de um bom tempo tentando entender por que raios o <strong>printf</strong> não printava(nada como um <strong>fflush(stdout)</strong> para resolver) é que eu falei para ela usar o debug, e espantada eu fui explicar como funcionava.</p>
+<p>A ideia para quem não sabe é simples:</p>
+<ol>
+<li>você marca a linha em que você quer que o programa pare(<strong>BreakPoint</strong>):<br/>
+<a href="/wp-content/uploads/2012/03/breakpoint.png"><img alt="break point" class="img-fluid alignnone wp-image-1058 size-full" height="409" src="/wp-content/uploads/2012/03/breakpoint.png" title="breakpoint" width="428"/></a></li>
+<li>Depois clique no botão de debbug: <a href="/wp-content/uploads/2012/03/debug.jpg"><img alt="" class="wp-image-1062 img-fluid alignnone size-full" height="27" src="/wp-content/uploads/2012/03/debug.jpg" title="debug" width="38"/></a></li>
+<li>Usando as teclas <strong>F6</strong> para ir passo-a-passo, e <strong>F8</strong> para seguir direto para o próximo breakpoint é possível navegar pelo seu código observando exatamente o que está acontecendo.</li>
+</ol>
+<h2>C/C++</h2>
+<p>É claro que os passos são o modo genérico(Java), assim para funcionar isso em C é preciso dar build(<a href="/wp-content/uploads/2012/03/download.jpg"><img alt="build" class="wp-image-1064 img-fluid alignnone size-full" height="19" src="/wp-content/uploads/2012/03/download.jpg" title="build" width="37"/></a>) no Debug antes de debugar.</p>
+<h2>Django</h2>
+<p>É claro que depois disso eu me perguntei:<br/>
+<em>"Pera ai... Porque raios não uso isso nos meu projetos em Django?"</em></p>
+<p>Depois de 2 minutos configurando algumas coisas(minha estrutura de diretório de projetos não é a padrão, então tive que adicionar outras pastas no PYTHON_PATH do projeto).<br/>
+Depois disso é o mesmo procedimento: Colocar um breakpoint e executar o servidor com o Debug.</p>
+<p>Foi uma experiencia bacana, fui indo passo a passo por todo o processo do django desde o momento em que ele terminou uma view minha até o momento em que ele entrega a resposta... passando pelos middlewares e etc =)</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

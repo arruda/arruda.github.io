@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Trac + Git + Post-receive Hooks | Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida
+</title>
+  <link rel="canonical" href="/trac-git-post-receive-hooks.html">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  
+  <meta name="description" content="I'm just documenting this since I just made it work(again) in my test server, but need to implement this in my work. I just had some headache since I lost the first server I implemented this, and didn't have it documented anywhere, so now I'll post here what worked …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="/">
+        <img class="img-fluid rounded" src=images/logo.png alt="Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="/">Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</a></h1>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Trac + Git + Post-receive Hooks
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2012-09-04T13:24:00+01:00">
+          <i class="fa fa-clock-o"></i>
+          Ter 04 setembro 2012
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="/category/ambiente-de-trabalho-web.html">Ambiente de Trabalho, Web</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="/tag/012.html">#0.12</a>,               <a href="/tag/git.html">#git</a>,               <a href="/tag/gitolite.html">#gitolite</a>,               <a href="/tag/hooks.html">#hooks</a>,               <a href="/tag/locale.html">#locale</a>,               <a href="/tag/post-receive.html">#post-receive</a>,               <a href="/tag/script.html">#script</a>,               <a href="/tag/trac.html">#trac</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>I'm just documenting this since I just made it work(again) in my test server, but need to implement this in my work.<br/>
+I just had some headache since I lost the first server I implemented this, and didn't have it documented anywhere, so now I'll post here what worked for me, and some problems that I faced, and maybe this will help somebody else.</p>
+<p>But, after I started writting this post I just asked myself: "Why not make a Script that does all that I need?". And so I did:</p>
+<h2>The Script</h2>
+<p>The idea of this script is prepare a ambient with:</p>
+<ul>
+<li>TRAC 0.12(with locale)</li>
+<li>GIT server (Using Gitolite)</li>
+<li>New Trac Project and Git Repository</li>
+<li>Working Post-receive Hook integration for the new Repository and TRAC Tickets</li>
+</ul>
+<h2>The requirements</h2>
+<p>You'll need root permission to the Server or simillar.<br/>
+SSH acess to the server (OpenSSH for example)<br/>
+A working station (Another machine apart from the server, preferably your desktop or laptop).</p>
+<h2>Preparing the Script to Run</h2>
+<p>First you'll need to copy your's workstation RSA key to your Server(you can copy anywhare, ex: "/tmp/")</p>
+<p>``` {lang="shell"}
+scp ~/.ssh/id_rsa.pub root@DOMAIN_NAME:/tmp/myNewUser.pub</p>
+<div class="highlight"><pre><span></span><span class="o">**</span><span class="nv">Note</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">name</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">RSA</span> <span class="nv">key</span> <span class="nv">must</span> <span class="nv">be</span> <span class="nv">the</span> <span class="nv">SAME</span> <span class="nv">name</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">user</span> <span class="nv">you</span> <span class="nv">whant</span> <span class="nv">to</span> <span class="nv">have</span> <span class="nv">as</span> <span class="nv">the</span> <span class="nv">admin</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">GIT</span> <span class="nv">server</span> <span class="nv">and</span> <span class="nv">the</span> <span class="nv">TRAC</span> <span class="nv">Project</span> <span class="nv">that</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">created</span>.<span class="o">**</span>
+
+<span class="nv">After</span> <span class="nv">this</span> <span class="nv">you</span> <span class="nv">can</span> <span class="nv">download</span> <span class="nv">the</span> <span class="nv">script</span> <span class="nv">into</span> <span class="nv">anywhere</span>, <span class="nv">ex</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">shell</span><span class="s2">"</span>}
+<span class="nv">cd</span> <span class="o">/</span><span class="nv">tmp</span>
+<span class="nv">wget</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">arruda</span><span class="o">/</span><span class="nv">TRAC</span><span class="o">-</span><span class="nv">GIT</span><span class="o">-</span><span class="nv">HOOKS</span><span class="o">/</span><span class="nv">tarball</span><span class="o">/</span><span class="nv">master</span>
+<span class="nv">tar</span> <span class="o">-</span><span class="nv">zxvf</span> <span class="nv">master</span>
+<span class="nv">cd</span> <span class="nv">master</span>
+</pre></div>
+<h2>Running the Script</h2>
+<p>First of all the script is divided in two parts. That's because you have to do some manual configurations in the workinstation in the middle of the process.</p>
+<h3>First Script</h3>
+<p>``` {lang="shell"}
+./install_1.sh PROJECT_NAME REPO_NAME DOMAIN_NAME USER_NAME USER_PSSWD RSA_FOLDER_PATH</p>
+<div class="highlight"><pre><span></span><span class="n">Replacing</span> <span class="k">with</span> <span class="n">your</span> <span class="n">own</span> <span class="n">configurations</span> <span class="k">as</span> <span class="n">follow</span><span class="p">:</span>
+
+<span class="o">-</span>   <span class="n">PROJECT</span><span class="err">\</span><span class="n">_NAME</span><span class="p">:</span> <span class="k">is</span> <span class="n">the</span> <span class="n">name</span> <span class="k">of</span> <span class="n">your</span> <span class="n">project</span><span class="p">,</span> <span class="n">ex</span><span class="p">:</span> <span class="n">MyTrac</span>
+<span class="o">-</span>   <span class="n">REPO</span><span class="err">\</span><span class="n">_NAME</span><span class="p">:</span> <span class="k">is</span> <span class="n">the</span> <span class="n">name</span> <span class="k">of</span> <span class="n">your</span> <span class="n">repository</span><span class="p">,</span> <span class="n">ex</span><span class="p">:</span> <span class="n">mynewrepo</span>
+<span class="o">-</span>   <span class="k">DOMAIN</span><span class="err">\</span><span class="n">_NAME</span><span class="p">:</span> <span class="n">your</span> <span class="k">domain</span><span class="p">,</span> <span class="n">ex</span><span class="p">:</span> <span class="n">mysite</span><span class="p">.</span><span class="n">com</span>
+<span class="o">-</span>   <span class="k">USER</span><span class="err">\</span><span class="n">_NAME</span><span class="p">:</span> <span class="n">your</span> <span class="n">username</span><span class="p">,</span> <span class="n">ex</span><span class="p">:</span> <span class="n">myNewUser</span> <span class="p">(</span><span class="n">THIS</span> <span class="n">MUST</span> <span class="n">BE</span> <span class="n">THE</span> <span class="n">SAME</span> <span class="k">USER</span> <span class="n">NAME</span> <span class="k">OF</span> <span class="n">THE</span> <span class="n">RSA</span> <span class="k">KEY</span> <span class="k">BEFORE</span><span class="o">!</span><span class="p">)</span>
+<span class="o">-</span>   <span class="k">USER</span><span class="err">\</span><span class="n">_PSSWD</span><span class="p">:</span> <span class="n">your</span> <span class="n">password</span><span class="p">,</span> <span class="n">ex</span><span class="p">:</span> <span class="n">mystrongpass</span>
+<span class="o">-</span>   <span class="n">RSA</span><span class="err">\</span><span class="n">_FOLDER</span><span class="err">\</span><span class="n">_PATH</span><span class="p">:</span> <span class="n">the</span> <span class="n">path</span> <span class="k">to</span> <span class="n">the</span> <span class="n">folder</span> <span class="k">where</span> <span class="n">you</span> <span class="n">put</span> <span class="n">the</span> <span class="n">rsa</span> <span class="n">pub</span> <span class="k">key</span><span class="p">,</span> <span class="n">ex</span><span class="p">:</span> <span class="o">/</span><span class="n">tmp</span>
+
+<span class="k">Using</span> <span class="n">the</span> <span class="n">example</span> <span class="n">above</span> <span class="n">this</span> <span class="n">would</span> <span class="n">be</span> <span class="n">a</span> <span class="n">possible</span> <span class="k">usage</span><span class="p">:</span>
+
+<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"shell"</span><span class="err">}</span>
+<span class="p">.</span><span class="o">/</span><span class="n">install_1</span><span class="p">.</span><span class="n">sh</span> <span class="n">MyTrac</span> <span class="n">mynewrepo</span> <span class="n">mysite</span><span class="p">.</span><span class="n">com</span> <span class="n">myNewUser</span> <span class="n">mystrongpass</span> <span class="o">/</span><span class="n">tmp</span>
+</pre></div>
+<h2>Configuring the GIT server</h2>
+<p>This has to be done in your workstation after the fist part of the install:</p>
+<p>``` {lang="shell"}
+git clone git@DOMAIN_NAME:gitolite-admin</p>
+<div class="highlight"><pre><span></span><span class="nv">replacing</span> <span class="nv">DOMAIN</span>\<span class="nv">_NAME</span> <span class="nv">with</span> <span class="nv">your</span> <span class="nv">server</span> <span class="nv">domain</span>.
+
+<span class="nv">Open</span> <span class="nv">the</span> <span class="nv">conf</span><span class="o">/</span><span class="nv">gitolite</span>.<span class="nv">conf</span> <span class="nv">file</span>, <span class="nv">and</span> <span class="nv">add</span> <span class="nv">this</span> <span class="nv">lines</span> <span class="nv">to</span> <span class="nv">the</span> <span class="k">end</span> <span class="nv">of</span> <span class="nv">it</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">shell</span><span class="s2">"</span>}
+<span class="nv">repo</span> <span class="nv">REPO_NAME</span>
+    <span class="nv">RW</span><span class="o">+</span>    <span class="o">=</span>    <span class="nv">USER_NAME</span>
+</pre></div>
+<p>replacing REPO_NAME and USER_NAME with the ones used in the execution of the script, ex: myNewUser.</p>
+<p>Save, commit and push it.</p>
+<p>``` {lang="shell"}
+git add . 
+git commit -m 'new repo' 
+git push origin master</p>
+<div class="highlight"><pre><span></span><span class="gh">Finishing the Install</span>
+<span class="gh">---------------------</span>
+
+After this execute install\_2.sh, using the same parameters as before! Ex:
+
+<span class="s">``` {lang="shell"}</span>
+<span class="s">./install_2.sh MyTrac mynewrepo mysite.com myNewUser mystrongpass /tmp</span>
+</pre></div>
+<p>This will finish the TRAC project creation and the GIT configuration for the new repository.</p>
+<p>Also will install and configure the post-receive hook that allows you to <strong>close and reference tickects in the commit messages.</strong></p>
+<h2>Helping</h2>
+<p>If you want to help, feel free to fork the project on github:<br/>
+<a href="https://github.com/arruda/TRAC-GIT-HOOKS">https://github.com/arruda/TRAC-GIT-HOOKS</a></p>
+<p>That's all folks</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
