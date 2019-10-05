@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Sharing Files Easily With Python | Arruda
+</title>
+  <link rel="canonical" href="https://arruda.github.io/programacao/sharing-files-easily-with-python.html">
+
+    <link rel="apple-touch-icon" href="https://arruda.github.io/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://arruda.github.io/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://arruda.github.io/feeds/all.atom.xml">
+  
+  <meta name="description" content="Want to share some files in a folder from your unix OS to others PCs on the same network, without having to install any other library, just Python? Simple HTTP Server There is a simple command that lets you create a very basic HTPP server in the current folder, and …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://arruda.github.io/">
+        <img class="img-fluid rounded" src=https://arruda.github.io/images/logo.png alt="Arruda">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://arruda.github.io/">Arruda</a></h1>
+      <p class="text-muted">Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Sharing Files Easily With Python
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-04-01T19:42:00+01:00">
+          <i class="fa fa-clock-o"></i>
+          Seg 01 abril 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://arruda.github.io/category/programacao.html">programação</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://arruda.github.io/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://arruda.github.io/tag/files.html">#files</a>,               <a href="https://arruda.github.io/tag/oneline.html">#oneline</a>,               <a href="https://arruda.github.io/tag/python.html">#python</a>,               <a href="https://arruda.github.io/tag/server.html">#server</a>,               <a href="https://arruda.github.io/tag/sharing.html">#sharing</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Want to share some files in a folder from your unix OS to others PCs on the same network, without having to install any other library, just Python?</p>
+<h1>Simple HTTP Server</h1>
+<p>There is a simple command that lets you create a very basic HTPP server in the current folder, and it's just one line!</p>
+<p>``` {lang="python"}
+python -m SimpleHTTPServer 8000</p>
+<div class="highlight"><pre><span></span><span class="nv">This</span> <span class="nv">will</span> <span class="nv">run</span> <span class="nv">a</span> <span class="nv">local</span> <span class="nv">server</span> <span class="nv">using</span> <span class="nv">the</span> <span class="nv">port</span> <span class="mi">8000</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">current</span> <span class="nv">dir</span><span class="ss">(</span><span class="nv">from</span> <span class="nv">where</span> <span class="nv">you</span> <span class="nv">run</span> <span class="nv">this</span> <span class="nv">command</span><span class="ss">)</span>.
+
+<span class="k">Then</span> <span class="nv">I</span><span class="s1">'</span><span class="s">ll you need to do is get your IP and access it in a browser from another PC, ex:  </span>
+<span class="o">**</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">0</span>.<span class="mi">5</span>:<span class="mi">8000</span><span class="o">**</span>
+
+<span class="nv">And</span> <span class="k">then</span> <span class="nv">you</span> <span class="nv">just</span> <span class="nv">navigate</span> <span class="nv">and</span> <span class="nv">download</span> <span class="nv">the</span> <span class="nv">files</span> <span class="nv">from</span> <span class="nv">the</span> <span class="nv">browser</span>, <span class="nv">simple</span> <span class="nv">as</span> <span class="nv">that</span><span class="o">!</span>
+
+<span class="nv">So</span> <span class="k">if</span> <span class="nv">I</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">share</span> <span class="nv">the</span> <span class="nv">contents</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">folder</span>: <span class="o">**/</span><span class="nv">home</span><span class="o">/</span><span class="nv">my</span>\<span class="nv">_user</span><span class="o">/</span><span class="nv">some</span>\<span class="nv">_folder</span><span class="o">**</span>, <span class="nv">just</span> <span class="nv">enter</span> <span class="nv">this</span> <span class="nv">folder</span>,  
+<span class="nv">and</span> <span class="nv">run</span> <span class="nv">the</span> <span class="o">**</span><span class="nv">simpleHTTTPServer</span><span class="o">**</span> <span class="nv">in</span> <span class="nv">there</span><span class="o">!</span>
+
+\[<span class="nv">adsense</span>\]
+
+<span class="nv">Using</span> <span class="nv">an</span> <span class="nv">alias</span>
+<span class="o">--------------</span>
+
+<span class="nv">You</span> <span class="nv">can</span> <span class="nv">even</span> <span class="nv">set</span> <span class="nv">a</span> <span class="nv">alias</span> <span class="nv">on</span> <span class="nv">your</span> <span class="nv">bash</span>\<span class="nv">_rc</span><span class="ss">(</span><span class="nv">or</span> <span class="nv">similar</span><span class="ss">)</span> <span class="nv">to</span> <span class="nv">make</span> <span class="nv">it</span> <span class="nv">easier</span>, <span class="nv">ex</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">shell</span><span class="s2">"</span>}
+<span class="nv">alias</span> <span class="nv">share_local</span> <span class="o">=</span> <span class="s1">'</span><span class="s">python -m SimpleHTTPServer 8000</span><span class="s1">'</span>
+</pre></div>
+<p>Then all you'll have to do is:</p>
+<p><code>{lang="shell"}
+share_local</code></p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://arruda.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://arruda.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

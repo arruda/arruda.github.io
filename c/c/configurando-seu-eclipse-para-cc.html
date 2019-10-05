@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Configurando seu Eclipse para C/C++ | Arruda
+</title>
+  <link rel="canonical" href="https://arruda.github.io/c/c/configurando-seu-eclipse-para-cc.html">
+
+    <link rel="apple-touch-icon" href="https://arruda.github.io/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://arruda.github.io/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://arruda.github.io/feeds/all.atom.xml">
+  
+  <meta name="description" content="Depois de muito tempo programando em IDEs simplistas como Dev, ou exageradas como microsoft c++, finalmente descobri a IDE que supre todas as minhas necessidades de programação em C/C++: Eclipse Para aqueles não familiarizados com o nome (não, não tem nada haver com vampiros que brilham no sol), o …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://arruda.github.io/">
+        <img class="img-fluid rounded" src=https://arruda.github.io/images/logo.png alt="Arruda">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://arruda.github.io/">Arruda</a></h1>
+      <p class="text-muted">Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Configurando seu Eclipse para C/C++
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2011-04-02T17:42:00+01:00">
+          <i class="fa fa-clock-o"></i>
+          Sáb 02 abril 2011
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://arruda.github.io/category/c/c.html">C/C++</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://arruda.github.io/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://arruda.github.io/tag/c.html">#C</a>,               <a href="https://arruda.github.io/tag/cpp.html">#CPP</a>,               <a href="https://arruda.github.io/tag/eclipse.html">#Eclipse</a>,               <a href="https://arruda.github.io/tag/ide.html">#IDE</a>,               <a href="https://arruda.github.io/tag/programacao.html">#programação</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Depois de muito tempo programando em IDEs simplistas como Dev, ou exageradas como microsoft c++, finalmente descobri a IDE que supre todas as minhas necessidades de programação em C/C++:<br/>
+<strong>Eclipse</strong></p>
+<p>Para aqueles não familiarizados com o nome (não, não tem nada haver com vampiros que brilham no sol), o Eclipse é uma das melhores IDEs de Java no mercado, junto com Netbeens e outras.<br/>
+Mas, indo direto ao que interessa, essa magnífica ferramenta possui certas facilidades como:</p>
+<ul>
+<li>Auto-completar</li>
+<li>Simplicidade de uso</li>
+<li>Roda leve como uma pluma.</li>
+</ul>
+<p>Bem, basicamente é como eu digo: "Não programe, deixe que o Eclipse programe por você."</p>
+<p>Não vejo muito sentido em ter que escrever todas as linhas de código quando já existem IDEs que são capazes de tal feito.<br/>
+[adsense]</p>
+<h2><strong>Instalação:</strong></h2>
+<p>Para instalar o Eclipse C/C++ na sua maquina, basta fazer o download do programa:<br/>
+<a href="http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/galileosr2" title="Eclipse C++">Eclipse Galileo C/C++</a><br/>
+(Sistemas de 64 bits: <a href="http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/heliosr" title="Eclipse C++">Eclipse Helios C/C++</a>)</p>
+<p>E escolha a versão compatível com sua maquina.</p>
+<p>Após o download é necessário instalar algum compilador de C e ou C++.<br/>
+<strong>Windows:</strong> <a href="http://sourceforge.net/projects/mingw/files/Automated%20MinGW%20Installer/">http://sourceforge.net/projects/mingw/files/Automated%20MinGW%20Installer/</a></p>
+<p><strong>Linux(Ubuntu):</strong> \$sudo apt-get install g++ gcc</p>
+<h2><strong>Criando um Novo Projeto:</strong></h2>
+<p>Após a instalação de um compilador, basta iniciar o seu Eclipse recém baixado, clicar File-&gt;New-&gt;C++ Project(ou C Project dependendo do que você quer).<br/>
+Escolha um nome para o projeto, Ex: Projeto1.<br/>
+Selecione um Toolchain(mingw para windows, linux gcc para ubuntu, ou seu compilador preferido) e clique em "next".<br/>
+Depois escolha o que você quer usar, realease(executavel normal) e ou debug(debugger) e clique em "finish".</p>
+<p>Pronto! Seu projeto em C/C++ em Eclipse já está pronto para ser usado.</p>
+<h2><strong>Adicionando Arquivos Fonte ao Projeto:</strong></h2>
+<p>Para incluir um arquivo ao projeto, clique com o botao direito no projeto, vá em "new-&gt;file" e digite o nome do arquivo.</p>
+<p>Opcionalmente você pode escolher criar um arquivo Header(arquivo.h), Source(arquivo.c/cpp) ou uma classe(classe.h e classe.cpp).</p>
+<h2><strong>Executar um Projeto</strong>:</h2>
+<p>Para executar um projeto basta ir em Run-&gt;Run(Tecla de atalho Ctrl+F11)<br/>
+Detalhe, que ao fazer isso seu projeto será automaticamente recompilado.<br/>
+Para recompilar um projeto, basta clicar na seta ao lado do icone de um Martelo, e selecionar a opção que você deseja(Release ou Debug).</p>
+<h2><strong>Debugando No Eclipse:</strong></h2>
+<p>Clique com o botão direito do mouse no canto esquerdo do arquivo(Onde aparece a numeração das linhas) em cima da linha em que você deseja adicionar um ponto de parada(BreakPoint), e selecione a opção Toggle BreakPoint.</p>
+<p>Clique em Run-&gt;Debug(Tecla de atalho F11).<br/>
+Será dado um aviso pedindo para mudar para a perspectiva de Debug(aconselho marcar que sim).<br/>
+Na perspectiva de debug utilize F6 para avançar e F5 para entrar em um metodo(apesar de eu nunca me entender bem com esse cara, mesmo no Java).</p>
+<p>Numa janela ao lado estão disponíveis as variáveis e seus valores, tao como os BreakPoints do seu projeto(você pode habilitar ou desabilita-los por ali se quiser).</p>
+<h2><strong>Facilidades do Eclipse</strong>:</h2>
+<p>Vou falar apenas da mais famosa e mais utilizada de todas:</p>
+<p><strong>Ctrl+Espaço = Auto-Completar.</strong></p>
+<p>Essa opção permite que você acelere sua codificação em um tempo incalculável(Tá eu talvez eu que seja ruim em calculo).<br/>
+Ex:<br/>
+Classe instanciaComNomeGrande = new Classe();<br/>
+...<br/>
+Escreva "inst" e aperte Ctrl+Espaço e veja o Eclipse selecionando a instanciaComNomeGrande da lista de possíveis opções para você.<br/>
+Mas vai além, após por um . em instanciaComNomeGrande e usar o auto-completar, ele te dará a lista de opções de métodos e variáveis dessa instancia!</p>
+<p>Enfim... são muitas as facilidades que essa IDE proporciona, para aqueles que desejam saber melhor sobre as 3 teclas mais uteis da IDE(Ctrl+1, Ctrl+3, Ctrl+Espaco) pode ver esse <a href="http://blog.caelum.com.br/as-tres-principais-teclas-de-atalho-do-eclipse/" title="As tres principais teclas de atalho do eclipse">post</a> que fala bem delas.</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://arruda.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://arruda.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

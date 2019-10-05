@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  JayFlot - Integração Flot e Java Web | Arruda
+</title>
+  <link rel="canonical" href="https://arruda.github.io/java/jayflot-integracao-flot-e-java-web.html">
+
+    <link rel="apple-touch-icon" href="https://arruda.github.io/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://arruda.github.io/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://arruda.github.io/feeds/all.atom.xml">
+  
+  <meta name="description" content="Quem nunca pensou em usar um ou mais gráficos em sua app Java Web? Para fazer em desktop existem várias bibliotecas que permitem tal proeza, mas quando vamos para web... Aí é outra história, e pelo que pesquisei, a única forma de fazer gráficos sem dor de cabeça é usando …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://arruda.github.io/">
+        <img class="img-fluid rounded" src=https://arruda.github.io/images/logo.png alt="Arruda">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://arruda.github.io/">Arruda</a></h1>
+      <p class="text-muted">Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  JayFlot - Integração Flot e Java Web
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2011-09-01T10:51:00+01:00">
+          <i class="fa fa-clock-o"></i>
+          Qui 01 setembro 2011
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://arruda.github.io/category/java.html">Java</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://arruda.github.io/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://arruda.github.io/tag/download.html">#download</a>,               <a href="https://arruda.github.io/tag/exemplo.html">#exemplo</a>,               <a href="https://arruda.github.io/tag/facil.html">#facil</a>,               <a href="https://arruda.github.io/tag/flot.html">#flot</a>,               <a href="https://arruda.github.io/tag/integracao.html">#integracao</a>,               <a href="https://arruda.github.io/tag/java.html">#Java</a>,               <a href="https://arruda.github.io/tag/jayflot.html">#jayflot</a>,               <a href="https://arruda.github.io/tag/plot.html">#plot</a>,               <a href="https://arruda.github.io/tag/plotagem.html">#plotagem</a>,               <a href="https://arruda.github.io/tag/web.html">#web</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Quem nunca pensou em usar um ou mais gráficos em sua app Java Web?<br/>
+Para fazer em desktop existem várias bibliotecas que permitem tal proeza, mas quando vamos para web... Aí é outra história, e pelo que pesquisei, a única forma de fazer gráficos sem dor de cabeça é usando o <a href="http://code.google.com/p/flot/">Flot</a>.</p>
+<h2>O Problema</h2>
+<p>O que pode dificultar a utilização do Flot é que é preciso fazer uma série de métodos para serializar os dados que se quer para gerar o dicionário de dados em JS.<br/>
+Isso, além de cansativo é repetitivo. Foi aí que tive a idéia de fazer uma biblioteca Java para lidar com isso, seu nome é <strong>JayFlot</strong>.</p>
+<h2>JayFlot</h2>
+<p>Essa biblioteca permite uma fácil serializacao, além de ter métodos que facilitam a criação de gráficos internamente.<br/>
+E o melhor de tudo é que pode ser usado em praticamente qualquer framework web de Java.</p>
+<h2>Exemplo</h2>
+<p>Vamos supor que esteja usando <strong>JSF</strong> e sua app seja uma loja virtual, e queira fazer um grafico com informações de <strong>vendas</strong> e <strong>custo</strong> de um produto por <strong>período</strong>.</p>
+<h3>1º Passo</h3>
+<p>Inclua no seu projeto as bibliotecas <strong>jayflot-0.1.jar</strong> e <strong>gson-1.7.1.jar</strong>.<br/>
+Agora você já pode usar o jayflot</p>
+<h3>2º Passo</h3>
+<p>No service faça um método para gerar os dados do grafico(usando um ArrayList da classe PlotData). Lembrando, de fazer o import das classes <strong>Plot</strong> e <strong>PlotData</strong>.<br/>
+Ex:</p>
+<p>``` {lang="java" line="1"}
+public ArrayList gerarPlotDataDeCustoEVendasPorPeriodo(List periodos, List vendas, List custos){
+     ArrayList datas = ArrayList();
+     //o primeiro parâmetro do método é o eixo X e o segundo o eixo Y
+     PlotData vendasData = Plot.generatePlotData(periodos,vendas);
+     vendasData.setLabel("Vendas");
+     datas.add(vendasData);</p>
+<div class="highlight"><pre><span></span> <span class="nv">PlotData</span> <span class="nv">custosData</span> <span class="o">=</span> <span class="nv">Plot</span>.<span class="nv">generatePlotData</span><span class="ss">(</span><span class="nv">periodos</span>,<span class="nv">custos</span><span class="ss">)</span><span class="c1">;</span>
+ <span class="nv">custosData</span>.<span class="nv">setLabel</span><span class="ss">(</span><span class="s2">"</span><span class="s">Custos</span><span class="s2">"</span><span class="ss">)</span><span class="c1">;</span>
+ <span class="nv">datas</span>.<span class="nv">add</span><span class="ss">(</span><span class="nv">custosData</span><span class="ss">)</span><span class="c1">;</span>
+ <span class="k">return</span> <span class="nv">datas</span><span class="c1">;</span>
+</pre></div>
+<p>} </p>
+<div class="highlight"><pre><span></span>### <span class="mi">3</span>º <span class="nv">Passo</span>
+
+<span class="nv">Ainda</span> <span class="nv">no</span> <span class="nv">service</span> <span class="nv">fa</span>ç<span class="nv">a</span> <span class="nv">um</span> <span class="nv">outro</span> <span class="nv">m</span>é<span class="nv">todo</span> <span class="nv">para</span> <span class="nv">gerar</span> <span class="nv">o</span> <span class="nv">grafico</span><span class="ss">(</span><span class="nv">uma</span> <span class="nv">instancia</span> <span class="nv">da</span> <span class="nv">classe</span> <span class="o">**</span><span class="nv">Plot</span><span class="o">**</span><span class="ss">)</span> <span class="nv">usando</span> <span class="nv">os</span> <span class="nv">dados</span> <span class="nv">populados</span> <span class="nv">no</span> <span class="nv">m</span>é<span class="nv">todo</span> <span class="nv">anterior</span>:  
+<span class="nv">Ex</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">java</span><span class="s2">"</span> <span class="nv">line</span><span class="o">=</span><span class="s2">"</span><span class="s">1</span><span class="s2">"</span>}
+<span class="nv">public</span> <span class="nv">Plot</span> <span class="nv">gerarPlotDeCustoEVendasPorPeriodo</span><span class="ss">(</span><span class="nv">List</span> <span class="nv">periodos</span>, <span class="nv">List</span> <span class="nv">vendas</span>, <span class="nv">List</span> <span class="nv">custos</span><span class="ss">)</span>{
+     <span class="o">//</span><span class="nv">chama</span> <span class="nv">o</span> <span class="nv">metodo</span> <span class="nv">anterior</span> <span class="nv">para</span> <span class="nv">gerar</span> <span class="nv">o</span> <span class="nv">ArrayList</span> <span class="nv">de</span> <span class="nv">PlotData</span>.
+     <span class="nv">ArrayList</span> <span class="nv">datas</span> <span class="o">=</span> <span class="nv">this</span>.<span class="nv">gerarPlotDataDeCustoEVendasPorPeriodo</span><span class="ss">(</span><span class="nv">periodos</span>,<span class="nv">vendas</span>,<span class="nv">custos</span><span class="ss">)</span><span class="c1">;</span>
+
+     <span class="o">//</span><span class="nv">os</span> <span class="nv">parametros</span> <span class="nv">sao</span>: <span class="nv">Lista</span> <span class="nv">das</span> <span class="nv">PlotDatas</span> <span class="nv">desse</span> <span class="nv">grafico</span>, <span class="nv">Label</span> <span class="k">do</span> <span class="nv">Eixo</span> <span class="nv">X</span> <span class="nv">e</span> <span class="nv">Label</span> <span class="k">do</span> <span class="nv">Eixo</span> <span class="nv">Y</span>.
+     <span class="nv">Plot</span> <span class="nv">grafico</span> <span class="o">=</span> <span class="nv">Plot</span>.<span class="nv">generatePlot</span><span class="ss">(</span><span class="nv">datas</span>,<span class="s2">"</span><span class="s">Periodos De Produção</span><span class="s2">"</span>,<span class="s2">"</span><span class="s">R$</span><span class="s2">"</span><span class="ss">)</span><span class="c1">;</span>
+     <span class="k">return</span> <span class="nv">grafico</span><span class="c1">;</span>
+} 
+</pre></div>
+<h3>4º Passo</h3>
+<p>No seu manageBean faça uma instancia de um <strong>Plot</strong> que será seu grafico, e faça ele receber o retorno do seu metodo criado no service. E não esqueça dos métodos <strong>Get e Set</strong> para ele!<br/>
+Ex:</p>
+<p>``` {lang="java"}
+private Plot graficoVendasCustosPeriodo;
+....
+public String mostrarGraficoVendasECustosPorPeriodo(){
+     //considerando que em algum momento você já populou os vetores de periodos, vendas e custos
+     graficoVendasCustosPeriodo = meuService.gerarPlotDeCustoEVendasPorPeriodo(periodos,vendas,custos);
+     return PAGINA_GRAFICO;
+} </p>
+<div class="highlight"><pre><span></span>### <span class="mi">5</span>º <span class="nv">Passo</span>
+
+<span class="nv">Fa</span>ç<span class="nv">a</span> <span class="nv">a</span> <span class="nv">sua</span> <span class="nv">tela</span> <span class="nv">de</span> <span class="nv">grafico</span>, <span class="nv">quando</span> <span class="k">for</span> <span class="nv">fazer</span> <span class="nv">o</span> <span class="nv">JS</span>, <span class="nv">fa</span>ç<span class="nv">a</span> <span class="nv">algo</span> <span class="k">do</span> <span class="nv">tipo</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">javascript</span><span class="s2">"</span>}
+<span class="nv">data</span> <span class="o">=</span> []<span class="c1">;</span>
+<span class="nv">data</span> <span class="o">=</span> #{<span class="nv">myBean</span>.<span class="nv">graficoVendasCustosPeriodo</span>.<span class="nv">printData</span>}<span class="c1">;</span>
+...
+<span class="nv">options</span> <span class="o">=</span> {}<span class="c1">;</span>
+<span class="nv">options</span> <span class="o">=</span> #{<span class="nv">myBean</span>.<span class="nv">graficoVendasCustosPeriodo</span>.<span class="nv">printOptions</span>}<span class="c1">;</span>
+....
+$<span class="nv">j</span>.<span class="nv">plot</span><span class="ss">(</span>$<span class="nv">j</span><span class="ss">(</span><span class="s2">"</span><span class="s">#placeholder</span><span class="s2">"</span><span class="ss">)</span>, <span class="nv">data</span>, <span class="nv">options</span><span class="ss">)</span><span class="c1">;</span>
+...
+</pre></div>
+<p>Dessa forma onde teriam que ter as informações de data e options no Flot ele irá imprimir os dados do seu gráfico que está no bean.<br/>
+<strong>Ou você pode usar a tag JSF que eu fiz: <a href="https://gist.github.com/78453a5a55fc63284126">JayFlot_CheckBoxTag_JSF</a></strong></p>
+<h3>Pronto, seu gráfico está feito!</h3>
+<p>Sem dor de cabeça, sem ter que ficar gerando json, ou concatenando strings, nem nada. Só chamar os métodos do Plot e setar algumas informações.</p>
+<h2>Onde Baixar?</h2>
+<p>Quem quiser pode fazer o download da biblioteca, os fontes se encontram no GitHub: <a href="http://arruda.github.com/JayFlot/">http://arruda.github.com/JayFlot</a>.</p>
+<p>Um abraço a todos.</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://arruda.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://arruda.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

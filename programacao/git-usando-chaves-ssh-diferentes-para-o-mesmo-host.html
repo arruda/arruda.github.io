@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  GIT - Usando Chaves SSH Diferentes Para o Mesmo Host | Arruda
+</title>
+  <link rel="canonical" href="https://arruda.github.io/programacao/git-usando-chaves-ssh-diferentes-para-o-mesmo-host.html">
+
+    <link rel="apple-touch-icon" href="https://arruda.github.io/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://arruda.github.io/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://arruda.github.io/feeds/all.atom.xml">
+  
+  <meta name="description" content="Uma dica para quem usa SSH para fazer push em reposítórios GIT, mas gostaria de usar uma chave SSH diferente para diferentes repositórios, mas que sejam do mesmo host: Caso de Uso Bem, posse ser meio estranho, mas vou dar um exemplo de como você pode querer aproveitar isso: Vamos …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://arruda.github.io/">
+        <img class="img-fluid rounded" src=https://arruda.github.io/images/logo.png alt="Arruda">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://arruda.github.io/">Arruda</a></h1>
+      <p class="text-muted">Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  GIT - Usando Chaves SSH Diferentes Para o Mesmo Host
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-11-02T18:43:00+00:00">
+          <i class="fa fa-clock-o"></i>
+          Sáb 02 novembro 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://arruda.github.io/category/programacao.html">programação</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://arruda.github.io/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://arruda.github.io/tag/chave.html">#chave</a>,               <a href="https://arruda.github.io/tag/config.html">#config</a>,               <a href="https://arruda.github.io/tag/diferente.html">#diferente</a>,               <a href="https://arruda.github.io/tag/github.html">#github</a>,               <a href="https://arruda.github.io/tag/heroku.html">#heroku</a>,               <a href="https://arruda.github.io/tag/host.html">#host</a>,               <a href="https://arruda.github.io/tag/rsa.html">#rsa</a>,               <a href="https://arruda.github.io/tag/ssh.html">#ssh</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Uma dica para quem usa SSH para fazer push em reposítórios GIT, mas gostaria de usar uma chave SSH diferente para diferentes repositórios, mas que sejam do mesmo host:</p>
+<h2>Caso de Uso</h2>
+<p>Bem, posse ser meio estranho, mas vou dar um exemplo de como você pode querer aproveitar isso:</p>
+<p>Vamos supor que você trabalha na empresa <strong>Empresa SA</strong> mas também tem diversos projetos pessoais.<br/>
+Para sua empresa, você deve usar uma chave SSH específica, e claro, para seus projetos pessoas você usa outra chave SSH.<br/>
+Considere que ambos os repositórios estão no Github (mesmo Host).<br/>
+Assim você tem um projeto pessoal em <strong>git\@github.com:arruda/um_proj.git</strong> e está trabalhando em um da sua empresa que está em <strong>git\@github.com:empresa_sa/outro_proj.git</strong>.</p>
+<p>Pronto, temos o cenário, como fazemos para o SO entender que no repositório do projeto pessoal você quer usar sua chave SSH pessoal, e que no do trabalho você quer utilizar sua chave SSH do trabalho?<br/>
+[adsense]</p>
+<h2>Solução</h2>
+<p>Para isso devemos fazer as coisas em 2 etapas bem simples:</p>
+<h3>Host com Apelido</h3>
+<p>Vamos começar definindo "apelidos" para um dos repositórios, assim será possível diferenciar os host de cada um dos repositórios.</p>
+<p>Para isso edite o arquivo de configuração de SSH do seu usuário, em sistema Debian ele costuma ficar em:<br/>
+<strong>\~/.ssh/config</strong><br/>
+Ponha no fim desse arquivo, o seguinte texto:</p>
+<p>``` {lang="shell"}
+Host repo_da_minha_empresa_sa
+  HostName github.com
+  IdentityFile ~/.ssh/minha_chave_da_empresa
+  User git</p>
+<div class="highlight"><pre><span></span><span class="nv">Onde</span>:
+
+<span class="o">-</span>   <span class="o">**</span><span class="nv">repo</span>\<span class="nv">_da</span>\<span class="nv">_minha</span>\<span class="nv">_empresa</span>\<span class="nv">_sa</span><span class="o">**</span>: <span class="nv">Um</span> <span class="nv">apelido</span> <span class="nv">intuitivo</span> <span class="nv">para</span> <span class="nv">esse</span> <span class="nv">host</span>
+<span class="o">-</span>   <span class="o">**</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">**</span>: <span class="nv">Hostname</span> <span class="nv">de</span> <span class="nv">onde</span> <span class="nv">est</span>á <span class="nv">hospedado</span> <span class="nv">o</span> <span class="nv">remote</span> <span class="k">do</span> <span class="nv">GIT</span>
+<span class="o">-</span>   <span class="o">**</span>\<span class="o">~/</span>.<span class="nv">ssh</span><span class="o">/</span><span class="nv">minha</span>\<span class="nv">_chave</span>\<span class="nv">_da</span>\<span class="nv">_empresa</span><span class="o">**</span>:<span class="nv">Caminho</span> <span class="nv">para</span> <span class="nv">a</span> <span class="nv">chave</span> <span class="nv">SSH</span> <span class="nv">que</span> <span class="nv">voc</span>ê <span class="nv">usa</span> <span class="nv">no</span> <span class="nv">seu</span> <span class="nv">trabalho</span>
+<span class="o">-</span>   <span class="o">**</span><span class="nv">git</span><span class="o">**</span>:<span class="nv">Usu</span>á<span class="nv">rio</span> <span class="nv">que</span> é <span class="nv">usado</span> <span class="nv">no</span> <span class="nv">SSH</span> <span class="ss">(</span>é <span class="nv">o</span> <span class="nv">que</span> <span class="nv">vem</span> <span class="nv">antes</span> <span class="k">do</span> <span class="s2">"</span><span class="s">**@**</span><span class="s2">"</span> <span class="nv">em</span> <span class="nv">git</span>\@<span class="nv">github</span>.<span class="nv">com</span>:<span class="nv">empresa</span>\<span class="nv">_sa</span><span class="o">/</span><span class="nv">outro</span>\<span class="nv">_proj</span>.<span class="nv">git</span><span class="ss">)</span>
+
+<span class="nv">Com</span> <span class="nv">isso</span> <span class="nv">definimos</span> <span class="nv">que</span> <span class="nv">onde</span> <span class="nv">houver</span> <span class="nv">o</span> <span class="nv">Host</span>: <span class="s2">"</span><span class="s">**repo\_da\_minha\_empresa\_sa**</span><span class="s2">"</span>, <span class="nv">ser</span>á <span class="nv">usado</span> <span class="nv">a</span> <span class="nv">chave</span> <span class="nv">SSH</span> <span class="k">do</span> <span class="nv">seu</span> <span class="nv">trabalho</span> <span class="nv">ao</span> <span class="nv">inv</span>é<span class="nv">s</span> <span class="nv">da</span> <span class="nv">padr</span>ã<span class="nv">o</span>.
+
+<span class="nv">Com</span> <span class="nv">isso</span> <span class="nv">terminamos</span> <span class="nv">o</span> <span class="nv">primeiro</span> <span class="nv">passo</span>.
+
+### <span class="nv">Colocando</span> <span class="nv">o</span> <span class="nv">Apelido</span> <span class="nv">no</span> <span class="nv">repos</span>í<span class="nv">torio</span> <span class="nv">Git</span>
+
+<span class="nv">Agora</span> <span class="nv">devemos</span> <span class="nv">ir</span> <span class="nv">para</span> <span class="nv">o</span> <span class="nv">reposit</span>ó<span class="nv">rio</span> <span class="nv">local</span> <span class="k">do</span> <span class="nv">seu</span> <span class="nv">projeto</span> <span class="k">do</span> <span class="nv">trabalho</span>, <span class="nv">e</span> <span class="nv">nele</span> <span class="nv">editar</span> <span class="nv">as</span> <span class="nv">configura</span>çõ<span class="nv">es</span> <span class="k">do</span> <span class="nv">mesmo</span>.  
+<span class="nv">Para</span> <span class="nv">isso</span>, <span class="nv">dentro</span> <span class="k">do</span> <span class="nv">reposit</span>ó<span class="nv">rio</span> <span class="nv">abra</span> <span class="nv">o</span> <span class="nv">seguinte</span> <span class="nv">arquivo</span>: <span class="o">**</span>.<span class="nv">git</span><span class="o">/</span><span class="nv">config</span><span class="o">**</span>  
+<span class="nv">Procure</span> <span class="nv">por</span>: <span class="o">**</span>\[<span class="nv">remote</span> <span class="s2">"</span><span class="s">origin</span><span class="s2">"</span>\]<span class="o">**</span>, <span class="nv">essa</span> <span class="nv">se</span>çã<span class="nv">o</span> <span class="nv">deve</span> <span class="nv">ser</span> <span class="nv">parecida</span> <span class="nv">com</span> <span class="nv">a</span> <span class="nv">seguinte</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">shell</span><span class="s2">"</span>}
+[<span class="nv">remote</span> <span class="s2">"</span><span class="s">origin</span><span class="s2">"</span>]
+    <span class="nv">fetch</span> <span class="o">=</span> <span class="o">+</span><span class="nv">refs</span><span class="o">/</span><span class="nv">heads</span><span class="cm">/*:refs/remotes/origin/*</span>
+<span class="cm">    url = git@github.com:empresa_sa/outro_proj.git</span>
+</pre></div>
+<p>O que você vai alterar é que no lugar de "github.com", você vai colocar o apelido que você definiu no arquivo <strong>\~/.ssh/config</strong>, neste exemplo ficaria:</p>
+<p><code>{lang="shell"}
+[remote "origin"]
+    fetch = +refs/heads/*:refs/remotes/origin/*
+    url = git@repo_da_minha_empresa_sa:empresa_sa/outro_proj.git</code></p>
+<p>Pronto, agora quando for utilizar o SSH nesse repositório, para fazer pull, push e etc, ele irá utilizar a chave SSH do seu trabalho, ao inves da padrão. E seu repositório pessoal continuará utilizando a chave padrão (usando chave RSA é a chave <strong>id_rsa</strong>).</p>
+<p>Com isso concluo essa importante dica (<strong>muito importante também se você tem um heroku pessoal e um heroku da sua empresa</strong>).</p>
+<p>Para uma boa referência, segue um dos links que me ajudaram nessa questão:<br/>
+<a href="http://stackoverflow.com/questions/7927750/specify-an-ssh-key-for-git-push-without-using-ssh-config" title="Specify an SSH key for git push without using ~/.ssh/config">Specify an SSH key for git push without using \~/.ssh/config</a></p>
+<p>Abraços.</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://arruda.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://arruda.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Django 1.7 - Uma das melhores releases do Django? | Arruda
+</title>
+  <link rel="canonical" href="https://arruda.github.io/django/django-1-7-uma-das-melhores-releases-do-django.html">
+
+    <link rel="apple-touch-icon" href="https://arruda.github.io/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://arruda.github.io/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://arruda.github.io/feeds/all.atom.xml">
+  
+  <meta name="description" content="Para quem ainda não sabe a nova versão do Django (a versão 1.7) em data de lançamento prevista para 16 de Maio deste ano. "E dai?" vocês devem estar perguntando... Bem, "e dai" que essa nova versão tem diversas novas funcionalidades que por mim é uma das melhores (se …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://arruda.github.io/">
+        <img class="img-fluid rounded" src=https://arruda.github.io/images/logo.png alt="Arruda">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://arruda.github.io/">Arruda</a></h1>
+      <p class="text-muted">Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Django 1.7 - Uma das melhores releases do Django?
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2014-01-13T10:23:00+00:00">
+          <i class="fa fa-clock-o"></i>
+          Seg 13 janeiro 2014
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://arruda.github.io/category/django.html">Django</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://arruda.github.io/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://arruda.github.io/tag/17.html">#1.7</a>,               <a href="https://arruda.github.io/tag/django.html">#Django</a>,               <a href="https://arruda.github.io/tag/melhor.html">#melhor</a>,               <a href="https://arruda.github.io/tag/notas.html">#notas</a>,               <a href="https://arruda.github.io/tag/notes.html">#notes</a>,               <a href="https://arruda.github.io/tag/release.html">#release</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Para quem ainda não sabe a nova versão do Django (a versão <strong>1.7</strong>) em data de lançamento prevista para <strong>16 de Maio</strong> deste ano.</p>
+<p>"E dai?" vocês devem estar perguntando... Bem, "e dai" que essa nova versão tem diversas novas funcionalidades que por mim é uma das <strong>melhores</strong> (se não a melhor) releases do Django até agora. Eis os porquês:<br/>
+[adsense]</p>
+<h2>Schema Migration</h2>
+<p>Por mim essa é a principal novidade.<br/>
+Finalmente o Core do Django decidiu investir, com uma abordagem muito interessante (<a href="http://www.kickstarter.com/projects/andrewgodwin/schema-migrations-for-django" title="Schema Migration do Django no Kickstarter">um projeto no kickstarter</a>), e agora o Django terá uma App de Schema Migration embutida e pronta para ser usada =D.</p>
+<p>Basicamente o <a href="http://www.aeracode.org/" title="Página do Andrew Godwin">Andrew Godwin</a> fez essa app baseada no <a href="http://south.aeracode.org/" title="Django South Page">Django South</a> com algumas melhorias.</p>
+<p>Para quem não entendeu ainda qual as vantagens, basta exemplificar com um dos principais problemas (que qualquer um que já tenha feito algum projeto em Django já deve ter tido), que é poder "atualizar" as tabelas do banco de dados...</p>
+<p>Isso por que, o agora depreciado, <strong>"syncdb"</strong> apenas criava tabelas novas <strong>caso elas não existissem</strong>, mas <strong>não atualizava</strong> caso os campos desta fossem alterados.</p>
+<p><a href="https://docs.djangoproject.com/en/dev/releases/1.7/#schema-migrations" title="Schema migrations no Django 1.7">Mais informações sobre essa feature</a>.</p>
+<h2>App Loading Refactor</h2>
+<p>Houve uma <strong>grande refatoração</strong> na parte do carregamento das apps, coisas que facilitam muito a vida do desenvolvedor, como:</p>
+<ul>
+<li>Apps podem rodar código durante o startup, antes que o Django execute qualquer coisa;</li>
+<li>Chega de ficar explicitando app_label no seus models caso eles fiquem fora do padrão "models.py", agora seus models são achados automaticamente sem ter que setar nada;</li>
+<li>É possível ter uma app sem ter um "models.py" caso essa não possua models</li>
+</ul>
+<p><a href="https://docs.djangoproject.com/en/dev/releases/1.7/#app-loading-refactor" title="App Loading Refactor no Django 1.7">Mais informações sobre essa feature</a>.</p>
+<h2>Formulários</h2>
+<h3>Form.add_error</h3>
+<p>Com essa nova funcionalidade é possível incluir um erro para algum campo específico de dentro do método "<strong>Form.clean()</strong>".<br/>
+Basicamente você passa como primeiro parâmetro uma string que tem o nome do campo (string vazia é considerado como um erro genérico do formulário) e como segundo parâmetro um <strong>ValidationError</strong> com a mensagem que preferir.</p>
+<p><a href="https://docs.djangoproject.com/en/dev/ref/forms/api/#django.forms.Form.add_error" title="Form.add_error no Django 1.7">Mais informações sobre essa feature</a>.</p>
+<h3>Form.errors.as_json</h3>
+<p>Bem, já era hora né?<br/>
+Para quem já brincou com ajax sabe que é um porre toda vez ter que serializar os erros para Json.<br/>
+Agora não precisa mais se preocupar com isso, basta chamar esse método que ele retorna pra você tudo bonito.</p>
+<p><a href="https://docs.djangoproject.com/en/dev/ref/forms/api/#django.forms.Form.errors.as_json" title="Form.errors.as_json no Django 1.7">Mais informações sobre essa feature</a>.</p>
+<h2>Custom Manager para Reverse Relations</h2>
+<p>Agora é possível explicitar um Custom Manager para uma relação reversa:<br/>
+Por exemplo:</p>
+<p>``` {lang="python"}
+from django.db import models</p>
+<p>class Entry(models.Model):
+    #...
+    objects = models.Manager() # Default Manager
+    entries = EntryManager() # Custom Manager</p>
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p>b = Blog.objects.get(id=1)
+b.entry_set(manager='entries').all()
+```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Isso é muito bacana pra quem conhece as vantagens de usar Managers customizados mas não conseguia usar para esse caso específico.</p>
+<p><a href="https://docs.djangoproject.com/en/dev/releases/1.7/#using-a-custom-manager-when-traversing-reverse-relations" title="Using a custom manager when traversing reverse relations no Django 1.7">Mais informações sobre essa feature</a>.</p>
+<h2>Tchau Memoize</h2>
+<p>Para quem usava o <strong>Memoize</strong> (django.utils.functional.memoize), fiquem atentos pois ele vai ser depreciado nessa versão (em troca do lru_cache).<br/>
+Na versão 1.9 Memoize vai embora, então é bom fazer a troca o quanto antes.</p>
+<p>Bem, essas são as razões deu achar essa release fantástica.<br/>
+E você o que acha? Prefere alguma outra release? Qual? E por que?</p>
+<p>Abraços.</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://arruda.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://arruda.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

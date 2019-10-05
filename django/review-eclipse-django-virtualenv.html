@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Review: Eclipse + Django + VirtualEnv | Arruda
+</title>
+  <link rel="canonical" href="https://arruda.github.io/django/review-eclipse-django-virtualenv.html">
+
+    <link rel="apple-touch-icon" href="https://arruda.github.io/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://arruda.github.io/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://arruda.github.io/feeds/all.atom.xml">
+  
+  <meta name="description" content="Hi there everyone, I'd like to share with you some of my experience with Eclipse as a IDE for Django and virtualEnv. First of all I already tried some other IDEs, like VIM, TextMate, PyCharm and Gedit(that I still used 'till now), but for many reasons I just preferred …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://arruda.github.io/">
+        <img class="img-fluid rounded" src=https://arruda.github.io/images/logo.png alt="Arruda">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://arruda.github.io/">Arruda</a></h1>
+      <p class="text-muted">Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Review: Eclipse + Django + VirtualEnv
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2012-01-16T10:01:00+00:00">
+          <i class="fa fa-clock-o"></i>
+          Seg 16 janeiro 2012
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://arruda.github.io/category/django.html">Django</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://arruda.github.io/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://arruda.github.io/tag/django.html">#Django</a>,               <a href="https://arruda.github.io/tag/eclipse.html">#Eclipse</a>,               <a href="https://arruda.github.io/tag/ide.html">#IDE</a>,               <a href="https://arruda.github.io/tag/pydev.html">#pydev</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Hi there everyone, I'd like to share with you some of my experience with Eclipse as a IDE for Django and virtualEnv.<br/>
+First of all I already tried some other IDEs, like VIM, TextMate, PyCharm and Gedit(that I still used 'till now), but for many reasons I just preferred a simple Text Editor.</p>
+<h2>VIM</h2>
+<p>Why not?<br/>
+Well, I've the power it has, and all that stuff, how it's fast and etc...<br/>
+But the point is that if you want to use this as a working tool, you'll need to train in that(a lot) to make it right. And since I couldn't expend the time necessary to learn every single shortcut(I still dream of doing this *-*) this one was out.</p>
+<h2>TextMate</h2>
+<p>Now it's the time that all the macboys start shouting that I need to buy a mac since it's the most perfect, awesome, incredible OS ever... And I can understand, but I left TextMate out as my main IDE for to reasons:<br/>
+It doesn't have the resource of <strong>ctrl + click to navigate in a function/attribute/class</strong>(I'll explain this latter on).<br/>
+And more important of all:<br/>
+I'm prefer a PC scenario that I have a linux system(WORK) and a windows shitted system(GAMES), and no, mac still can't play games... <strong>Sorry Mac, but you lake my sense of having fun gaming.</strong></p>
+<h2>PyCharm</h2>
+<p>Ok, this one at first promised a lot, but I don't know if I was the only one that have this problem, but this IDE took me some long time to run, and do all the stuff(even more than Eclipse!!).<br/>
+But that was not the real deal, the problem was that when we where starting to get along the IDE simply stoped, telling me that I should by a license(it was only a Shareware edition).<br/>
+And, for what I read I could even use it as a IDE if my project where a open source.<br/>
+<strong>"Ok"</strong> I thought, but if by some reason I want to do a parallel project that is not Open Source, I'll need to buy a license?!<br/>
+<strong>"Hummm.. no thanks, I prefer to find another FREE tool"</strong><br/>
+And that was the end for PyCharm.</p>
+<h2>Gedit</h2>
+<p>After all that I just fall back for Gedit(a normal text editor in Ubuntu) and a terminal... But some days ago I thought of given Eclipse(PyDev) a try.<br/>
+And so this is what I got from Eclipse:</p>
+<h1>Eclipse(PyDev)</h1>
+<p>First I'm using the PyDev plugin for eclipse, in a Classig Eclipse installation.</p>
+<h2>Pros</h2>
+<p>And right at the start there are already plenty of good reasons to use this IDE:</p>
+<ul>
+<li>Code Completion(Including code for your project!)</li>
+<li>Debug(Nice one within Eclipse)</li>
+<li>Code Navigation(Ctrl + click in a function/class/method will that you to that code in a blink, and then you can go back using another shortcut)</li>
+</ul>
+<h2>Cons</h2>
+<p>Ok, not everything is a "sea of flowers", there are some problems in there, the first one is how it deals with VirtualEnv:</p>
+<ul>
+<li>You need to configure what's the python interpreter for that <strong>WORKSPACE</strong>, so if you want to have a separated python interpreter for each project you'll need to set a different workspace for each project.</li>
+<li>Another problem is that if you have some more complex things in your project (like a different directory organization) will probably have problem with eclipse telling you that your project is full of errors).</li>
+</ul>
+<h2>Solutions</h2>
+<ul>
+<li>For the errors that will pop in your face if your project is not in the normal django structure, you can just set the Eclipse option to stop checking errors(for eclipse there will be still erros, but for the most tools there will be no problems).</li>
+<li>For the PYTHON_PATH thing, I got a great help from <strong><a href="http://www.arruda.blog.br/programacao/review-eclipse-django-virtualenv/#comment-208" title="Solution to workspace">Brian Jinwright</a> </strong>That said that:</li>
+</ul>
+<blockquote class="blockquote">
+<div>
+<p>"You don’t have to create a new <strong>Workspace</strong> for each project/virtualenv. If you go to the <strong>Project</strong> menu and select <strong>Properties</strong>, then choose <strong>PyDev – Interperter/Grammar</strong>, then choose <strong>Click here to choose an interperter not listed</strong> then choose the virtualenv interperter that you want."</p>
+</div>
+</blockquote>
+<div>
+</div>
+<p>That's all, hope you enjoy.</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://arruda.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://arruda.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

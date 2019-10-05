@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Django 1.5 - Startproject Using Custom Structure | Arruda
+</title>
+  <link rel="canonical" href="https://arruda.github.io/django/django-1-5-startproject-using-custom-structure.html">
+
+    <link rel="apple-touch-icon" href="https://arruda.github.io/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://arruda.github.io/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://arruda.github.io/feeds/all.atom.xml">
+  
+  <meta name="description" content="Hi there, I decided to make this post, to explain how I'm using this great feature of Django (1.4 and higher). Simple Usage This is just the simplest example of how you can use it: This will give you this layout: ``` {lang="shell"} myproject/ manage.py myproject/ init.py …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://arruda.github.io/">
+        <img class="img-fluid rounded" src=https://arruda.github.io/images/logo.png alt="Arruda">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://arruda.github.io/">Arruda</a></h1>
+      <p class="text-muted">Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Django 1.5 - Startproject Using Custom Structure
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-03-10T20:21:00+00:00">
+          <i class="fa fa-clock-o"></i>
+          Dom 10 março 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://arruda.github.io/category/django.html">Django</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://arruda.github.io/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://arruda.github.io/tag/custom.html">#custom</a>,               <a href="https://arruda.github.io/tag/django.html">#Django</a>,               <a href="https://arruda.github.io/tag/project.html">#project</a>,               <a href="https://arruda.github.io/tag/start.html">#start</a>,               <a href="https://arruda.github.io/tag/startapp.html">#startapp</a>,               <a href="https://arruda.github.io/tag/startproject.html">#startproject</a>,               <a href="https://arruda.github.io/tag/template.html">#template</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Hi there, I decided to make this post, to explain how I'm using this great feature of Django (1.4 and higher).</p>
+<h1>Simple Usage</h1>
+<p>
+
+This is just the simplest example of how you can use it:  
+
+<script src="https://gist.github.com/arruda/4546833.js?file=simple_cmd.sh"></script>
+</p>
+<p>This will give you this layout:</p>
+<p>``` {lang="shell"}
+myproject/
+    manage.py
+    myproject/
+        <strong>init</strong>.py
+        settings.py
+        urls.py
+        wsgi.py</p>
+<div class="highlight"><pre><span></span><span class="nv">Beyond</span> <span class="nv">the</span> <span class="nv">basic</span>
+<span class="o">----------------</span>
+
+<span class="nv">That</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">pretty</span> <span class="nv">nice</span> <span class="nv">layout</span>... <span class="nv">but</span> <span class="nv">after</span> <span class="nv">some</span> <span class="nv">time</span> <span class="nv">you</span> <span class="nv">start</span> <span class="nv">to</span> <span class="k">do</span> <span class="nv">more</span> <span class="nv">elaborated</span> <span class="nv">stuff</span>, <span class="nv">or</span> <span class="nv">simply</span> <span class="nv">just</span> <span class="nv">want</span> <span class="nv">things</span> <span class="nv">more</span> <span class="nv">on</span> <span class="nv">your</span> <span class="nv">way</span>.
+
+<span class="nv">So</span> <span class="nv">now</span> <span class="nv">you</span> <span class="nv">can</span> <span class="nv">just</span> <span class="nv">use</span> <span class="nv">the</span> <span class="o">**--</span><span class="nv">template</span><span class="o">**</span> <span class="nv">option</span> <span class="nv">lets</span> <span class="nv">you</span> <span class="nv">specify</span> <span class="nv">a</span> <span class="nv">directory</span>, <span class="nv">file</span> <span class="nv">path</span> <span class="nv">or</span> <span class="nv">URL</span> <span class="nv">of</span> <span class="nv">a</span> <span class="nv">custom</span> <span class="nv">project</span> <span class="nv">template</span>.
+
+<span class="o">&lt;</span><span class="nv">p</span><span class="o">&gt;</span>
+
+<span class="k">For</span> <span class="nv">example</span>, <span class="nv">I</span> <span class="nv">have</span> <span class="nv">a</span> <span class="nv">directory</span> <span class="nv">that</span> <span class="nv">has</span> <span class="nv">this</span> <span class="nv">structure</span> <span class="nv">with</span> <span class="nv">some</span> <span class="nv">pre</span><span class="o">-</span><span class="nv">defined</span> <span class="nv">files</span>:  
+
+<span class="o">&lt;</span><span class="nv">script</span> <span class="nv">src</span><span class="o">=</span><span class="s2">"</span><span class="s">https://gist.github.com/arruda/4546833.js?file=my_structure.txt</span><span class="s2">"</span><span class="o">&gt;&lt;/</span><span class="nv">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nv">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nv">p</span><span class="o">&gt;</span>
+
+<span class="k">Then</span> <span class="nv">I</span> <span class="nv">can</span> <span class="nv">just</span> <span class="nv">use</span> <span class="nv">a</span> <span class="nv">simple</span> <span class="nv">command</span> <span class="nv">to</span> <span class="nv">re</span><span class="o">-</span><span class="nv">use</span> <span class="nv">this</span> <span class="nv">structure</span>:  
+
+<span class="o">&lt;</span><span class="nv">script</span> <span class="nv">src</span><span class="o">=</span><span class="s2">"</span><span class="s">https://gist.github.com/arruda/4546833.js?file=template_cmd.sh</span><span class="s2">"</span><span class="o">&gt;&lt;/</span><span class="nv">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nv">p</span><span class="o">&gt;</span>
+
+<span class="nv">The</span> <span class="o">**--</span><span class="nv">extensions</span><span class="o">**</span> <span class="nv">options</span> <span class="nv">let</span> <span class="nv">me</span> <span class="nv">pass</span> <span class="nv">what</span> <span class="nv">files</span> <span class="nv">will</span> <span class="nv">be</span> <span class="s2">"</span><span class="s">used</span><span class="s2">"</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">template</span><span class="ss">(</span> <span class="nv">don</span><span class="s1">'</span><span class="s">t try to put the html extension, it will crash on you), the rest will just be copied as it is, without having it</span><span class="s1">'</span><span class="nv">s</span> <span class="nv">content</span> <span class="s2">"</span><span class="s">rendered</span><span class="s2">"</span>. <span class="nv">See</span> <span class="nv">this</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">docs</span>, <span class="k">for</span> <span class="nv">some</span> [<span class="nv">help</span>]<span class="ss">(</span><span class="nv">https</span>:<span class="o">//</span><span class="nv">docs</span>.<span class="nv">djangoproject</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">en</span><span class="o">/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">ref</span><span class="o">/</span><span class="nv">django</span><span class="o">-</span><span class="nv">admin</span><span class="o">/</span>#<span class="nv">render</span><span class="o">-</span><span class="nv">warning</span> <span class="s2">"</span><span class="s">render warning</span><span class="s2">"</span><span class="ss">)</span>  
+<span class="nv">I</span> <span class="nv">recommend</span> <span class="nv">adding</span> <span class="nv">the</span> <span class="o">**</span><span class="nv">md</span><span class="o">**</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">README</span>.<span class="nv">md</span> <span class="nv">file</span> <span class="nv">in</span> <span class="nv">the</span> <span class="o">**</span><span class="nv">extensions</span><span class="o">**</span>.
+
+\[<span class="nv">adsense</span>\]
+
+<span class="nv">The</span> <span class="k">next</span> <span class="nv">level</span>
+<span class="o">--------------</span>
+
+<span class="nv">You</span> <span class="nv">can</span> <span class="nv">also</span>, <span class="nv">as</span> <span class="nv">I</span> <span class="nv">said</span> <span class="nv">before</span>, <span class="nv">pass</span> <span class="nv">the</span> <span class="nv">url</span> <span class="nv">of</span> <span class="nv">a</span> <span class="o">**</span>.<span class="nv">tar</span><span class="o">**</span> <span class="nv">file</span> <span class="nv">of</span> <span class="nv">a</span> <span class="nv">project</span> <span class="nv">template</span>.  
+<span class="nv">So</span>, <span class="nv">you</span> <span class="nv">could</span> <span class="k">do</span> <span class="nv">something</span> <span class="nv">like</span> <span class="nv">I</span> <span class="nv">did</span>:
+
+<span class="o">-</span>   <span class="nv">Create</span> <span class="nv">a</span> <span class="nv">github</span> <span class="nv">repo</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">project</span> <span class="nv">directory</span>
+<span class="o">-</span>   <span class="nv">Zip</span> <span class="nv">this</span> <span class="nv">folder</span> <span class="nv">and</span> <span class="nv">add</span> <span class="nv">it</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">repo</span>
+<span class="o">-</span>   <span class="nv">Create</span> <span class="nv">an</span> <span class="nv">alias</span> <span class="nv">that</span> <span class="nv">will</span> <span class="nv">always</span> <span class="nv">start</span> <span class="nv">a</span> <span class="nv">project</span> <span class="nv">using</span> <span class="nv">this</span> <span class="nv">repo</span> <span class="nv">as</span> <span class="nv">the</span> <span class="nv">project</span> <span class="nv">template</span>.
+
+<span class="o">&lt;</span><span class="nv">p</span><span class="o">&gt;</span>
+
+<span class="k">If</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">use</span> <span class="nv">a</span> <span class="nv">github</span> <span class="nv">repo</span>, <span class="nv">you</span> <span class="nv">could</span> <span class="nv">use</span> <span class="nv">this</span> <span class="k">next</span> <span class="nv">command</span>:  
+
+<span class="o">&lt;</span><span class="nv">script</span> <span class="nv">src</span><span class="o">=</span><span class="s2">"</span><span class="s">https://gist.github.com/arruda/4546833.js?file=http_cmd.sh</span><span class="s2">"</span><span class="o">&gt;&lt;/</span><span class="nv">script</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nv">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nv">p</span><span class="o">&gt;</span>
+
+<span class="nv">You</span> <span class="nv">can</span> <span class="nv">just</span> <span class="nv">run</span> <span class="nv">this</span> <span class="k">next</span> <span class="nv">command</span>, <span class="nv">to</span> <span class="nv">add</span> <span class="nv">an</span> <span class="nv">alias</span> <span class="nv">called</span> <span class="o">**</span><span class="nv">djproj</span><span class="o">**</span> <span class="nv">and</span> <span class="nv">another</span> <span class="o">**</span><span class="nv">djapp</span><span class="o">**</span> <span class="nv">to</span> <span class="nv">your</span> <span class="o">**</span>.<span class="nv">bashrc</span><span class="o">**</span>:  
+
+<span class="o">&lt;</span><span class="nv">script</span> <span class="nv">src</span><span class="o">=</span><span class="s2">"</span><span class="s">https://gist.github.com/arruda/4546833.js?file=other.sh</span><span class="s2">"</span><span class="o">&gt;&lt;/</span><span class="nv">script</span><span class="o">&gt;</span>
+
+
+<span class="o">**</span><span class="nv">Don</span><span class="s1">'</span><span class="s">t forget to replace my github repository for your</span><span class="s1">'</span><span class="nv">s</span><span class="o">!**</span>  
+<span class="nv">This</span> <span class="nv">way</span> <span class="nv">you</span> <span class="nv">can</span> <span class="nv">now</span> <span class="nv">just</span> <span class="k">do</span>:
+
+<span class="o">&lt;/</span><span class="nv">p</span><span class="o">&gt;</span>
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">shell</span><span class="s2">"</span>}
+<span class="nv">djproj</span> <span class="nv">myproject</span>
+</pre></div>
+<p>That it will use the repository project template.</p>
+<p>If you want to take a look at how can your project template be, just checkout my <a href="https://github.com/arruda/dj_project_templates" title="My Django Proejct Templates">github repository</a>.</p>
+<h2>StartApp</h2>
+<p>You can do the same thing for the <strong>startapp</strong> command, so you can also create some custom app layouts!</p>
+<p>That's it, hope this helps you =)</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://arruda.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://arruda.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

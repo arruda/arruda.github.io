@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Dicas de GIT: Integrando um Branch no Master. Rebase Ou Merge? | Arruda
+</title>
+  <link rel="canonical" href="https://arruda.github.io/programacao/dicas-de-git-integrando-um-branch-no-master-rebase-ou-merge.html">
+
+    <link rel="apple-touch-icon" href="https://arruda.github.io/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://arruda.github.io/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://arruda.github.io/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="https://arruda.github.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://arruda.github.io/feeds/all.atom.xml">
+  
+  <meta name="description" content="Se você está usando Rebase ao invés de Merge no Git, então fica uma dica importantíssima para quando você vai trabalhar com Branches. Rebase? Que isso? Se você não esta usando rebase, bem, aconselho seriamente a dar uma olhada no meu post que ajuda a ver a diferença entre o …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="https://arruda.github.io/">
+        <img class="img-fluid rounded" src=https://arruda.github.io/images/logo.png alt="Arruda">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="https://arruda.github.io/">Arruda</a></h1>
+      <p class="text-muted">Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="https://arruda.github.io/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Dicas de GIT: Integrando um Branch no Master. Rebase Ou Merge?
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-11-20T10:20:00+00:00">
+          <i class="fa fa-clock-o"></i>
+          Qua 20 novembro 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://arruda.github.io/category/programacao.html">programação</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://arruda.github.io/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://arruda.github.io/tag/branch.html">#branch</a>,               <a href="https://arruda.github.io/tag/commits.html">#commits</a>,               <a href="https://arruda.github.io/tag/git.html">#git</a>,               <a href="https://arruda.github.io/tag/integrando.html">#integrando</a>,               <a href="https://arruda.github.io/tag/master.html">#master</a>,               <a href="https://arruda.github.io/tag/merge.html">#merge</a>,               <a href="https://arruda.github.io/tag/rebase.html">#rebase</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p><a href="https://arruda.github.io/wp-content/uploads/2013/11/Git-logo.jpg"><img alt="" class="wp-image-1944 img-fluid aligncenter size-full" height="114" src="https://arruda.github.io/wp-content/uploads/2013/11/Git-logo.jpg" title="Git-logo" width="273"/></a><br/>
+Se você está usando <strong>Rebase</strong> ao invés de <strong>Merge</strong> no <strong>Git</strong>, então fica uma dica importantíssima para quando você vai trabalhar com <strong>Branches</strong>.</p>
+<h2>Rebase? Que isso?</h2>
+<p>Se você não esta usando rebase, bem, aconselho seriamente a dar uma olhada no meu post que ajuda a ver a diferença entre o Rebase e o Merge: <a href="http://www.arruda.blog.br/programacao/dicas-de-git-rebase-vs-merge/" title="Dicas de GIT: Rebase vs Merge">Dicas de GIT: Rebase vs Merge</a>.</p>
+<p>[adsense]</p>
+<h2>Momento delicado: Integração de um Branch no Master</h2>
+<p>Muitas vezes quando vamos implementar uma funcionalidade nova, criamos um branch novo para isso, e depois que ela está funcional juntamos esse branch de volta ao <strong>master</strong>.</p>
+<p>Só que normalmente no meio do desenvolvimento dessa funcionalidade, aparece <strong>algo novo no master</strong> e temos que <strong>colocar isso no branch</strong> que estamos trabalhando.<br/>
+E ai? Qual deve ser usado nesse caso? Rebase ou Merge?</p>
+<h3 id="atualizando_branch_master">Atualizando o Branch com commits do Master</h3>
+<p>Bem, nesse caso devemos usar o <strong>REBASE</strong>, seguindo o procedimento abaixo.</p>
+<p>``` {lang="shell"}
+git checkout nova_funcionalidade
+git rebase master</p>
+<div class="highlight"><pre><span></span><span class="nv">Isso</span> <span class="nv">vai</span> <span class="nv">pegar</span> <span class="nv">todos</span> <span class="nv">os</span> <span class="nv">commits</span> <span class="nv">que</span> <span class="nv">voc</span>ê <span class="nv">fez</span> <span class="nv">no</span> <span class="nv">seu</span> <span class="nv">branch</span> <span class="nv">e</span> <span class="nv">coloca</span><span class="o">-</span><span class="nv">los</span> <span class="nv">depois</span> <span class="nv">das</span> <span class="nv">altera</span>çõ<span class="nv">es</span> <span class="nv">provenientes</span> <span class="k">do</span> <span class="nv">master</span>, <span class="nv">o</span> <span class="nv">que</span> <span class="nv">deixa</span> <span class="nv">at</span>é <span class="nv">bem</span> <span class="nv">organizado</span>, <span class="nv">j</span>á <span class="nv">que</span> <span class="nv">todos</span> <span class="nv">os</span> <span class="nv">commits</span> <span class="nv">referentes</span> <span class="nv">a</span> <span class="nv">essa</span> <span class="nv">funcionalidade</span> <span class="nv">ficam</span> <span class="nv">juntos</span> <span class="nv">um</span> <span class="k">do</span> <span class="nv">outro</span>, <span class="nv">facilitando</span> <span class="nv">depois</span> <span class="nv">caso</span> <span class="nv">voc</span>ê <span class="nv">queira</span> <span class="nv">reverter</span> <span class="nv">apenas</span> <span class="nv">essa</span> <span class="nv">funcionalidade</span>.
+
+### <span class="nv">Juntando</span> <span class="nv">o</span> <span class="nv">Branch</span> <span class="nv">no</span> <span class="nv">Master</span>
+
+<span class="nv">Antes</span> <span class="nv">de</span> <span class="nv">mais</span> <span class="nv">nada</span>, <span class="nv">devemos</span> <span class="nv">garantir</span> <span class="nv">que</span> <span class="nv">nosso</span> <span class="nv">branch</span> <span class="nv">com</span> <span class="nv">a</span> <span class="nv">nova</span> <span class="nv">funcionalidade</span> <span class="nv">est</span>á <span class="nv">atualizado</span> <span class="nv">com</span> <span class="nv">o</span> <span class="nv">master</span>, <span class="nv">portanto</span> <span class="nv">execute</span> <span class="nv">os</span> <span class="nv">comandos</span> <span class="nv">mostrados</span> <span class="nv">anteriormente</span>, <span class="nv">em</span> [<span class="nv">Atualizando</span> <span class="nv">o</span> <span class="nv">Branch</span> <span class="nv">com</span> <span class="nv">commits</span> <span class="k">do</span> <span class="nv">Master</span>]<span class="ss">(</span>#<span class="nv">atualizando_branch_master</span><span class="ss">)</span>.  
+<span class="nv">Depois</span> <span class="nv">disso</span>, <span class="nv">o</span> <span class="nv">que</span> <span class="nv">devemos</span> <span class="nv">fazer</span> é <span class="nv">um</span> <span class="o">**</span><span class="nv">MERGE</span><span class="o">**</span>, <span class="nv">conforme</span> <span class="nv">ser</span>á <span class="nv">explicado</span> <span class="nv">a</span> <span class="nv">seguir</span>.
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">shell</span><span class="s2">"</span>}
+<span class="nv">git</span> <span class="nv">checkout</span> <span class="nv">master</span>
+<span class="nv">git</span> <span class="nv">merge</span> <span class="nv">nova_funcionalidade</span>
+</pre></div>
+<p>Com isso garantimos que nosso master ficará igual ao nosso branch da nova funcionalidade (que por sua vez garantimos que ele tinha todos os commits do master fazendo o rebase do master nele).</p>
+<h3>Revisão</h3>
+<p>Só para frisar, o procedimento final de quando vamos juntar um branch no master é:</p>
+<p><code>{lang="shell"}
+git checkout nova_funcionalidade
+git rebase master
+git checkout master
+git merge nova_funcionalidade</code></p>
+<p>Espero que essas dica ajudem vocês, assim como me ajudaram também.</p>
+<p>Abraços.</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://arruda.github.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://arruda.github.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://arruda.github.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
