@@ -5,7 +5,11 @@ from __future__ import unicode_literals
 THEME = 'themes/pelican-alchemy/alchemy'
 
 AUTHOR = 'Felipe Arruda Pontes'
-SITENAME = 'Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida'
+SITENAME = 'Arruda'
+SITESUBTITLE = 'Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida'
+
+DESCRIPTION = SITESUBTITLE
+
 SITEURL = ''
 
 PATH = 'content'
@@ -57,6 +61,3 @@ SITEIMAGE = '/images/logo.png'
 # PYGMENTS_STYLE = 'default'
 PYGMENTS_STYLE = 'monokai'
 RFG_FAVICONS = True
-
-# GOOGLE_ANALYTICS = '...'
-# DISQUS_SITENAME = '...'
