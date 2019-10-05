@@ -9,13 +9,13 @@ Attachments: wp-content/uploads/2014/01/djang_17.jpg
 
 Para quem ainda não sabe a nova versão do Django (a versão **1.7**) em data de lançamento prevista para **16 de Maio** deste ano.
 
-"E dai?" vocês devem estar perguntando... Bem, "e dai" que essa nova versão tem diversas novas funcionalidades que por mim é uma das **melhores** (se não a melhor) releases do Django até agora. Eis os porquês:  
-\[adsense\]
+"E dai?" vocês devem estar perguntando... Bem, "e dai" que essa nova versão tem diversas novas funcionalidades que por mim é uma das **melhores** (se não a melhor) releases do Django até agora. Eis os porquês:
+:${IMAGE_TAG}
 
 Schema Migration
 ----------------
 
-Por mim essa é a principal novidade.  
+Por mim essa é a principal novidade.
 Finalmente o Core do Django decidiu investir, com uma abordagem muito interessante ([um projeto no kickstarter](http://www.kickstarter.com/projects/andrewgodwin/schema-migrations-for-django "Schema Migration do Django no Kickstarter")), e agora o Django terá uma App de Schema Migration embutida e pronta para ser usada =D.
 
 Basicamente o [Andrew Godwin](http://www.aeracode.org/ "Página do Andrew Godwin") fez essa app baseada no [Django South](http://south.aeracode.org/ "Django South Page") com algumas melhorias.
@@ -42,15 +42,15 @@ Formulários
 
 ### Form.add\_error
 
-Com essa nova funcionalidade é possível incluir um erro para algum campo específico de dentro do método "**Form.clean()**".  
+Com essa nova funcionalidade é possível incluir um erro para algum campo específico de dentro do método "**Form.clean()**".
 Basicamente você passa como primeiro parâmetro uma string que tem o nome do campo (string vazia é considerado como um erro genérico do formulário) e como segundo parâmetro um **ValidationError** com a mensagem que preferir.
 
 [Mais informações sobre essa feature](https://docs.djangoproject.com/en/dev/ref/forms/api/#django.forms.Form.add_error "Form.add_error no Django 1.7").
 
 ### Form.errors.as\_json
 
-Bem, já era hora né?  
-Para quem já brincou com ajax sabe que é um porre toda vez ter que serializar os erros para Json.  
+Bem, já era hora né?
+Para quem já brincou com ajax sabe que é um porre toda vez ter que serializar os erros para Json.
 Agora não precisa mais se preocupar com isso, basta chamar esse método que ele retorna pra você tudo bonito.
 
 [Mais informações sobre essa feature](https://docs.djangoproject.com/en/dev/ref/forms/api/#django.forms.Form.errors.as_json "Form.errors.as_json no Django 1.7").
@@ -58,7 +58,7 @@ Agora não precisa mais se preocupar com isso, basta chamar esse método que ele
 Custom Manager para Reverse Relations
 -------------------------------------
 
-Agora é possível explicitar um Custom Manager para uma relação reversa:  
+Agora é possível explicitar um Custom Manager para uma relação reversa:
 Por exemplo:
 
 ``` {lang="python"}
@@ -80,10 +80,10 @@ Isso é muito bacana pra quem conhece as vantagens de usar Managers customizados
 Tchau Memoize
 -------------
 
-Para quem usava o **Memoize** (django.utils.functional.memoize), fiquem atentos pois ele vai ser depreciado nessa versão (em troca do lru\_cache).  
+Para quem usava o **Memoize** (django.utils.functional.memoize), fiquem atentos pois ele vai ser depreciado nessa versão (em troca do lru\_cache).
 Na versão 1.9 Memoize vai embora, então é bom fazer a troca o quanto antes.
 
-Bem, essas são as razões deu achar essa release fantástica.  
+Bem, essas são as razões deu achar essa release fantástica.
 E você o que acha? Prefere alguma outra release? Qual? E por que?
 
 Abraços.

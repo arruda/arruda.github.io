@@ -17,7 +17,7 @@ Para quem ainda não viu, fiz um resenha do primeiro livro da série aqui no blo
 
 Outro detalhe: **Quem ainda não terminou de ler o primeiro livro, melhor não ler essa resenha**, por que mesmo sem dar spoilers do segundo livro, não teria como falar dele sem dar spoilers do primeiro.
 
-\[adsense\]
+:${IMAGE_TAG}
 
 História
 --------
@@ -39,13 +39,13 @@ No fim do primeiro livro já vemos que Jorg conseguiu algumas coisas de necroman
 Os Construtores
 ---------------
 
-Novas coisas são mostradas dos construtores, seus "fantasmas" e suas máquinas que ficaram para trás.  
+Novas coisas são mostradas dos construtores, seus "fantasmas" e suas máquinas que ficaram para trás.
 Mas, no fim das contas eles continuam mais como um plano de fundo, do mundo esquecido.
 
 Mitologia
 ---------
 
-Novamente o autor do livro faz coisas fantásticas, quando ele pega mitologias que para nós já são antigas e distorce levemente as mesmas, dando a ideia de como as coisas vão mudando com o tempo, a medida que as histórias vão sendo recontadas.  
+Novamente o autor do livro faz coisas fantásticas, quando ele pega mitologias que para nós já são antigas e distorce levemente as mesmas, dando a ideia de como as coisas vão mudando com o tempo, a medida que as histórias vão sendo recontadas.
 Uma das mais bacanas mencionadas nesse segundo livro é a da mitologia nórdica, e o que ela se tornaria no tempo de Jorg.
 
 Por fim acho que esse segundo livro da série é muito bom, você continua tendo que ler sem parar e vai cada vez mais compreendendo a forma como o protagonista age.
@@ -55,5 +55,5 @@ E como vocês podem ver pelas fotos, a edição brasileira tá ótima, vale muit
 Mais imagens!
 -------------
 
-Quem quiser mais imagens do livro deem uma olhada no blog da [Annanda Sousa](http://annandasousa.com.br/livros/fotos-livro-king-of-thorns/ "Fotos livro King of Thorns no Blog da Annanda Sousa"), ela que tirou essas fotos e muitas outras fotos incríveis da minha coleção, vale a pena uma olhada =).  
+Quem quiser mais imagens do livro deem uma olhada no blog da [Annanda Sousa](http://annandasousa.com.br/livros/fotos-livro-king-of-thorns/ "Fotos livro King of Thorns no Blog da Annanda Sousa"), ela que tirou essas fotos e muitas outras fotos incríveis da minha coleção, vale a pena uma olhada =).
 Abraços.

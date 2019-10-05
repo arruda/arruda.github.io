@@ -16,7 +16,7 @@ Django-H5BP
 This is a **reusable** Django app that is **very simple** and helps a lot.
 
 The idea is that instead you grab the HTML5 boilerplate and make it fit your new project base template, for every project, you just install this app, extend it's predefined HTML5 Boilerplate template and change the blocks that you want to.
-\[adsense\]
+:${IMAGE_TAG}
 
 ### Installing
 

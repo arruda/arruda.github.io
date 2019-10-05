@@ -8,8 +8,8 @@ Status: published
 
 Bem, acabou o segundo dia da maratona e infelizmente só consegui ler 40 páginas de O Senhor da Chuva.
 
-Não entendam mal, não é que o livro é ruim ou que eu não estou gostando, é só que fiquei um pouco viciado em Skyrim e estava colocando em dia os jogos.  
-\[adsense\]  
+Não entendam mal, não é que o livro é ruim ou que eu não estou gostando, é só que fiquei um pouco viciado em Skyrim e estava colocando em dia os jogos.
+:${IMAGE_TAG}
 Mas, acredito que amanha vou dar uma dedicada melhor à leitura, ver se termino O senhor da chuva logo.
 
 Por enquanto é isso.

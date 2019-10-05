@@ -19,15 +19,15 @@ python -m SimpleHTTPServer 8000
 
 This will run a local server using the port 8000 to the current dir(from where you run this command).
 
-Then I'll you need to do is get your IP and access it in a browser from another PC, ex:  
+Then I'll you need to do is get your IP and access it in a browser from another PC, ex:
 **192.168.0.5:8000**
 
 And then you just navigate and download the files from the browser, simple as that!
 
-So if I want to share the contents of the folder: **/home/my\_user/some\_folder**, just enter this folder,  
+So if I want to share the contents of the folder: **/home/my\_user/some\_folder**, just enter this folder,
 and run the **simpleHTTTPServer** in there!
 
-\[adsense\]
+:${IMAGE_TAG}
 
 Using an alias
 --------------

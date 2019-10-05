@@ -26,18 +26,18 @@ Não preciso nem dizer que isso deixa o garoto bem traumatizado, já que afinal 
 
 Depois desse episódio o livro vai quatro anos no futuro, onde o príncipe lidera um bando de mercenários bem "gente boa", e ele começa a bolar uma série de planos para se tornar rei, e por fim se tornar imperador de todos os reinos (algo que ninguém conseguiu ainda).
 
-\[adsense\]
+:${IMAGE_TAG}
 
 O Mundo
 -------
 
-[![](http://www.arruda.blog.br/wp-content/uploads/2013/11/eot_map_colour-300x227.jpg "Mapa"){.aligncenter .size-medium .wp-image-1859 width="300" height="227"}]({static}wp-content/uploads/2013/11/eot_map_colour.jpg)  
+[![](http://www.arruda.blog.br/wp-content/uploads/2013/11/eot_map_colour-300x227.jpg "Mapa"){.aligncenter .size-medium .wp-image-1859 width="300" height="227"}]({static}wp-content/uploads/2013/11/eot_map_colour.jpg)
 Não vou falar muito, por que não quero dar spoilers, mas o mundo dele é muito interessante, é bem parecido com o nosso, é cheio de intrigas e guerras, mas tem um misto de magia e coisas ocultas, como Bruxos dos Sonhos, Magos do Fogo, mortos-vivos, Necromantes e por ai vai.
 
 Trilogia
 --------
 
-O livro faz parte de uma Trilogia dos Espinhos (em inglês é The Broken Empire), que é como o primeiro livro muito boa.  
+O livro faz parte de uma Trilogia dos Espinhos (em inglês é The Broken Empire), que é como o primeiro livro muito boa.
 Até o momento li o primeiro e o segundo livro: **The Prince of Thorns** e **The King of Thorns**, e posso dizer que ambos são muito bons, principalmente os trechos entre os capítulos, em que é como se o personagem principal estivesse conversando com o leitor, e em cada um dos trechos ele fala sobre alguém da "gangue" dele, sempre de uma forma irônica e que ajuda a entender a personalidade dos outros personagens (os mercenários) que andam junto dele.
 
 O ultimo livro é o The Emperor of Thorns, que eu ainda não pude ler por conta do preço, mas imagino que seja muito bom também.
@@ -45,8 +45,8 @@ O ultimo livro é o The Emperor of Thorns, que eu ainda não pude ler por conta 
 A Qualidade do Livro
 --------------------
 
-Eu não comprei o livro físico, nem a edição brasileira ou americana. Acabei comprando o livro para ler no Kobo.  
-Mas quando fui ver a edição brasileira... puts... me arrependi um pouco (só um pouco, por que o preço na época era R\$ 50,00 pelo livro, enquanto no Kobo era de R\$ 14,00).  
+Eu não comprei o livro físico, nem a edição brasileira ou americana. Acabei comprando o livro para ler no Kobo.
+Mas quando fui ver a edição brasileira... puts... me arrependi um pouco (só um pouco, por que o preço na época era R\$ 50,00 pelo livro, enquanto no Kobo era de R\$ 14,00).
 Mas se for levar em consideração todo o trabalho e acabamento, e etc que foi feito no livro (publicado pela [DarkSide](http://www.darksidebooks.com.br/prince/ "Prince of Thorns BR")), então o preço vale muito a pena!
 
 [![](http://www.arruda.blog.br/wp-content/uploads/2013/11/livro-300x300.jpg "Livro Prince of Thorns"){.aligncenter .size-medium .wp-image-1857 width="300" height="300"}]({static}wp-content/uploads/2013/11/livro.jpg)

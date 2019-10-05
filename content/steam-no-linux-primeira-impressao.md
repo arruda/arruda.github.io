@@ -9,7 +9,7 @@ Attachments: wp-content/uploads/2015/03/Mac_OS_X_Steam_Icon_by_ssj4saturnduo.png
 
 Essa semana decidi testar o **Steam** no **linux**, e ver quais jogos eu podia **jogar** nele, eis minha experiência:
 
-\[adsense\]
+:${IMAGE_TAG}
 
 Instalação
 ----------

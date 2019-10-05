@@ -15,8 +15,8 @@ def some_old_function(arg1,arg2):
     return arg1 + arg2
 ```
 
-This is something that I see too often, and this could be done better.  
-\[adsense\]
+This is something that I see too often, and this could be done better.
+:${IMAGE_TAG}
 
 Warnings
 --------
@@ -36,10 +36,10 @@ def some_old_function(arg1,arg2):
     return arg1 + arg2
 ```
 
-This way, when this function is called (maybe there was a piece of the code that hadn't got refactored and you missed it)  
+This way, when this function is called (maybe there was a piece of the code that hadn't got refactored and you missed it)
 you'll get the warning in the sys.stderr (by default, but in some cases you can change this to another output).
 
-You might be asking: **"Why the hell won't you just delete this function?"**  
+You might be asking: **"Why the hell won't you just delete this function?"**
 Well, because in some cases you just can't be sure that this function isn't been called by someone else in the project, sometimes you're in the middle of a large refactoring that is going on slowly.
 
 ### Other Warning Types
@@ -54,7 +54,7 @@ This is a warning about dubious syntactic features, for example:
 import warnings
 
 def some_function(arg1,arg2):
-    
+
     # Not sure if this is the best approach for this case, maybe should do arg1 - arg2...
     warnings.warn(
         "Should confirm what's the best approach for some_function",
@@ -73,7 +73,7 @@ This is a warning about dubious runtime features, for example:
 import warnings
 
 def some_function(array,position):
-    
+
     # better verify if I can access array[position] first
     if position < array.lenght:
         return array[position]
@@ -105,8 +105,8 @@ So if you're planning to change the constructor then it's a good idea to put one
 
 #### ImportWarning
 
-For warnings during the process of importing a module  
-**  
+For warnings during the process of importing a module
+**
 dont\_use\_this\_module.py**:
 
 ``` {lang="python"}
@@ -128,7 +128,7 @@ import dont_use_this_module
 
 #### PendingDeprecationWarning
 
-Very similar to DeprecationWarning, but in this case the feature is not yet deprecated,  
+Very similar to DeprecationWarning, but in this case the feature is not yet deprecated,
 but soon (maybe in the next version of the project) will.
 
 ``` {lang="python"}

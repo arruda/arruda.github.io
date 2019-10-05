@@ -12,17 +12,17 @@ Graças as dicas dos meus antigos colegas de trabalho la na Globo.com (Lucas, H�
 Diferença entre Rebase e Merge
 ------------------------------
 
-Considerando que haja a princípio 3 commits, **A, B e C**:  
+Considerando que haja a princípio 3 commits, **A, B e C**:
 [![]({static}wp-content/uploads/2013/09/exg1.png "3 commits originais"){.alignnone .size-full .wp-image-1533 width="255" height="68"}]({static}wp-content/uploads/2013/09/exg1.png)
 
-Em seguida o desenvolvedor José criar o commit **D** e o desenvolvedor Manuel o commit **E**:  
+Em seguida o desenvolvedor José criar o commit **D** e o desenvolvedor Manuel o commit **E**:
 [![](http://www.arruda.blog.br/wp-content/uploads/2013/09/exg2-300x97.png "Dois devs fazem commits"){.alignnone .size-medium .wp-image-1535 width="300" height="97"}]({static}wp-content/uploads/2013/09/exg2.png)
 
-\[adsense\]
+:${IMAGE_TAG}
 
 ### Merge
 
-[![](http://www.arruda.blog.br/wp-content/uploads/2013/09/exg3-300x97.png "Fazendo merge"){.alignnone .size-medium .wp-image-1538 width="300" height="97"}]({static}wp-content/uploads/2013/09/exg3.png)  
+[![](http://www.arruda.blog.br/wp-content/uploads/2013/09/exg3-300x97.png "Fazendo merge"){.alignnone .size-medium .wp-image-1538 width="300" height="97"}]({static}wp-content/uploads/2013/09/exg3.png)
 Como podemos observar, ao utilizar o Merge um novo commit **M** é criado, e ambos os commits **D** e **E** continuam no mesmo lugar. Isso acaba criando uma forma de *diamante* que confunde bastante quando vamos olhar os commits (além de criar um commit a mais).
 
 ### Rebase
@@ -61,8 +61,8 @@ Para fazer isso localmente em um único repositório no lugar de global, basta r
 Exemplo Prático
 ---------------
 
-Aproveitando a [dúvida do Norton](http://www.arruda.blog.br/programacao/dicas-de-git-rebase-vs-merge/#comment-910), vou colocar aqui no post o que passei pra ele no comentário:  
-Criei um repositório no github que ilustra esses dois casos, quando tem o merge e quando tem o rebase:  
+Aproveitando a [dúvida do Norton](http://www.arruda.blog.br/programacao/dicas-de-git-rebase-vs-merge/#comment-910), vou colocar aqui no post o que passei pra ele no comentário:
+Criei um repositório no github que ilustra esses dois casos, quando tem o merge e quando tem o rebase:
 [Exemplo da Forma de Diamante no Git](https://github.com/arruda/exemplo_diamante_git/network "Exemplo da Forma de Diamante no GIt")
 
 O **segundo** e o **terceiro** commit estão usando **merge**, e os **dois ultimos** usando **rebase**, você pode ver como fica mais claro a visualização usando rebase do que usando merge, que cria essas ramificações e depois volta para a linha principal dos commits.

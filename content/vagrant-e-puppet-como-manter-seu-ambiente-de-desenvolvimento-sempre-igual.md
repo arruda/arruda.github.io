@@ -6,7 +6,7 @@ Tags: ambiente de trabalho, igual, puppet, vagrant
 Slug: vagrant-e-puppet-como-manter-seu-ambiente-de-desenvolvimento-sempre-igual
 Status: published
 
-Bom dia a todos!  
+Bom dia a todos!
 Voltando agora a ativa no meu blog, decidi escrever sobre algo que andei estudando(conforme já havia mencionado em um [post anterior](http://www.arruda.blog.br/aleatoriedades/voltando-aos-estudos-de-verdade/ "Voltando aos estudos… de verdade…")) sobre uma forma mais fácil de desenvolver projetos em equipe.
 
 Problemas Comuns
@@ -19,8 +19,8 @@ Ou então, depois de um bom tempo, quando todos as máquinas ficaram prontas, e 
 Solução
 -------
 
-Conheçam o [Vagrant](http://www.vagrantup.com/ "Vagrant")!  
-Essa ferramente permite replicar um ambiente de trabalho facilmente entre os desenvolvedores e o ambiente de produção.  
+Conheçam o [Vagrant](http://www.vagrantup.com/ "Vagrant")!
+Essa ferramente permite replicar um ambiente de trabalho facilmente entre os desenvolvedores e o ambiente de produção.
 Basicamente ele cria para você uma maquina virtual com a partir de um arquivo texto que possuí diversas configurações da máquina, como o sistema operacional dela, quantidade de memória, nome, endereço ip e etc...
 
 E para ter sua máquina pronta para o uso é bem simples, uma vez instalado o Vagrant, basta que, dentro diretório em que está o arquivo de configuração do vagrant, rode o comando:
@@ -38,39 +38,39 @@ Como o Vagrant funciona a princípio em cima do [VirtualBox](https://www.virtual
 Instalando Programas e Configurando Sua Máquina
 -----------------------------------------------
 
-O arquivo de configuração do Vagrant permite algumas coisas da máquina virtual, mas outras coisas como quais programas serão instalados e as configurações dos mesmos não são feitas diretamente pelo Vagrant.  
+O arquivo de configuração do Vagrant permite algumas coisas da máquina virtual, mas outras coisas como quais programas serão instalados e as configurações dos mesmos não são feitas diretamente pelo Vagrant.
 Os programas que são responsáveis por isso são chamados de "Provisioning", os 3 principais que trabalham bem com o Vagrant são: Shell (simples shellscripts que devem ser executados), [Chef](http://www.opscode.com/chef/ "Chef") e [Puppet](http://puppetlabs.com/puppet/puppet-open-source "Puppet Open Source"). Vou falar aqui sobre o Puppet.
 
 ### Puppet
 
 Para configurar os programas no Puppet é bem interessante. Ao invés de se descrever as configurações de forma imperativa, você descreve usando uma forma declarativa. Ex (traduzido de:
 
-**Me Faça um Sanduiche! (Imperativo)**  
-Espalhe manteiga em uma fatia do pão. Deixe essa fatia no prato com a face para cima;  
-Espalhe requeijão em uma outra fatia de pão. Coloque esta fatia em cima da primeira, com a face voltada para baixo;  
+**Me Faça um Sanduiche! (Imperativo)**
+Espalhe manteiga em uma fatia do pão. Deixe essa fatia no prato com a face para cima;
+Espalhe requeijão em uma outra fatia de pão. Coloque esta fatia em cima da primeira, com a face voltada para baixo;
 Me traga o sanduiche;
 
-**O Sanduiche Que Eu Quero. (Declarativo)**  
-Deve haver um sanduiche no prato na minha frente em 5 minutos;  
+**O Sanduiche Que Eu Quero. (Declarativo)**
+Deve haver um sanduiche no prato na minha frente em 5 minutos;
 Este deve ter apenas manteiga e requeijão entre as duas fatias de pão;
 
 *Esses exemplos foram baseados nos exemplos do post a seguir: [From Imperative to Declarative System Configuration with Puppet](http://spin.atomicobject.com/2012/09/13/from-imperative-to-declarative-system-configuration-with-puppet/ "From Imperative to Declarative System Configuration with Puppet")*
 
 Assim, fica muito mais simples configurar suas dependências, além disso o Puppet possui diversos [Módulos](https://forge.puppetlabs.com/ "Puppet Forge") já prontos para diversas aplicações, basta usa-los e configurar os detalhes.
 
-\[adsense\]
+:${IMAGE_TAG}
 
 Instalando Tudo
 ---------------
 
-Primeiramente deve-se instalar o VirtualBox, que será o responsável pelas Maquinas virtuais criadas pelo Vagrant.  
-Para isso basta ir no site do VirtualBox, e procurar o release compatível com seu Sistema Operacional:  
+Primeiramente deve-se instalar o VirtualBox, que será o responsável pelas Maquinas virtuais criadas pelo Vagrant.
+Para isso basta ir no site do VirtualBox, e procurar o release compatível com seu Sistema Operacional:
 [Download VirtualBox](https://www.virtualbox.org/wiki/Downloads "Download VirtualBox")
 
 Agora é necessário instalar o Vagrant, para isso vá ao site de downloads do Vagrant, e baixe a ultima versão e release que seja compatível com seu Sistema Operacional: [Download Vagrant](http://downloads.vagrantup.com/ "Download Vagrant")
 
-Por fim devemos instalar o Puppet, para isso existem instruções bem completas no [site](http://docs.puppetlabs.com/guides/installation.html#installing-puppet-1 "Instalar o Puppet"), para cada tipo de plataforma.  
-É importante entender que nesse tipo de cenário, o que você deseja instalar é o **Puppet Standalone**  
+Por fim devemos instalar o Puppet, para isso existem instruções bem completas no [site](http://docs.puppetlabs.com/guides/installation.html#installing-puppet-1 "Instalar o Puppet"), para cada tipo de plataforma.
+É importante entender que nesse tipo de cenário, o que você deseja instalar é o **Puppet Standalone**
 Vou colocar aqui a maneira em que instalei o Puppet Standalone no meu Ubuntu 12.04. Para isso executei os seguintes comandos:
 
 ``` {lang="shell"}
@@ -90,7 +90,7 @@ Agora já tem tudo pronto pra você começar seu projeto com o Vagrant e o Puppe
 Exemplo Simples
 ---------------
 
-Vamos criar uma maquina virtual, e instalar nela os pacotes: **build-essential, vim, curl e git-core**.  
+Vamos criar uma maquina virtual, e instalar nela os pacotes: **build-essential, vim, curl e git-core**.
 E vamos fazer com que toda vez que a máquina for ligada, esta execute updates com o apt.
 
 ### Vagrantfile
@@ -136,7 +136,7 @@ Vagrant.configure("2") do |config|
 
     # arquivo manifest que você quer que seja chamado de começo
     puppet.manifest_file  = "mymanifest.pp"
-    
+
     # pasta onde ficam os modulos do puppet
     puppet.module_path = "./modules"
 
@@ -177,7 +177,7 @@ package { [
 
 ### Instalando Módulos do Puppet
 
-No arquivo mymanifest.pp utilizamos o módulo APT do Puppet, portanto devemos instala-lo na pasta modules do projeto.  
+No arquivo mymanifest.pp utilizamos o módulo APT do Puppet, portanto devemos instala-lo na pasta modules do projeto.
 Devemos primeiro criar essa pasta:
 
 ``` {lang="shell"}

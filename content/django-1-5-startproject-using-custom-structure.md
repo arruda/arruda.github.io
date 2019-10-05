@@ -13,7 +13,7 @@ Simple Usage
 
 <p>
 
-This is just the simplest example of how you can use it:  
+This is just the simplest example of how you can use it:
 
 <script src="https://gist.github.com/arruda/4546833.js?file=simple_cmd.sh"></script>
 </p>
@@ -39,26 +39,26 @@ So now you can just use the **--template** option lets you specify a directory, 
 
 <p>
 
-For example, I have a directory that has this structure with some pre-defined files:  
+For example, I have a directory that has this structure with some pre-defined files:
 
 <script src="https://gist.github.com/arruda/4546833.js?file=my_structure.txt"></script>
 </p>
 <p>
 
-Then I can just use a simple command to re-use this structure:  
+Then I can just use a simple command to re-use this structure:
 
 <script src="https://gist.github.com/arruda/4546833.js?file=template_cmd.sh"></script>
 </p>
 
-The **--extensions** options let me pass what files will be "used" as a template( don't try to put the html extension, it will crash on you), the rest will just be copied as it is, without having it's content "rendered". See this in the docs, for some [help](https://docs.djangoproject.com/en/dev/ref/django-admin/#render-warning "render warning")  
+The **--extensions** options let me pass what files will be "used" as a template( don't try to put the html extension, it will crash on you), the rest will just be copied as it is, without having it's content "rendered". See this in the docs, for some [help](https://docs.djangoproject.com/en/dev/ref/django-admin/#render-warning "render warning")
 I recommend adding the **md** for the README.md file in the **extensions**.
 
-\[adsense\]
+:${IMAGE_TAG}
 
 The next level
 --------------
 
-You can also, as I said before, pass the url of a **.tar** file of a project template.  
+You can also, as I said before, pass the url of a **.tar** file of a project template.
 So, you could do something like I did:
 
 -   Create a github repo for the project directory
@@ -67,18 +67,18 @@ So, you could do something like I did:
 
 <p>
 
-If you want to use a github repo, you could use this next command:  
+If you want to use a github repo, you could use this next command:
 
 <script src="https://gist.github.com/arruda/4546833.js?file=http_cmd.sh"></script>
 </p>
 <p>
 
-You can just run this next command, to add an alias called **djproj** and another **djapp** to your **.bashrc**:  
+You can just run this next command, to add an alias called **djproj** and another **djapp** to your **.bashrc**:
 
 <script src="https://gist.github.com/arruda/4546833.js?file=other.sh"></script>
 
-  
-**Don't forget to replace my github repository for your's!**  
+
+**Don't forget to replace my github repository for your's!**
 This way you can now just do:
 
 </p>

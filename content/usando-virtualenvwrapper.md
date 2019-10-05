@@ -9,14 +9,14 @@ Status: published
 Breve Revisão do VirtualEnv
 ---------------------------
 
-Estive a algum tempo usando o VirtualEnv, uma ferramenta que permite diferentes ambiente virtuais de Python na mesma maquina.  
+Estive a algum tempo usando o VirtualEnv, uma ferramenta que permite diferentes ambiente virtuais de Python na mesma maquina.
 Para instalar o VirtualEnv:
 
 ``` {lang="bash"}
 $ sudo pip install virtualenv
 ```
 
-Com ele você pode ter um ambiente totalmente limpo com apenas os packages necessarios para um determinado projeto. Ex:  
+Com ele você pode ter um ambiente totalmente limpo com apenas os packages necessarios para um determinado projeto. Ex:
 Se estiver fazendo um projeto em Django e usando o django-extensions basta criar um virtualenv usando o comandos:
 
 ``` {lang="bash"}
@@ -29,19 +29,19 @@ Em seguida basta ativar o MeuProjetoVirtual:
 $source /caminho/completo/MeuProjetoVirtual/bin/activate
 ```
 
-Uma vez usando o virtualenv basta instalar os pacotes usando pip:  
+Uma vez usando o virtualenv basta instalar os pacotes usando pip:
 **"pip install django" e "pip install django\_extensions"**
 
 E pronto! Você tem agora um ambiente separado com apenas esses pacotes essenciais para seu projeto.
 
-\[adsense\]
+:${IMAGE_TAG}
 
 E o Wrapper?
 ------------
 
 Pórem a magia não acaba ai, por que quando se começa a usar mais de um virtualenv, você sente uma certa dificuldade de arrumar todos eles e trocar de um para outro.
 
-E justamente uma das grandes vantagens do VirtualEnvWrapper é a forma como ele ajuda você a organizar seus ambientes todos e trocar de um para outro com muita facilidade.  
+E justamente uma das grandes vantagens do VirtualEnvWrapper é a forma como ele ajuda você a organizar seus ambientes todos e trocar de um para outro com muita facilidade.
 Para instala-lo basta fazer(fora de um virtualenv):
 
 ``` {lang="bash"}
@@ -94,7 +94,7 @@ Isso irá fazer com que o mkvirtualenv crie ambientes usando os argumentos **'--
 Tem mais?
 ---------
 
-Pois bem, tem muito mais coisa que wrapper permite, uma das outras fantásticas coisas é a personalização dos scripts que são rodados em diversos momentos, como script que é rodado antes de criar um virtualenv, ou depois de ativar o mesmo, e etc...  
+Pois bem, tem muito mais coisa que wrapper permite, uma das outras fantásticas coisas é a personalização dos scripts que são rodados em diversos momentos, como script que é rodado antes de criar um virtualenv, ou depois de ativar o mesmo, e etc...
 Um exemplo seria alterar o arquivo: **postmkvirtualenv**
 
 ``` {lang="bash"}
@@ -107,7 +107,7 @@ E colocar dentro do mesmo:
 pip install yolk
 ```
 
-Isso fará com que assim que terminar de criar o ambiente, ele irá instalar o pacote yolk no mesmo.  
+Isso fará com que assim que terminar de criar o ambiente, ele irá instalar o pacote yolk no mesmo.
 Muito bom isso, principalmente para ambientes de desenvolvimento, que é bom saber quais os pacotes estão instalados.
 
 Outro detalhe muito util que peguei com meu amigo [Victor Fontes](http://victorfontes.com/) que é limitar o pip para funcionar apenas dentro de um virtualenv, assim você não corre o risco de instalar pacotes fora de um ambiente. Para isso basta por no bashrc, antes das informações do virtualenv o seguinte:

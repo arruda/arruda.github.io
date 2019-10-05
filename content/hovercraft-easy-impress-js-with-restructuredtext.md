@@ -7,7 +7,7 @@ Slug: hovercraft-easy-impress-js-with-restructuredtext
 Status: published
 Attachments: wp-content/uploads/2013/05/rc_hovercraft-thumb-419x300-565146.gif
 
-Hi there, long time without posting, but now I\`m back with the review of this nice tool:  
+Hi there, long time without posting, but now I\`m back with the review of this nice tool:
 **Hovercraft**, a tool for creating (easily) a nice [Impress.js](http://bartaz.github.io/impress.js/ "Impress.js") presentation from a [reStructuredText](http://en.wikipedia.org/wiki/ReStructuredText "reStructuredText").
 
 What\`s impress.js?
@@ -23,7 +23,7 @@ This is a lightweight markup language that is most used in documentation of soft
 So.. Hovercraft...
 ------------------
 
-What [Hovercraft](http://regebro.github.io/hovercraft/ "Hovercraf") does is simplify the creation of a Impress.Js presentation.  
+What [Hovercraft](http://regebro.github.io/hovercraft/ "Hovercraf") does is simplify the creation of a Impress.Js presentation.
 So, instead of making tha HTML/CSS yourself, all you have to do is a ReStructuredText and run hovercraft, that the corresponding HTML/CSS and JS will be generated for you =)
 
 Installing Hovercraft
@@ -35,19 +35,19 @@ To install it, just install it using PIP:
 pip install hovercraft
 ```
 
-**OBS:**Hovercraft is intended to be used with Python 3. But I also made it work(at least what I could test) in Python 2.7.  
+**OBS:**Hovercraft is intended to be used with Python 3. But I also made it work(at least what I could test) in Python 2.7.
 If you want to use it with Python 2.7 you\`ll also need to install configparser:
 
 ``` {lang="shell"}
 pip install configparser
 ```
 
-\[adsense\]
+:${IMAGE_TAG}
 
 Basic Usage
 -----------
 
-First of all you\`ll have to create a **.rst** file for your presentation. Ex:  
+First of all you\`ll have to create a **.rst** file for your presentation. Ex:
 **helloworld.rst**.
 
 Then inside you put:

@@ -14,7 +14,7 @@ Para quem não sabe quem é **H.P Lovecraft** (Howard Phillips Lovecraft), eis u
 
 [![HP Lovecraft](http://www.arruda.blog.br/wp-content/uploads/2015/02/Howard_Phillips_Lovecraft-203x300.jpg){.aligncenter .size-medium .wp-image-2421 width="203" height="300"}]({static}wp-content/uploads/2015/02/Howard_Phillips_Lovecraft.jpg)
 
-O cara é considerado por grandes autores de terror (ex: **Stephen King**) como um dos maiores escritores deste gênero no seculo XX. Ele nasceu em 1890 e morreu em 1937, sendo assim suas histórias se passam nesses tempos também. Também é responsável por criar em seus contos um panteão (**mito de Cthulhu**) de entidades muito mais poderosas que seres humanos, vindo do espaço e outras dimensões e que já habitaram a terra à milhares de anos atrás, e por seus contos terem todos o mesmo plano de fundo, o mesmo universo, então eles acabam tendo diversas referências entre si.  
+O cara é considerado por grandes autores de terror (ex: **Stephen King**) como um dos maiores escritores deste gênero no seculo XX. Ele nasceu em 1890 e morreu em 1937, sendo assim suas histórias se passam nesses tempos também. Também é responsável por criar em seus contos um panteão (**mito de Cthulhu**) de entidades muito mais poderosas que seres humanos, vindo do espaço e outras dimensões e que já habitaram a terra à milhares de anos atrás, e por seus contos terem todos o mesmo plano de fundo, o mesmo universo, então eles acabam tendo diversas referências entre si.
 \[caption id="attachment\_2426" align="aligncenter" width="300"\][![Cthulhu emergindo das profundesas](http://www.arruda.blog.br/wp-content/uploads/2015/02/Cthulhu_rising_by_somniturne1-300x225.jpg){.size-medium .wp-image-2426 width="300" height="225"}]({static}wp-content/uploads/2015/02/Cthulhu_rising_by_somniturne1.jpg) Cthulhu emergindo das profundesas\[/caption\]
 
 Em seus contos, Lovecraft costuma brincar com o subconsciente, os sonhos e com coisas subjetivas, muitas vezes com uma escrita altamente trabalhada (ao **extremo**). Isto é, ao invés de simplesmente descrever uma determinada estrutura como tendo uma aparência antiga e de fins obscuros, ele escreve, por exemplo, que é uma estrutura ciclópica e em pelo menos dois parágrafos ele descreve a **Sensação** quase que inexplicável, de que aquilo é maligno (muitas vezes o personagem não consegue se decidir se é um cheiro, ou um som ou até mesmo a luz refletida que da essa impressão). Outro ponto forte na temática de suas histórias, é que elas tratam muito daquilo que é **desconhecido**, e ele abusa disso para por bastante medo em suas histórias.
@@ -25,7 +25,7 @@ Atualmente já li os contos: **The Dreams in the Witch House** (Os sonhos na cas
 
 Apenas um aviso: Se for ler a versão em inglês dos contos, se prepare, pois é como eu disse, ele usa uma escrita muito complicada, não apenas com palavras difíceis, mas com uma oração organizada de maneira confusa.
 
-\[adsense\]
+:${IMAGE_TAG}
 
 Todos os Contos, Um Livro
 -------------------------
@@ -53,7 +53,7 @@ Para quem **gosta de livros de terror**, bem feitos, bem editorados (ver [detalh
 Folhas Prateadas vs Douradas: Erros de Edição {#nota_sobre_cores_das_folhas_e_fita}
 ---------------------------------------------
 
-As primeiras edições desse livro, foram feitas usando uma **fita dourada** para marcar as páginas, e **páginas douradas** também.  
+As primeiras edições desse livro, foram feitas usando uma **fita dourada** para marcar as páginas, e **páginas douradas** também.
 [![HP lovecraft ed 1](http://www.arruda.blog.br/wp-content/uploads/2015/02/edicao1-300x213.jpg){.aligncenter .size-medium .wp-image-2435 width="300" height="213"}]({static}wp-content/uploads/2015/02/edicao1.jpg)
 
 Entretanto, evite comprar essa edição, pois ela possui muitos erros de edição (pelo que li, são muitos erros, e como a escrita já não é das mais simples, isso pode inviabilizar a leitura). Depois que perceberam isso, eles corrigiram esses problemas e lançaram uma nova edição, dessa vez com as **folhas prateadas** e a **fita roxa**.

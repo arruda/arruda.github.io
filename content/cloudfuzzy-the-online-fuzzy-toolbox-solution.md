@@ -7,15 +7,15 @@ Slug: cloudfuzzy-the-online-fuzzy-toolbox-solution
 Status: published
 Attachments: wp-content/uploads/2014/03/fuzzy_system.jpg, wp-content/uploads/2014/03/cf_fill.png
 
-Hi there. I decided to make a post about this project that I've recently released a beta version.  
+Hi there. I decided to make a post about this project that I've recently released a beta version.
 Basically this project started inside this other project that I was doing in my work: [Gesplan](http://gesplanblog.int.gov.br/ "Gesplan Project").
 
-\[adsense\]
+:${IMAGE_TAG}
 
 What's this about?
 ------------------
 
-The main feature of **CloudFuzzy** is to help you create a new **fuzzy inference system** and to help you test **online and friendly interface**.  
+The main feature of **CloudFuzzy** is to help you create a new **fuzzy inference system** and to help you test **online and friendly interface**.
 \[gallery\]
 
 What technologies are behind it?
@@ -33,7 +33,7 @@ But I'm also trying to **rewrite** the hole system in **Python**, using **[Djang
 Wait, what?! Rewrite it in Python?
 ----------------------------------
 
-Yeap, that's right, and here is the reason why:  
+Yeap, that's right, and here is the reason why:
 Even though Play is very simple and powerful it's still more focused on Scala, so the docs for Play using Java aren't as good as the Scala docs.
 
 And come on, I'm not going to struggle with some framework when I can use one that I'm more interested in (like Django), so there's already a branch for it in the Github repository.

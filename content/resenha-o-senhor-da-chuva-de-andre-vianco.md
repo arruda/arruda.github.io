@@ -7,9 +7,9 @@ Slug: resenha-o-senhor-da-chuva-de-andre-vianco
 Status: published
 Attachments: wp-content/uploads/2014/02/GRD_892_Senhor.jpg
 
-Então, foi só ter voltado ao trabalho (pegando linha amarela, serra e etc) que pude ter mais tempo para ler esse livro (que era uma das metas da minha tentativa de fazer a [Maratona Literária](http://www.arruda.blog.br/leitura/maratona-literaria-2-0/ "Maratona Literária 2.0") enquanto jogava pela primeira vez o jogo **Skyrim**).  
-E vou dizer, o livro é bom.  
-\[adsense\]
+Então, foi só ter voltado ao trabalho (pegando linha amarela, serra e etc) que pude ter mais tempo para ler esse livro (que era uma das metas da minha tentativa de fazer a [Maratona Literária](http://www.arruda.blog.br/leitura/maratona-literaria-2-0/ "Maratona Literária 2.0") enquanto jogava pela primeira vez o jogo **Skyrim**).
+E vou dizer, o livro é bom.
+:${IMAGE_TAG}
 
 Editoração
 ----------
@@ -21,17 +21,17 @@ Nada de mais nesse ponto, tirando a capa, que achei bem bacana (mas que no come�
 Ambientação
 -----------
 
-A história, como muitos dos livros do **André Vianco**, se passa no Brasil, no ano 2000 (ou próximo). Parte da história se passa na capital de São Paulo, e parte no interior, em Belo Verde.  
+A história, como muitos dos livros do **André Vianco**, se passa no Brasil, no ano 2000 (ou próximo). Parte da história se passa na capital de São Paulo, e parte no interior, em Belo Verde.
 Com isso, o autor faz um contraste bacana entre os dois cenários e os estilos de vida dos personagens que vivem nelas.
 
 A História
 ----------
 
-Basicamente a historia conta sobre um personagem (Gregório) que vive no submundo como traficante de drogas, sendo que sua vida muda quando consegue uma oportunidade de uma grande venda de cocaína para um cliente.  
-No meio de muito tumulto, escondido da visão dos humanos, anjos e demônios lutam entre si sem poder interferir diretamente no destino dos homens.  
+Basicamente a historia conta sobre um personagem (Gregório) que vive no submundo como traficante de drogas, sendo que sua vida muda quando consegue uma oportunidade de uma grande venda de cocaína para um cliente.
+No meio de muito tumulto, escondido da visão dos humanos, anjos e demônios lutam entre si sem poder interferir diretamente no destino dos homens.
 É durante a troca da mercadoria do personagem Gregório, que o **anjo Thal**, perdendo para o demonio **Khell** usa instintivamente de um ultimo recurso para poder sobreviver: Possui o corpo de Gregório e o manda para Belo Verde.
 
-Ao fazer isso, o anjo quebra as antigas regras, e começa então a Batalha Negra, um evento onde anjos devem se juntar para lutar contra demônios.  
+Ao fazer isso, o anjo quebra as antigas regras, e começa então a Batalha Negra, um evento onde anjos devem se juntar para lutar contra demônios.
 A diferença dessa batalha é que, por ter sido provocada por um anjo, os mesmos ao lutarem nela, se morrerem terão suas almas aprisionadas pelo inimigo e passão então a ser Anjos Negros (o que acaba fazendo com que muitos anjos prefiram não participar desta batalha). E para piorar, se os demônios participantes da batalha ganharem dos anjos participantes, eles terão então 24hrs para poder roubar livremente almas dos humanos.
 
 Assim, a história vai se desenrolando, com ambos os lados se preparando para a guerra, juntando generais para lutarem e juntando fieis (para ambos os lados) para reforçar suas energias, até que de fato ocorre a guerra.
@@ -41,7 +41,7 @@ Esse é um outro aspecto muito bacana no livro, pois mesmo estando no mesmo luga
 Ligações com outros livros
 --------------------------
 
-Para quem já leu **"Os Sete"**, ou **"Sétimo"**, é mais interessante ainda a história.  
+Para quem já leu **"Os Sete"**, ou **"Sétimo"**, é mais interessante ainda a história.
 Isso por que em "Os Sete", o exército brasileiro em determinado momento fala de um tal de evento com alguns seres em Belo Verde alguns anos antes, confirmando assim que de fato os livros se passam no mesmo universo.
 
 Conclusão Geral

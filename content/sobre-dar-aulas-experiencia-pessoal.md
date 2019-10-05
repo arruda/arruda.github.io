@@ -13,15 +13,15 @@ Nos últimos dois domingos eu estive dando aula para o pessoal da Empresa Junior
 
 Isso já era algo que gostaria de ter feito a um tempo, que foi inclusive uma das razões deu ter pego a um tempo atrás monitoria em programação na faculdade, mas no final das contas acabei não me envolvendo muito com isso na monitoria e a ideia acabou morrendo. Mas a algum tempo surgiu a necessidade de passar para os novos integrantes da EJ o conhecimento básico de Django, então juntei o útil com o agradável e preparei esse treinamento para eles.
 
-No caso as aulas eram de um treinamento de **Django básico**, e ao todo foram **12 horas** de curso (6 horas de aula por dia) aos **domingos**.  
-\[adsense\]
+No caso as aulas eram de um treinamento de **Django básico**, e ao todo foram **12 horas** de curso (6 horas de aula por dia) aos **domingos**.
+:${IMAGE_TAG}
 
 Pontos Positivos
 ----------------
 
 Bem, eu achei de modo geral a experiência de dar aula bem interessante e divertida, acho que o fato do pessoal estar interessado também contribuiu para isso.
 
-Mas também eu já tinha essa ideia de que talvez eu gostasse de dar aula, e realmente, o lance todo de transmitir o conhecimento, de ajudar outra pessoa a entender algo, sempre foi uma coisa que eu gostei.  
+Mas também eu já tinha essa ideia de que talvez eu gostasse de dar aula, e realmente, o lance todo de transmitir o conhecimento, de ajudar outra pessoa a entender algo, sempre foi uma coisa que eu gostei.
 Lembro dos tempos longínquos na faculdade, em que marcava aulas de revisão com os colegas que estavam com problema em programação, íamos para a cantina da faculdade (antes dela ser demolida) e ficávamos lá, eu passando para eles as dicas e tentando ajudar como podia.
 
 Acho também que de certa forma isso foi outra razão para eu criar esse blog, que a minha ideia era postar coisas de programação que eu achava interessante ou que eu tivesse tido muito trabalho para aprender, mas de uma forma mais direta e facilitada, para ajudar outros que estivessem tendo os mesmos problemas.
@@ -35,11 +35,11 @@ Como nada é perfeito, as aulas tiveram seus defeitos também.
 
 Alguns alunos chegaram um pouco atrasados, o que acabava dando uma quebra no ritmo da aula (mas por sorte eu já tinha considerado essas coisas quando preparei a ementa, e mesmo assim não atrasou quase nada a aula, e não extrapolou o horário combinado).
 
-Outro problema muito sério, foi que no primeiro domingo não tínhamos água para beber... Quer dizer, tinha água na faculdade, mas o a chave do registro que ligava os bebedouros não tava ligada.  
-Então, vocês podem imaginar né?  
+Outro problema muito sério, foi que no primeiro domingo não tínhamos água para beber... Quer dizer, tinha água na faculdade, mas o a chave do registro que ligava os bebedouros não tava ligada.
+Então, vocês podem imaginar né?
 Depois de 6 horas falando e falando, e sem beber água, cheguei em casa e minha garganta tava pegando fogo. Tanto que no dia seguinte (segunda) tive que faltar a faculdade de tão mal que ainda tava.
 
-Outro ponto negativo, é que infelizmente ninguém é perfeito (é duro admitir isso, mas até mesmo eu não sou, hehehe).  
+Outro ponto negativo, é que infelizmente ninguém é perfeito (é duro admitir isso, mas até mesmo eu não sou, hehehe).
 E quase no final do treinamento, uma das alunas percebeu um pequeno erro no meu código, um erro que demorei algum tempo pra conseguir entender o que raios estava acontecendo. Mas por fim não foi nada muito sério, era apenas 3 caracteres que faltavam e não atrasou a aula.
 
 E claro, o mais importante... **pqp, aulas aos domingos?!** Nunca mais dou aula nesse dia... que grande bosta, você sai do final de semana um caco, e nem tem como descansar... sem contar que não tinha lugar perto para almoçar e tudo tava fechado...

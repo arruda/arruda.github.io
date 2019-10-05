@@ -7,7 +7,7 @@ Slug: dicas-de-git-integrando-um-branch-no-master-rebase-ou-merge
 Status: published
 Attachments: wp-content/uploads/2013/11/Git-logo.jpg
 
-[![]({static}wp-content/uploads/2013/11/Git-logo.jpg "Git-logo"){.aligncenter .size-full .wp-image-1944 width="273" height="114"}]({static}wp-content/uploads/2013/11/Git-logo.jpg)  
+[![]({static}wp-content/uploads/2013/11/Git-logo.jpg "Git-logo"){.aligncenter .size-full .wp-image-1944 width="273" height="114"}]({static}wp-content/uploads/2013/11/Git-logo.jpg)
 Se você está usando **Rebase** ao invés de **Merge** no **Git**, então fica uma dica importantíssima para quando você vai trabalhar com **Branches**.
 
 Rebase? Que isso?
@@ -15,14 +15,14 @@ Rebase? Que isso?
 
 Se você não esta usando rebase, bem, aconselho seriamente a dar uma olhada no meu post que ajuda a ver a diferença entre o Rebase e o Merge: [Dicas de GIT: Rebase vs Merge](http://www.arruda.blog.br/programacao/dicas-de-git-rebase-vs-merge/ "Dicas de GIT: Rebase vs Merge").
 
-\[adsense\]
+:${IMAGE_TAG}
 
 Momento delicado: Integração de um Branch no Master
 ---------------------------------------------------
 
 Muitas vezes quando vamos implementar uma funcionalidade nova, criamos um branch novo para isso, e depois que ela está funcional juntamos esse branch de volta ao **master**.
 
-Só que normalmente no meio do desenvolvimento dessa funcionalidade, aparece **algo novo no master** e temos que **colocar isso no branch** que estamos trabalhando.  
+Só que normalmente no meio do desenvolvimento dessa funcionalidade, aparece **algo novo no master** e temos que **colocar isso no branch** que estamos trabalhando.
 E ai? Qual deve ser usado nesse caso? Rebase ou Merge?
 
 ### Atualizando o Branch com commits do Master {#atualizando_branch_master}
@@ -38,7 +38,7 @@ Isso vai pegar todos os commits que você fez no seu branch e coloca-los depois 
 
 ### Juntando o Branch no Master
 
-Antes de mais nada, devemos garantir que nosso branch com a nova funcionalidade está atualizado com o master, portanto execute os comandos mostrados anteriormente, em [Atualizando o Branch com commits do Master](#atualizando_branch_master).  
+Antes de mais nada, devemos garantir que nosso branch com a nova funcionalidade está atualizado com o master, portanto execute os comandos mostrados anteriormente, em [Atualizando o Branch com commits do Master](#atualizando_branch_master).
 Depois disso, o que devemos fazer é um **MERGE**, conforme será explicado a seguir.
 
 ``` {lang="shell"}

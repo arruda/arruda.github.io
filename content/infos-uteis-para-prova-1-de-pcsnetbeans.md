@@ -11,23 +11,23 @@ Decidi fazer um post para ajudar quem for fazer a prova de PCS , são só alguma
 HotKeys
 -------
 
-**Ctrl+Shift+i** : Resolver problemas de imports na classe  
-**Ctrl+K / Ctrl + L :** Auto-complete melhorado  
-**Ctrl + R:** Renomear  
-**Ctrl + shit + f:** procurar nos projetos  
-**ctrl + e:** deletar linha  
-**Alt+shift + f:** formatar código  
+**Ctrl+Shift+i** : Resolver problemas de imports na classe
+**Ctrl+K / Ctrl + L :** Auto-complete melhorado
+**Ctrl + R:** Renomear
+**Ctrl + shit + f:** procurar nos projetos
+**ctrl + e:** deletar linha
+**Alt+shift + f:** formatar código
 psvm -\> cria um método main (public static void main)
 
 Code Templates
 --------------
 
-No netBeans escreva o codigo em negrito e aperte tab, ele irá imprimir o texto correspondente:  
-**sout** =\> System.out.println("");  
-**psvm** =\> public static void main(String\[\] args)  
+No netBeans escreva o codigo em negrito e aperte tab, ele irá imprimir o texto correspondente:
+**sout** =\> System.out.println("");
+**psvm** =\> public static void main(String\[\] args)
 **fore** =\> foreach pre montado.
 
-**Bom para contruir a classe:**  
+**Bom para contruir a classe:**
 **Alt+Insert :** Inserir código(em classes permite atalho para gerar gets e sets, construtores e o que você quiser)
 
 Comandos
@@ -68,7 +68,7 @@ if (bigD.compareTo(bigD)==0) {
 }
 ```
 
-\[adsense\]
+:${IMAGE_TAG}
 
 Infos de **String:**
 
@@ -86,5 +86,5 @@ if(str.equals("String Diferente")){
 }
 ```
 
-Ainda estou tentando lembrar como faz no netbeans pra que crie uma classe automaticamente como filha de outra, ou implementando alguma interface(sem ser na mão).  
+Ainda estou tentando lembrar como faz no netbeans pra que crie uma classe automaticamente como filha de outra, ou implementando alguma interface(sem ser na mão).
 Mas é isso ai, espero que isso ajude.

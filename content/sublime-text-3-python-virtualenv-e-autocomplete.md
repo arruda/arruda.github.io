@@ -11,7 +11,7 @@ Attachments: wp-content/uploads/2015/01/python_anaconda.jpg
 
 Aproveitando que muitas pessoas vem me perguntando como integrar facilmente o Python no SublimeText 3, e como meu [post anterior](http://www.arruda.blog.br/programacao/sublime-text-2-python-virtualenv-e-auto-complete/ "Sublime Text 2 – Python, VirtualEnv e Auto Complete") não funciona mais para essa nova versão da IDE, foi que decidi fazer esse post explicando como integrar essas maravilhas.
 
-\[adsense\]
+:${IMAGE_TAG}
 
 Sublime Text 3
 --------------
@@ -39,7 +39,7 @@ Anaconda
 
 Com ele é possível utilizar a função de Autocompletar e navegar nos fontes de um determinado código em Python, além de usar os linters (PyFlakes ou PyLint) já "direto de fábrica".
 
-Para instalar esse package vamos usar o Package Control recém instalado, aperte(**Shift + ctrl + P** ou no mac: **shit + cmd + P**)  
+Para instalar esse package vamos usar o Package Control recém instalado, aperte(**Shift + ctrl + P** ou no mac: **shit + cmd + P**)
 Selecione na lista: **"Package Control: Install Package"**, e na próxima lista que aparecer, procure por Anaconda e instale.
 
 Usando o Anaconda em um Projeto
@@ -105,10 +105,10 @@ Caso queira, você pode configurar outros atalhos do Anaconda ou trocar outros p
 Linting
 -------
 
-Esse package já vem com uma série de Lints do Python built-in, como o PyFlakes e Pylint.  
+Esse package já vem com uma série de Lints do Python built-in, como o PyFlakes e Pylint.
 Mas caso queira é possivel configurar para ele não rodar essas verificações, ou para ignorar apenas algumas, colocando nas settings a chave **anaconda\_linting** como **false**.
 
 Existem muitas outras opções e formas de tornar o sublime text uma IDE Python bem personalizada usando o Anaconda, porém o post iria ficar imenso, se você gostou do que viu, sugiro que de uma olhada no site e veja o que mais você pode fazer para se divertir.
 
-**OBS**: Só recomendo ser especifico na hora de buscar algo no google, ja que os primeiros resultados apontam para [Nicki Minaj](http://pt.wikipedia.org/wiki/Anaconda_(can%C3%A7%C3%A3o_de_Nicki_Minaj) "Nicki Minaji na Wiki") xD  
+**OBS**: Só recomendo ser especifico na hora de buscar algo no google, ja que os primeiros resultados apontam para [Nicki Minaj](http://pt.wikipedia.org/wiki/Anaconda_(can%C3%A7%C3%A3o_de_Nicki_Minaj) "Nicki Minaji na Wiki") xD
 Abraços.

@@ -9,12 +9,12 @@ Attachments: wp-content/uploads/2014/02/Octocat.png
 
 Pois é, juntei uma lista aqui com **10 desenvolvedores Python no Github** que você tem que seguir. Os devs foram selecionados de diversos **projetos bacanas em Python**.
 
-\[adsense\]
+:${IMAGE_TAG}
 
 Por Que Seguir no Github?
 -------------------------
 
-Quando você segue uma pessoa no Github você recebe algumas atualizações delas, como quais projetos eles marcam com uma **estrela**, quais eles fazem **fork** e etc...  
+Quando você segue uma pessoa no Github você recebe algumas atualizações delas, como quais projetos eles marcam com uma **estrela**, quais eles fazem **fork** e etc...
 Assim você consegue **ficar pro dentro** de vários outros projetos interessantes em **Python** que você nem sabia que existia.
 
 A Lista

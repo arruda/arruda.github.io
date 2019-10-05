@@ -13,10 +13,10 @@ Sobre o trabalho
 
 ### A ideia
 
-A ideia nasceu com minha orientadora, Geiza Hamazaki, que durante minha monitoria deu a ideia de um programa para ajudar a corrigir as provas de programação.  
+A ideia nasceu com minha orientadora, Geiza Hamazaki, que durante minha monitoria deu a ideia de um programa para ajudar a corrigir as provas de programação.
 A partir disso, eu e meu colega Zanoni Miranda (que é tipo um fantasma da internet, já que não tem facebook ou twitter) demos várias ideias e por fim decidimos fazer um sistema online que não apenas ajudasse a corrigir as provas como fosse também um ambiente de avaliação para os alunos.
 
-\[adsense\]
+:${IMAGE_TAG}
 
 ### O Desenvolvimento
 
@@ -25,7 +25,7 @@ Fizemos o projeto utilizando a framework Django e começamos com o controle de v
 Apresentação
 ------------
 
-Para variar a apresentação foi tensa, como todas apresentações de monografia devem ser né...  
+Para variar a apresentação foi tensa, como todas apresentações de monografia devem ser né...
 Vem todo aquele desespero de falar sobre as quase 100 páginas de trabalho em menos de 30 minutos de apresentação. Mas, ainda bem que treinamos como loucos (meus pais e minha namorada já deviam ter cada palavra da apresentação memorizada) e conseguimos apresentar muito bem (ao menos é o que eu acho).
 
 ### Perguntas e Respostas
@@ -34,8 +34,8 @@ Depois da apresentação é que foi bem complicado, recebemos algumas perguntas 
 
 ### Resultado
 
-Nessas horas parece que o tempo não passa, mas depois do que pareceu um século, mas provavelmente não passou de alguns minutos, recebemos o resultado:  
-**"Aprovados com nota 10, precisando apenas de algumas revisões no texto."**.  
+Nessas horas parece que o tempo não passa, mas depois do que pareceu um século, mas provavelmente não passou de alguns minutos, recebemos o resultado:
+**"Aprovados com nota 10, precisando apenas de algumas revisões no texto."**.
 Saindo de lá, eu meus pais, minha irmã e minha namorada fomos direto comemorar no Outback.
 
 Versão final
@@ -43,7 +43,7 @@ Versão final
 
 Depois do período estipulado pela banca, entregamos a versão final da monografia, e conseguimos assim concluir nosso trabalho de fim de curso =D
 
-**Pergunta**: Arruda, quer dizer que você ta formado agora?  
+**Pergunta**: Arruda, quer dizer que você ta formado agora?
 **Não.**
 
 O resto da Faculdade
@@ -54,7 +54,7 @@ Infelizmente ainda tenho algumas matérias atrasadas, então mesmo tendo termina
 A Monografia
 ------------
 
-Bem, caso alguém se interesse, segue o pdf da monografia na versão final:  
+Bem, caso alguém se interesse, segue o pdf da monografia na versão final:
 [AMAO - DESENVOLVIMENTO DE UM AMBIENTE ONLINE DE AUXÍLIO À CORREÇÃO E RESOLUÇÃO DE AVALIAÇÕES DE PROGRAMAÇÃO](https://www.slideshare.net/felipearrudapontes/monografia-arruda-zanonifinal "AMAO - DESENVOLVIMENTO DE UM AMBIENTE ONLINE DE AUXÍLIO À CORREÇÃO E RESOLUÇÃO DE AVALIAÇÕES DE PROGRAMAÇÃO")
 
 Abraços.

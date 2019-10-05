@@ -12,18 +12,18 @@ So, I'm just releasing the first version of a new project of mine, and I'll shar
 Reader's Must Read
 ------------------
 
-The idea of this system is a very simple one: Help you choose what is the next book you should buy, and control your "Must Read" book list.  
-That's the reason of the name being that.  
+The idea of this system is a very simple one: Help you choose what is the next book you should buy, and control your "Must Read" book list.
+That's the reason of the name being that.
 Also, the system is free =)
 
 Where this came from?
 ---------------------
 
-My Girl Friend, that is bookworm, was having some troubles trying to control her books expenses, and trying to choose which book bye nex.  
-Since it was next to her birthday, she asked me this system as a birthday present.  
+My Girl Friend, that is bookworm, was having some troubles trying to control her books expenses, and trying to choose which book bye nex.
+Since it was next to her birthday, she asked me this system as a birthday present.
 And then, I started doing it to her, but also made it in a way that others would be able to use as well.
 
-\[adsense\]
+:${IMAGE_TAG}
 
 Where is it?
 ------------
@@ -33,8 +33,8 @@ For now it's hosted in heroku apps, in the link: [http://readersmustread.herokua
 Can I help?
 -----------
 
-Yes, please, fell free to help out.  
+Yes, please, fell free to help out.
 Since the project is open source, you can fork it in the github: <https://github.com/arruda/rmr>.
 
-So, is it a good present? What do you think?  
+So, is it a good present? What do you think?
 That's all.

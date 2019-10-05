@@ -11,7 +11,7 @@ Ola a todos, decidi tentar uma coisa nova no blog. Vou começar a fazer uma sér
 
 O primeiro package escolhido foi: [Sandman](https://github.com/jeffknupp/sandman "Sandman no Github").
 
-\[adsense\]
+:${IMAGE_TAG}
 
 Sandman: "Making things 'Rest'"
 -------------------------------
@@ -36,7 +36,7 @@ Caso tenha alguma dúvida, alguma coisa a acrescentar nessa review, basta coment
 Próxima Review
 --------------
 
-Pretendo fazer mais reviews como essa, então fique ligado no blog para mais delas.  
+Pretendo fazer mais reviews como essa, então fique ligado no blog para mais delas.
 E se tiver alguma dica de package, comente aqui também, que eu tento fazer uma review sobre o package em questão.
 
 Um abraço, e até a próxima!

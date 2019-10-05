@@ -6,7 +6,7 @@ Tags: pip, python, setup.py
 Slug: pip-instead-of-python-setup-py-install
 Status: published
 
-\[adsense\]  
+:${IMAGE_TAG}
 A nice way to install any package that has it's setup.py file is to use the **pip install -e command**:
 
 ``` {lang="python"}

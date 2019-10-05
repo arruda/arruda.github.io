@@ -8,7 +8,7 @@ Status: published
 
 Just got my hands on the great book "**Two Scoops of Django - Best Pratices for Django 1.6**" and decided to put in pratice one of their advises: **The Relative Imports**.
 
-\[adsense\]
+:${IMAGE_TAG}
 
 Whooo Relatives Imports, that's great!
 --------------------------------------
@@ -24,7 +24,7 @@ Yes... if you're just starting on relative imports then you will come across thi
 
 You may also come across this other error: **"Parent module XXXX not found while handling absolute import"** and many other errors because a confusion in how exactly you have to set up your package to work with relative imports.
 
-So I decided to explain what you have to set up, to have a package that can handles relative imports nicely.  
+So I decided to explain what you have to set up, to have a package that can handles relative imports nicely.
 Lets start by listing what has to be done, and in the end I'll give you an example in Github.
 
 The main idea is this: Considering you have a **my\_package**, with **submodule1** and a **my\_pyscript.py** (the Python script that is going to be executed to do whatever your package does)
@@ -64,7 +64,7 @@ from .submodule1 import *
 Example Project
 ---------------
 
-Here is an example project on Github that implements what was described earlier.  
+Here is an example project on Github that implements what was described earlier.
 [Relative Import Example](https://github.com/arruda/relative_import_example "Relative Import Example")
 
 That's all, hope this helps you guys!

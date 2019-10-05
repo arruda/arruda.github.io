@@ -15,13 +15,13 @@ E assim começa a jornada de **Torre Negra**.
 
 Acho que já estava na hora de falar dessa incrível série.
 
-Sempre que algum conhecido meu vem me perguntar de **"Algum livro desse tal de Stephen King"** eu preparo meu discurso, então por que não deixa-lo escrito de uma vez e simplesmente compartilhar, certo?  
-\[adsense\]
+Sempre que algum conhecido meu vem me perguntar de **"Algum livro desse tal de Stephen King"** eu preparo meu discurso, então por que não deixa-lo escrito de uma vez e simplesmente compartilhar, certo?
+:${IMAGE_TAG}
 
 Antes de mais nada...
 ---------------------
 
-**Não leia spoilers** dessa serie!  
+**Não leia spoilers** dessa serie!
 Sério, a princípio as histórias do **SK** (Stephen King) são cheias de reviravoltas e etc, mas essa aqui é como ele como ele mesmo diz sua **"Über-story"**, é sua **obra-prima**. E spoilers nessa série vão estragar muita coisa.
 
 Outra coisa importante: **Tenha paciência com o começo**.
@@ -57,20 +57,20 @@ Roland está tentando chegar a Torre, para que este possa, ao entrar nela, conse
 
 > "Primeiro vem as risadas, depois as mentiras. Por último o tiroteio." Roland Deschain
 
-No ponto em que o leitor começa a história, **Roland parece como sendo um cara frio**, que não se importa muito com as pessoas ao seu redor, e **apenas se importa com sua Torre** (seu objetivo de vida), chegando a ser obsessivo com relação a isso.  
+No ponto em que o leitor começa a história, **Roland parece como sendo um cara frio**, que não se importa muito com as pessoas ao seu redor, e **apenas se importa com sua Torre** (seu objetivo de vida), chegando a ser obsessivo com relação a isso.
 Mas ao longo da história, você descobre que **na verdade...** bem, na verdade **Roland é frio mesmo**, e **obsessivo** com sua missão, mas você descobre suas razões para seu comportamento.
 
 Os Personagens
 --------------
 
-Durante a história, Roland vai encontrando diversos personagens, alguns passageiros, outros que o acompanham em sua jornada.  
-Algo que é muito marcante é que muitos destes personagens tem suas razões, seus conflitos, e são muito bem desenvolvidos, a ponto de que em determinados momentos o livro deixa de ter Roland como personagem principal, e tem no lugar disso esse conjunto de personagens (seu **Ka-tet**).  
+Durante a história, Roland vai encontrando diversos personagens, alguns passageiros, outros que o acompanham em sua jornada.
+Algo que é muito marcante é que muitos destes personagens tem suas razões, seus conflitos, e são muito bem desenvolvidos, a ponto de que em determinados momentos o livro deixa de ter Roland como personagem principal, e tem no lugar disso esse conjunto de personagens (seu **Ka-tet**).
 Assim quando você já ta querendo que Roland morra, por ser um grande babaca muitas vezes, da pra se distrair disso com a vida dos outros personagens suas missões, dificuldades e melhorias.
 
 Uma série para reunir a todos
 -----------------------------
 
-Quando eu digo que essa série é o universo central de várias histórias do autor, é por que É MESMO!  
+Quando eu digo que essa série é o universo central de várias histórias do autor, é por que É MESMO!
 Por razões que não vale explicar para não estragar a surpresa, vários personagens de outras de suas histórias estão presentes em A Torre Negra, cada um com sua razão, seu objetivo, e com uma história de como chegou lá (muitas vezes a **morte está envolvida**).
 
 Comece a ler... AGORA!

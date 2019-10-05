@@ -26,8 +26,8 @@ $ sudo easy_install pip
 
 ### Virtualenv + virtualenvwrapper
 
-Fiz um post bem interessante, basta seguir [esses](http://www.arruda.blog.br/?p=498) passos e pronto.  
-\[adsense\]
+Fiz um post bem interessante, basta seguir [esses](http://www.arruda.blog.br/?p=498) passos e pronto.
+:${IMAGE_TAG}
 
 Instalando a Framework
 ----------------------
@@ -49,7 +49,7 @@ Pronto, você agora tem um ambiente com Django 1.3.
 Aplicativos Interessantes
 -------------------------
 
-Para quem quer dar uma turbinada no seu Django recém instalado, aconselho estes Apps:  
+Para quem quer dar uma turbinada no seu Django recém instalado, aconselho estes Apps:
 [Apps Uteis Para Django](http://www.arruda.blog.br/programacao/aplicativos-uteis-para-django/)
 
 Espero que isso de uma esclarecida, fiquem ligados pois o próximo da série será Flask!

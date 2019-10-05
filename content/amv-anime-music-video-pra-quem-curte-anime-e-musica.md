@@ -12,11 +12,11 @@ O Que é Um AMV?
 
 Para quem não sabe, existe algo chamado AMV: Anime Music Video, que são cenas, de um ou mais animes, editadas e com uma música de fundo (as vezes tem inclusive mais de uma música de fundo).
 
-Sempre que vou me decidir entre qual o próximo anime que vou assistir, eu procuro antes um AMV deste anime.  
-Se achar um AMV que seja legal, então assisto o anime, senão escolho outro.  
+Sempre que vou me decidir entre qual o próximo anime que vou assistir, eu procuro antes um AMV deste anime.
+Se achar um AMV que seja legal, então assisto o anime, senão escolho outro.
 Faço isso por que, normalmente animes que são bons costumam ter AMVs legais (exceto se forem lançamentos, ai demora um pouco pra sair um AMV né).
 
-\[adsense\]
+:${IMAGE_TAG}
 
 ### AMV e Spoilers
 
@@ -25,20 +25,20 @@ Isso é algo que sempre acontece, tipo, se você ta vai assistir um AMV é fato 
 Exemplos de AMVs
 ----------------
 
-O AMV a seguir é do anime **Evangelion** com a musica **Engel** do **Rammstein**, pelo que eu vi não tem nenhum spoiler sinistro, e é muito engraçado:  
+O AMV a seguir é do anime **Evangelion** com a musica **Engel** do **Rammstein**, pelo que eu vi não tem nenhum spoiler sinistro, e é muito engraçado:
 <iframe width="560" height="315" src="//www.youtube.com/embed/cQw05e26I-k" frameborder="0" allowfullscreen></iframe>
 
-Esse outro AMV é de diversos animes como Senjou no Valkyria: Valkyria Chronicles, Naruto: Shippuuden, Hellsing Ultimate, com a musica **Red Star** da banda **Birthday Massacre** . Esse AMV é um exemplo de um ótimo grau de edição e efeitos em um amv:  
+Esse outro AMV é de diversos animes como Senjou no Valkyria: Valkyria Chronicles, Naruto: Shippuuden, Hellsing Ultimate, com a musica **Red Star** da banda **Birthday Massacre** . Esse AMV é um exemplo de um ótimo grau de edição e efeitos em um amv:
 <iframe width="560" height="315" src="//www.youtube.com/embed/kyArAQvrKIM" frameborder="0" allowfullscreen></iframe>
 
-Esse ultimo AMV é do anime Cowboy Bebop com musica Yesterday dos Beatles, esse é muito bom por que o tema casa muito bem com as cenas do anime em questão (Tem bastante spoilers, cuidado!):  
+Esse ultimo AMV é do anime Cowboy Bebop com musica Yesterday dos Beatles, esse é muito bom por que o tema casa muito bem com as cenas do anime em questão (Tem bastante spoilers, cuidado!):
 <iframe width="560" height="315" src="//www.youtube.com/embed/osekoBG3Ozg" frameborder="0" allowfullscreen></iframe>
 
 Sites e playlists de AMVs
 -------------------------
 
-Existem alguns sites muito bons só voltados para amvs, mas tem 2 que são muito bons:  
-<http://www.animemusicvideos.org/>  
+Existem alguns sites muito bons só voltados para amvs, mas tem 2 que são muito bons:
+<http://www.animemusicvideos.org/>
 Que tem de tudo, mas para acessar algumas partes do site tem que se cadastrar.
 
 [http://akross.ru](http://akross.ru/index.cgi?l=e "AKROSS CON"): Concourso de AMVs internacional, só AMV foda que aparece ai, eles estão no [Youtube](http://www.youtube.com/user/AKROSSofficial/videos "AKROSS CON no youtube") também.
@@ -48,19 +48,19 @@ E várias outras playlists muito boas no youtube, como essa por exemplo: [Playli
 Bonus Round: AMV HELL
 ---------------------
 
-Bem, vou dizer que são fodas... mas os melhores são o 3º e o 4º AMV HELL foi muito engraçado e bem feito, depois virou muita bagunça e piadas repetidas.  
+Bem, vou dizer que são fodas... mas os melhores são o 3º e o 4º AMV HELL foi muito engraçado e bem feito, depois virou muita bagunça e piadas repetidas.
 Mas vou dizer, as várias horas de AMV HELL são sempre um bom proveito.
 
-AMV Hell 1:  
+AMV Hell 1:
 <iframe width="560" height="315" src="//www.youtube.com/embed/MedNqEE6Ylk" frameborder="0" allowfullscreen></iframe>
 
-AMV Hell 2:  
+AMV Hell 2:
 <iframe width="560" height="315" src="//www.youtube.com/embed/gSdAP8xwG9Y" frameborder="0" allowfullscreen></iframe>
 
-AMV Hell 3:  
+AMV Hell 3:
 <iframe width="560" height="315" src="//www.youtube.com/embed/MZr52-x9p4w" frameborder="0" allowfullscreen></iframe>
 
-AMV Hell 4:  
+AMV Hell 4:
 <iframe width="560" height="315" src="//www.youtube.com/embed/lGgx4eRCthI" frameborder="0" allowfullscreen></iframe>
 
 Abraços.
