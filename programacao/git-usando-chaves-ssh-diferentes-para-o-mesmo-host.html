@@ -82,18 +82,18 @@
       <p>Uma dica para quem usa SSH para fazer push em reposítórios GIT, mas gostaria de usar uma chave SSH diferente para diferentes repositórios, mas que sejam do mesmo host:</p>
 <h2>Caso de Uso</h2>
 <p>Bem, posse ser meio estranho, mas vou dar um exemplo de como você pode querer aproveitar isso:</p>
-<p>Vamos supor que você trabalha na empresa <strong>Empresa SA</strong> mas também tem diversos projetos pessoais.<br/>
-Para sua empresa, você deve usar uma chave SSH específica, e claro, para seus projetos pessoas você usa outra chave SSH.<br/>
-Considere que ambos os repositórios estão no Github (mesmo Host).<br/>
+<p>Vamos supor que você trabalha na empresa <strong>Empresa SA</strong> mas também tem diversos projetos pessoais.
+Para sua empresa, você deve usar uma chave SSH específica, e claro, para seus projetos pessoas você usa outra chave SSH.
+Considere que ambos os repositórios estão no Github (mesmo Host).
 Assim você tem um projeto pessoal em <strong>git\@github.com:arruda/um_proj.git</strong> e está trabalhando em um da sua empresa que está em <strong>git\@github.com:empresa_sa/outro_proj.git</strong>.</p>
-<p>Pronto, temos o cenário, como fazemos para o SO entender que no repositório do projeto pessoal você quer usar sua chave SSH pessoal, e que no do trabalho você quer utilizar sua chave SSH do trabalho?<br/>
-[adsense]</p>
+<p>Pronto, temos o cenário, como fazemos para o SO entender que no repositório do projeto pessoal você quer usar sua chave SSH pessoal, e que no do trabalho você quer utilizar sua chave SSH do trabalho?
+:${IMAGE_TAG}</p>
 <h2>Solução</h2>
 <p>Para isso devemos fazer as coisas em 2 etapas bem simples:</p>
 <h3>Host com Apelido</h3>
 <p>Vamos começar definindo "apelidos" para um dos repositórios, assim será possível diferenciar os host de cada um dos repositórios.</p>
-<p>Para isso edite o arquivo de configuração de SSH do seu usuário, em sistema Debian ele costuma ficar em:<br/>
-<strong>\~/.ssh/config</strong><br/>
+<p>Para isso edite o arquivo de configuração de SSH do seu usuário, em sistema Debian ele costuma ficar em:
+<strong>\~/.ssh/config</strong>
 Ponha no fim desse arquivo, o seguinte texto:</p>
 <p>``` {lang="shell"}
 Host repo_da_minha_empresa_sa
@@ -113,8 +113,8 @@ Host repo_da_minha_empresa_sa
 
 ### <span class="nv">Colocando</span> <span class="nv">o</span> <span class="nv">Apelido</span> <span class="nv">no</span> <span class="nv">repos</span>í<span class="nv">torio</span> <span class="nv">Git</span>
 
-<span class="nv">Agora</span> <span class="nv">devemos</span> <span class="nv">ir</span> <span class="nv">para</span> <span class="nv">o</span> <span class="nv">reposit</span>ó<span class="nv">rio</span> <span class="nv">local</span> <span class="k">do</span> <span class="nv">seu</span> <span class="nv">projeto</span> <span class="k">do</span> <span class="nv">trabalho</span>, <span class="nv">e</span> <span class="nv">nele</span> <span class="nv">editar</span> <span class="nv">as</span> <span class="nv">configura</span>çõ<span class="nv">es</span> <span class="k">do</span> <span class="nv">mesmo</span>.  
-<span class="nv">Para</span> <span class="nv">isso</span>, <span class="nv">dentro</span> <span class="k">do</span> <span class="nv">reposit</span>ó<span class="nv">rio</span> <span class="nv">abra</span> <span class="nv">o</span> <span class="nv">seguinte</span> <span class="nv">arquivo</span>: <span class="o">**</span>.<span class="nv">git</span><span class="o">/</span><span class="nv">config</span><span class="o">**</span>  
+<span class="nv">Agora</span> <span class="nv">devemos</span> <span class="nv">ir</span> <span class="nv">para</span> <span class="nv">o</span> <span class="nv">reposit</span>ó<span class="nv">rio</span> <span class="nv">local</span> <span class="k">do</span> <span class="nv">seu</span> <span class="nv">projeto</span> <span class="k">do</span> <span class="nv">trabalho</span>, <span class="nv">e</span> <span class="nv">nele</span> <span class="nv">editar</span> <span class="nv">as</span> <span class="nv">configura</span>çõ<span class="nv">es</span> <span class="k">do</span> <span class="nv">mesmo</span>.
+<span class="nv">Para</span> <span class="nv">isso</span>, <span class="nv">dentro</span> <span class="k">do</span> <span class="nv">reposit</span>ó<span class="nv">rio</span> <span class="nv">abra</span> <span class="nv">o</span> <span class="nv">seguinte</span> <span class="nv">arquivo</span>: <span class="o">**</span>.<span class="nv">git</span><span class="o">/</span><span class="nv">config</span><span class="o">**</span>
 <span class="nv">Procure</span> <span class="nv">por</span>: <span class="o">**</span>\[<span class="nv">remote</span> <span class="s2">"</span><span class="s">origin</span><span class="s2">"</span>\]<span class="o">**</span>, <span class="nv">essa</span> <span class="nv">se</span>çã<span class="nv">o</span> <span class="nv">deve</span> <span class="nv">ser</span> <span class="nv">parecida</span> <span class="nv">com</span> <span class="nv">a</span> <span class="nv">seguinte</span>:
 
 ``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">shell</span><span class="s2">"</span>}
@@ -129,7 +129,7 @@ Host repo_da_minha_empresa_sa
     url = git@repo_da_minha_empresa_sa:empresa_sa/outro_proj.git</code></p>
 <p>Pronto, agora quando for utilizar o SSH nesse repositório, para fazer pull, push e etc, ele irá utilizar a chave SSH do seu trabalho, ao inves da padrão. E seu repositório pessoal continuará utilizando a chave padrão (usando chave RSA é a chave <strong>id_rsa</strong>).</p>
 <p>Com isso concluo essa importante dica (<strong>muito importante também se você tem um heroku pessoal e um heroku da sua empresa</strong>).</p>
-<p>Para uma boa referência, segue um dos links que me ajudaram nessa questão:<br/>
+<p>Para uma boa referência, segue um dos links que me ajudaram nessa questão:
 <a href="http://stackoverflow.com/questions/7927750/specify-an-ssh-key-for-git-push-without-using-ssh-config" title="Specify an SSH key for git push without using ~/.ssh/config">Specify an SSH key for git push without using \~/.ssh/config</a></p>
 <p>Abraços.</p>
     </div>

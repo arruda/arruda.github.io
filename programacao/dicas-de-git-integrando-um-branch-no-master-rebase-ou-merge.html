@@ -79,14 +79,14 @@
       </ul>
     </header>
     <div class="content">
-      <p><a href="https://arruda.github.io/wp-content/uploads/2013/11/Git-logo.jpg"><img alt="" class="img-fluid wp-image-1944 size-full aligncenter" height="114" src="https://arruda.github.io/wp-content/uploads/2013/11/Git-logo.jpg" title="Git-logo" width="273"/></a><br/>
+      <p><a href="https://arruda.github.io/wp-content/uploads/2013/11/Git-logo.jpg"><img alt="" class="wp-image-1944 size-full img-fluid aligncenter" height="114" src="https://arruda.github.io/wp-content/uploads/2013/11/Git-logo.jpg" title="Git-logo" width="273"/></a>
 Se você está usando <strong>Rebase</strong> ao invés de <strong>Merge</strong> no <strong>Git</strong>, então fica uma dica importantíssima para quando você vai trabalhar com <strong>Branches</strong>.</p>
 <h2>Rebase? Que isso?</h2>
 <p>Se você não esta usando rebase, bem, aconselho seriamente a dar uma olhada no meu post que ajuda a ver a diferença entre o Rebase e o Merge: <a href="http://www.arruda.blog.br/programacao/dicas-de-git-rebase-vs-merge/" title="Dicas de GIT: Rebase vs Merge">Dicas de GIT: Rebase vs Merge</a>.</p>
-<p>[adsense]</p>
+<p>:${IMAGE_TAG}</p>
 <h2>Momento delicado: Integração de um Branch no Master</h2>
 <p>Muitas vezes quando vamos implementar uma funcionalidade nova, criamos um branch novo para isso, e depois que ela está funcional juntamos esse branch de volta ao <strong>master</strong>.</p>
-<p>Só que normalmente no meio do desenvolvimento dessa funcionalidade, aparece <strong>algo novo no master</strong> e temos que <strong>colocar isso no branch</strong> que estamos trabalhando.<br/>
+<p>Só que normalmente no meio do desenvolvimento dessa funcionalidade, aparece <strong>algo novo no master</strong> e temos que <strong>colocar isso no branch</strong> que estamos trabalhando.
 E ai? Qual deve ser usado nesse caso? Rebase ou Merge?</p>
 <h3 id="atualizando_branch_master">Atualizando o Branch com commits do Master</h3>
 <p>Bem, nesse caso devemos usar o <strong>REBASE</strong>, seguindo o procedimento abaixo.</p>
@@ -97,7 +97,7 @@ git rebase master</p>
 
 ### <span class="nv">Juntando</span> <span class="nv">o</span> <span class="nv">Branch</span> <span class="nv">no</span> <span class="nv">Master</span>
 
-<span class="nv">Antes</span> <span class="nv">de</span> <span class="nv">mais</span> <span class="nv">nada</span>, <span class="nv">devemos</span> <span class="nv">garantir</span> <span class="nv">que</span> <span class="nv">nosso</span> <span class="nv">branch</span> <span class="nv">com</span> <span class="nv">a</span> <span class="nv">nova</span> <span class="nv">funcionalidade</span> <span class="nv">est</span>á <span class="nv">atualizado</span> <span class="nv">com</span> <span class="nv">o</span> <span class="nv">master</span>, <span class="nv">portanto</span> <span class="nv">execute</span> <span class="nv">os</span> <span class="nv">comandos</span> <span class="nv">mostrados</span> <span class="nv">anteriormente</span>, <span class="nv">em</span> [<span class="nv">Atualizando</span> <span class="nv">o</span> <span class="nv">Branch</span> <span class="nv">com</span> <span class="nv">commits</span> <span class="k">do</span> <span class="nv">Master</span>]<span class="ss">(</span>#<span class="nv">atualizando_branch_master</span><span class="ss">)</span>.  
+<span class="nv">Antes</span> <span class="nv">de</span> <span class="nv">mais</span> <span class="nv">nada</span>, <span class="nv">devemos</span> <span class="nv">garantir</span> <span class="nv">que</span> <span class="nv">nosso</span> <span class="nv">branch</span> <span class="nv">com</span> <span class="nv">a</span> <span class="nv">nova</span> <span class="nv">funcionalidade</span> <span class="nv">est</span>á <span class="nv">atualizado</span> <span class="nv">com</span> <span class="nv">o</span> <span class="nv">master</span>, <span class="nv">portanto</span> <span class="nv">execute</span> <span class="nv">os</span> <span class="nv">comandos</span> <span class="nv">mostrados</span> <span class="nv">anteriormente</span>, <span class="nv">em</span> [<span class="nv">Atualizando</span> <span class="nv">o</span> <span class="nv">Branch</span> <span class="nv">com</span> <span class="nv">commits</span> <span class="k">do</span> <span class="nv">Master</span>]<span class="ss">(</span>#<span class="nv">atualizando_branch_master</span><span class="ss">)</span>.
 <span class="nv">Depois</span> <span class="nv">disso</span>, <span class="nv">o</span> <span class="nv">que</span> <span class="nv">devemos</span> <span class="nv">fazer</span> é <span class="nv">um</span> <span class="o">**</span><span class="nv">MERGE</span><span class="o">**</span>, <span class="nv">conforme</span> <span class="nv">ser</span>á <span class="nv">explicado</span> <span class="nv">a</span> <span class="nv">seguir</span>.
 
 ``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">shell</span><span class="s2">"</span>}

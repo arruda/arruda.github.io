@@ -24,7 +24,7 @@
   <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
         href="https://arruda.github.io/feeds/all.atom.xml">
   
-  <meta name="description" content="I'm reading and testing a bit about this new tool (Docker), and after some time I discovered some tips that I wanted to share with you guys. [adsense] 1 - Check out other containers filesystems Maybe for what you plan on installing inside a container, the default filesystem that Docker uses …">
+  <meta name="description" content="I'm reading and testing a bit about this new tool (Docker), and after some time I discovered some tips that I wanted to share with you guys. :${IMAGE_TAG} 1 - Check out other containers filesystems Maybe for what you plan on installing inside a container, the default filesystem that Docker uses …">
 
 
 </head>
@@ -79,21 +79,21 @@
       </ul>
     </header>
     <div class="content">
-      <p><a href="https://arruda.github.io/wp-content/uploads/2014/07/baby-36828_640.png"><img alt="Docker" class="img-fluid size-medium aligncenter wp-image-2352" height="164" src="http://www.arruda.blog.br/wp-content/uploads/2014/07/baby-36828_640-300x164.png" width="300"/></a><br/>
+      <p><a href="https://arruda.github.io/wp-content/uploads/2014/07/baby-36828_640.png"><img alt="Docker" class="img-fluid aligncenter wp-image-2352 size-medium" height="164" src="http://www.arruda.blog.br/wp-content/uploads/2014/07/baby-36828_640-300x164.png" width="300"/></a>
 I'm reading and testing a bit about this new tool (<a href="https://www.docker.com/" title="Docker website">Docker</a>), and after some time I discovered some <strong>tips</strong> that I wanted to share with you guys.</p>
-<p>[adsense]</p>
+<p>:${IMAGE_TAG}</p>
 <h2>1 - Check out other containers filesystems</h2>
-<p>Maybe for what you plan on installing inside a container, the default filesystem that Docker uses (<strong>AUFS</strong>), ins't the best choice.<br/>
-A pretty good example is a <strong>MySQL</strong> DB image, that has a problem <a href="https://github.com/dotcloud/docker/issues/783" title="unexpected file permission error in container">already documented</a>.<br/>
-But don't be alarmed, there is a workaround for this!<br/>
+<p>Maybe for what you plan on installing inside a container, the default filesystem that Docker uses (<strong>AUFS</strong>), ins't the best choice.
+A pretty good example is a <strong>MySQL</strong> DB image, that has a problem <a href="https://github.com/dotcloud/docker/issues/783" title="unexpected file permission error in container">already documented</a>.
+But don't be alarmed, there is a workaround for this!
 You just need to <a href="http://muehe.org/posts/switching-docker-from-aufs-to-devicemapper/" title="Switching from AUFS to device mapper in docker">change your Docker filesystem to Device Mapper</a>.</p>
 <h2>2 - Debugging Containers With Nsenter</h2>
-<p>If you want to debug your containers, and don't feel very well installing a SSHD inside each container just to navigate inside it, then you should use Nsenter.<br/>
+<p>If you want to debug your containers, and don't feel very well installing a SSHD inside each container just to navigate inside it, then you should use Nsenter.
 This allow you to get a prompt inside your container that has a process initialized, and it doesn't hurt the Docker principle (<strong>one concern per container</strong>).</p>
 <p>You can read more about this in here: <a href="http://jpetazzo.github.io/2014/06/23/docker-ssh-considered-evil/" title="If you run SSHD in your Docker containers, you're doing it wrong!">If you run SSHD in your Docker containers, you're doing it wrong!</a></p>
 <h2>3 - Test things with Vagrant!</h2>
-<p>Had problem installing Docker in your machine?<br/>
-Or maybe you just want to test this new tool in a clean environment?<br/>
+<p>Had problem installing Docker in your machine?
+Or maybe you just want to test this new tool in a clean environment?
 That's easy, since the guys from Phusion created a base Vagrant image that has it's a kernel ready to install docker.</p>
 <p>So all you have to do is</p>
 <p><code>{lang="shell"}

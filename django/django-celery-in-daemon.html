@@ -83,17 +83,17 @@
 <h2>Django-Celery</h2>
 <p>
 
-First of all you need to install it and configure the basics(this all is well explained in the [docs](http://django-celery.readthedocs.org/en/latest/getting-started/first-steps-with-django.html)), so basically you can do:  
+First of all you need to install it and configure the basics(this all is well explained in the [docs](http://django-celery.readthedocs.org/en/latest/getting-started/first-steps-with-django.html)), so basically you can do:
 
 <script src="https://gist.github.com/2343490.js?file=install.sh"></script>
 
 
-Then you need to install a broker server(like RabbitMQ):  
+Then you need to install a broker server(like RabbitMQ):
 
 <script src="https://gist.github.com/2343490.js?file=broker.sh"></script>
 
 
-After this is done, you need to put some basic configurations for celery in your settings file, like this:  
+After this is done, you need to put some basic configurations for celery in your settings file, like this:
 
 <script src="https://gist.github.com/2343490.js?file=settings.py"></script>
 
@@ -103,42 +103,42 @@ Also don't forget to run **syncdb** or **migrate**(if using south).
 </p>
 <p>
 
-Now if you want to run celery, you do it like:  
+Now if you want to run celery, you do it like:
 
 <script src="https://gist.github.com/2343490.js?file=run.sh"></script>
 </p>
 <h2>Daemonizing...Not so fast!</h2>
-<p>This part is not so intuitive for those who are starting to use this tool, but after you get what need to be done, it's all fast and furious.<br/>
+<p>This part is not so intuitive for those who are starting to use this tool, but after you get what need to be done, it's all fast and furious.
 This is, in my opinion, because of some misleading details in the <a href="http://docs.celeryq.org/en/latest/cookbook/daemonizing.html">celery daemon docs</a>. So I'll try to make it as explained as I can.</p>
-<p>[adsense]</p>
+<p>:${IMAGE_TAG}</p>
 <h3>Create a Configuration File For The Daemon</h3>
-<p>In this file there will be some variable used to run the celery as a daemon, like:<br/>
-Where is the project folder;<br/>
-How many workers;<br/>
-Where will be the log files...<br/>
+<p>In this file there will be some variable used to run the celery as a daemon, like:
+Where is the project folder;
+How many workers;
+Where will be the log files...
 And many others.</p>
-<p>But it will also contain any <strong>environment variable</strong> that you need in your project!<br/>
-So if you have a different settings for development and for production using an env var, you'll have to set this in the configuration file as well.<br/>
+<p>But it will also contain any <strong>environment variable</strong> that you need in your project!
+So if you have a different settings for development and for production using an env var, you'll have to set this in the configuration file as well.
 <strong>Or else you'll might and up having the celery working with the sqlite3.</strong></p>
 <p>
 
-You create this file as: **/etc/default/celeryd**  
-And put something like this inside it:  
+You create this file as: **/etc/default/celeryd**
+And put something like this inside it:
 
 <script src="https://gist.github.com/2343490.js?file=conf.sh"></script>
 </p>
 <h3>Get a init.d script</h3>
-<p>Yeah, this is strange, but after some time I understood this.<br/>
-So basically the file that they tell you to run in the docs, you need to get and put it there yourself...<br/>
+<p>Yeah, this is strange, but after some time I understood this.
+So basically the file that they tell you to run in the docs, you need to get and put it there yourself...
 And this init.d script will run the celeryd using the configurations that you'll set in the <strong>/etc/default/celeryd</strong>.</p>
-<p>You can get the file in:<br/>
+<p>You can get the file in:
 <a href="https://raw.github.com/ask/celery/1da3aa43d1e6de525beeda398d0acb8841d5b4d2/contrib/generic-init.d/celeryd">https://raw.github.com/ask/celery/1da3aa43d1e6de525beeda398d0acb8841d5b4d2/contrib/generic-init.d/celeryd</a></p>
-<p>This file must go to <strong>/etc/init.d/celeryd</strong><br/>
+<p>This file must go to <strong>/etc/init.d/celeryd</strong>
 And don't forget to make it executable: <strong>chmod +x /etc/init.d/celeryd</strong></p>
 <h2>Using the Daemon</h2>
 <p>
 
-To use it, just do like this:  
+To use it, just do like this:
 
 <script src="https://gist.github.com/2343490.js?file=daemon.sh"></script>
 </p>

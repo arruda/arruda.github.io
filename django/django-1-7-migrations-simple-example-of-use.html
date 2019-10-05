@@ -24,7 +24,7 @@
   <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
         href="https://arruda.github.io/feeds/all.atom.xml">
   
-  <meta name="description" content="Hi there, since Django 1.7 release is coming soon, I decided to take some time and learn how the workflow will be when working with these Migrations, and decided to share my experience with you. [adsense] New Commands So, first of all we have the ``` {lang="shell"} ./manage.py …">
+  <meta name="description" content="Hi there, since Django 1.7 release is coming soon, I decided to take some time and learn how the workflow will be when working with these Migrations, and decided to share my experience with you. :${IMAGE_TAG} New Commands So, first of all we have the ``` {lang="shell"} ./manage.py …">
 
 
 </head>
@@ -80,7 +80,7 @@
     </header>
     <div class="content">
       <p>Hi there, since <strong>Django 1.7</strong> release is coming soon, I decided to take some time and learn how the workflow will be when working with these <strong>Migrations</strong>, and decided to share my experience with you.</p>
-<p>[adsense]</p>
+<p>:${IMAGE_TAG}</p>
 <h2>New Commands</h2>
 <p>So, first of all we have the</p>
 <p>``` {lang="shell"}
@@ -90,7 +90,7 @@
 <span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"shell"</span><span class="err">}</span>
 <span class="p">.</span><span class="o">/</span><span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">syncdb</span>
 </pre></div>
-<p>This is the command that will <strong>execute</strong> the migrations, and create the initial Django tables (for auth, session and etc). But you should see now that the <strong>superuser</strong> for the DB <strong>is not created</strong> with this.<br/>
+<p>This is the command that will <strong>execute</strong> the migrations, and create the initial Django tables (for auth, session and etc). But you should see now that the <strong>superuser</strong> for the DB <strong>is not created</strong> with this.
 So you have to create it using the command:</p>
 <p>``` {lang="shell"}
 ./manage.py createsuperuser</p>
@@ -108,10 +108,10 @@ So you have to create it using the command:</p>
 </ol>
 <h2>A Workflow Example</h2>
 <p>I created a git repository(<a href="https://github.com/arruda/django-17-migrations-example" title="django-17-migrations-example Repository">django-17-migrations-example</a>) that has a simple workflow of what you'll probably face when doing your projects.</p>
-<p>In it you'll be see a simple <strong>Polls</strong> app using migration, all you have to do is navigate through the commits and execute the migrations.<br/>
+<p>In it you'll be see a simple <strong>Polls</strong> app using migration, all you have to do is navigate through the commits and execute the migrations.
 I use <strong>Scheme Migrations</strong> and <strong>Data Migrations</strong>, and also implement a simple <strong>rollback</strong> for a custom made migration.</p>
 <p>You can check the complete workflow and let it guide you, in the <a href="https://github.com/arruda/django-17-migrations-example#workflow" title="Workflow instructions">Readme</a> of the project.</p>
-<p>That's it guys.<br/>
+<p>That's it guys.
 <strong>Good migrations</strong> for you.</p>
     </div>
   </article>

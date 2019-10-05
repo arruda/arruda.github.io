@@ -24,7 +24,7 @@
   <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
         href="https://arruda.github.io/feeds/all.atom.xml">
   
-  <meta name="description" content="Aproveitando que muitas pessoas vem me perguntando como integrar facilmente o Python no SublimeText 3, e como meu post anterior não funciona mais para essa nova versão da IDE, foi que decidi fazer esse post explicando como integrar essas maravilhas. [adsense] Sublime Text 3 Para fazer download é simples, basta …">
+  <meta name="description" content="Aproveitando que muitas pessoas vem me perguntando como integrar facilmente o Python no SublimeText 3, e como meu post anterior não funciona mais para essa nova versão da IDE, foi que decidi fazer esse post explicando como integrar essas maravilhas. :${IMAGE_TAG} Sublime Text 3 Para fazer download é simples, basta …">
 
 
 </head>
@@ -79,9 +79,9 @@
       </ul>
     </header>
     <div class="content">
-      <p><a href="https://arruda.github.io/wp-content/uploads/2015/01/python_anaconda.jpg"><img alt="Python Anaconda" class="wp-image-2411 size-full aligncenter img-fluid" height="272" src="https://arruda.github.io/wp-content/uploads/2015/01/python_anaconda.jpg" width="283"/></a></p>
+      <p><a href="https://arruda.github.io/wp-content/uploads/2015/01/python_anaconda.jpg"><img alt="Python Anaconda" class="size-full img-fluid aligncenter wp-image-2411" height="272" src="https://arruda.github.io/wp-content/uploads/2015/01/python_anaconda.jpg" width="283"/></a></p>
 <p>Aproveitando que muitas pessoas vem me perguntando como integrar facilmente o Python no SublimeText 3, e como meu <a href="http://www.arruda.blog.br/programacao/sublime-text-2-python-virtualenv-e-auto-complete/" title="Sublime Text 2 – Python, VirtualEnv e Auto Complete">post anterior</a> não funciona mais para essa nova versão da IDE, foi que decidi fazer esse post explicando como integrar essas maravilhas.</p>
-<p>[adsense]</p>
+<p>:${IMAGE_TAG}</p>
 <h2>Sublime Text 3</h2>
 <p>Para fazer download é simples, basta ir em <a href="http://www.sublimetext.com/3">http://www.sublimetext.com/3</a> e baixar a ultima versão da IDE compatível com seu sistema operacional.</p>
 <h2>Package Control</h2>
@@ -101,7 +101,7 @@ import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c
 
 <span class="nv">Com</span> <span class="nv">ele</span> é <span class="nv">poss</span>í<span class="nv">vel</span> <span class="nv">utilizar</span> <span class="nv">a</span> <span class="nv">fun</span>çã<span class="nv">o</span> <span class="nv">de</span> <span class="nv">Autocompletar</span> <span class="nv">e</span> <span class="nv">navegar</span> <span class="nv">nos</span> <span class="nv">fontes</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">determinado</span> <span class="nv">c</span>ó<span class="nv">digo</span> <span class="nv">em</span> <span class="nv">Python</span>, <span class="nv">al</span>é<span class="nv">m</span> <span class="nv">de</span> <span class="nv">usar</span> <span class="nv">os</span> <span class="nv">linters</span> <span class="ss">(</span><span class="nv">PyFlakes</span> <span class="nv">ou</span> <span class="nv">PyLint</span><span class="ss">)</span> <span class="nv">j</span>á <span class="s2">"</span><span class="s">direto de fábrica</span><span class="s2">"</span>.
 
-<span class="nv">Para</span> <span class="nv">instalar</span> <span class="nv">esse</span> <span class="nv">package</span> <span class="nv">vamos</span> <span class="nv">usar</span> <span class="nv">o</span> <span class="nv">Package</span> <span class="nv">Control</span> <span class="nv">rec</span>é<span class="nv">m</span> <span class="nv">instalado</span>, <span class="nv">aperte</span><span class="ss">(</span><span class="o">**</span><span class="nv">Shift</span> <span class="o">+</span> <span class="nv">ctrl</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span> <span class="nv">ou</span> <span class="nv">no</span> <span class="nv">mac</span>: <span class="o">**</span><span class="nv">shit</span> <span class="o">+</span> <span class="nv">cmd</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span><span class="ss">)</span>  
+<span class="nv">Para</span> <span class="nv">instalar</span> <span class="nv">esse</span> <span class="nv">package</span> <span class="nv">vamos</span> <span class="nv">usar</span> <span class="nv">o</span> <span class="nv">Package</span> <span class="nv">Control</span> <span class="nv">rec</span>é<span class="nv">m</span> <span class="nv">instalado</span>, <span class="nv">aperte</span><span class="ss">(</span><span class="o">**</span><span class="nv">Shift</span> <span class="o">+</span> <span class="nv">ctrl</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span> <span class="nv">ou</span> <span class="nv">no</span> <span class="nv">mac</span>: <span class="o">**</span><span class="nv">shit</span> <span class="o">+</span> <span class="nv">cmd</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span><span class="ss">)</span>
 <span class="nv">Selecione</span> <span class="nv">na</span> <span class="nv">lista</span>: <span class="o">**</span><span class="s2">"</span><span class="s">Package Control: Install Package</span><span class="s2">"</span><span class="o">**</span>, <span class="nv">e</span> <span class="nv">na</span> <span class="nv">pr</span>ó<span class="nv">xima</span> <span class="nv">lista</span> <span class="nv">que</span> <span class="nv">aparecer</span>, <span class="nv">procure</span> <span class="nv">por</span> <span class="nv">Anaconda</span> <span class="nv">e</span> <span class="nv">instale</span>.
 
 <span class="nv">Usando</span> <span class="nv">o</span> <span class="nv">Anaconda</span> <span class="nv">em</span> <span class="nv">um</span> <span class="nv">Projeto</span>
@@ -154,10 +154,10 @@ import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c
 <p>Para utilizar o <strong>Go to Definition</strong> no <strong>linux</strong> basta selecionar o bloco de codigo python que se deseja inspecionar e apertar as teclas: <strong>Super + g</strong>, ou no mac/windows: <strong>ctrl+alt+g</strong>.</p>
 <p>Caso queira, você pode configurar outros atalhos do Anaconda ou trocar outros para que fiquem de acordo com seu gosto (eu prefiro utilizar o <strong>Go to Definition</strong> com <strong>Super + a + g</strong> por exemplo).</p>
 <h2>Linting</h2>
-<p>Esse package já vem com uma série de Lints do Python built-in, como o PyFlakes e Pylint.<br/>
+<p>Esse package já vem com uma série de Lints do Python built-in, como o PyFlakes e Pylint.
 Mas caso queira é possivel configurar para ele não rodar essas verificações, ou para ignorar apenas algumas, colocando nas settings a chave <strong>anaconda_linting</strong> como <strong>false</strong>.</p>
 <p>Existem muitas outras opções e formas de tornar o sublime text uma IDE Python bem personalizada usando o Anaconda, porém o post iria ficar imenso, se você gostou do que viu, sugiro que de uma olhada no site e veja o que mais você pode fazer para se divertir.</p>
-<p><strong>OBS</strong>: Só recomendo ser especifico na hora de buscar algo no google, ja que os primeiros resultados apontam para <a href="http://pt.wikipedia.org/wiki/Anaconda_(can%C3%A7%C3%A3o_de_Nicki_Minaj)" title="Nicki Minaji na Wiki">Nicki Minaj</a> xD<br/>
+<p><strong>OBS</strong>: Só recomendo ser especifico na hora de buscar algo no google, ja que os primeiros resultados apontam para <a href="http://pt.wikipedia.org/wiki/Anaconda_(can%C3%A7%C3%A3o_de_Nicki_Minaj)" title="Nicki Minaji na Wiki">Nicki Minaj</a> xD
 Abraços.</p>
     </div>
   </article>

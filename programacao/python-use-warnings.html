@@ -24,7 +24,7 @@
   <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
         href="https://arruda.github.io/feeds/all.atom.xml">
   
-  <meta name="description" content="Have you ever confronted a code like this: ``` {lang="python"} shouldn't use this function anymore! Now use XYZ! def some_old_function(arg1,arg2): return arg1 + arg2 This is something that I see too often, and this could be done better. \[adsense\] Warnings -------- There is something in python called **warnings**, and guess …">
+  <meta name="description" content="Have you ever confronted a code like this: ``` {lang="python"} shouldn't use this function anymore! Now use XYZ! def some_old_function(arg1,arg2): return arg1 + arg2 This is something that I see too often, and this could be done better. :${IMAGE_TAG} Warnings -------- There is something in python called **warnings**, and guess …">
 
 
 </head>
@@ -84,8 +84,8 @@
 <h1>shouldn't use this function anymore! Now use XYZ!</h1>
 <p>def some_old_function(arg1,arg2):
     return arg1 + arg2</p>
-<div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="n">something</span> <span class="n">that</span> <span class="n">I</span> <span class="n">see</span> <span class="n">too</span> <span class="n">often</span><span class="p">,</span> <span class="ow">and</span> <span class="n">this</span> <span class="n">could</span> <span class="n">be</span> <span class="n">done</span> <span class="n">better</span><span class="o">.</span>  
-\<span class="p">[</span><span class="n">adsense</span>\<span class="p">]</span>
+<div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="n">something</span> <span class="n">that</span> <span class="n">I</span> <span class="n">see</span> <span class="n">too</span> <span class="n">often</span><span class="p">,</span> <span class="ow">and</span> <span class="n">this</span> <span class="n">could</span> <span class="n">be</span> <span class="n">done</span> <span class="n">better</span><span class="o">.</span>
+<span class="p">:</span><span class="err">$</span><span class="p">{</span><span class="n">IMAGE_TAG</span><span class="p">}</span>
 
 <span class="n">Warnings</span>
 <span class="o">--------</span>
@@ -104,9 +104,9 @@
     <span class="p">)</span>
     <span class="k">return</span> <span class="n">arg1</span> <span class="o">+</span> <span class="n">arg2</span>
 </pre></div>
-<p>This way, when this function is called (maybe there was a piece of the code that hadn't got refactored and you missed it)<br/>
+<p>This way, when this function is called (maybe there was a piece of the code that hadn't got refactored and you missed it)
 you'll get the warning in the sys.stderr (by default, but in some cases you can change this to another output).</p>
-<p>You might be asking: <strong>"Why the hell won't you just delete this function?"</strong><br/>
+<p>You might be asking: <strong>"Why the hell won't you just delete this function?"</strong>
 Well, because in some cases you just can't be sure that this function isn't been called by someone else in the project, sometimes you're in the middle of a large refactoring that is going on slowly.</p>
 <h3>Other Warning Types</h3>
 <p>Here are other useful warning types:</p>
@@ -158,8 +158,8 @@ import warnings</p>
 
 <span class="c1">#### ImportWarning</span>
 
-<span class="n">For</span> <span class="n">warnings</span> <span class="n">during</span> <span class="n">the</span> <span class="n">process</span> <span class="n">of</span> <span class="n">importing</span> <span class="n">a</span> <span class="n">module</span>  
-<span class="o">**</span>  
+<span class="n">For</span> <span class="n">warnings</span> <span class="n">during</span> <span class="n">the</span> <span class="n">process</span> <span class="n">of</span> <span class="n">importing</span> <span class="n">a</span> <span class="n">module</span>
+<span class="o">**</span>
 <span class="n">dont</span>\<span class="n">_use</span>\<span class="n">_this</span>\<span class="n">_module</span><span class="o">.</span><span class="n">py</span><span class="o">**</span><span class="p">:</span>
 
 <span class="sb">``</span><span class="err">`</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"python"</span><span class="p">}</span>
@@ -177,7 +177,7 @@ import dont_use_this_module</p>
 
 <span class="c1">#### PendingDeprecationWarning</span>
 
-<span class="n">Very</span> <span class="n">similar</span> <span class="n">to</span> <span class="ne">DeprecationWarning</span><span class="p">,</span> <span class="n">but</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">case</span> <span class="n">the</span> <span class="n">feature</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">deprecated</span><span class="p">,</span>  
+<span class="n">Very</span> <span class="n">similar</span> <span class="n">to</span> <span class="ne">DeprecationWarning</span><span class="p">,</span> <span class="n">but</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">case</span> <span class="n">the</span> <span class="n">feature</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">deprecated</span><span class="p">,</span>
 <span class="n">but</span> <span class="n">soon</span> <span class="p">(</span><span class="n">maybe</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">next</span> <span class="n">version</span> <span class="n">of</span> <span class="n">the</span> <span class="n">project</span><span class="p">)</span> <span class="n">will</span><span class="o">.</span>
 
 <span class="sb">``</span><span class="err">`</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"python"</span><span class="p">}</span>
