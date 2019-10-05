@@ -82,15 +82,15 @@
       <p>Graças as dicas dos meus antigos colegas de trabalho la na Globo.com (Lucas, Hélio e Gustavo) que fiquei sabendo dessa dica importantes do Git.</p>
 <h2>Diferença entre Rebase e Merge</h2>
 <p>Considerando que haja a princípio 3 commits, <strong>A, B e C</strong>:<br/>
-<a href="https://arruda.github.io/wp-content/uploads/2013/09/exg1.png"><img alt="" class="wp-image-1533 alignnone size-full img-fluid" height="68" src="https://arruda.github.io/wp-content/uploads/2013/09/exg1.png" title="3 commits originais" width="255"/></a></p>
+<a href="https://arruda.github.io/wp-content/uploads/2013/09/exg1.png"><img alt="" class="img-fluid alignnone wp-image-1533 size-full" height="68" src="https://arruda.github.io/wp-content/uploads/2013/09/exg1.png" title="3 commits originais" width="255"/></a></p>
 <p>Em seguida o desenvolvedor José criar o commit <strong>D</strong> e o desenvolvedor Manuel o commit <strong>E</strong>:<br/>
-<a href="https://arruda.github.io/wp-content/uploads/2013/09/exg2.png"><img alt="" class="size-medium alignnone wp-image-1535 img-fluid" height="97" src="http://www.arruda.blog.br/wp-content/uploads/2013/09/exg2-300x97.png" title="Dois devs fazem commits" width="300"/></a></p>
+<a href="https://arruda.github.io/wp-content/uploads/2013/09/exg2.png"><img alt="" class="img-fluid alignnone wp-image-1535 size-medium" height="97" src="http://www.arruda.blog.br/wp-content/uploads/2013/09/exg2-300x97.png" title="Dois devs fazem commits" width="300"/></a></p>
 <p>[adsense]</p>
 <h3>Merge</h3>
-<p><a href="https://arruda.github.io/wp-content/uploads/2013/09/exg3.png"><img alt="" class="size-medium alignnone img-fluid wp-image-1538" height="97" src="http://www.arruda.blog.br/wp-content/uploads/2013/09/exg3-300x97.png" title="Fazendo merge" width="300"/></a><br/>
+<p><a href="https://arruda.github.io/wp-content/uploads/2013/09/exg3.png"><img alt="" class="img-fluid alignnone wp-image-1538 size-medium" height="97" src="http://www.arruda.blog.br/wp-content/uploads/2013/09/exg3-300x97.png" title="Fazendo merge" width="300"/></a><br/>
 Como podemos observar, ao utilizar o Merge um novo commit <strong>M</strong> é criado, e ambos os commits <strong>D</strong> e <strong>E</strong> continuam no mesmo lugar. Isso acaba criando uma forma de <em>diamante</em> que confunde bastante quando vamos olhar os commits (além de criar um commit a mais).</p>
 <h3>Rebase</h3>
-<p><a href="https://arruda.github.io/wp-content/uploads/2013/09/exg4.png"><img alt="" class="size-medium alignnone wp-image-1540 img-fluid" height="97" src="http://www.arruda.blog.br/wp-content/uploads/2013/09/exg4-300x97.png" title="Usando rebase" width="300"/></a></p>
+<p><a href="https://arruda.github.io/wp-content/uploads/2013/09/exg4.png"><img alt="" class="wp-image-1540 alignnone size-medium img-fluid" height="97" src="http://www.arruda.blog.br/wp-content/uploads/2013/09/exg4-300x97.png" title="Usando rebase" width="300"/></a></p>
 <p>Ao utilizar o Rebase, um novo commit <strong>R</strong> com conteúdo identido ao do commit <strong>M</strong> anterior é criado, mas eliminamos o commit <strong>E</strong>. Com isso o histórico fica mais linear e fácil de ler e com um commit a menos.</p>
 <p><strong>Atenção:</strong> Como foi dito anteriormente, o Rebase altera a arvore de commits, assim se for feito um push dessa alteração, as arvores dos outros desenvolvedores vão também ser reescritas e isso pode gerar uma baita confusão! Portanto não é uma boa ideia fazer pushar o Rebase, a menos que queira apanhar do seu time!</p>
 <h2>Quando usar Rebase então?</h2>
