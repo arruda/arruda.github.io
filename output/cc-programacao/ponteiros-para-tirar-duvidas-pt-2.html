@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Ponteiros - Para tirar dúvidas Pt 2 | Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida
+</title>
+  <link rel="canonical" href="/cc-programacao/ponteiros-para-tirar-duvidas-pt-2.html">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  
+  <meta name="description" content="Seguindo a mesma idéia do post anterior, dou uma continuidade no tópico de como utilizar ponteiros. Agora vou focar em como acessar atributos de um objeto instanciado a partir de um ponteiro de uma classe: ``` {lang="cpp" line="1"} class MinhaClasse{ private: int x; public: MinhaClasse(){ x = 0; } MinhaClasse(int …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="/">
+        <img class="img-fluid rounded" src=/images/logo.png alt="Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="/">Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</a></h1>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Ponteiros - Para tirar dúvidas Pt 2
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2011-05-24T16:22:00+01:00">
+          <i class="fa fa-clock-o"></i>
+          Ter 24 maio 2011
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="/category/cc-programacao.html">C/C++, programação</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="/tag/c.html">#C</a>,               <a href="/tag/cpp.html">#CPP</a>,               <a href="/tag/ponteiro.html">#ponteiro</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Seguindo a mesma idéia do <a href="http://www.arruda.blog.br/?p=256" title="Ponteiros – Para tirar duvidas">post anterior</a>, dou uma continuidade no tópico de como utilizar ponteiros.</p>
+<p>Agora vou focar em como acessar atributos de um objeto instanciado a partir de um ponteiro de uma classe:</p>
+<p>``` {lang="cpp" line="1"}
+class MinhaClasse{
+private:
+int x;
+public:
+MinhaClasse(){ x = 0; }</p>
+<p>MinhaClasse(int x){
+this-&gt;x = x;
+}
+void setX(int x){ this-&gt;x = x;}
+int getX(void){return this-&gt;x;}
+};</p>
+<div class="highlight"><pre><span></span><span class="nv">E</span> <span class="nv">na</span> <span class="nv">main</span>.<span class="nv">cpp</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">cpp</span><span class="s2">"</span> <span class="nv">line</span><span class="o">=</span><span class="s2">"</span><span class="s">1</span><span class="s2">"</span>}
+<span class="nv">int</span> <span class="nv">main</span><span class="ss">(</span><span class="nv">void</span><span class="ss">)</span>{
+
+<span class="cm">/*Criando uma instancia da MinhaClasse,</span>
+<span class="cm">usando o contrutor padrao.</span>
+<span class="cm">*/</span>
+<span class="nv">MinhaClasse</span> <span class="nv">instancia</span><span class="c1">;</span>
+
+<span class="cm">/*Criando uma instancia da MinhaClasse a partir de um ponteiro</span>
+<span class="cm">da classe.</span>
+<span class="cm">Usando construtor parametrizado.</span>
+<span class="cm">*/</span>
+<span class="nv">MinhaClasse</span> <span class="o">*</span> <span class="nv">instanciaPonteiro</span> <span class="o">=</span> <span class="nv">new</span> <span class="nv">MinhaClasse</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span><span class="c1">;</span>
+
+<span class="cm">/*Criando um vetor de MinhaClasse apartir de um ponteiro</span>
+<span class="cm">da classe.</span>
+<span class="cm">Nesse caso ele utiliza o construtor padrão.</span>
+<span class="cm">*/</span>
+<span class="nv">MinhaClasse</span> <span class="o">*</span> <span class="nv">vetorDeClasses</span> <span class="o">=</span> <span class="nv">new</span> <span class="nv">MinhaClasse</span>[<span class="mi">15</span>]<span class="c1">;</span>
+
+<span class="o">//===========</span><span class="nv">Acessando</span> <span class="nv">Pos</span> <span class="nv">metodos</span>:<span class="o">===========</span>
+<span class="nv">cout</span> <span class="o">&lt;&lt;</span> <span class="nv">instancia</span>.<span class="nv">getX</span><span class="ss">()</span> <span class="o">&lt;&lt;</span> <span class="nv">endl</span><span class="c1">;</span>
+
+<span class="nv">cout</span> <span class="o">&lt;&lt;</span> <span class="nv">instanciaPonteiro</span><span class="o">-&gt;</span><span class="nv">getX</span><span class="ss">()</span> <span class="o">&lt;&lt;</span> <span class="nv">endl</span><span class="c1">;</span>
+
+<span class="k">for</span> <span class="ss">(</span><span class="nv">int</span> <span class="nv">i</span><span class="o">=</span><span class="mi">0</span><span class="c1">; i &lt; 15;i++)</span>
+    <span class="nv">vetorDeClasses</span>[<span class="nv">i</span>].<span class="nv">setX</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span><span class="c1">;</span>
+
+<span class="k">for</span> <span class="ss">(</span><span class="nv">int</span> <span class="nv">i</span><span class="o">=</span><span class="mi">0</span><span class="c1">; i &lt; 15;i++)</span>
+    <span class="nv">cout</span> <span class="o">&lt;&lt;</span> <span class="nv">vetorDeClasses</span>[<span class="nv">i</span>].<span class="nv">getX</span><span class="ss">()</span> <span class="o">&lt;</span>
+<span class="nv">Com</span> <span class="nv">esse</span> <span class="nv">c</span>ó<span class="nv">digo</span> <span class="nv">o</span> <span class="nv">que</span> <span class="nv">teremos</span> <span class="nv">de</span> <span class="nv">sa</span>í<span class="nv">da</span> <span class="nv">ser</span>á:
+
+<span class="s2">"</span><span class="s">0</span>
+
+<span class="mi">10</span>
+
+<span class="mi">1</span>
+
+<span class="mi">2</span>
+
+...
+
+<span class="mi">15</span><span class="s2">"</span>
+<span class="nv">Dessa</span> <span class="nv">forma</span>, <span class="nv">o</span> <span class="nv">que</span> <span class="nv">podemos</span> <span class="nv">notar</span> é <span class="nv">que</span>:
+
+<span class="nv">Ao</span> <span class="nv">instanciar</span> <span class="nv">uma</span> <span class="nv">classe</span>, <span class="nv">acessamos</span> <span class="nv">seus</span> <span class="nv">atributos</span> <span class="nv">da</span> <span class="nv">forma</span>:
+
+<span class="s2">"</span><span class="s">instancia.atributo</span><span class="s2">"</span>, <span class="nv">ou</span> <span class="s2">"</span><span class="s">instancia.getAtributo()</span><span class="s2">"</span> <span class="nv">para</span> <span class="nv">atributos</span> <span class="nv">privados</span>.
+<span class="nv">Para</span> <span class="nv">uma</span> <span class="nv">instancia</span> <span class="nv">a</span> <span class="nv">partir</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">ponteiro</span>, <span class="nv">devemos</span> <span class="nv">usar</span> <span class="nv">no</span> <span class="nv">padr</span>ã<span class="nv">o</span>:
+
+<span class="s2">"</span><span class="s">instanciaPonteiro-&gt;atributo</span><span class="s2">"</span> <span class="nv">ou</span> <span class="s2">"</span><span class="s">instanciaPonteiro-&gt;getAtributo()</span><span class="s2">"</span> <span class="nv">no</span> <span class="nv">caso</span> <span class="nv">de</span> <span class="nv">atributos</span> <span class="nv">privados</span>.
+<span class="nv">Para</span> <span class="nv">acessar</span> <span class="nv">um</span> <span class="nv">atributo</span> <span class="nv">de</span> <span class="nv">uma</span> <span class="nv">instancia</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">vetor</span><span class="ss">(</span><span class="nv">feito</span> <span class="nv">a</span> <span class="nv">partir</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">ponteiro</span><span class="ss">)</span>, <span class="nv">usamos</span> <span class="nv">da</span> <span class="nv">seguinte</span> <span class="nv">forma</span>:
+
+<span class="s2">"</span><span class="s">vetorDeClasses[posicao].atributo</span><span class="s2">"</span> <span class="nv">ou</span> <span class="s2">"</span><span class="s">vetorDeClasses[posicao].getAtributo()</span><span class="s2">"</span> <span class="nv">no</span> <span class="nv">caso</span> <span class="nv">de</span> <span class="nv">atributos</span> <span class="nv">privados</span>.
+
+<span class="nv">Vcs</span> <span class="nv">me</span> <span class="nv">perguntam</span>: <span class="s2">"</span><span class="s">O que raios quer dizer esse -&gt;?</span><span class="s2">"</span>
+
+<span class="nv">Esse</span> <span class="s2">"</span><span class="s">-&gt;</span><span class="s2">"</span> <span class="nv">nada</span> <span class="nv">mais</span> é <span class="k">do</span> <span class="nv">que</span> <span class="nv">um</span> <span class="nv">atalho</span> <span class="nv">para</span> <span class="s2">"</span><span class="s">acessar um atributo/método de uma instância através do conteúdo de um ponteiro</span><span class="s2">"</span>. <span class="nv">Isso</span> é:
+
+<span class="nv">instanciaPonteiro</span><span class="o">-&gt;</span><span class="nv">atributo</span> <span class="o">=</span> <span class="ss">(</span><span class="o">*</span><span class="nv">instanciaPonteiro</span><span class="ss">)</span>.<span class="nv">atributo</span> 
+</pre></div>
+<p>Por enquanto é só isso, caso esteja com duvidas em coisas mais básicas sobre ponteiros, dê uma olhada no <a href="http://www.arruda.blog.br/?p=256" title="Ponteiros – Para tirar duvidas">post anterior</a>.</p>
+<p>Abraços.</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

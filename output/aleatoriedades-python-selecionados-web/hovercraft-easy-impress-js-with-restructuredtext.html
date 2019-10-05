@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Hovercraft - Easy Impress.js with reStructuredText | Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida
+</title>
+  <link rel="canonical" href="/aleatoriedades-python-selecionados-web/hovercraft-easy-impress-js-with-restructuredtext.html">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  
+  <meta name="description" content="Hi there, long time without posting, but now I`m back with the review of this nice tool: Hovercraft, a tool for creating (easily) a nice Impress.js presentation from a reStructuredText. What`s impress.js? Impress.js is a great JS presentation framework based in CSS3 transforms/transitions and …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="/">
+        <img class="img-fluid rounded" src=/images/logo.png alt="Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="/">Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</a></h1>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Hovercraft - Easy Impress.js with reStructuredText
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-05-14T14:41:00+01:00">
+          <i class="fa fa-clock-o"></i>
+          Ter 14 maio 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="/category/aleatoriedades-python-selecionados-web.html">Aleatoriedades, Python, Selecionados, Web</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="/tag/easy.html">#easy</a>,               <a href="/tag/hovercraft.html">#hovercraft</a>,               <a href="/tag/impressjs.html">#impress.js</a>,               <a href="/tag/js.html">#js</a>,               <a href="/tag/python.html">#python</a>,               <a href="/tag/rest.html">#reST</a>,               <a href="/tag/restructuredtext.html">#reStructuredText</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Hi there, long time without posting, but now I`m back with the review of this nice tool:<br/>
+<strong>Hovercraft</strong>, a tool for creating (easily) a nice <a href="http://bartaz.github.io/impress.js/" title="Impress.js">Impress.js</a> presentation from a <a href="http://en.wikipedia.org/wiki/ReStructuredText" title="reStructuredText">reStructuredText</a>.</p>
+<h2>What`s impress.js?</h2>
+<p><a href="http://bartaz.github.io/impress.js/" title="Impress.js">Impress.js</a> is a great JS presentation framework based in CSS3 transforms/transitions and many other cool stuff.</p>
+<h2>What`s reStructuredText?</h2>
+<p>This is a lightweight markup language that is most used in documentation of software such as Docutils and that is easily readable by humans.</p>
+<h2>So.. Hovercraft...</h2>
+<p>What <a href="http://regebro.github.io/hovercraft/" title="Hovercraf">Hovercraft</a> does is simplify the creation of a Impress.Js presentation.<br/>
+So, instead of making tha HTML/CSS yourself, all you have to do is a ReStructuredText and run hovercraft, that the corresponding HTML/CSS and JS will be generated for you =)</p>
+<h2>Installing Hovercraft</h2>
+<p>To install it, just install it using PIP:</p>
+<p>``` {lang="shell"}
+pip install hovercraft</p>
+<div class="highlight"><pre><span></span><span class="o">**</span><span class="nv">OBS</span>:<span class="o">**</span><span class="nv">Hovercraft</span> <span class="nv">is</span> <span class="nv">intended</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">used</span> <span class="nv">with</span> <span class="nv">Python</span> <span class="mi">3</span>. <span class="nv">But</span> <span class="nv">I</span> <span class="nv">also</span> <span class="nv">made</span> <span class="nv">it</span> <span class="nv">work</span><span class="ss">(</span><span class="nv">at</span> <span class="nv">least</span> <span class="nv">what</span> <span class="nv">I</span> <span class="nv">could</span> <span class="nv">test</span><span class="ss">)</span> <span class="nv">in</span> <span class="nv">Python</span> <span class="mi">2</span>.<span class="mi">7</span>.  
+<span class="k">If</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">use</span> <span class="nv">it</span> <span class="nv">with</span> <span class="nv">Python</span> <span class="mi">2</span>.<span class="mi">7</span> <span class="nv">you</span>\`<span class="nv">ll</span> <span class="nv">also</span> <span class="nv">need</span> <span class="nv">to</span> <span class="nv">install</span> <span class="nv">configparser</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">shell</span><span class="s2">"</span>}
+<span class="nv">pip</span> <span class="nv">install</span> <span class="nv">configparser</span>
+</pre></div>
+<p>[adsense]</p>
+<h2>Basic Usage</h2>
+<p>First of all you`ll have to create a <strong>.rst</strong> file for your presentation. Ex:<br/>
+<strong>helloworld.rst</strong>.</p>
+<p>Then inside you put:</p>
+<p>``` {lang="rst"}
+:title: Hello World!</p>
+<p>This is a simple Hello world example for hovercraft!</p>
+<hr/>
+<h1>This is the First Slide:</h1>
+<p>Some text here in this slide...</p>
+<p>.. note::</p>
+<div class="highlight"><pre><span></span><span class="nv">Here</span> <span class="nv">whe</span> <span class="nv">have</span> <span class="nv">some</span> <span class="nv">notes</span> <span class="k">for</span> <span class="nv">this</span> <span class="nv">slide</span>.
+</pre></div>
+<hr/>
+<h1>Second Slide</h1>
+<p>Hello World!</p>
+<div class="highlight"><pre><span></span>### <span class="nv">Generate</span> <span class="nv">the</span> <span class="nv">Presentation</span>
+
+<span class="nv">To</span> <span class="nv">create</span> <span class="nv">a</span> <span class="nv">Impress</span>.<span class="nv">js</span> <span class="nv">presentation</span> <span class="nv">from</span> <span class="nv">the</span> <span class="nv">last</span> <span class="nv">example</span>, <span class="nv">just</span> <span class="k">do</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">shell</span><span class="s2">"</span>}
+<span class="nv">hovercraft</span> <span class="o">-</span><span class="nv">a</span> <span class="nv">helloworld</span>.<span class="nv">rst</span> <span class="nv">helloworld</span>
+</pre></div>
+<p>This will create a directory named <strong>"helloworld"</strong> that contains the HTML, CSS and JS for your presentation, you just have to open the index.html and present!</p>
+<h2>Adding some nice Effects</h2>
+<p>You can use many effects in your presentation, and set many options:</p>
+<p>In the next example we`ll set so that :</p>
+<ul>
+<li>when moving from the first slide to the second, it will go down.</li>
+<li>in the transition from the second to the last, it will rotate 90 degrees.</li>
+</ul>
+<p>So here is the ReStructuredText for this new presentation:</p>
+<p>``` {lang="rst"}
+:title: Hello World! Efx</p>
+<p>This is a simple Hello world example for hovercraft! with some effects.</p>
+<hr/>
+<h1>This is the First Slide:</h1>
+<p>Some text here in this slide...</p>
+<p>.. note::</p>
+<div class="highlight"><pre><span></span><span class="nv">Here</span> <span class="nv">whe</span> <span class="nv">have</span> <span class="nv">some</span> <span class="nv">notes</span> <span class="k">for</span> <span class="nv">this</span> <span class="nv">slide</span>.
+</pre></div>
+<hr/>
+<p>:data-y: r1000</p>
+<h1>Second Slide</h1>
+<p>Hello World!</p>
+<hr/>
+<p>:data-rotate: 90</p>
+<h1>Rotating</h1>
+<p>Nice!</p>
+<div class="highlight"><pre><span></span><span class="n">Again</span><span class="p">,</span> <span class="n">just</span> <span class="n">run</span> <span class="n">the</span> <span class="n">same</span> <span class="n">command</span><span class="p">:</span>
+
+<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"shell"</span><span class="err">}</span>
+<span class="n">hovercraft</span> <span class="o">-</span><span class="n">a</span> <span class="n">helloworld</span><span class="p">.</span><span class="n">rst</span> <span class="n">helloworld</span>
+</pre></div>
+<p>And you`ll get a presentation with rotation and custom positioning.</p>
+<h2>More!</h2>
+<p>If you want to know more about this too, and what it allows you to do, just check it`s presentation: <a href="http://regebro.github.io/hovercraft/">http://regebro.github.io/hovercraft/</a></p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

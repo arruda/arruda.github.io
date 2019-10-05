@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Sublime Text 2 - Python, VirtualEnv e Auto Complete | Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida
+</title>
+  <link rel="canonical" href="/ambiente-de-trabalho-programacao-python-selecionados/sublime-text-2-python-virtualenv-e-auto-complete.html">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  
+  <meta name="description" content="Depois de algum tempo usando o Eclipse + PyDev, já estava ficando cansado da lentidão do Eclipse. Como já tinha usado antes o Sublime Text, mas para java, e não tinha configurado tudo para ficar com um autocomplete decente como o do eclipse, parei de usar a mesma, mas a pouco …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="/">
+        <img class="img-fluid rounded" src=/images/logo.png alt="Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="/">Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</a></h1>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Sublime Text 2 - Python, VirtualEnv e Auto Complete
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-01-22T09:19:00+00:00">
+          <i class="fa fa-clock-o"></i>
+          Ter 22 janeiro 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="/category/ambiente-de-trabalho-programacao-python-selecionados.html">Ambiente de Trabalho, programação, Python, Selecionados</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="/tag/auto-complete.html">#auto complete</a>,               <a href="/tag/python.html">#python</a>,               <a href="/tag/sublime.html">#sublime</a>,               <a href="/tag/text.html">#text</a>,               <a href="/tag/virtualenv.html">#virtualenv</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Depois de algum tempo usando o Eclipse + PyDev, já estava ficando cansado da lentidão do Eclipse. Como já tinha usado antes o Sublime Text, mas para java, e não tinha configurado tudo para ficar com um autocomplete decente como o do eclipse, parei de usar a mesma, mas a pouco tempo descobri uma maneira rápida e facil de preparar o ambiente e que funciona muito bem, mesmo usando um virtualEnv.</p>
+<h2>Sublime Text 2 - Download</h2>
+<p>Antes de mais nada devemos baixar a ultima versão da IDE:<br/>
+<a href="http://www.sublimetext.com/2">http://www.sublimetext.com/2</a></p>
+<h2>Package Control</h2>
+<p>Para facilitar a instalação de outros pacotes no Sublime, devemos instalar esse cara aqui:<br/>
+<a href="http://wbond.net/sublime_packages/package_control" title="Package Manager">Package Control</a>.<br/>
+Para instala-lo é simples:</p>
+<ul>
+<li>Abra o console do sublime text(<strong>ctrl+`</strong> normalmente, ou acessível em <strong>View-&gt;Show Console</strong></li>
+<li>Cole o seguinte texto e de enter:</li>
+</ul>
+<p>``` {lang="bash"}
+import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print 'Please restart Sublime Text to finish installation'</p>
+<div class="highlight"><pre><span></span><span class="nv">Depois</span> <span class="nv">reinicie</span> <span class="nv">o</span> <span class="nv">sublime</span>.
+
+<span class="nv">SublimeRope</span> <span class="o">-</span> <span class="nv">Autocomplete</span> <span class="nv">e</span> <span class="nv">outras</span> <span class="nv">coisas</span> <span class="k">do</span> <span class="nv">Python</span>
+<span class="o">----------------------------------------------------</span>
+
+<span class="nv">Para</span> <span class="nv">instalar</span> <span class="nv">esse</span> <span class="nv">package</span> <span class="nv">vamos</span> <span class="nv">usar</span> <span class="nv">o</span> <span class="nv">Package</span> <span class="nv">Control</span> <span class="nv">rec</span>é<span class="nv">m</span> <span class="nv">instalado</span>, <span class="nv">aperte</span><span class="ss">(</span><span class="o">**</span><span class="nv">Shift</span> <span class="o">+</span> <span class="nv">ctrl</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span> <span class="nv">ou</span> <span class="nv">no</span> <span class="nv">mac</span>: <span class="o">**</span><span class="nv">shit</span> <span class="o">+</span> <span class="nv">cmd</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span><span class="ss">)</span>  
+<span class="nv">Selecione</span> <span class="nv">na</span> <span class="nv">lista</span>: <span class="o">**</span><span class="s2">"</span><span class="s">Package Control: Install Package</span><span class="s2">"</span><span class="o">**</span>, <span class="nv">e</span> <span class="nv">na</span> <span class="nv">pr</span>ó<span class="nv">xima</span> <span class="nv">lista</span> <span class="nv">que</span> <span class="nv">aparecer</span>, <span class="nv">procure</span> <span class="nv">por</span> <span class="nv">SublimeRope</span> <span class="nv">e</span> <span class="nv">instale</span>.
+
+<span class="nv">Criando</span> <span class="nv">um</span> <span class="nv">projeto</span> <span class="nv">Rope</span>
+<span class="o">-----------------------</span>
+
+<span class="nv">Para</span> <span class="nv">deixar</span> <span class="nv">tudo</span> <span class="nv">ok</span>, <span class="nv">devemos</span> <span class="nv">agora</span> <span class="nv">criar</span> <span class="nv">um</span> <span class="nv">projeto</span> <span class="nv">Rope</span> <span class="nv">e</span> <span class="nv">configurar</span> <span class="nv">alguns</span> <span class="nv">detalhes</span>.  
+<span class="nv">Para</span> <span class="nv">criar</span> <span class="nv">um</span> <span class="nv">novo</span> <span class="nv">projeto</span> <span class="nv">Rope</span>, <span class="nv">aperte</span><span class="ss">(</span><span class="o">**</span><span class="nv">Shift</span> <span class="o">+</span> <span class="nv">ctrl</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span> <span class="nv">ou</span> <span class="nv">no</span> <span class="nv">mac</span>: <span class="o">**</span><span class="nv">shit</span> <span class="o">+</span> <span class="nv">cmd</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span><span class="ss">)</span>, <span class="nv">e</span> <span class="nv">procure</span> <span class="nv">por</span> <span class="o">**</span><span class="s2">"</span><span class="s">Rope: New Project</span><span class="s2">"</span><span class="o">**</span>.
+
+<span class="nv">Ao</span> <span class="nv">selecionar</span> <span class="nv">essa</span> <span class="nv">op</span>çã<span class="nv">o</span> <span class="nv">ele</span> <span class="nv">ir</span>á <span class="nv">perguntar</span> <span class="nv">onde</span> <span class="nv">se</span> <span class="nv">encontra</span> <span class="nv">seu</span> <span class="nv">virtualenv</span>.  
+<span class="nv">Esse</span> é <span class="nv">o</span> <span class="nv">path</span> <span class="k">do</span> <span class="nv">env</span> <span class="nv">em</span> <span class="nv">quest</span>ã<span class="nv">o</span>, <span class="nv">ex</span>:  
+<span class="o">**</span><span class="s2">"</span><span class="s">/Users/arruda/.virtualenvs/um\_projeto</span><span class="s2">"</span><span class="o">**</span>  
+<span class="nv">Depois</span> <span class="nv">disso</span>, <span class="nv">caso</span> <span class="nv">queira</span> <span class="nv">add</span> <span class="nv">algo</span> <span class="nv">mais</span> <span class="nv">na</span> <span class="nv">PYTHONPATH</span>, <span class="nv">voc</span>ê <span class="nv">pode</span> <span class="nv">abrir</span> <span class="nv">o</span> <span class="nv">arquivo</span>: <span class="o">**</span><span class="s2">"</span><span class="s">.ropeproject/config.py</span><span class="s2">"</span><span class="o">**</span>
+
+<span class="nv">HotKeys</span>
+<span class="o">-------</span>
+
+<span class="nv">Uma</span> <span class="nv">vez</span> <span class="nv">instalado</span> <span class="nv">o</span> <span class="nv">SublimeRope</span> <span class="nv">podemos</span> <span class="nv">usar</span> <span class="nv">o</span> <span class="nv">AutoComplete</span> <span class="nv">usando</span> <span class="o">**</span><span class="nv">Ctrl</span> <span class="o">+</span> <span class="nv">Space</span><span class="o">**</span>, <span class="nv">mas</span> <span class="nv">existe</span> <span class="nv">outra</span> <span class="nv">funcionalidade</span> <span class="nv">muito</span> <span class="nv">boa</span> <span class="nv">presente</span> <span class="nv">no</span> <span class="nv">eclipse</span> <span class="nv">que</span> <span class="nv">podemos</span> <span class="nv">aproveitar</span> <span class="nv">agora</span> <span class="nv">no</span> <span class="nv">Sublime</span> <span class="nv">tamb</span>é<span class="nv">m</span>, <span class="nv">o</span> <span class="nv">Code</span> <span class="nv">Navigation</span><span class="ss">(</span><span class="nv">Navegamos</span> <span class="nv">diretamente</span> <span class="nv">para</span> <span class="nv">o</span> <span class="nv">fonte</span> <span class="nv">da</span> <span class="nv">sele</span>çã<span class="nv">o</span> <span class="nv">atual</span><span class="ss">)</span>.
+
+<span class="nv">No</span> <span class="nv">meu</span> <span class="nv">caso</span> <span class="nv">configurei</span> <span class="nv">para</span> <span class="nv">que</span> <span class="nv">a</span> <span class="nv">hotkey</span> <span class="nv">para</span> <span class="nv">esse</span> <span class="nv">comando</span> <span class="nv">fosse</span>: <span class="nv">Super</span> <span class="o">+</span> <span class="nv">A</span> <span class="o">+</span> <span class="nv">S</span> <span class="ss">(</span><span class="nv">No</span> <span class="nv">mac</span> <span class="nv">o</span> <span class="nv">super</span> <span class="nv">para</span> <span class="nv">o</span> <span class="nv">sublime</span> é <span class="nv">o</span> <span class="nv">Command</span><span class="ss">)</span>.
+
+<span class="nv">Para</span> <span class="nv">isso</span> <span class="nv">devemos</span> <span class="nv">ir</span> <span class="nv">em</span> <span class="nv">preferences</span><span class="o">-</span>\<span class="o">&gt;</span><span class="nv">Default</span> <span class="nv">keybinding</span> <span class="o">-</span> <span class="nv">User</span> <span class="nv">e</span> <span class="nv">alterar</span> <span class="nv">no</span> <span class="nv">arquivo</span> <span class="nv">para</span> <span class="nv">ter</span> <span class="nv">a</span> <span class="nv">nova</span> <span class="nv">configura</span>çã<span class="nv">o</span> <span class="k">do</span> <span class="nv">Rope</span>:
+
+``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">python</span><span class="s2">"</span>}
+<span class="o">//</span><span class="nv">Rope</span> <span class="nv">key</span> <span class="nv">bindings</span>
+{ <span class="s2">"</span><span class="s">keys</span><span class="s2">"</span>: [<span class="s2">"</span><span class="s">super+a</span><span class="s2">"</span>, <span class="s2">"</span><span class="s">super+s</span><span class="s2">"</span>], <span class="s2">"</span><span class="s">command</span><span class="s2">"</span>: <span class="s2">"</span><span class="s">goto_python_definition</span><span class="s2">"</span>, <span class="s2">"</span><span class="s">context</span><span class="s2">"</span>:
+    [
+        { <span class="s2">"</span><span class="s">key</span><span class="s2">"</span>: <span class="s2">"</span><span class="s">selector</span><span class="s2">"</span>, <span class="s2">"</span><span class="s">operator</span><span class="s2">"</span>: <span class="s2">"</span><span class="s">equal</span><span class="s2">"</span>, <span class="s2">"</span><span class="s">operand</span><span class="s2">"</span>: <span class="s2">"</span><span class="s">source.python</span><span class="s2">"</span> }
+    ]
+}
+</pre></div>
+<p>Caso queira, você pode configurar outros atalhos do Rope, a lista completa se encontra aqui: <a href="http://sublimerope.readthedocs.org/en/latest/key_bindings.html" title="http://sublimerope.readthedocs.org/en/latest/key_bindings.html">SublimeRope Keys</a></p>
+<h2>Python Settings</h2>
+<p>Outra coisa que devemos fazer é configurar as settings do usuario para deixa-las de mais adequadas ao python.</p>
+<p>Você pode fazer isso você deve ir em preferences-&gt;Settings - User, e nele por a seguinte configuração:</p>
+<p><code>{lang="python"}
+{
+    "auto_complete_delay": 500,
+    "detect_indentation": false,
+    "folder_exclude_patterns":
+    [
+        ".svn",
+        ".git",
+        ".hg",
+        "CVS",
+        ".bundle",
+        ".ropeproject",
+        ".sass-cache",
+        ".settings"
+    ],
+    "font_size": 13.0,
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "trim_automatic_white_space": true,
+    "trim_trailing_white_space_on_save": true
+}</code></p>
+<p>Com isso seu Sublime será uma ótima IDE para Python =)</p>
+<h3>Referencia</h3>
+<p>Fiz esse post usando como referencia esse outro em ingles(que é muito bom e abrange outros detalhes inclusive): <a href="http://outofmemoryblog.blogspot.com.br/2012/08/python-development-with-sublime-text-2.html" title="http://outofmemoryblog.blogspot.com.br/2012/08/python-development-with-sublime-text-2.html">Python development with Sublime Text 2 tips and tricks</a></p>
+<p>Abraços</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

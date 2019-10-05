@@ -11,6 +11,9 @@ SITEURL = ''
 PATH = 'content'
 STATIC_PATHS = ['images']
 
+ARTICLE_URL = '{category}/{slug}.html'
+ARTICLE_SAVE_AS = '{category}/{slug}.html'
+
 TIMEZONE = 'Europe/Dublin'
 
 DEFAULT_LANG = 'en'
@@ -21,6 +24,7 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -47,9 +51,9 @@ SITEMAP_SAVE_AS = 'sitemap.xml'
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
-SITEIMAGE = 'images/logo.png'
+SITEIMAGE = '/images/logo.png'
 # PYGMENTS_STYLE = 'default'
 PYGMENTS_STYLE = 'monokai'
 RFG_FAVICONS = True

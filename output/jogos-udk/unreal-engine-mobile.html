@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Unreal Engine Mobile | Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida
+</title>
+  <link rel="canonical" href="/jogos-udk/unreal-engine-mobile.html">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  
+  <meta name="description" content="Mais uma vez venho lhes falar da Unreal Engine, desta vez algo que era desconhecido para mim até pouco tempo: UE para desenvolvimento mobile. Já havia dado uma rápida introdução ao que as ferramentas do Unreal Ed possibilitam, então decidi olhar a fundo as vantagens e as limitações das mesmas …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="/">
+        <img class="img-fluid rounded" src=/images/logo.png alt="Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="/">Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</a></h1>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Unreal Engine Mobile
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2011-04-26T15:00:00+01:00">
+          <i class="fa fa-clock-o"></i>
+          Ter 26 abril 2011
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="/category/jogos-udk.html">Jogos, UDK</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="/tag/mobile.html">#mobile</a>,               <a href="/tag/udk.html">#udk</a>,               <a href="/tag/ue3.html">#ue3</a>,               <a href="/tag/unreal-engine.html">#unreal engine</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Mais uma vez venho lhes falar da Unreal Engine, desta vez algo que era desconhecido para mim até pouco tempo: UE para desenvolvimento mobile.</p>
+<p>Já havia dado uma rápida introdução ao que as ferramentas do Unreal Ed possibilitam, então decidi olhar a fundo as vantagens e as limitações das mesmas.</p>
+<p>Fiquei muito contente com o que vi, não só com os jogos resultantes, mas também com o incentivo para a área. Eles da EpicGames não são bobos, sabem que app Mobile são a onda hoje em dia, e não deixaram por menos com a Engine.</p>
+<h2>Compatibilidade</h2>
+<p>Atualmente a UE3 tem maior compatibilidade com sistemas IOs, Ipad, Iphone 3GS e similares.<br/>
+No caso para Android ainda não é algo muito certo, tirando alguns modelos específicos como o Samsumg Galaxy Tab.<br/>
+Ela também roda no novo console feito pela Sony, o NGP, sem problemas.</p>
+<h2>UE3 Mobile vs UE3</h2>
+<p>A verdade é que se você está desenvolvendo uma aplicação usando UE3, é quer q ela seja multiplataforma(PC e Mobile), então eis alguns detalhes:</p>
+<ul>
+<li>Materials: Para a plataforma Mobile, a forma como os Materials são feitos e processados é um pouco diferente. Veja essa referencia: <a href="http://udn.epicgames.com/Three/MobileMaterialReference.html" title="Materials for Mobile">Materials</a></li>
+<li>A maioria das coisas serão convertidas para que sejam suportadas por um mobile, ao gerar tal versão. Entretanto vale lembrar que pontos como usabilidade de memoria, limitar a quantidade de coisas nos Levels é uma boa forma de reduzir isso.</li>
+<li>Outra possível solução é criar 2 tipos diferentes de jogos, mas com scripts e funcionalidades similares, dessa forma você pode ter num jogo de PC um mapa gigante cheio de itens e etc, e no Mobile salas pequenas com menos detalhes.</li>
+</ul>
+<h2>Ativando a UE3 para Mobile</h2>
+<p>Para fazer que sua Unreal Engine trabalhe para Mobile, é preciso alterar alguns arquivos de configuração da mesma (ao que parece é possível baixar uma versão já totalmente configurada para mobile, mas ainda não achei isso).</p>
+<p>A maioria das configurações podem ser encontradas no arquivo: "Engine/Config/BaseEngine.ini". Essas configurações também podem ser sobrescritas por seu "DefaultEngine.ini" dentro do seu diretório "GameName/Config". Mais informações sobre <a href="http://udn.epicgames.com/Three/MobileSystemSettings.html" title="Mobile Settings">Mobile Settings</a>.</p>
+<h2>Domínio do Mercado</h2>
+<p>Ao que tudo indica, e pelo que muitos estão dizendo, a UE3, agora que chegou ao mercado Mobile, veio para ficar. Provavelmente os melhores gráficos que você vera num Mobile nos dias que viram serão provenientes da UE3. Então vale a pena conferir e aproveitar a onda.<br/>
+Para você ter uma noção, o jogo Infinity Blade feito pela EpicGames, era pra ser um jogo simples que apenas mostra o poder da engine em mobiles. Entretanto, depois de pouco tempo de venda, até mesmo o pessoal da EpicGames ficou espantado com a quantidade de pessoas comprando o jogo.</p>
+<p>Também, não é para menos, confira por si próprio se não da vontade de jogar isso no teu IOs:<br/>
+<iframe allowfullscreen="" frameborder="0" height="390" src="http://www.youtube.com/embed/JDvPIhCd8N4" title="YouTube video player" width="640"></iframe></p>
+<p>E ai, pode falar, já ta baixando o jogo né? =)</p>
+<h2>Referencia</h2>
+<p><a href="http://udn.epicgames.com/Three/MobileHome.html" title="Mobile Home">UDN Mobile Home</a></p>
+<p><a href="http://www.udk.com/mobile" title="UDK Mobile">UDK Mobile</a></p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

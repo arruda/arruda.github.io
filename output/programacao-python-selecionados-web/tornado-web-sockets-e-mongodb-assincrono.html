@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Tornado, Web Sockets e MongoDB Assíncrono | Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida
+</title>
+  <link rel="canonical" href="/programacao-python-selecionados-web/tornado-web-sockets-e-mongodb-assincrono.html">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  
+  <meta name="description" content="Esses dias estive testando a framework web Tornado (originalmente desenvolvida no FriendFeed do Facebook) conhecida por ter suporte a non-blocking I/O na rede e pelo uso de web sockets e decidi falar um pouco da experiência que tive com ela, bem como algumas curiosidades que descobri. DB Assíncrono Ao …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="/">
+        <img class="img-fluid rounded" src=/images/logo.png alt="Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="/">Arruda: Um Blog Sobre Tecnologia, Informação, Literatura e Coisas da Vida</a></h1>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li class="list-inline-item"><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li class="list-inline-item"><a href="#" target="_blank">You can modify those links in your config file</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/projetos.html">Projetos</a></li>
+            <li class="list-inline-item"><a href="/pages/sobre.html">Sobre</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Tornado, Web Sockets e MongoDB Assíncrono
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2013-10-04T10:00:00+01:00">
+          <i class="fa fa-clock-o"></i>
+          Sex 04 outubro 2013
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="/category/programacao-python-selecionados-web.html">programação, Python, Selecionados, Web</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="/author/arruda.html">arruda</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="/tag/assincrono.html">#assincrono</a>,               <a href="/tag/async.html">#async</a>,               <a href="/tag/mongo.html">#mongo</a>,               <a href="/tag/motor.html">#motor</a>,               <a href="/tag/python.html">#python</a>,               <a href="/tag/tornado.html">#tornado</a>,               <a href="/tag/web-sockets.html">#web sockets</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p><a href="/wp-content/uploads/2013/10/tornado.png"><img alt="" class="size-full alignnone img-fluid wp-image-1602" height="72" src="/wp-content/uploads/2013/10/tornado.png" title="tornado" width="286"/></a></p>
+<p>Esses dias estive testando a framework web <a href="http://www.tornadoweb.org/en/stable/" title="Tornado web page">Tornado</a> (originalmente desenvolvida no FriendFeed do Facebook) conhecida por ter suporte a non-blocking I/O na rede e pelo uso de web sockets e decidi falar um pouco da experiência que tive com ela, bem como algumas curiosidades que descobri.</p>
+<h2>DB Assíncrono</h2>
+<p>Ao investigar mais a fundo, descobri que a framework utiliza por padrão o MySQL como banco de dados.<br/>
+Na mesma hora fiquei com aquela pulga atrás da orelha, já que até onde sabia o MySQL não trabalhava assíncrono.<br/>
+E foi aí que percebi: Ao ler que a framework tinha non-blocking eu já considerei que tudo poderia ser non-blocking,<br/>
+mas na verdade é como eles dizem né: A parte de networking é non-blocking, o acesso a disco é diferente.</p>
+<p>Então, volta aquela historia... <strong>é importante ler as coisas direito, né xD</strong></p>
+<h2>Facilidade e Simplicidade</h2>
+<p>A framework é bem simplista, muito bacana ela, procurei no repositório oficial no <a href="https://github.com/facebook/tornado" title="Repositorio Tornado no Github">github</a> e descobri la uns <a href="https://github.com/facebook/tornado/tree/master/demos/websocket" title="Exemplos usando web socket no github">exemplos usando web sockets</a>, e decidi fazer um eu mesmo.<br/>
+Fiquei espantado que em apenas um dia, eu que não sabia nada de Web Sockets, nem de Tornado consegui fazer uma app funcional.<br/>
+[adsense]</p>
+<h2>Mas e o BD assíncrono?</h2>
+<p>Bem, descobri que existe o projeto chamado <a href="http://motor.readthedocs.org/en/stable/" title="Pagina do Motor">Motor</a> (de <strong>MO</strong>ngo e <strong>TOR</strong>nado) que é implementa um driver em cima do PyMongo que faz ele funcionar de forma assíncrona. Não cheguei a ver as limitações da ferramenta, mas para o teste que eu fiz de um chat tosquinho ela funcionou de boa.</p>
+<h2>Chega de blablabla, quero código!</h2>
+<p>Bem, pra quem quiser o código é bem simples, criei inclusive um arquivo Vagrant para facilitar (basta usar o comando <strong>vagrant up</strong> na pasta, rodar o servidor e acessar a página localhost:8888 pra ver em funcionamento.<br/>
+<strong>OBS:</strong> Quem não conhecer o Vagrant aconselho a dar uma olhada neste <a href="http://www.arruda.blog.br/programacao/vagrant-e-puppet-como-manter-seu-ambiente-de-desenvolvimento-sempre-igual/" title="Vagrant e Puppet – Como manter seu ambiente de desenvolvimento sempre igual">post</a>, facilita muito o espelhamento do ambiente de trabalho =)</p>
+<p>Quem não usar Vagrant, basta instalar os requirements (<strong>pip install -r requirements.txt</strong>) e o ter instalado o MongoDB.</p>
+<p>Aqui segue o <a href="https://github.com/arruda/Tornado-WS-Assincrono" title="Tornado-WS-Assincrono">link para o repositório</a> no github.<br/>
+E tomei a liberdade de por uma estrutura no código que me facilitasse:<br/>
+Em <strong>urls.py</strong> tem o mapeamento das urls, em <strong>handlers</strong> tem os códigos em Python das visões do sistema. e no arquivo <strong>app.py</strong> tem as configurações básicas da aplicação (inclusive a que diz que é para usar o <strong>Motor</strong> no banco de dados).</p>
+<h3>Editado</h3>
+<p>Segue um link de um vídeo, muito bom sobre esse assunto, que a <a href="http://www.arruda.blog.br/programacao/tornado-web-sockets-e-mongodb-assincrono/#comment-863" title="Comentario da Anna">Anna Cruz</a> postou aqui nos comentários: <a href="http://vimeo.com/38972256">http://vimeo.com/38972256</a></p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
