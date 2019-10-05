@@ -37,7 +37,7 @@ SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['bootstrapify']
+PLUGINS = ['bootstrapify', 'more_categories']
 
 BOOTSTRAPIFY = {
     'table': ['table', 'table-striped', 'table-hover'],
