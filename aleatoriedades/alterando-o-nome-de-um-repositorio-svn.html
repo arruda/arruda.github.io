@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2011-08-18T11:48:00+01:00">
           <i class="fa fa-clock-o"></i>
-          Qui 18 agosto 2011
+          Thu 18 August 2011
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -80,26 +80,26 @@
 <p>``` {lang="bash"}
 $cd /path/do/repositorio
 $svnadmin dump nomeAntigoRepos &gt; nomeAntigoRepos.dump</p>
-<div class="highlight"><pre><span></span><span class="nv">Isso</span> <span class="nv">far</span>á <span class="nv">com</span> <span class="nv">que</span> <span class="nv">seja</span> <span class="nv">criado</span> <span class="nv">um</span> <span class="nv">arquivo</span> <span class="s2">"</span><span class="s">nomeAntigoRepos.dump</span><span class="s2">"</span> <span class="nv">com</span> <span class="nv">as</span> <span class="nv">informa</span>çõ<span class="nv">es</span> <span class="nv">dos</span> <span class="nv">seus</span> <span class="nv">commits</span> <span class="nv">e</span> <span class="nv">etc</span>.  
-<span class="o">**</span><span class="nv">OBS</span>:<span class="o">**</span> <span class="nv">Esse</span> <span class="nv">arquivo</span> .<span class="nv">dump</span> <span class="nv">pode</span> <span class="nv">ficar</span> <span class="nv">bem</span> <span class="nv">grande</span>, <span class="nv">dependendo</span> <span class="nv">de</span> <span class="nv">qual</span> <span class="k">for</span> <span class="nv">o</span> <span class="nv">porte</span> <span class="k">do</span> <span class="nv">seu</span> <span class="nv">SVN</span>.
+<div class="highlight"><pre><span></span><span class="n">Isso</span> <span class="n">fará</span> <span class="n">com</span> <span class="n">que</span> <span class="n">seja</span> <span class="n">criado</span> <span class="n">um</span> <span class="n">arquivo</span> <span class="s2">"nomeAntigoRepos.dump"</span> <span class="n">com</span> <span class="k">as</span> <span class="n">informações</span> <span class="n">dos</span> <span class="n">seus</span> <span class="n">commits</span> <span class="n">e</span> <span class="n">etc</span><span class="o">.</span>  
+<span class="o">**</span><span class="n">OBS</span><span class="p">:</span><span class="o">**</span> <span class="n">Esse</span> <span class="n">arquivo</span> <span class="o">.</span><span class="n">dump</span> <span class="n">pode</span> <span class="n">ficar</span> <span class="n">bem</span> <span class="n">grande</span><span class="p">,</span> <span class="n">dependendo</span> <span class="n">de</span> <span class="n">qual</span> <span class="k">for</span> <span class="n">o</span> <span class="n">porte</span> <span class="n">do</span> <span class="n">seu</span> <span class="n">SVN</span><span class="o">.</span>
 
-<span class="nv">Em</span> <span class="nv">seguida</span>, <span class="nv">crie</span> <span class="nv">um</span> <span class="nv">novo</span> <span class="nv">reposit</span>ó<span class="nv">rio</span> <span class="nv">com</span> <span class="nv">o</span> <span class="nv">nome</span> <span class="nv">desejado</span>, <span class="nv">e</span> <span class="nv">fa</span>ç<span class="nv">a</span> <span class="o">**</span><span class="nv">load</span><span class="o">**</span> <span class="k">do</span> <span class="nv">seu</span> <span class="nv">arquivo</span> <span class="o">*</span>.<span class="nv">dump</span><span class="o">*</span> <span class="nv">nele</span>:
+<span class="n">Em</span> <span class="n">seguida</span><span class="p">,</span> <span class="n">crie</span> <span class="n">um</span> <span class="n">novo</span> <span class="n">repositório</span> <span class="n">com</span> <span class="n">o</span> <span class="n">nome</span> <span class="n">desejado</span><span class="p">,</span> <span class="n">e</span> <span class="n">faça</span> <span class="o">**</span><span class="nb">load</span><span class="o">**</span> <span class="n">do</span> <span class="n">seu</span> <span class="n">arquivo</span> <span class="o">*.</span><span class="n">dump</span><span class="o">*</span> <span class="n">nele</span><span class="p">:</span>
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">bash</span><span class="s2">"</span>}
-$<span class="nv">svnadmin</span> <span class="nv">create</span> <span class="nv">nomeNovoRepos</span>
-$<span class="nv">svnadmin</span> <span class="nv">load</span> <span class="nv">nomeNovoRepos</span> <span class="o">&lt;</span> <span class="nv">nomeAntigoRepos</span>.<span class="nv">dump</span>
+<span class="err">```</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"bash"</span><span class="p">}</span>
+<span class="o">$</span><span class="n">svnadmin</span> <span class="n">create</span> <span class="n">nomeNovoRepos</span>
+<span class="o">$</span><span class="n">svnadmin</span> <span class="nb">load</span> <span class="n">nomeNovoRepos</span> <span class="o">&lt;</span> <span class="n">nomeAntigoRepos</span><span class="o">.</span><span class="n">dump</span>
 </pre></div>
 <p>Agora já pode excluir o nomeAntigoRepos.dump e o antigo repositório também.</p>
 <h2>Alterando o Trac</h2>
 <p>Caso esteja usando o Trac, e se quiser alterar o nome do Trac também, deve ser feito:</p>
 <p>``` {lang="bash"}
 $trac-admin /path/do/trac hotcopy /path/do/novoTrac</p>
-<div class="highlight"><pre><span></span><span class="n">Depois</span> <span class="n">disso</span> <span class="n">abra</span> <span class="n">o</span> <span class="n">conf</span><span class="p">(</span><span class="o">**</span><span class="n">trac</span><span class="p">.</span><span class="n">ini</span><span class="o">**</span><span class="p">)</span> <span class="n">desse</span> <span class="n">novoTrac</span><span class="p">,</span> <span class="n">e</span> <span class="n">edite</span> <span class="n">a</span> <span class="n">linha</span><span class="p">:</span>  
-<span class="o">**</span><span class="ss">"repository\_dir ="</span><span class="o">**</span> <span class="n">para</span> <span class="n">o</span> <span class="n">novo</span> <span class="n">repositório</span> <span class="n">SVN</span> <span class="n">criado</span><span class="p">.</span>  
-<span class="n">Por</span> <span class="n">fim</span><span class="p">,</span> <span class="k">execute</span><span class="p">:</span>
+<div class="highlight"><pre><span></span>Depois disso abra o conf(**trac.ini**) desse novoTrac, e edite a linha:  
+**"repository\_dir ="** para o novo repositório SVN criado.  
+Por fim, execute:
 
-<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"bash"</span><span class="err">}</span>
-<span class="err">$</span><span class="n">trac</span><span class="o">-</span><span class="k">admin</span> <span class="p">.</span> <span class="n">resync</span>
+``` {lang="bash"}
+$trac-admin . resync
 </pre></div>
 <p><strong>OBS:</strong>Esse comando deve ser usado de dentro do diretório do novoTrac.</p>
     </div>

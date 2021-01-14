@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2012-09-21T00:04:00+01:00">
           <i class="fa fa-clock-o"></i>
-          Sex 21 setembro 2012
+          Fri 21 September 2012
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -90,10 +90,10 @@ when you change that address it's like you removed fisically the network device,
 <p>To do so, edit the file:</p>
 <p>``` {lang="bash"}</p>
 <p>vim /etc/udev/rules.d/70-persistent-net.rules</p>
-<div class="highlight"><pre><span></span><span class="nv">And</span> <span class="nv">where</span> <span class="nv">you</span> <span class="nv">read</span>, <span class="k">for</span> <span class="nv">exemple</span>:
+<div class="highlight"><pre><span></span><span class="k">And</span> <span class="k">where</span> <span class="n">you</span> <span class="k">read</span><span class="p">,</span> <span class="k">for</span> <span class="n">exemple</span><span class="p">:</span>
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">bash</span><span class="s2">"</span>}
-<span class="nv">ATTR</span>{<span class="nv">address</span>}<span class="o">==</span><span class="s2">"</span><span class="s">00:00:00:00:00:00</span><span class="s2">"</span>
+<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"bash"</span><span class="err">}</span>
+<span class="n">ATTR</span><span class="err">{</span><span class="n">address</span><span class="err">}</span><span class="o">==</span><span class="ss">"00:00:00:00:00:00"</span>
 </pre></div>
 <p>replace the address(in this example its the <strong>"00:00:00:00:00:00"</strong>, but in your case will probably different) for your new Mac Address(the one you just copied before).</p>
 <p>Remember to put the ":" separating the MAC in Six pairs, and with low caption letters.<br/>

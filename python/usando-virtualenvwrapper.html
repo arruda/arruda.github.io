@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2011-07-21T14:47:00+01:00">
           <i class="fa fa-clock-o"></i>
-          Qui 21 julho 2011
+          Thu 21 July 2011
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -88,32 +88,32 @@ $ sudo pip install virtualenv</p>
 <p>Em seguida basta ativar o MeuProjetoVirtual:</p>
 <p>``` {lang="bash"}
 $source /caminho/completo/MeuProjetoVirtual/bin/activate</p>
-<div class="highlight"><pre><span></span><span class="nv">Uma</span> <span class="nv">vez</span> <span class="nv">usando</span> <span class="nv">o</span> <span class="nv">virtualenv</span> <span class="nv">basta</span> <span class="nv">instalar</span> <span class="nv">os</span> <span class="nv">pacotes</span> <span class="nv">usando</span> <span class="nv">pip</span>:
-<span class="o">**</span><span class="s2">"</span><span class="s">pip install django</span><span class="s2">"</span> <span class="nv">e</span> <span class="s2">"</span><span class="s">pip install django\_extensions</span><span class="s2">"</span><span class="o">**</span>
+<div class="highlight"><pre><span></span>Uma vez usando o virtualenv basta instalar os pacotes usando pip:
+**"pip install django" e "pip install django\_extensions"**
 
-<span class="nv">E</span> <span class="nv">pronto</span><span class="o">!</span> <span class="nv">Voc</span>ê <span class="nv">tem</span> <span class="nv">agora</span> <span class="nv">um</span> <span class="nv">ambiente</span> <span class="nv">separado</span> <span class="nv">com</span> <span class="nv">apenas</span> <span class="nv">esses</span> <span class="nv">pacotes</span> <span class="nv">essenciais</span> <span class="nv">para</span> <span class="nv">seu</span> <span class="nv">projeto</span>.
+E pronto! Você tem agora um ambiente separado com apenas esses pacotes essenciais para seu projeto.
 
-:${<span class="nv">IMAGE_TAG</span>}
+:<span class="cp">${</span><span class="n">IMAGE_TAG</span><span class="cp">}</span>
 
-<span class="nv">E</span> <span class="nv">o</span> <span class="nv">Wrapper</span>?
-<span class="o">------------</span>
+E o Wrapper?
+------------
 
-<span class="nv">P</span>ó<span class="nv">rem</span> <span class="nv">a</span> <span class="nv">magia</span> <span class="nv">n</span>ã<span class="nv">o</span> <span class="nv">acaba</span> <span class="nv">ai</span>, <span class="nv">por</span> <span class="nv">que</span> <span class="nv">quando</span> <span class="nv">se</span> <span class="nv">come</span>ç<span class="nv">a</span> <span class="nv">a</span> <span class="nv">usar</span> <span class="nv">mais</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">virtualenv</span>, <span class="nv">voc</span>ê <span class="nv">sente</span> <span class="nv">uma</span> <span class="nv">certa</span> <span class="nv">dificuldade</span> <span class="nv">de</span> <span class="nv">arrumar</span> <span class="nv">todos</span> <span class="nv">eles</span> <span class="nv">e</span> <span class="nv">trocar</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">para</span> <span class="nv">outro</span>.
+Pórem a magia não acaba ai, por que quando se começa a usar mais de um virtualenv, você sente uma certa dificuldade de arrumar todos eles e trocar de um para outro.
 
-<span class="nv">E</span> <span class="nv">justamente</span> <span class="nv">uma</span> <span class="nv">das</span> <span class="nv">grandes</span> <span class="nv">vantagens</span> <span class="k">do</span> <span class="nv">VirtualEnvWrapper</span> é <span class="nv">a</span> <span class="nv">forma</span> <span class="nv">como</span> <span class="nv">ele</span> <span class="nv">ajuda</span> <span class="nv">voc</span>ê <span class="nv">a</span> <span class="nv">organizar</span> <span class="nv">seus</span> <span class="nv">ambientes</span> <span class="nv">todos</span> <span class="nv">e</span> <span class="nv">trocar</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">para</span> <span class="nv">outro</span> <span class="nv">com</span> <span class="nv">muita</span> <span class="nv">facilidade</span>.
-<span class="nv">Para</span> <span class="nv">instala</span><span class="o">-</span><span class="nv">lo</span> <span class="nv">basta</span> <span class="nv">fazer</span><span class="ss">(</span><span class="nv">fora</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">virtualenv</span><span class="ss">)</span>:
+E justamente uma das grandes vantagens do VirtualEnvWrapper é a forma como ele ajuda você a organizar seus ambientes todos e trocar de um para outro com muita facilidade.
+Para instala-lo basta fazer(fora de um virtualenv):
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">bash</span><span class="s2">"</span>}
-$<span class="nv">sudo</span> <span class="nv">pip</span> <span class="nv">install</span> <span class="nv">virtualenvwrapper</span>
+``` {lang="bash"}
+<span class="nv">$sudo</span> pip install virtualenvwrapper
 </pre></div>
 <p>Agora é preciso criar uma pasta para guardar os seus virtualenvs, por exemplo:</p>
 <p>``` {lang="bash"}
 $mkdir ~/.virtualenvs</p>
-<div class="highlight"><pre><span></span><span class="nv">Depois</span> <span class="nv">basta</span> <span class="nv">editar</span> <span class="nv">seu</span> <span class="o">**</span><span class="s2">"</span><span class="s">\~/.bashrc</span><span class="s2">"</span><span class="o">**</span> <span class="nv">e</span> <span class="nv">colocar</span> <span class="nv">no</span> <span class="nv">final</span> <span class="k">do</span> <span class="nv">mesmo</span>:
+<div class="highlight"><pre><span></span><span class="n">Depois</span> <span class="n">basta</span> <span class="n">editar</span> <span class="n">seu</span> <span class="o">**</span><span class="s2">"\~/.bashrc"</span><span class="o">**</span> <span class="n">e</span> <span class="n">colocar</span> <span class="n">no</span> <span class="n">final</span> <span class="n">do</span> <span class="n">mesmo</span><span class="p">:</span>
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">bash</span><span class="s2">"</span>}
-<span class="nv">export</span> <span class="nv">WORKON_HOME</span><span class="o">=~/</span>.<span class="nv">virtualenvs</span>
-<span class="nv">source</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">virtualenvwrapper</span>.<span class="nv">sh</span>
+<span class="err">```</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"bash"</span><span class="p">}</span>
+<span class="k">export</span> <span class="n">WORKON_HOME</span><span class="o">=~/.</span><span class="n">virtualenvs</span>
+<span class="n">source</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">virtualenvwrapper</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 <p><strong>OBS:</strong> dependendo da sua versão o arquivo <strong>virtualenvwrapper.sh</strong> pode estar num local diferente. Se este for o caso, mude o endereço para apontar para o local onde ele está.</p>
 <h2>Como Funciona?</h2>
@@ -130,16 +130,16 @@ $mkvirtualenv NomeDoVirtualEnv</p>
 <p>Caso queira, você pode alterar o seu <strong>"\~/.bashrc"</strong> e colocar no final(além do que tinha sido posto antes) o seguinte código:</p>
 <p>``` {lang="bash"}
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'</p>
-<div class="highlight"><pre><span></span><span class="n">Isso</span> <span class="n">irá</span> <span class="n">fazer</span> <span class="n">com</span> <span class="n">que</span> <span class="n">o</span> <span class="n">mkvirtualenv</span> <span class="n">crie</span> <span class="n">ambientes</span> <span class="n">usando</span> <span class="n">os</span> <span class="n">argumentos</span> <span class="o">**</span><span class="s1">'--no-site-packages --distribute'</span><span class="o">**</span><span class="p">.</span>
+<div class="highlight"><pre><span></span><span class="n">Isso</span> <span class="n">irá</span> <span class="n">fazer</span> <span class="n">com</span> <span class="n">que</span> <span class="n">o</span> <span class="n">mkvirtualenv</span> <span class="n">crie</span> <span class="n">ambientes</span> <span class="n">usando</span> <span class="n">os</span> <span class="n">argumentos</span> <span class="o">**</span><span class="s1">'--no-site-packages --distribute'</span><span class="o">**.</span>
 
-<span class="n">Tem</span> <span class="n">mais</span><span class="o">?</span>
-<span class="c1">---------</span>
+<span class="n">Tem</span> <span class="n">mais</span><span class="err">?</span>
+<span class="o">---------</span>
 
-<span class="n">Pois</span> <span class="n">bem</span><span class="p">,</span> <span class="n">tem</span> <span class="n">muito</span> <span class="n">mais</span> <span class="n">coisa</span> <span class="n">que</span> <span class="n">wrapper</span> <span class="n">permite</span><span class="p">,</span> <span class="n">uma</span> <span class="n">das</span> <span class="n">outras</span> <span class="n">fantásticas</span> <span class="n">coisas</span> <span class="err">é</span> <span class="n">a</span> <span class="n">personalização</span> <span class="n">dos</span> <span class="n">scripts</span> <span class="n">que</span> <span class="n">são</span> <span class="n">rodados</span> <span class="n">em</span> <span class="n">diversos</span> <span class="n">momentos</span><span class="p">,</span> <span class="n">como</span> <span class="n">script</span> <span class="n">que</span> <span class="err">é</span> <span class="n">rodado</span> <span class="n">antes</span> <span class="n">de</span> <span class="n">criar</span> <span class="n">um</span> <span class="n">virtualenv</span><span class="p">,</span> <span class="n">ou</span> <span class="n">depois</span> <span class="n">de</span> <span class="n">ativar</span> <span class="n">o</span> <span class="n">mesmo</span><span class="p">,</span> <span class="n">e</span> <span class="n">etc</span><span class="p">...</span>
+<span class="n">Pois</span> <span class="n">bem</span><span class="p">,</span> <span class="n">tem</span> <span class="n">muito</span> <span class="n">mais</span> <span class="n">coisa</span> <span class="n">que</span> <span class="n">wrapper</span> <span class="n">permite</span><span class="p">,</span> <span class="n">uma</span> <span class="n">das</span> <span class="n">outras</span> <span class="n">fantásticas</span> <span class="n">coisas</span> <span class="err">é</span> <span class="n">a</span> <span class="n">personalização</span> <span class="n">dos</span> <span class="n">scripts</span> <span class="n">que</span> <span class="n">são</span> <span class="n">rodados</span> <span class="n">em</span> <span class="n">diversos</span> <span class="n">momentos</span><span class="p">,</span> <span class="n">como</span> <span class="n">script</span> <span class="n">que</span> <span class="err">é</span> <span class="n">rodado</span> <span class="n">antes</span> <span class="n">de</span> <span class="n">criar</span> <span class="n">um</span> <span class="n">virtualenv</span><span class="p">,</span> <span class="n">ou</span> <span class="n">depois</span> <span class="n">de</span> <span class="n">ativar</span> <span class="n">o</span> <span class="n">mesmo</span><span class="p">,</span> <span class="n">e</span> <span class="n">etc</span><span class="o">...</span>
 <span class="n">Um</span> <span class="n">exemplo</span> <span class="n">seria</span> <span class="n">alterar</span> <span class="n">o</span> <span class="n">arquivo</span><span class="p">:</span> <span class="o">**</span><span class="n">postmkvirtualenv</span><span class="o">**</span>
 
-<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"bash"</span><span class="err">}</span>
-<span class="err">$</span><span class="n">vim</span> <span class="err">$</span><span class="n">WORKON_HOME</span><span class="o">/</span><span class="n">postmkvirtualenv</span>
+<span class="err">```</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"bash"</span><span class="p">}</span>
+<span class="o">$</span><span class="n">vim</span> <span class="o">$</span><span class="n">WORKON_HOME</span><span class="o">/</span><span class="n">postmkvirtualenv</span>
 </pre></div>
 <p>E colocar dentro do mesmo:</p>
 <p>``` {lang="bash"}

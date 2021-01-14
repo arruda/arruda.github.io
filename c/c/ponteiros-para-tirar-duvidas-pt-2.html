@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2011-05-24T16:22:00+01:00">
           <i class="fa fa-clock-o"></i>
-          Ter 24 maio 2011
+          Tue 24 May 2011
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -88,68 +88,68 @@ this-&gt;x = x;
 void setX(int x){ this-&gt;x = x;}
 int getX(void){return this-&gt;x;}
 };</p>
-<div class="highlight"><pre><span></span><span class="nv">E</span> <span class="nv">na</span> <span class="nv">main</span>.<span class="nv">cpp</span>:
+<div class="highlight"><pre><span></span><span class="n">E</span><span class="w"> </span><span class="n">na</span><span class="w"> </span><span class="n">main</span><span class="p">.</span><span class="nl">cpp</span><span class="p">:</span><span class="w"></span>
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">cpp</span><span class="s2">"</span> <span class="nv">line</span><span class="o">=</span><span class="s2">"</span><span class="s">1</span><span class="s2">"</span>}
-<span class="nv">int</span> <span class="nv">main</span><span class="ss">(</span><span class="nv">void</span><span class="ss">)</span>{
+<span class="err">```</span><span class="w"> </span><span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"cpp"</span><span class="w"> </span><span class="n">line</span><span class="o">=</span><span class="ss">"1"</span><span class="err">}</span><span class="w"></span>
+<span class="nc">int</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="err">{</span><span class="w"></span>
 
 <span class="cm">/*Criando uma instancia da MinhaClasse,</span>
 <span class="cm">usando o contrutor padrao.</span>
-<span class="cm">*/</span>
-<span class="nv">MinhaClasse</span> <span class="nv">instancia</span><span class="c1">;</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="n">MinhaClasse</span><span class="w"> </span><span class="n">instancia</span><span class="p">;</span><span class="w"></span>
 
 <span class="cm">/*Criando uma instancia da MinhaClasse a partir de um ponteiro</span>
 <span class="cm">da classe.</span>
 <span class="cm">Usando construtor parametrizado.</span>
-<span class="cm">*/</span>
-<span class="nv">MinhaClasse</span> <span class="o">*</span> <span class="nv">instanciaPonteiro</span> <span class="o">=</span> <span class="nv">new</span> <span class="nv">MinhaClasse</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span><span class="c1">;</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="n">MinhaClasse</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">instanciaPonteiro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MinhaClasse</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
 
 <span class="cm">/*Criando um vetor de MinhaClasse apartir de um ponteiro</span>
 <span class="cm">da classe.</span>
 <span class="cm">Nesse caso ele utiliza o construtor padrão.</span>
-<span class="cm">*/</span>
-<span class="nv">MinhaClasse</span> <span class="o">*</span> <span class="nv">vetorDeClasses</span> <span class="o">=</span> <span class="nv">new</span> <span class="nv">MinhaClasse</span>[<span class="mi">15</span>]<span class="c1">;</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="n">MinhaClasse</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vetorDeClasses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MinhaClasse</span><span class="o">[</span><span class="n">15</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
 
-<span class="o">//===========</span><span class="nv">Acessando</span> <span class="nv">Pos</span> <span class="nv">metodos</span>:<span class="o">===========</span>
-<span class="nv">cout</span> <span class="o">&lt;&lt;</span> <span class="nv">instancia</span>.<span class="nv">getX</span><span class="ss">()</span> <span class="o">&lt;&lt;</span> <span class="nv">endl</span><span class="c1">;</span>
+<span class="o">//===========</span><span class="n">Acessando</span><span class="w"> </span><span class="n">Pos</span><span class="w"> </span><span class="nl">metodos</span><span class="p">:</span><span class="o">===========</span><span class="w"></span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">instancia</span><span class="p">.</span><span class="n">getX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
 
-<span class="nv">cout</span> <span class="o">&lt;&lt;</span> <span class="nv">instanciaPonteiro</span><span class="o">-&gt;</span><span class="nv">getX</span><span class="ss">()</span> <span class="o">&lt;&lt;</span> <span class="nv">endl</span><span class="c1">;</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">instanciaPonteiro</span><span class="o">-&gt;</span><span class="n">getX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
 
-<span class="k">for</span> <span class="ss">(</span><span class="nv">int</span> <span class="nv">i</span><span class="o">=</span><span class="mi">0</span><span class="c1">; i &lt; 15;i++)</span>
-    <span class="nv">vetorDeClasses</span>[<span class="nv">i</span>].<span class="nv">setX</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span><span class="c1">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nc">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">vetorDeClasses</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="n">setX</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
 
-<span class="k">for</span> <span class="ss">(</span><span class="nv">int</span> <span class="nv">i</span><span class="o">=</span><span class="mi">0</span><span class="c1">; i &lt; 15;i++)</span>
-    <span class="nv">cout</span> <span class="o">&lt;&lt;</span> <span class="nv">vetorDeClasses</span>[<span class="nv">i</span>].<span class="nv">getX</span><span class="ss">()</span> <span class="o">&lt;</span>
-<span class="nv">Com</span> <span class="nv">esse</span> <span class="nv">c</span>ó<span class="nv">digo</span> <span class="nv">o</span> <span class="nv">que</span> <span class="nv">teremos</span> <span class="nv">de</span> <span class="nv">sa</span>í<span class="nv">da</span> <span class="nv">ser</span>á:
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nc">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vetorDeClasses</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="n">getX</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"></span>
+<span class="n">Com</span><span class="w"> </span><span class="n">esse</span><span class="w"> </span><span class="n">código</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="n">teremos</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">saída</span><span class="w"> </span><span class="nl">será</span><span class="p">:</span><span class="w"></span>
 
-<span class="s2">"</span><span class="s">0</span>
+<span class="ss">"0</span>
 
-<span class="mi">10</span>
+<span class="ss">10</span>
 
-<span class="mi">1</span>
+<span class="ss">1</span>
 
-<span class="mi">2</span>
+<span class="ss">2</span>
 
-...
+<span class="ss">...</span>
 
-<span class="mi">15</span><span class="s2">"</span>
-<span class="nv">Dessa</span> <span class="nv">forma</span>, <span class="nv">o</span> <span class="nv">que</span> <span class="nv">podemos</span> <span class="nv">notar</span> é <span class="nv">que</span>:
+<span class="ss">15"</span><span class="w"></span>
+<span class="n">Dessa</span><span class="w"> </span><span class="n">forma</span><span class="p">,</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="n">podemos</span><span class="w"> </span><span class="n">notar</span><span class="w"> </span><span class="n">é</span><span class="w"> </span><span class="nl">que</span><span class="p">:</span><span class="w"></span>
 
-<span class="nv">Ao</span> <span class="nv">instanciar</span> <span class="nv">uma</span> <span class="nv">classe</span>, <span class="nv">acessamos</span> <span class="nv">seus</span> <span class="nv">atributos</span> <span class="nv">da</span> <span class="nv">forma</span>:
+<span class="n">Ao</span><span class="w"> </span><span class="n">instanciar</span><span class="w"> </span><span class="n">uma</span><span class="w"> </span><span class="n">classe</span><span class="p">,</span><span class="w"> </span><span class="n">acessamos</span><span class="w"> </span><span class="n">seus</span><span class="w"> </span><span class="n">atributos</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="nl">forma</span><span class="p">:</span><span class="w"></span>
 
-<span class="s2">"</span><span class="s">instancia.atributo</span><span class="s2">"</span>, <span class="nv">ou</span> <span class="s2">"</span><span class="s">instancia.getAtributo()</span><span class="s2">"</span> <span class="nv">para</span> <span class="nv">atributos</span> <span class="nv">privados</span>.
-<span class="nv">Para</span> <span class="nv">uma</span> <span class="nv">instancia</span> <span class="nv">a</span> <span class="nv">partir</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">ponteiro</span>, <span class="nv">devemos</span> <span class="nv">usar</span> <span class="nv">no</span> <span class="nv">padr</span>ã<span class="nv">o</span>:
+<span class="ss">"instancia.atributo"</span><span class="p">,</span><span class="w"> </span><span class="n">ou</span><span class="w"> </span><span class="ss">"instancia.getAtributo()"</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="n">atributos</span><span class="w"> </span><span class="n">privados</span><span class="p">.</span><span class="w"></span>
+<span class="n">Para</span><span class="w"> </span><span class="n">uma</span><span class="w"> </span><span class="n">instancia</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">partir</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">um</span><span class="w"> </span><span class="n">ponteiro</span><span class="p">,</span><span class="w"> </span><span class="n">devemos</span><span class="w"> </span><span class="n">usar</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="nl">padrão</span><span class="p">:</span><span class="w"></span>
 
-<span class="s2">"</span><span class="s">instanciaPonteiro-&gt;atributo</span><span class="s2">"</span> <span class="nv">ou</span> <span class="s2">"</span><span class="s">instanciaPonteiro-&gt;getAtributo()</span><span class="s2">"</span> <span class="nv">no</span> <span class="nv">caso</span> <span class="nv">de</span> <span class="nv">atributos</span> <span class="nv">privados</span>.
-<span class="nv">Para</span> <span class="nv">acessar</span> <span class="nv">um</span> <span class="nv">atributo</span> <span class="nv">de</span> <span class="nv">uma</span> <span class="nv">instancia</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">vetor</span><span class="ss">(</span><span class="nv">feito</span> <span class="nv">a</span> <span class="nv">partir</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">ponteiro</span><span class="ss">)</span>, <span class="nv">usamos</span> <span class="nv">da</span> <span class="nv">seguinte</span> <span class="nv">forma</span>:
+<span class="ss">"instanciaPonteiro-&gt;atributo"</span><span class="w"> </span><span class="n">ou</span><span class="w"> </span><span class="ss">"instanciaPonteiro-&gt;getAtributo()"</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">caso</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">atributos</span><span class="w"> </span><span class="n">privados</span><span class="p">.</span><span class="w"></span>
+<span class="n">Para</span><span class="w"> </span><span class="n">acessar</span><span class="w"> </span><span class="n">um</span><span class="w"> </span><span class="n">atributo</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">uma</span><span class="w"> </span><span class="n">instancia</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">um</span><span class="w"> </span><span class="n">vetor</span><span class="p">(</span><span class="n">feito</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">partir</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">um</span><span class="w"> </span><span class="n">ponteiro</span><span class="p">),</span><span class="w"> </span><span class="n">usamos</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="n">seguinte</span><span class="w"> </span><span class="nl">forma</span><span class="p">:</span><span class="w"></span>
 
-<span class="s2">"</span><span class="s">vetorDeClasses[posicao].atributo</span><span class="s2">"</span> <span class="nv">ou</span> <span class="s2">"</span><span class="s">vetorDeClasses[posicao].getAtributo()</span><span class="s2">"</span> <span class="nv">no</span> <span class="nv">caso</span> <span class="nv">de</span> <span class="nv">atributos</span> <span class="nv">privados</span>.
+<span class="ss">"vetorDeClasses[posicao].atributo"</span><span class="w"> </span><span class="n">ou</span><span class="w"> </span><span class="ss">"vetorDeClasses[posicao].getAtributo()"</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">caso</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">atributos</span><span class="w"> </span><span class="n">privados</span><span class="p">.</span><span class="w"></span>
 
-<span class="nv">Vcs</span> <span class="nv">me</span> <span class="nv">perguntam</span>: <span class="s2">"</span><span class="s">O que raios quer dizer esse -&gt;?</span><span class="s2">"</span>
+<span class="n">Vcs</span><span class="w"> </span><span class="n">me</span><span class="w"> </span><span class="nl">perguntam</span><span class="p">:</span><span class="w"> </span><span class="ss">"O que raios quer dizer esse -&gt;?"</span><span class="w"></span>
 
-<span class="nv">Esse</span> <span class="s2">"</span><span class="s">-&gt;</span><span class="s2">"</span> <span class="nv">nada</span> <span class="nv">mais</span> é <span class="k">do</span> <span class="nv">que</span> <span class="nv">um</span> <span class="nv">atalho</span> <span class="nv">para</span> <span class="s2">"</span><span class="s">acessar um atributo/método de uma instância através do conteúdo de um ponteiro</span><span class="s2">"</span>. <span class="nv">Isso</span> é:
+<span class="n">Esse</span><span class="w"> </span><span class="ss">"-&gt;"</span><span class="w"> </span><span class="n">nada</span><span class="w"> </span><span class="n">mais</span><span class="w"> </span><span class="n">é</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="n">um</span><span class="w"> </span><span class="n">atalho</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="ss">"acessar um atributo/método de uma instância através do conteúdo de um ponteiro"</span><span class="p">.</span><span class="w"> </span><span class="n">Isso</span><span class="w"> </span><span class="nl">é</span><span class="p">:</span><span class="w"></span>
 
-<span class="nv">instanciaPonteiro</span><span class="o">-&gt;</span><span class="nv">atributo</span> <span class="o">=</span> <span class="ss">(</span><span class="o">*</span><span class="nv">instanciaPonteiro</span><span class="ss">)</span>.<span class="nv">atributo</span> 
+<span class="n">instanciaPonteiro</span><span class="o">-&gt;</span><span class="n">atributo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">instanciaPonteiro</span><span class="p">).</span><span class="n">atributo</span><span class="w"> </span>
 </pre></div>
 <p>Por enquanto é só isso, caso esteja com duvidas em coisas mais básicas sobre ponteiros, dê uma olhada no <a href="http://www.arruda.blog.br/?p=256" title="Ponteiros – Para tirar duvidas">post anterior</a>.</p>
 <p>Abraços.</p>

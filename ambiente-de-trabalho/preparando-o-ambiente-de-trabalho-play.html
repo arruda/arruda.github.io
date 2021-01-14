@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2011-10-10T10:30:00+01:00">
           <i class="fa fa-clock-o"></i>
-          Seg 10 outubro 2011
+          Mon 10 October 2011
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -83,22 +83,22 @@
 <p>``` {lang="bash"}
 $ apt-cache search jdk
 $ apt-get install sun-java6-jdk sun-java6-jre</p>
-<div class="highlight"><pre><span></span><span class="nv">Isso</span> <span class="nv">dever</span>á <span class="nv">instalar</span> <span class="nv">o</span> <span class="nv">JDK</span> <span class="nv">e</span> <span class="nv">JRE</span> <span class="nv">no</span> <span class="nv">seu</span> <span class="nv">Ubuntu</span>.
+<div class="highlight"><pre><span></span><span class="n">Isso</span> <span class="n">deverá</span> <span class="n">instalar</span> <span class="n">o</span> <span class="n">JDK</span> <span class="n">e</span> <span class="n">JRE</span> <span class="n">no</span> <span class="n">seu</span> <span class="n">Ubuntu</span><span class="o">.</span>
 
-<span class="nv">Instalando</span> <span class="nv">a</span> <span class="nv">Framework</span>
+<span class="n">Instalando</span> <span class="n">a</span> <span class="n">Framework</span>
 <span class="o">----------------------</span>
 
-<span class="nv">Baixe</span> <span class="nv">a</span> ú<span class="nv">ltima</span> <span class="nv">vers</span>ã<span class="nv">o</span> <span class="k">do</span> <span class="nv">play</span> <span class="nv">no</span> <span class="nv">site</span> <span class="o">&lt;</span><span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">playframework</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">download</span><span class="o">&gt;</span>  
-<span class="nv">Deszipe</span> <span class="nv">o</span> <span class="nv">conte</span>ú<span class="nv">do</span> <span class="nv">para</span> <span class="nv">uma</span> <span class="nv">pasta</span>, <span class="nv">ex</span>: <span class="o">**</span><span class="s2">"</span><span class="s">/home/MeuUser/play</span><span class="s2">"</span><span class="o">**</span>
+<span class="n">Baixe</span> <span class="n">a</span> <span class="err">ú</span><span class="n">ltima</span> <span class="n">versão</span> <span class="n">do</span> <span class="n">play</span> <span class="n">no</span> <span class="n">site</span> <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">playframework</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">download</span><span class="o">&gt;</span>  
+<span class="n">Deszipe</span> <span class="n">o</span> <span class="n">conteúdo</span> <span class="n">para</span> <span class="n">uma</span> <span class="n">pasta</span><span class="p">,</span> <span class="n">ex</span><span class="p">:</span> <span class="o">**</span><span class="s2">"/home/MeuUser/play"</span><span class="o">**</span>
 
-### <span class="nv">Vari</span>á<span class="nv">veis</span> <span class="nv">de</span> <span class="nv">Ambiente</span>
+<span class="c1">### Variáveis de Ambiente</span>
 
-<span class="nv">Abra</span> <span class="nv">seu</span> <span class="nv">arquivo</span> <span class="o">**</span>.<span class="nv">bash</span>\<span class="nv">_rc</span><span class="o">**</span> <span class="nv">e</span> <span class="nv">adicione</span> <span class="nv">ao</span> <span class="nv">final</span> <span class="nv">deste</span>:
+<span class="n">Abra</span> <span class="n">seu</span> <span class="n">arquivo</span> <span class="o">**.</span><span class="n">bash</span>\<span class="n">_rc</span><span class="o">**</span> <span class="n">e</span> <span class="n">adicione</span> <span class="n">ao</span> <span class="n">final</span> <span class="n">deste</span><span class="p">:</span>
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">bash</span><span class="s2">"</span>}
-<span class="nv">export</span> <span class="nv">PLAY_HOME</span><span class="o">=/</span><span class="nv">home</span><span class="o">/</span><span class="nv">MeuUser</span><span class="o">/</span><span class="nv">play</span>
-<span class="nv">PATH</span><span class="o">=</span>$<span class="nv">PATH</span>:<span class="o">/</span><span class="nv">home</span><span class="o">/</span><span class="nv">MeuUser</span><span class="o">/</span><span class="nv">play</span>
-<span class="nv">export</span> <span class="nv">PATH</span>
+<span class="err">```</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"bash"</span><span class="p">}</span>
+<span class="k">export</span> <span class="n">PLAY_HOME</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">MeuUser</span><span class="o">/</span><span class="n">play</span>
+<span class="n">PATH</span><span class="o">=$</span><span class="n">PATH</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">MeuUser</span><span class="o">/</span><span class="n">play</span>
+<span class="k">export</span> <span class="n">PATH</span>
 </pre></div>
 <p><strong>Assim você poderá usar o comando "play" de qualquer local.</strong></p>
 <h2>Usando IDEs</h2>
@@ -106,15 +106,15 @@ $ apt-get install sun-java6-jdk sun-java6-jre</p>
 <p>Para usar o play no Eclipse basta usar o comando:</p>
 <p>``` {lang="bash"}
 $ play eclipsify myApp</p>
-<div class="highlight"><pre><span></span><span class="nv">E</span> <span class="nv">importar</span> <span class="nv">o</span> <span class="nv">projeto</span> <span class="nv">para</span> <span class="nv">seu</span> <span class="nv">workspace</span>  
-<span class="nv">Para</span> <span class="nv">mais</span> <span class="nv">informa</span>çõ<span class="nv">es</span> <span class="nv">tem</span> <span class="nv">o</span> <span class="nv">link</span> <span class="k">do</span> <span class="nv">proprio</span> <span class="nv">Play</span> <span class="nv">mostrando</span> <span class="nv">como</span> <span class="nv">configurar</span> <span class="nv">os</span> <span class="nv">detalhes</span>: [<span class="nv">Play</span> <span class="nv">in</span> <span class="nv">Eclipse</span>]<span class="ss">(</span><span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">playframework</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">documentation</span><span class="o">/</span><span class="mi">1</span>.<span class="mi">2</span>.<span class="mi">3</span><span class="o">/</span><span class="nv">ide</span>#<span class="nv">eclipse</span><span class="ss">)</span>
+<div class="highlight"><pre><span></span><span class="n">E</span> <span class="n">importar</span> <span class="n">o</span> <span class="n">projeto</span> <span class="n">para</span> <span class="n">seu</span> <span class="n">workspace</span>  
+<span class="n">Para</span> <span class="n">mais</span> <span class="n">informações</span> <span class="n">tem</span> <span class="n">o</span> <span class="n">link</span> <span class="k">do</span> <span class="n">proprio</span> <span class="n">Play</span> <span class="n">mostrando</span> <span class="n">como</span> <span class="n">configurar</span> <span class="n">os</span> <span class="n">detalhes</span><span class="p">:</span> <span class="p">[</span><span class="n">Play</span> <span class="k">in</span> <span class="n">Eclipse</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">playframework</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">documentation</span><span class="o">/</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">3</span><span class="o">/</span><span class="n">ide</span><span class="o">#</span><span class="n">eclipse</span><span class="p">)</span>
 
-### <span class="nv">NetBeans</span>
+<span class="o">###</span> <span class="n">NetBeans</span>
 
-<span class="nv">Para</span> <span class="nv">usar</span> <span class="nv">o</span> <span class="nv">play</span> <span class="nv">no</span> <span class="nv">NetBeans</span> <span class="nv">basta</span> <span class="nv">usar</span> <span class="nv">o</span> <span class="nv">comando</span>:
+<span class="n">Para</span> <span class="n">usar</span> <span class="n">o</span> <span class="n">play</span> <span class="k">no</span> <span class="n">NetBeans</span> <span class="n">basta</span> <span class="n">usar</span> <span class="n">o</span> <span class="n">comando</span><span class="p">:</span>
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">bash</span><span class="s2">"</span>}
-$ <span class="nv">play</span> <span class="nv">netbeansify</span> <span class="nv">myApp</span>
+<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"bash"</span><span class="err">}</span>
+<span class="err">$</span> <span class="n">play</span> <span class="n">netbeansify</span> <span class="n">myApp</span>
 </pre></div>
 <p>E abrir o app como um projeto NetBeans.<br/>
 Para mais informações tem o link do proprio Play mostrando como configurar os detalhes: <a href="http://www.playframework.org/documentation/1.2.3/ide#netbeans">Play in NetBeans</a></p>

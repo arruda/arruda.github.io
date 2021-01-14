@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2011-05-02T10:00:00+01:00">
           <i class="fa fa-clock-o"></i>
-          Seg 02 maio 2011
+          Mon 02 May 2011
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -87,44 +87,44 @@ c=b;
 <p>printf("%d %d %d", *a, b, c);</p>
 <p>return 0;
 }</p>
-<div class="highlight"><pre><span></span><span class="n">O</span> <span class="n">que</span> <span class="n">será</span> <span class="n">impresso</span> <span class="k">no</span> <span class="n">exemplo</span> <span class="n">acima</span><span class="o">?</span>  
+<div class="highlight"><pre><span></span><span class="n">O</span> <span class="n">que</span> <span class="n">será</span> <span class="n">impresso</span> <span class="n">no</span> <span class="n">exemplo</span> <span class="n">acima</span><span class="err">?</span>  
 <span class="n">Caso</span> <span class="n">não</span> <span class="n">tenha</span> <span class="n">percebido</span> <span class="n">ainda</span><span class="p">,</span> <span class="n">o</span> <span class="n">resultado</span> <span class="n">será</span><span class="p">:</span>  
-<span class="ss">"109 109 110"</span>
+<span class="s2">"109 109 110"</span>
 
 <span class="n">Eis</span> <span class="n">o</span> <span class="n">por</span> <span class="n">que</span><span class="p">:</span>
-<span class="c1">--------------</span>
+<span class="o">--------------</span>
 
-<span class="n">Existem</span> <span class="n">ali</span> <span class="mi">2</span> <span class="n">variaveis</span> <span class="n">inteiras</span><span class="p">(</span><span class="n">b</span> <span class="n">e</span> <span class="k">c</span><span class="p">)</span> <span class="n">e</span> <span class="n">um</span> <span class="n">ponteiro</span> <span class="n">para</span> <span class="n">inteiro</span><span class="p">(</span><span class="err">\</span><span class="o">*</span><span class="n">a</span><span class="p">),</span> <span class="n">logo</span> <span class="n">b</span> <span class="n">e</span> <span class="k">c</span> <span class="n">estão</span> <span class="n">alocados</span> <span class="err">à</span> <span class="n">algum</span> <span class="n">endereco</span> <span class="n">de</span> <span class="n">memoria</span><span class="p">(</span><span class="n">ex</span><span class="p">:</span> <span class="mi">4042</span><span class="n">XF00</span> <span class="n">e</span> <span class="mi">1280</span><span class="n">FX92</span><span class="p">),</span> <span class="n">e</span> <span class="n">a</span> <span class="n">ainda</span> <span class="n">não</span> <span class="n">está</span> <span class="n">apontando</span> <span class="n">para</span> <span class="n">nenhum</span> <span class="n">endereço</span> <span class="n">de</span> <span class="n">inteiro</span><span class="p">.</span>
+<span class="n">Existem</span> <span class="n">ali</span> <span class="mi">2</span> <span class="n">variaveis</span> <span class="n">inteiras</span><span class="p">(</span><span class="n">b</span> <span class="n">e</span> <span class="n">c</span><span class="p">)</span> <span class="n">e</span> <span class="n">um</span> <span class="n">ponteiro</span> <span class="n">para</span> <span class="n">inteiro</span><span class="p">(</span>\<span class="o">*</span><span class="n">a</span><span class="p">),</span> <span class="n">logo</span> <span class="n">b</span> <span class="n">e</span> <span class="n">c</span> <span class="n">estão</span> <span class="n">alocados</span> <span class="err">à</span> <span class="n">algum</span> <span class="n">endereco</span> <span class="n">de</span> <span class="n">memoria</span><span class="p">(</span><span class="n">ex</span><span class="p">:</span> <span class="mi">4042</span><span class="n">XF00</span> <span class="n">e</span> <span class="mi">1280</span><span class="n">FX92</span><span class="p">),</span> <span class="n">e</span> <span class="n">a</span> <span class="n">ainda</span> <span class="n">não</span> <span class="n">está</span> <span class="n">apontando</span> <span class="n">para</span> <span class="n">nenhum</span> <span class="n">endereço</span> <span class="n">de</span> <span class="n">inteiro</span><span class="o">.</span>
 
 <span class="o">**</span><span class="n">Quando</span> <span class="n">faço</span><span class="p">:</span><span class="o">**</span>
 
-<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"c"</span><span class="err">}</span>
+<span class="err">```</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"c"</span><span class="p">}</span>
 <span class="n">b</span><span class="o">=</span><span class="mi">110</span><span class="p">;</span>
 </pre></div>
 <p>estou atribuindo a variavel b o valor de "110".</p>
 <p><strong>Depois quando faço:</strong></p>
 <p>``` {lang="c"}
 a=&amp;b</p>
-<div class="highlight"><pre><span></span><span class="nv">estou</span> <span class="nv">dizendo</span> <span class="nv">que</span>: <span class="o">*</span><span class="nv">a</span> <span class="nv">variavel</span> <span class="s2">"</span><span class="s">a</span><span class="s2">"</span> <span class="nv">vai</span> <span class="nv">receber</span> <span class="nv">o</span> <span class="nv">valor</span> <span class="k">do</span> <span class="nv">endereco</span> <span class="nv">da</span> <span class="nv">variavel</span> <span class="nv">b</span>.<span class="o">*</span>  
-<span class="nv">Isso</span> <span class="nv">far</span>á <span class="nv">com</span> <span class="nv">que</span> <span class="s2">"</span><span class="s">a</span><span class="s2">"</span> <span class="nv">aponte</span> <span class="nv">para</span> <span class="s2">"</span><span class="s">b</span><span class="s2">"</span>.
+<div class="highlight"><pre><span></span><span class="n">estou</span> <span class="n">dizendo</span> <span class="n">que</span><span class="p">:</span> <span class="o">*</span><span class="n">a</span> <span class="n">variavel</span> <span class="s2">"a"</span> <span class="n">vai</span> <span class="n">receber</span> <span class="n">o</span> <span class="n">valor</span> <span class="n">do</span> <span class="n">endereco</span> <span class="n">da</span> <span class="n">variavel</span> <span class="n">b</span><span class="o">.*</span>  
+<span class="n">Isso</span> <span class="n">fará</span> <span class="n">com</span> <span class="n">que</span> <span class="s2">"a"</span> <span class="n">aponte</span> <span class="n">para</span> <span class="s2">"b"</span><span class="o">.</span>
 
-<span class="nv">Mas</span> <span class="nv">por</span> <span class="nv">que</span> <span class="nv">passar</span> <span class="nv">fazer</span> <span class="s2">"</span><span class="s">a = &amp;b</span><span class="s2">"</span> <span class="nv">e</span> <span class="nv">n</span>ã<span class="nv">o</span> <span class="nv">simplesmente</span> <span class="s2">"</span><span class="s">a = b</span><span class="s2">"</span>?  
-<span class="nv">Por</span> <span class="nv">que</span> <span class="s2">"</span><span class="s">a</span><span class="s2">"</span> <span class="nv">por</span> <span class="nv">ser</span> <span class="nv">um</span> <span class="nv">ponteiro</span> <span class="nv">inteiro</span>, <span class="nv">n</span>ã<span class="nv">o</span> <span class="nv">armazena</span> <span class="nv">o</span> <span class="nv">valor</span> <span class="nv">de</span> <span class="nv">um</span> <span class="nv">inteiro</span>, <span class="nv">e</span> <span class="nv">sim</span> <span class="k">do</span> <span class="nv">endere</span>ç<span class="nv">o</span> <span class="nv">de</span> <span class="nv">memoria</span> <span class="nv">para</span> <span class="nv">um</span> <span class="nv">inteiro</span>.
+<span class="n">Mas</span> <span class="n">por</span> <span class="n">que</span> <span class="n">passar</span> <span class="n">fazer</span> <span class="s2">"a = &amp;b"</span> <span class="n">e</span> <span class="n">não</span> <span class="n">simplesmente</span> <span class="s2">"a = b"</span><span class="err">?</span>  
+<span class="n">Por</span> <span class="n">que</span> <span class="s2">"a"</span> <span class="n">por</span> <span class="n">ser</span> <span class="n">um</span> <span class="n">ponteiro</span> <span class="n">inteiro</span><span class="p">,</span> <span class="n">não</span> <span class="n">armazena</span> <span class="n">o</span> <span class="n">valor</span> <span class="n">de</span> <span class="n">um</span> <span class="n">inteiro</span><span class="p">,</span> <span class="n">e</span> <span class="n">sim</span> <span class="n">do</span> <span class="n">endereço</span> <span class="n">de</span> <span class="n">memoria</span> <span class="n">para</span> <span class="n">um</span> <span class="n">inteiro</span><span class="o">.</span>
 
-<span class="o">**</span><span class="nv">Logo</span> <span class="nv">depois</span>, <span class="nv">com</span> <span class="nv">a</span> <span class="nv">linha</span>:<span class="o">**</span>
+<span class="o">**</span><span class="n">Logo</span> <span class="n">depois</span><span class="p">,</span> <span class="n">com</span> <span class="n">a</span> <span class="n">linha</span><span class="p">:</span><span class="o">**</span>
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">c</span><span class="s2">"</span>}
-<span class="nv">c</span><span class="o">=</span><span class="nv">b</span><span class="c1">;</span>
+<span class="err">```</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"c"</span><span class="p">}</span>
+<span class="n">c</span><span class="o">=</span><span class="n">b</span><span class="p">;</span>
 </pre></div>
 <p>Estou fazendo com que "c" receba o mesmo valor de "b". E com isso temos que c = 110.</p>
 <p><strong>Agora, na linha:</strong></p>
 <p>``` {lang="c"}
 (*a)--;</p>
 <div class="highlight"><pre><span></span><span class="n">Pode</span> <span class="n">ser</span> <span class="n">facilmente</span> <span class="n">traduzido</span> <span class="n">para</span><span class="p">:</span>  
-<span class="o">*</span><span class="n">acesse</span> <span class="n">o</span> <span class="n">conteudo</span> <span class="n">da</span> <span class="n">variavel</span> <span class="n">para</span> <span class="n">quem</span> <span class="n">a</span> <span class="n">esta</span> <span class="n">apontando</span><span class="p">(</span><span class="err">\</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="n">e</span> <span class="n">reduza</span> <span class="n">em</span> <span class="n">um</span> <span class="n">essa</span> <span class="n">variavel</span><span class="p">.</span><span class="o">*</span> <span class="n">E</span> <span class="n">que</span> <span class="n">em</span> <span class="n">codigo</span> <span class="err">é</span> <span class="n">a</span> <span class="n">mesma</span> <span class="n">coisa</span> <span class="n">que</span><span class="p">:</span>
+<span class="o">*</span><span class="n">acesse</span> <span class="n">o</span> <span class="n">conteudo</span> <span class="n">da</span> <span class="n">variavel</span> <span class="n">para</span> <span class="n">quem</span> <span class="n">a</span> <span class="n">esta</span> <span class="n">apontando</span><span class="p">(</span>\<span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="n">e</span> <span class="n">reduza</span> <span class="n">em</span> <span class="n">um</span> <span class="n">essa</span> <span class="n">variavel</span><span class="o">.*</span> <span class="n">E</span> <span class="n">que</span> <span class="n">em</span> <span class="n">codigo</span> <span class="err">é</span> <span class="n">a</span> <span class="n">mesma</span> <span class="n">coisa</span> <span class="n">que</span><span class="p">:</span>
 
-<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"c"</span><span class="err">}</span>
-<span class="n">b</span><span class="c1">--;</span>
+<span class="err">```</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"c"</span><span class="p">}</span>
+<span class="n">b</span><span class="o">--</span><span class="p">;</span>
 <span class="o">//</span><span class="n">que</span> <span class="n">pode</span> <span class="n">ser</span> <span class="n">escrito</span> <span class="n">como</span><span class="p">:</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 </pre></div>

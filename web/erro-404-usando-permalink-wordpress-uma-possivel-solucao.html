@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2011-10-05T10:30:00+01:00">
           <i class="fa fa-clock-o"></i>
-          Qua 05 outubro 2011
+          Wed 05 October 2011
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -99,18 +99,18 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]</p>
 <h1>END WordPress</h1>
-<div class="highlight"><pre><span></span><span class="n">Reparem</span> <span class="n">que</span> <span class="n">quando</span> <span class="n">ele</span> <span class="n">faz</span> <span class="o">**</span><span class="n">IfModule</span> <span class="k">mod</span><span class="err">\</span><span class="n">_rewrite</span><span class="p">.</span><span class="k">c</span><span class="o">**</span> <span class="n">ele</span> <span class="n">vai</span> <span class="n">verificar</span> <span class="n">se</span> <span class="n">está</span> <span class="n">habilitado</span> <span class="n">o</span> <span class="n">modulo</span><span class="p">:</span> <span class="k">mod</span><span class="err">\</span><span class="n">_rewrite</span><span class="p">.</span><span class="k">c</span><span class="p">.</span> <span class="n">Se</span> <span class="n">não</span> <span class="n">estiver</span> <span class="n">habilitado</span><span class="p">,</span> <span class="n">basicamente</span> <span class="n">ele</span> <span class="n">não</span> <span class="n">vai</span> <span class="n">aplicar</span> <span class="k">as</span> <span class="n">mudanças</span> <span class="n">que</span> <span class="n">deveriam</span> <span class="n">ser</span> <span class="n">feitas</span><span class="p">.</span>
+<div class="highlight"><pre><span></span><span class="n">Reparem</span> <span class="n">que</span> <span class="n">quando</span> <span class="n">ele</span> <span class="n">faz</span> <span class="o">**</span><span class="n">IfModule</span> <span class="n">mod</span>\<span class="n">_rewrite</span><span class="o">.</span><span class="n">c</span><span class="o">**</span> <span class="n">ele</span> <span class="n">vai</span> <span class="n">verificar</span> <span class="n">se</span> <span class="n">está</span> <span class="n">habilitado</span> <span class="n">o</span> <span class="n">modulo</span><span class="p">:</span> <span class="n">mod</span>\<span class="n">_rewrite</span><span class="o">.</span><span class="n">c</span><span class="o">.</span> <span class="n">Se</span> <span class="n">não</span> <span class="n">estiver</span> <span class="n">habilitado</span><span class="p">,</span> <span class="n">basicamente</span> <span class="n">ele</span> <span class="n">não</span> <span class="n">vai</span> <span class="n">aplicar</span> <span class="k">as</span> <span class="n">mudanças</span> <span class="n">que</span> <span class="n">deveriam</span> <span class="n">ser</span> <span class="n">feitas</span><span class="o">.</span>
 
-<span class="n">Mas</span> <span class="n">por</span> <span class="n">que</span> <span class="n">raios</span> <span class="n">o</span> <span class="k">mod</span><span class="err">\</span><span class="n">_rewrite</span><span class="p">.</span><span class="k">c</span> <span class="n">não</span> <span class="n">estaria</span> <span class="n">habilitado</span><span class="o">?</span>  
-<span class="n">Por</span> <span class="n">que</span> <span class="n">aparentemente</span> <span class="n">quando</span> <span class="n">se</span> <span class="n">instala</span> <span class="n">o</span> <span class="n">apache</span> <span class="n">e</span> <span class="n">o</span> <span class="n">php</span> <span class="n">separados</span> <span class="k">no</span> <span class="n">Ubuntu</span><span class="p">,</span> <span class="n">esse</span> <span class="n">modulo</span> <span class="n">vem</span> <span class="o">**</span><span class="n">desativado</span> <span class="n">por</span> <span class="k">default</span><span class="p">.</span><span class="o">**</span>
+<span class="n">Mas</span> <span class="n">por</span> <span class="n">que</span> <span class="n">raios</span> <span class="n">o</span> <span class="n">mod</span>\<span class="n">_rewrite</span><span class="o">.</span><span class="n">c</span> <span class="n">não</span> <span class="n">estaria</span> <span class="n">habilitado</span><span class="err">?</span>  
+<span class="n">Por</span> <span class="n">que</span> <span class="n">aparentemente</span> <span class="n">quando</span> <span class="n">se</span> <span class="n">instala</span> <span class="n">o</span> <span class="n">apache</span> <span class="n">e</span> <span class="n">o</span> <span class="n">php</span> <span class="n">separados</span> <span class="n">no</span> <span class="n">Ubuntu</span><span class="p">,</span> <span class="n">esse</span> <span class="n">modulo</span> <span class="n">vem</span> <span class="o">**</span><span class="n">desativado</span> <span class="n">por</span> <span class="n">default</span><span class="o">.**</span>
 
 <span class="n">Resolvendo</span> <span class="n">o</span> <span class="n">Problema</span>
-<span class="c1">---------------------</span>
+<span class="o">---------------------</span>
 
-<span class="n">Para</span> <span class="n">ativar</span> <span class="n">o</span> <span class="n">modulo</span> <span class="o">**</span><span class="ss">"mod\_rewrite.c"</span><span class="o">**</span> <span class="n">use</span> <span class="n">o</span> <span class="n">comando</span><span class="p">:</span>
+<span class="n">Para</span> <span class="n">ativar</span> <span class="n">o</span> <span class="n">modulo</span> <span class="o">**</span><span class="s2">"mod\_rewrite.c"</span><span class="o">**</span> <span class="n">use</span> <span class="n">o</span> <span class="n">comando</span><span class="p">:</span>
 
-<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"bash"</span><span class="err">}</span>
-<span class="err">$</span> <span class="n">a2enmod</span> <span class="n">rewrite</span>
+<span class="err">```</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"bash"</span><span class="p">}</span>
+<span class="o">$</span> <span class="n">a2enmod</span> <span class="n">rewrite</span>
 </pre></div>
 <p>E pronto, basta agora alterar o PermaLink que ele vai funcionar.<br/>
 Se com isso ele não funcionar, eu aconselho a verificar os tópicos citados anteriormente, quem sabe um deles não está sendo o seu problema?</p>
@@ -118,10 +118,10 @@ Se com isso ele não funcionar, eu aconselho a verificar os tópicos citados ant
 <p>Se depois de habilitar o mod_rewrite.c, ainda assim você não estiver conseguindo fazer isso funcionar, talvez isso resolva:<br/>
 Verifique se na configuração do seu VirtualHost no apache, se você tem a seguinte configuração:</p>
 <p>``` {lang="shell"}</p>
-<div class="highlight"><pre><span></span>    <span class="k">Options</span> <span class="n">Indexes</span> <span class="n">FollowSymLinks</span> <span class="n">MultiViews</span>
-    <span class="n">AllowOverride</span> <span class="k">All</span>
-    <span class="k">Order</span> <span class="n">allow</span><span class="p">,</span><span class="n">deny</span>
-    <span class="n">allow</span> <span class="k">from</span> <span class="k">all</span>
+<div class="highlight"><pre><span></span><span class="err">    Options Indexes FollowSymLinks MultiViews</span>
+<span class="err">    AllowOverride All</span>
+<span class="err">    Order allow,deny</span>
+<span class="err">    allow from all</span>
 </pre></div>
 <p>```</p>
 <p>Atenção especial para a linha <strong>AllowOverride All</strong>.<br/>

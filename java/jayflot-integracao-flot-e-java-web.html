@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2011-09-01T10:51:00+01:00">
           <i class="fa fa-clock-o"></i>
-          Qui 01 setembro 2011
+          Thu 01 September 2011
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -97,26 +97,26 @@ public ArrayList gerarPlotDataDeCustoEVendasPorPeriodo(List periodos, List venda
      PlotData vendasData = Plot.generatePlotData(periodos,vendas);
      vendasData.setLabel("Vendas");
      datas.add(vendasData);</p>
-<div class="highlight"><pre><span></span> <span class="nv">PlotData</span> <span class="nv">custosData</span> <span class="o">=</span> <span class="nv">Plot</span>.<span class="nv">generatePlotData</span><span class="ss">(</span><span class="nv">periodos</span>,<span class="nv">custos</span><span class="ss">)</span><span class="c1">;</span>
- <span class="nv">custosData</span>.<span class="nv">setLabel</span><span class="ss">(</span><span class="s2">"</span><span class="s">Custos</span><span class="s2">"</span><span class="ss">)</span><span class="c1">;</span>
- <span class="nv">datas</span>.<span class="nv">add</span><span class="ss">(</span><span class="nv">custosData</span><span class="ss">)</span><span class="c1">;</span>
- <span class="k">return</span> <span class="nv">datas</span><span class="c1">;</span>
+<div class="highlight"><pre><span></span><span class="err"> PlotData custosData = Plot.generatePlotData(periodos,custos);</span>
+<span class="err"> custosData.setLabel("Custos");</span>
+<span class="err"> datas.add(custosData);</span>
+<span class="err"> return datas;</span>
 </pre></div>
 <p>} </p>
-<div class="highlight"><pre><span></span>### <span class="mi">3</span>º <span class="nv">Passo</span>
+<div class="highlight"><pre><span></span><span class="err">###</span> <span class="nt">3º</span> <span class="nt">Passo</span>
 
-<span class="nv">Ainda</span> <span class="nv">no</span> <span class="nv">service</span> <span class="nv">fa</span>ç<span class="nv">a</span> <span class="nv">um</span> <span class="nv">outro</span> <span class="nv">m</span>é<span class="nv">todo</span> <span class="nv">para</span> <span class="nv">gerar</span> <span class="nv">o</span> <span class="nv">grafico</span><span class="ss">(</span><span class="nv">uma</span> <span class="nv">instancia</span> <span class="nv">da</span> <span class="nv">classe</span> <span class="o">**</span><span class="nv">Plot</span><span class="o">**</span><span class="ss">)</span> <span class="nv">usando</span> <span class="nv">os</span> <span class="nv">dados</span> <span class="nv">populados</span> <span class="nv">no</span> <span class="nv">m</span>é<span class="nv">todo</span> <span class="nv">anterior</span>:  
-<span class="nv">Ex</span>:
+<span class="nt">Ainda</span> <span class="nt">no</span> <span class="nt">service</span> <span class="nt">faça</span> <span class="nt">um</span> <span class="nt">outro</span> <span class="nt">método</span> <span class="nt">para</span> <span class="nt">gerar</span> <span class="nt">o</span> <span class="nt">grafico</span><span class="o">(</span><span class="nt">uma</span> <span class="nt">instancia</span> <span class="nt">da</span> <span class="nt">classe</span> <span class="o">**</span><span class="nt">Plot</span><span class="o">**)</span> <span class="nt">usando</span> <span class="nt">os</span> <span class="nt">dados</span> <span class="nt">populados</span> <span class="nt">no</span> <span class="nt">método</span> <span class="nt">anterior</span><span class="o">:</span>  
+<span class="nt">Ex</span><span class="o">:</span>
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">java</span><span class="s2">"</span> <span class="nv">line</span><span class="o">=</span><span class="s2">"</span><span class="s">1</span><span class="s2">"</span>}
-<span class="nv">public</span> <span class="nv">Plot</span> <span class="nv">gerarPlotDeCustoEVendasPorPeriodo</span><span class="ss">(</span><span class="nv">List</span> <span class="nv">periodos</span>, <span class="nv">List</span> <span class="nv">vendas</span>, <span class="nv">List</span> <span class="nv">custos</span><span class="ss">)</span>{
-     <span class="o">//</span><span class="nv">chama</span> <span class="nv">o</span> <span class="nv">metodo</span> <span class="nv">anterior</span> <span class="nv">para</span> <span class="nv">gerar</span> <span class="nv">o</span> <span class="nv">ArrayList</span> <span class="nv">de</span> <span class="nv">PlotData</span>.
-     <span class="nv">ArrayList</span> <span class="nv">datas</span> <span class="o">=</span> <span class="nv">this</span>.<span class="nv">gerarPlotDataDeCustoEVendasPorPeriodo</span><span class="ss">(</span><span class="nv">periodos</span>,<span class="nv">vendas</span>,<span class="nv">custos</span><span class="ss">)</span><span class="c1">;</span>
+<span class="err">```</span> <span class="p">{</span><span class="err">lang="java"</span> <span class="err">line="1"</span><span class="p">}</span>
+<span class="nt">public</span> <span class="nt">Plot</span> <span class="nt">gerarPlotDeCustoEVendasPorPeriodo</span><span class="o">(</span><span class="nt">List</span> <span class="nt">periodos</span><span class="o">,</span> <span class="nt">List</span> <span class="nt">vendas</span><span class="o">,</span> <span class="nt">List</span> <span class="nt">custos</span><span class="o">)</span><span class="p">{</span>
+     <span class="err">//chama</span> <span class="err">o</span> <span class="err">metodo</span> <span class="err">anterior</span> <span class="err">para</span> <span class="err">gerar</span> <span class="err">o</span> <span class="err">ArrayList</span> <span class="err">de</span> <span class="err">PlotData.</span>
+     <span class="err">ArrayList</span> <span class="err">datas</span> <span class="err">=</span> <span class="err">this.gerarPlotDataDeCustoEVendasPorPeriodo(periodos,vendas,custos)</span><span class="p">;</span>
 
-     <span class="o">//</span><span class="nv">os</span> <span class="nv">parametros</span> <span class="nv">sao</span>: <span class="nv">Lista</span> <span class="nv">das</span> <span class="nv">PlotDatas</span> <span class="nv">desse</span> <span class="nv">grafico</span>, <span class="nv">Label</span> <span class="k">do</span> <span class="nv">Eixo</span> <span class="nv">X</span> <span class="nv">e</span> <span class="nv">Label</span> <span class="k">do</span> <span class="nv">Eixo</span> <span class="nv">Y</span>.
-     <span class="nv">Plot</span> <span class="nv">grafico</span> <span class="o">=</span> <span class="nv">Plot</span>.<span class="nv">generatePlot</span><span class="ss">(</span><span class="nv">datas</span>,<span class="s2">"</span><span class="s">Periodos De Produção</span><span class="s2">"</span>,<span class="s2">"</span><span class="s">R$</span><span class="s2">"</span><span class="ss">)</span><span class="c1">;</span>
-     <span class="k">return</span> <span class="nv">grafico</span><span class="c1">;</span>
-} 
+     <span class="err">//os</span> <span class="err">parametros</span> <span class="n">sao</span><span class="p">:</span> <span class="n">Lista</span> <span class="n">das</span> <span class="n">PlotDatas</span> <span class="n">desse</span> <span class="n">grafico</span><span class="p">,</span> <span class="n">Label</span> <span class="n">do</span> <span class="n">Eixo</span> <span class="n">X</span> <span class="n">e</span> <span class="n">Label</span> <span class="n">do</span> <span class="n">Eixo</span> <span class="n">Y</span><span class="o">.</span>
+     <span class="n">Plot</span> <span class="n">grafico</span> <span class="o">=</span> <span class="n">Plot</span><span class="o">.</span><span class="nf">generatePlot</span><span class="p">(</span><span class="n">datas</span><span class="p">,</span><span class="s2">"Periodos De Produção"</span><span class="p">,</span><span class="s2">"R$"</span><span class="p">);</span>
+     <span class="err">return</span> <span class="err">grafico</span><span class="p">;</span>
+<span class="p">}</span> 
 </pre></div>
 <h3>4º Passo</h3>
 <p>No seu manageBean faça uma instancia de um <strong>Plot</strong> que será seu grafico, e faça ele receber o retorno do seu metodo criado no service. E não esqueça dos métodos <strong>Get e Set</strong> para ele!<br/>
@@ -129,19 +129,19 @@ public String mostrarGraficoVendasECustosPorPeriodo(){
      graficoVendasCustosPeriodo = meuService.gerarPlotDeCustoEVendasPorPeriodo(periodos,vendas,custos);
      return PAGINA_GRAFICO;
 } </p>
-<div class="highlight"><pre><span></span>### <span class="mi">5</span>º <span class="nv">Passo</span>
+<div class="highlight"><pre><span></span><span class="err">###</span> <span class="nt">5º</span> <span class="nt">Passo</span>
 
-<span class="nv">Fa</span>ç<span class="nv">a</span> <span class="nv">a</span> <span class="nv">sua</span> <span class="nv">tela</span> <span class="nv">de</span> <span class="nv">grafico</span>, <span class="nv">quando</span> <span class="k">for</span> <span class="nv">fazer</span> <span class="nv">o</span> <span class="nv">JS</span>, <span class="nv">fa</span>ç<span class="nv">a</span> <span class="nv">algo</span> <span class="k">do</span> <span class="nv">tipo</span>:
+<span class="nt">Faça</span> <span class="nt">a</span> <span class="nt">sua</span> <span class="nt">tela</span> <span class="nt">de</span> <span class="nt">grafico</span><span class="o">,</span> <span class="nt">quando</span> <span class="nt">for</span> <span class="nt">fazer</span> <span class="nt">o</span> <span class="nt">JS</span><span class="o">,</span> <span class="nt">faça</span> <span class="nt">algo</span> <span class="nt">do</span> <span class="nt">tipo</span><span class="o">:</span>
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">javascript</span><span class="s2">"</span>}
-<span class="nv">data</span> <span class="o">=</span> []<span class="c1">;</span>
-<span class="nv">data</span> <span class="o">=</span> #{<span class="nv">myBean</span>.<span class="nv">graficoVendasCustosPeriodo</span>.<span class="nv">printData</span>}<span class="c1">;</span>
-...
-<span class="nv">options</span> <span class="o">=</span> {}<span class="c1">;</span>
-<span class="nv">options</span> <span class="o">=</span> #{<span class="nv">myBean</span>.<span class="nv">graficoVendasCustosPeriodo</span>.<span class="nv">printOptions</span>}<span class="c1">;</span>
-....
-$<span class="nv">j</span>.<span class="nv">plot</span><span class="ss">(</span>$<span class="nv">j</span><span class="ss">(</span><span class="s2">"</span><span class="s">#placeholder</span><span class="s2">"</span><span class="ss">)</span>, <span class="nv">data</span>, <span class="nv">options</span><span class="ss">)</span><span class="c1">;</span>
-...
+<span class="err">```</span> <span class="p">{</span><span class="err">lang="javascript"</span><span class="p">}</span>
+<span class="nt">data</span> <span class="o">=</span> <span class="cp">[]</span><span class="o">;</span>
+<span class="nt">data</span> <span class="o">=</span> <span class="err">#</span><span class="p">{</span><span class="err">myBean.graficoVendasCustosPeriodo.printData</span><span class="p">}</span><span class="o">;</span>
+<span class="o">...</span>
+<span class="nt">options</span> <span class="o">=</span> <span class="p">{}</span><span class="o">;</span>
+<span class="nt">options</span> <span class="o">=</span> <span class="err">#</span><span class="p">{</span><span class="err">myBean.graficoVendasCustosPeriodo.printOptions</span><span class="p">}</span><span class="o">;</span>
+<span class="o">....</span>
+<span class="o">$</span><span class="nt">j</span><span class="p">.</span><span class="nc">plot</span><span class="o">($</span><span class="nt">j</span><span class="o">(</span><span class="s2">"#placeholder"</span><span class="o">),</span> <span class="nt">data</span><span class="o">,</span> <span class="nt">options</span><span class="o">);</span>
+<span class="o">...</span>
 </pre></div>
 <p>Dessa forma onde teriam que ter as informações de data e options no Flot ele irá imprimir os dados do seu gráfico que está no bean.<br/>
 <strong>Ou você pode usar a tag JSF que eu fiz: <a href="https://gist.github.com/78453a5a55fc63284126">JayFlot_CheckBoxTag_JSF</a></strong></p>

@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2011-11-16T09:21:00+00:00">
           <i class="fa fa-clock-o"></i>
-          Qua 16 novembro 2011
+          Wed 16 November 2011
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -89,7 +89,7 @@ pip install django-structurer</p>
 <h2>Estrutura Básica Padrão</h2>
 <p>A estrutura básica que o projeto é criado, foi feita pensando em diversos detalhes para a modularização de todo o projeto e para deixar de forma mais organizada, assim facilita o entendimento para novos integrantes no projeto e outros detalhes.<br/>
 Segue uma imagem de como ficaria o projeto gerado com o comando anterior:<br/>
-<a href="https://arruda.github.io/wp-content/uploads/2011/11/folder_struct2.png"><img alt="Estrutura do Projeto" class="wp-image-862 alignnone img-fluid size-full" height="534" src="https://arruda.github.io/wp-content/uploads/2011/11/folder_struct2.png" title="folder_struct" width="328"/></a></p>
+<a href="https://arruda.github.io/wp-content/uploads/2011/11/folder_struct2.png"><img alt="Estrutura do Projeto" class="wp-image-862 alignnone size-full img-fluid" height="534" src="https://arruda.github.io/wp-content/uploads/2011/11/folder_struct2.png" title="folder_struct" width="328"/></a></p>
 <h2>Personalizando a Estrutura De Projetos</h2>
 <p>Muitos vão dizer:<br/>
 "Mas Arruda, na minha empresa a gente não usa esse padrão não, usamos um pouco diferente, como faço?"</p>
@@ -161,40 +161,40 @@ Ficando assim:</p>
 <div class="highlight"><pre><span></span><span class="o">**</span><span class="n">OBS</span><span class="p">:</span> <span class="n">Lembrando</span> <span class="n">que</span> <span class="n">a</span> <span class="n">ordem</span> <span class="n">em</span> <span class="n">que</span> <span class="n">são</span> <span class="n">escritos</span> <span class="n">os</span> <span class="n">snippets</span> <span class="n">são</span> <span class="n">a</span> <span class="n">ordem</span> <span class="n">em</span> <span class="n">que</span> <span class="n">eles</span> <span class="n">serão</span> <span class="n">escritos</span><span class="o">**</span>
 
 <span class="n">Configuração</span> <span class="n">Para</span> <span class="n">Personalizar</span>
-<span class="c1">------------------------------</span>
+<span class="o">------------------------------</span>
 
-<span class="ss">"Ok, eu posso usar diferentes snippets, mas e se eu quiser usar meus proprios snippets, como faço?"</span>
+<span class="s2">"Ok, eu posso usar diferentes snippets, mas e se eu quiser usar meus proprios snippets, como faço?"</span>
 
 <span class="n">Para</span> <span class="n">usar</span> <span class="n">diferentes</span> <span class="n">snippets</span> <span class="n">basta</span> <span class="n">criar</span> <span class="n">uma</span> <span class="n">pasta</span> <span class="n">em</span> <span class="n">que</span> <span class="n">você</span> <span class="n">ira</span> <span class="n">salvar</span> <span class="n">seus</span> <span class="n">snippets</span><span class="p">,</span> <span class="n">ex</span><span class="p">:</span>
 
-<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"bash"</span><span class="err">}</span>
-<span class="n">mkdir</span> <span class="o">~/</span><span class="p">.</span><span class="n">myStructs</span>
+<span class="err">```</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"bash"</span><span class="p">}</span>
+<span class="n">mkdir</span> <span class="o">~/.</span><span class="n">myStructs</span>
 </pre></div>
 <p>e criar no .bashrc para ter o seu DJSTRUCT_HOME nas variáveis de ambiente:</p>
 <p>``` {lang="bash"}
 export DJSTRUCT_HOME=/home/usuario/.myStructs</p>
-<div class="highlight"><pre><span></span><span class="nv">Dentro</span> <span class="nv">da</span> <span class="nv">sua</span> <span class="nv">pasta</span> <span class="s2">"</span><span class="s">.myStructs</span><span class="s2">"</span> <span class="nv">crie</span> <span class="nv">uma</span> <span class="nv">pasta</span> <span class="s2">"</span><span class="s">Snippets</span><span class="s2">"</span>, <span class="nv">e</span> <span class="nv">dentro</span> <span class="nv">dela</span> <span class="nv">coloque</span> <span class="nv">seus</span> <span class="nv">arquivos</span>, <span class="nv">lembrando</span> <span class="nv">de</span> <span class="nv">por</span> <span class="nv">a</span> <span class="nv">termina</span>çã<span class="nv">o</span> <span class="s2">"</span><span class="s">.snippets</span><span class="s2">"</span>.  
-<span class="nv">Ent</span>ã<span class="nv">o</span> <span class="nv">se</span> <span class="nv">voc</span>ê <span class="nv">quer</span> <span class="nv">por</span> <span class="nv">um</span> <span class="nv">novo</span> <span class="nv">snippet</span> <span class="nv">com</span> <span class="nv">imports</span> <span class="nv">que</span> <span class="nv">costuma</span> <span class="nv">usar</span> <span class="nv">sempre</span>, <span class="nv">voc</span>ê <span class="nv">pode</span> <span class="nv">por</span> <span class="nv">eles</span> <span class="nv">num</span> <span class="nv">arquivo</span>: <span class="s2">"</span><span class="s">imports\_importantes.snippets</span><span class="s2">"</span> <span class="nv">dentro</span> <span class="nv">da</span> <span class="nv">pasta</span> <span class="s2">"</span><span class="s">.myStructs/Snippets</span><span class="s2">"</span>.
+<div class="highlight"><pre><span></span>Dentro da sua pasta ".myStructs" crie uma pasta "Snippets", e dentro dela coloque seus arquivos, lembrando de por a terminação ".snippets".  
+Então se você quer por um novo snippet com imports que costuma usar sempre, você pode por eles num arquivo: "imports\_importantes.snippets" dentro da pasta ".myStructs/Snippets".
 
-<span class="nv">Pronto</span>, <span class="nv">seu</span> <span class="nv">snippet</span> <span class="nv">j</span>á <span class="nv">pode</span> <span class="nv">ser</span> <span class="nv">usado</span>.  
-<span class="nv">Para</span> <span class="nv">chamar</span> <span class="nv">ele</span> <span class="nv">nas</span> <span class="nv">configura</span>çõ<span class="nv">es</span> <span class="k">do</span> <span class="nv">seu</span> <span class="nv">projeto</span>, <span class="nv">basta</span> <span class="nv">por</span> <span class="nv">no</span> <span class="nv">atributo</span> <span class="s2">"</span><span class="s">snippets</span><span class="s2">"</span>:
+Pronto, seu snippet já pode ser usado.  
+Para chamar ele nas configurações do seu projeto, basta por no atributo "snippets":
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">bash</span><span class="s2">"</span>}
-[<span class="nv">imports_importantes</span>, <span class="nv">uma_pasta</span>.<span class="nv">outro_snippet</span>]
+``` {lang="bash"}
+[imports_importantes, uma_pasta.outro_snippet]
 </pre></div>
 <h2>Como usar sua própria configuração</h2>
 <p>Para usar o seu próprio arquivo de configuração(o arquivo YAML com a organização do projeto) você usa o comando da seguinte forma:</p>
 <p>``` {lang="bash"}
 djstruct.py proj "meu_projeto" MinhasConfiguracoes.yaml</p>
-<div class="highlight"><pre><span></span><span class="n">Isso</span> <span class="err">é</span> <span class="n">o</span> <span class="n">terceiro</span> <span class="n">parâmetro</span> <span class="err">é</span> <span class="n">o</span> <span class="n">arquivo</span> <span class="n">de</span> <span class="n">configuração</span> <span class="n">que</span> <span class="n">será</span> <span class="n">usado</span><span class="p">.</span>  
-<span class="n">Sendo</span> <span class="n">que</span> <span class="n">você</span> <span class="n">pode</span> <span class="n">por</span> <span class="n">o</span> <span class="n">seu</span> <span class="n">arquivo</span> <span class="n">de</span> <span class="n">configuração</span> <span class="n">dentro</span> <span class="n">de</span> <span class="n">seu</span> <span class="n">DJSTRUCT</span><span class="err">\</span><span class="n">_HOME</span><span class="p">,</span> <span class="n">para</span> <span class="n">acessar</span> <span class="n">facilmente</span> <span class="n">o</span> <span class="n">mesmo</span><span class="p">.</span>
+<div class="highlight"><pre><span></span><span class="n">Isso</span> <span class="err">é</span> <span class="n">o</span> <span class="n">terceiro</span> <span class="n">parâmetro</span> <span class="err">é</span> <span class="n">o</span> <span class="n">arquivo</span> <span class="n">de</span> <span class="n">configuração</span> <span class="n">que</span> <span class="n">será</span> <span class="n">usado</span><span class="o">.</span>  
+<span class="n">Sendo</span> <span class="n">que</span> <span class="n">você</span> <span class="n">pode</span> <span class="n">por</span> <span class="n">o</span> <span class="n">seu</span> <span class="n">arquivo</span> <span class="n">de</span> <span class="n">configuração</span> <span class="n">dentro</span> <span class="n">de</span> <span class="n">seu</span> <span class="n">DJSTRUCT</span>\<span class="n">_HOME</span><span class="p">,</span> <span class="n">para</span> <span class="n">acessar</span> <span class="n">facilmente</span> <span class="n">o</span> <span class="n">mesmo</span><span class="o">.</span>
 
-<span class="o">###</span> <span class="n">Usando</span> <span class="n">uma</span> <span class="n">Configuração</span> <span class="n">por</span> <span class="k">Default</span>
+<span class="c1">### Usando uma Configuração por Default</span>
 
 <span class="n">Você</span> <span class="n">pode</span> <span class="n">deixar</span> <span class="n">uma</span> <span class="n">configuração</span> <span class="n">como</span> <span class="n">sendo</span> <span class="n">a</span> <span class="n">padrão</span> <span class="n">setando</span> <span class="n">uma</span> <span class="n">outra</span> <span class="n">variável</span> <span class="n">de</span> <span class="n">ambiente</span><span class="p">:</span>
 
-<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"bash"</span><span class="err">}</span>
-<span class="n">DJSTRUCT_DEFAULT</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">usuario</span><span class="o">/</span><span class="p">.</span><span class="n">myStructs</span><span class="o">/</span><span class="n">MinhasConfiguracoes</span><span class="p">.</span><span class="n">yaml</span>
+<span class="err">```</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s2">"bash"</span><span class="p">}</span>
+<span class="n">DJSTRUCT_DEFAULT</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">usuario</span><span class="o">/.</span><span class="n">myStructs</span><span class="o">/</span><span class="n">MinhasConfiguracoes</span><span class="o">.</span><span class="n">yaml</span>
 </pre></div>
 <p>Assim você pode usar o comando sem ter que passar qual a configuração que por default ele ira carregar a indicada:</p>
 <p><code>{lang="bash"}

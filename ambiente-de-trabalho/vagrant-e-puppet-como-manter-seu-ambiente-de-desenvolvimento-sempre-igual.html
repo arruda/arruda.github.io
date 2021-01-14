@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2013-09-12T15:18:00+01:00">
           <i class="fa fa-clock-o"></i>
-          Qui 12 setembro 2013
+          Thu 12 September 2013
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -115,7 +115,7 @@ $ vagrant up</p>
 
 <span class="n">Assim</span><span class="p">,</span> <span class="n">fica</span> <span class="n">muito</span> <span class="n">mais</span> <span class="n">simples</span> <span class="n">configurar</span> <span class="n">suas</span> <span class="n">dependências</span><span class="p">,</span> <span class="n">além</span> <span class="n">disso</span> <span class="n">o</span> <span class="n">Puppet</span> <span class="n">possui</span> <span class="n">diversos</span> <span class="p">[</span><span class="n">Módulos</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//forge.puppetlabs.com/ "Puppet Forge") já prontos para diversas aplicações, basta usa-los e configurar os detalhes.</span>
 
-<span class="o">:</span><span class="err">$</span><span class="p">{</span><span class="n">IMAGE_TAG</span><span class="p">}</span>
+<span class="o">:</span><span class="n">$</span><span class="p">{</span><span class="n">IMAGE_TAG</span><span class="p">}</span>
 
 <span class="n">Instalando</span> <span class="n">Tudo</span>
 <span class="o">---------------</span>
@@ -195,25 +195,25 @@ $ vagrant init</p>
 <p>Como descrito no arquivo Vagrantfile, devemos criar nosso arquivo <strong>mymanifest.pp</strong>, dentro de uma pasta chamada <strong>manifests</strong>, e este será o ponto de partida para as ações do Puppet:</p>
 <p>``` {lang="shell"}
 $ mkdir manifests</p>
-<div class="highlight"><pre><span></span><span class="nv">e</span> <span class="nv">dentro</span> <span class="nv">desta</span> <span class="nv">nova</span> <span class="nv">pasta</span> <span class="nv">criada</span> <span class="nv">o</span> <span class="nv">arquivo</span> <span class="o">**</span><span class="nv">mymanifest</span>.<span class="nv">pp</span><span class="o">**</span> <span class="nv">deve</span> <span class="nv">ter</span> <span class="nv">o</span> <span class="nv">seguinte</span> <span class="nv">conte</span>ú<span class="nv">do</span>:
+<div class="highlight"><pre><span></span><span class="n">e</span> <span class="n">dentro</span> <span class="n">desta</span> <span class="n">nova</span> <span class="n">pasta</span> <span class="n">criada</span> <span class="n">o</span> <span class="n">arquivo</span> <span class="o">**</span><span class="n">mymanifest</span><span class="p">.</span><span class="n">pp</span><span class="o">**</span> <span class="n">deve</span> <span class="n">ter</span> <span class="n">o</span> <span class="n">seguinte</span> <span class="n">conteúdo</span><span class="p">:</span>
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">ruby</span><span class="s2">"</span>}
-<span class="nv">group</span> { <span class="s1">'</span><span class="s">puppet</span><span class="s1">'</span>: <span class="nv">ensure</span> <span class="o">=&gt;</span> <span class="nv">present</span> }
-<span class="k">Exec</span> { <span class="nv">path</span> <span class="o">=&gt;</span> [ <span class="s1">'</span><span class="s">/bin/</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">/sbin/</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">/usr/bin/</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">/usr/sbin/</span><span class="s1">'</span>] }
-<span class="nv">File</span> { <span class="nv">owner</span> <span class="o">=&gt;</span> <span class="mi">0</span>, <span class="nv">group</span> <span class="o">=&gt;</span> <span class="mi">0</span>, <span class="nv">mode</span> <span class="o">=&gt;</span> <span class="mi">0644</span> }
+<span class="o">```</span> <span class="err">{</span><span class="n">lang</span><span class="o">=</span><span class="ss">"ruby"</span><span class="err">}</span>
+<span class="k">group</span> <span class="err">{</span> <span class="s1">'puppet'</span><span class="p">:</span> <span class="n">ensure</span> <span class="o">=&gt;</span> <span class="n">present</span> <span class="err">}</span>
+<span class="k">Exec</span> <span class="err">{</span> <span class="n">path</span> <span class="o">=&gt;</span> <span class="p">[</span> <span class="s1">'/bin/'</span><span class="p">,</span> <span class="s1">'/sbin/'</span><span class="p">,</span> <span class="s1">'/usr/bin/'</span><span class="p">,</span> <span class="s1">'/usr/sbin/'</span><span class="p">]</span> <span class="err">}</span>
+<span class="n">File</span> <span class="err">{</span> <span class="k">owner</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="k">group</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="k">mode</span> <span class="o">=&gt;</span> <span class="mi">0644</span> <span class="err">}</span>
 
-<span class="nv">class</span> {<span class="s1">'</span><span class="s">apt</span><span class="s1">'</span>:
-  <span class="nv">always_apt_update</span> <span class="o">=&gt;</span> <span class="nv">true</span>,
-}
+<span class="k">class</span> <span class="err">{</span><span class="s1">'apt'</span><span class="p">:</span>
+  <span class="n">always_apt_update</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+<span class="err">}</span>
 
-<span class="nv">package</span> { [
-    <span class="s1">'</span><span class="s">build-essential</span><span class="s1">'</span>,
-    <span class="s1">'</span><span class="s">vim</span><span class="s1">'</span>,
-    <span class="s1">'</span><span class="s">curl</span><span class="s1">'</span>,
-    <span class="s1">'</span><span class="s">git-core</span><span class="s1">'</span>
-  ]:
-  <span class="nv">ensure</span>  <span class="o">=&gt;</span> <span class="s1">'</span><span class="s">installed</span><span class="s1">'</span>,
-}
+<span class="n">package</span> <span class="err">{</span> <span class="p">[</span>
+    <span class="s1">'build-essential'</span><span class="p">,</span>
+    <span class="s1">'vim'</span><span class="p">,</span>
+    <span class="s1">'curl'</span><span class="p">,</span>
+    <span class="s1">'git-core'</span>
+  <span class="p">]:</span>
+  <span class="n">ensure</span>  <span class="o">=&gt;</span> <span class="s1">'installed'</span><span class="p">,</span>
+<span class="err">}</span>
 </pre></div>
 <h3>Instalando Módulos do Puppet</h3>
 <p>No arquivo mymanifest.pp utilizamos o módulo APT do Puppet, portanto devemos instala-lo na pasta modules do projeto.
@@ -230,12 +230,12 @@ $ mkdir modules</p>
 <p>Para terminar e ter sua máquina pronta, basta usar o comando:</p>
 <p>``` {lang="shell"}
 $ vagrant up</p>
-<div class="highlight"><pre><span></span><span class="nv">Isso</span> <span class="nv">carregar</span>á <span class="nv">sua</span> <span class="nv">m</span>á<span class="nv">quina</span> <span class="nv">virtual</span> <span class="nv">e</span> <span class="nv">em</span> <span class="nv">seguida</span> <span class="nv">ir</span>á <span class="nv">chamar</span> <span class="nv">o</span> <span class="nv">mymanifest</span>.<span class="nv">pp</span>, <span class="nv">que</span> <span class="nv">por</span> <span class="nv">sua</span> <span class="nv">vez</span> <span class="nv">d</span>á <span class="nv">instru</span>çõ<span class="nv">es</span> <span class="nv">ao</span> <span class="nv">Puppet</span> <span class="nv">da</span> <span class="nv">maquina</span> <span class="nv">virtual</span> <span class="k">do</span> <span class="nv">que</span> <span class="nv">deve</span> <span class="nv">ser</span> <span class="nv">feito</span>.
+<div class="highlight"><pre><span></span><span class="n">Isso</span> <span class="n">carregará</span> <span class="n">sua</span> <span class="n">máquina</span> <span class="n">virtual</span> <span class="n">e</span> <span class="n">em</span> <span class="n">seguida</span> <span class="n">irá</span> <span class="n">chamar</span> <span class="n">o</span> <span class="n">mymanifest</span><span class="p">.</span><span class="n">pp</span><span class="p">,</span> <span class="n">que</span> <span class="n">por</span> <span class="n">sua</span> <span class="n">vez</span> <span class="n">dá</span> <span class="n">instruções</span> <span class="n">ao</span> <span class="n">Puppet</span> <span class="n">da</span> <span class="n">maquina</span> <span class="n">virtual</span> <span class="k">do</span> <span class="n">que</span> <span class="n">deve</span> <span class="n">ser</span> <span class="n">feito</span><span class="p">.</span>
 
-<span class="nv">Caso</span> <span class="nv">deseje</span> <span class="nv">acessar</span> <span class="nv">sua</span> <span class="nv">m</span>á<span class="nv">quina</span> <span class="nv">virtual</span>, <span class="nv">basta</span> <span class="nv">executar</span> <span class="nv">o</span> <span class="nv">comando</span>:
+<span class="n">Caso</span> <span class="n">deseje</span> <span class="n">acessar</span> <span class="n">sua</span> <span class="n">máquina</span> <span class="n">virtual</span><span class="p">,</span> <span class="n">basta</span> <span class="n">executar</span> <span class="n">o</span> <span class="nl">comando:</span>
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">shell</span><span class="s2">"</span>}
-$ <span class="nv">vagrant</span> <span class="nv">ssh</span>
+<span class="err">```</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s">"shell"</span><span class="p">}</span>
+<span class="err">$</span> <span class="n">vagrant</span> <span class="n">ssh</span>
 </pre></div>
 <p>Assim você fica logado como o usuário vagrant e pode fazer o que bem entender dentro da máquina.</p>
 <p>Outra coisa interessante, é que a pasta do seu host (máquina real) onde tem o arquivo Vagrantfile, fica sendo uma pasta compartilhada com a nova máquina virtual no caminho <strong>"/vagrant/"</strong>. Ou seja: todo código fonte que houver dentro da pasta do projeto, irá aparecer também dentro da máquina virtual na pasta "/vagrant/". Que moleza, não?</p>

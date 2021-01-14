@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2013-01-22T09:19:00+00:00">
           <i class="fa fa-clock-o"></i>
-          Ter 22 janeiro 2013
+          Tue 22 January 2013
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -88,39 +88,39 @@ Para instala-lo é simples:</p>
 </ul>
 <p>``` {lang="bash"}
 import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print 'Please restart Sublime Text to finish installation'</p>
-<div class="highlight"><pre><span></span><span class="nv">Depois</span> <span class="nv">reinicie</span> <span class="nv">o</span> <span class="nv">sublime</span>.
+<div class="highlight"><pre><span></span>Depois reinicie o sublime.
 
-<span class="nv">SublimeRope</span> <span class="o">-</span> <span class="nv">Autocomplete</span> <span class="nv">e</span> <span class="nv">outras</span> <span class="nv">coisas</span> <span class="k">do</span> <span class="nv">Python</span>
-<span class="o">----------------------------------------------------</span>
+SublimeRope - Autocomplete e outras coisas do Python
+----------------------------------------------------
 
-<span class="nv">Para</span> <span class="nv">instalar</span> <span class="nv">esse</span> <span class="nv">package</span> <span class="nv">vamos</span> <span class="nv">usar</span> <span class="nv">o</span> <span class="nv">Package</span> <span class="nv">Control</span> <span class="nv">rec</span>é<span class="nv">m</span> <span class="nv">instalado</span>, <span class="nv">aperte</span><span class="ss">(</span><span class="o">**</span><span class="nv">Shift</span> <span class="o">+</span> <span class="nv">ctrl</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span> <span class="nv">ou</span> <span class="nv">no</span> <span class="nv">mac</span>: <span class="o">**</span><span class="nv">shit</span> <span class="o">+</span> <span class="nv">cmd</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span><span class="ss">)</span>  
-<span class="nv">Selecione</span> <span class="nv">na</span> <span class="nv">lista</span>: <span class="o">**</span><span class="s2">"</span><span class="s">Package Control: Install Package</span><span class="s2">"</span><span class="o">**</span>, <span class="nv">e</span> <span class="nv">na</span> <span class="nv">pr</span>ó<span class="nv">xima</span> <span class="nv">lista</span> <span class="nv">que</span> <span class="nv">aparecer</span>, <span class="nv">procure</span> <span class="nv">por</span> <span class="nv">SublimeRope</span> <span class="nv">e</span> <span class="nv">instale</span>.
+Para instalar esse package vamos usar o Package Control recém instalado, aperte(**Shift + ctrl + P** ou no mac: **shit + cmd + P**)  
+Selecione na lista: **"Package Control: Install Package"**, e na próxima lista que aparecer, procure por SublimeRope e instale.
 
-<span class="nv">Criando</span> <span class="nv">um</span> <span class="nv">projeto</span> <span class="nv">Rope</span>
-<span class="o">-----------------------</span>
+Criando um projeto Rope
+-----------------------
 
-<span class="nv">Para</span> <span class="nv">deixar</span> <span class="nv">tudo</span> <span class="nv">ok</span>, <span class="nv">devemos</span> <span class="nv">agora</span> <span class="nv">criar</span> <span class="nv">um</span> <span class="nv">projeto</span> <span class="nv">Rope</span> <span class="nv">e</span> <span class="nv">configurar</span> <span class="nv">alguns</span> <span class="nv">detalhes</span>.  
-<span class="nv">Para</span> <span class="nv">criar</span> <span class="nv">um</span> <span class="nv">novo</span> <span class="nv">projeto</span> <span class="nv">Rope</span>, <span class="nv">aperte</span><span class="ss">(</span><span class="o">**</span><span class="nv">Shift</span> <span class="o">+</span> <span class="nv">ctrl</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span> <span class="nv">ou</span> <span class="nv">no</span> <span class="nv">mac</span>: <span class="o">**</span><span class="nv">shit</span> <span class="o">+</span> <span class="nv">cmd</span> <span class="o">+</span> <span class="nv">P</span><span class="o">**</span><span class="ss">)</span>, <span class="nv">e</span> <span class="nv">procure</span> <span class="nv">por</span> <span class="o">**</span><span class="s2">"</span><span class="s">Rope: New Project</span><span class="s2">"</span><span class="o">**</span>.
+Para deixar tudo ok, devemos agora criar um projeto Rope e configurar alguns detalhes.  
+Para criar um novo projeto Rope, aperte(**Shift + ctrl + P** ou no mac: **shit + cmd + P**), e procure por **"Rope: New Project"**.
 
-<span class="nv">Ao</span> <span class="nv">selecionar</span> <span class="nv">essa</span> <span class="nv">op</span>çã<span class="nv">o</span> <span class="nv">ele</span> <span class="nv">ir</span>á <span class="nv">perguntar</span> <span class="nv">onde</span> <span class="nv">se</span> <span class="nv">encontra</span> <span class="nv">seu</span> <span class="nv">virtualenv</span>.  
-<span class="nv">Esse</span> é <span class="nv">o</span> <span class="nv">path</span> <span class="k">do</span> <span class="nv">env</span> <span class="nv">em</span> <span class="nv">quest</span>ã<span class="nv">o</span>, <span class="nv">ex</span>:  
-<span class="o">**</span><span class="s2">"</span><span class="s">/Users/arruda/.virtualenvs/um\_projeto</span><span class="s2">"</span><span class="o">**</span>  
-<span class="nv">Depois</span> <span class="nv">disso</span>, <span class="nv">caso</span> <span class="nv">queira</span> <span class="nv">add</span> <span class="nv">algo</span> <span class="nv">mais</span> <span class="nv">na</span> <span class="nv">PYTHONPATH</span>, <span class="nv">voc</span>ê <span class="nv">pode</span> <span class="nv">abrir</span> <span class="nv">o</span> <span class="nv">arquivo</span>: <span class="o">**</span><span class="s2">"</span><span class="s">.ropeproject/config.py</span><span class="s2">"</span><span class="o">**</span>
+Ao selecionar essa opção ele irá perguntar onde se encontra seu virtualenv.  
+Esse é o path do env em questão, ex:  
+**"/Users/arruda/.virtualenvs/um\_projeto"**  
+Depois disso, caso queira add algo mais na PYTHONPATH, você pode abrir o arquivo: **".ropeproject/config.py"**
 
-<span class="nv">HotKeys</span>
-<span class="o">-------</span>
+HotKeys
+-------
 
-<span class="nv">Uma</span> <span class="nv">vez</span> <span class="nv">instalado</span> <span class="nv">o</span> <span class="nv">SublimeRope</span> <span class="nv">podemos</span> <span class="nv">usar</span> <span class="nv">o</span> <span class="nv">AutoComplete</span> <span class="nv">usando</span> <span class="o">**</span><span class="nv">Ctrl</span> <span class="o">+</span> <span class="nv">Space</span><span class="o">**</span>, <span class="nv">mas</span> <span class="nv">existe</span> <span class="nv">outra</span> <span class="nv">funcionalidade</span> <span class="nv">muito</span> <span class="nv">boa</span> <span class="nv">presente</span> <span class="nv">no</span> <span class="nv">eclipse</span> <span class="nv">que</span> <span class="nv">podemos</span> <span class="nv">aproveitar</span> <span class="nv">agora</span> <span class="nv">no</span> <span class="nv">Sublime</span> <span class="nv">tamb</span>é<span class="nv">m</span>, <span class="nv">o</span> <span class="nv">Code</span> <span class="nv">Navigation</span><span class="ss">(</span><span class="nv">Navegamos</span> <span class="nv">diretamente</span> <span class="nv">para</span> <span class="nv">o</span> <span class="nv">fonte</span> <span class="nv">da</span> <span class="nv">sele</span>çã<span class="nv">o</span> <span class="nv">atual</span><span class="ss">)</span>.
+Uma vez instalado o SublimeRope podemos usar o AutoComplete usando **Ctrl + Space**, mas existe outra funcionalidade muito boa presente no eclipse que podemos aproveitar agora no Sublime também, o Code Navigation(Navegamos diretamente para o fonte da seleção atual).
 
-<span class="nv">No</span> <span class="nv">meu</span> <span class="nv">caso</span> <span class="nv">configurei</span> <span class="nv">para</span> <span class="nv">que</span> <span class="nv">a</span> <span class="nv">hotkey</span> <span class="nv">para</span> <span class="nv">esse</span> <span class="nv">comando</span> <span class="nv">fosse</span>: <span class="nv">Super</span> <span class="o">+</span> <span class="nv">A</span> <span class="o">+</span> <span class="nv">S</span> <span class="ss">(</span><span class="nv">No</span> <span class="nv">mac</span> <span class="nv">o</span> <span class="nv">super</span> <span class="nv">para</span> <span class="nv">o</span> <span class="nv">sublime</span> é <span class="nv">o</span> <span class="nv">Command</span><span class="ss">)</span>.
+No meu caso configurei para que a hotkey para esse comando fosse: Super + A + S (No mac o super para o sublime é o Command).
 
-<span class="nv">Para</span> <span class="nv">isso</span> <span class="nv">devemos</span> <span class="nv">ir</span> <span class="nv">em</span> <span class="nv">preferences</span><span class="o">-</span>\<span class="o">&gt;</span><span class="nv">Default</span> <span class="nv">keybinding</span> <span class="o">-</span> <span class="nv">User</span> <span class="nv">e</span> <span class="nv">alterar</span> <span class="nv">no</span> <span class="nv">arquivo</span> <span class="nv">para</span> <span class="nv">ter</span> <span class="nv">a</span> <span class="nv">nova</span> <span class="nv">configura</span>çã<span class="nv">o</span> <span class="k">do</span> <span class="nv">Rope</span>:
+Para isso devemos ir em preferences-\&gt;Default keybinding - User e alterar no arquivo para ter a nova configuração do Rope:
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">python</span><span class="s2">"</span>}
-<span class="o">//</span><span class="nv">Rope</span> <span class="nv">key</span> <span class="nv">bindings</span>
-{ <span class="s2">"</span><span class="s">keys</span><span class="s2">"</span>: [<span class="s2">"</span><span class="s">super+a</span><span class="s2">"</span>, <span class="s2">"</span><span class="s">super+s</span><span class="s2">"</span>], <span class="s2">"</span><span class="s">command</span><span class="s2">"</span>: <span class="s2">"</span><span class="s">goto_python_definition</span><span class="s2">"</span>, <span class="s2">"</span><span class="s">context</span><span class="s2">"</span>:
+``` {lang="python"}
+//Rope key bindings
+{ "keys": ["super+a", "super+s"], "command": "goto_python_definition", "context":
     [
-        { <span class="s2">"</span><span class="s">key</span><span class="s2">"</span>: <span class="s2">"</span><span class="s">selector</span><span class="s2">"</span>, <span class="s2">"</span><span class="s">operator</span><span class="s2">"</span>: <span class="s2">"</span><span class="s">equal</span><span class="s2">"</span>, <span class="s2">"</span><span class="s">operand</span><span class="s2">"</span>: <span class="s2">"</span><span class="s">source.python</span><span class="s2">"</span> }
+        { "key": "selector", "operator": "equal", "operand": "source.python" }
     ]
 }
 </pre></div>

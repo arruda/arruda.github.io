@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2013-10-17T10:13:00+01:00">
           <i class="fa fa-clock-o"></i>
-          Qui 17 outubro 2013
+          Thu 17 October 2013
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -110,12 +110,12 @@ Well, because in some cases you just can't be sure that this function isn't been
 <p>``` {lang="python"}
 import warnings</p>
 <p>def some_function(arg1,arg2):</p>
-<div class="highlight"><pre><span></span># <span class="nv">Not</span> <span class="nv">sure</span> <span class="k">if</span> <span class="nv">this</span> <span class="nv">is</span> <span class="nv">the</span> <span class="nv">best</span> <span class="nv">approach</span> <span class="k">for</span> <span class="nv">this</span> <span class="nv">case</span>, <span class="nv">maybe</span> <span class="nv">should</span> <span class="k">do</span> <span class="nv">arg1</span> <span class="o">-</span> <span class="nv">arg2</span>...
-<span class="nv">warnings</span>.<span class="nv">warn</span><span class="ss">(</span>
-    <span class="s2">"</span><span class="s">Should confirm what's the best approach for some_function</span><span class="s2">"</span>,
-    <span class="nv">SyntaxWarning</span>
-<span class="ss">)</span>
-<span class="k">return</span> <span class="nv">arg1</span> <span class="o">+</span> <span class="nv">arg2</span>
+<div class="highlight"><pre><span></span><span class="err"># Not sure if this is the best approach for this case, maybe should do arg1 - arg2...</span>
+<span class="err">warnings.warn(</span>
+<span class="err">    "Should confirm what's the best approach for some_function",</span>
+<span class="err">    SyntaxWarning</span>
+<span class="err">)</span>
+<span class="err">return arg1 + arg2</span>
 </pre></div>
 <div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">way</span> <span class="k">if</span> <span class="n">you</span> <span class="n">somehow</span> <span class="n">forgot</span> <span class="n">about</span> <span class="n">this</span> <span class="n">dubious</span> <span class="n">syntax</span><span class="p">,</span> <span class="n">the</span> <span class="n">warning</span> <span class="n">will</span> <span class="n">remind</span> <span class="n">you</span> <span class="n">of</span> <span class="n">it</span><span class="o">.</span>
 

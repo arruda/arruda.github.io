@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2013-12-27T06:06:00+00:00">
           <i class="fa fa-clock-o"></i>
-          Sex 27 dezembro 2013
+          Fri 27 December 2013
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -84,13 +84,13 @@
 <p>Very simple, just use pip:</p>
 <p>``` {lang="shell"}
 $ pip install django-h5bp</p>
-<div class="highlight"><pre><span></span><span class="k">Then</span> <span class="nv">inside</span> <span class="nv">yours</span> <span class="nv">project</span> <span class="o">**</span><span class="s1">'</span><span class="s">installed\_apps</span><span class="s1">'</span><span class="o">**</span> <span class="nv">settings</span>:
+<div class="highlight"><pre><span></span>Then inside yours project **'installed\_apps'** settings:
 
-``` {<span class="nv">lang</span><span class="o">=</span><span class="s2">"</span><span class="s">python</span><span class="s2">"</span>}
-<span class="nv">INSTALLED_APPS</span> <span class="o">=</span> <span class="ss">(</span>
+``` {lang="python"}
+INSTALLED_APPS = (
     ...
-    <span class="s1">'</span><span class="s">django_h5bp</span><span class="s1">'</span>,
-<span class="ss">)</span>
+    'django_h5bp',
+)
 </pre></div>
 <h3>Using it!</h3>
 <p>Now that you have it installed in your project, you just need to <strong>extend</strong> the
@@ -102,7 +102,7 @@ Here is a <strong>simple example</strong> for your <strong>"base.html"</strong> 
 <p _="%" endblock="">{% block header %}
     Here is my page header</p>
 <p>{% block main-container %}</p>
-<div class="highlight"><pre><span></span>    <span class="n">Hello</span> <span class="n">World</span><span class="o">!</span>
+<div class="highlight"><pre><span></span><span class="err">    Hello World!</span>
 </pre></div>
 <p>{% endblock %}</p>
 <p>{% block footer %}

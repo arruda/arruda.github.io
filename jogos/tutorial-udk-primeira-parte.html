@@ -59,7 +59,7 @@
       <ul class="list-inline">
         <li class="list-inline-item text-muted" title="2011-05-11T12:00:00+01:00">
           <i class="fa fa-clock-o"></i>
-          Qua 11 maio 2011
+          Wed 11 May 2011
         </li>
         <li class="list-inline-item">
           <i class="fa fa-folder-open-o"></i>
@@ -84,42 +84,42 @@ Existem diferentes formas de se abordar a criação de jogos na UDK, muitas são
 Então vamos começar!</p>
 <h2>UnrealEditor</h2>
 <p>Para começarmos basta executar o programa UDK Editor:
-<a href="https://arruda.github.io/wp-content/uploads/2011/05/1.png"><img alt="" class="wp-image-309 aligncenter img-fluid size-full" height="252" src="https://arruda.github.io/wp-content/uploads/2011/05/1.png" title="UDK" width="734"/></a></p>
+<a href="https://arruda.github.io/wp-content/uploads/2011/05/1.png"><img alt="" class="aligncenter wp-image-309 size-full img-fluid" height="252" src="https://arruda.github.io/wp-content/uploads/2011/05/1.png" title="UDK" width="734"/></a></p>
 <p>Após executar o editor , vamos criar um mapa simples(bem simples) e fazer dele um mapa de teste para nosso futuro jogo.</p>
 <p>Para isso clique com o botão direito do mouse sobre o cubo de “Brushes”:</p>
-<p><a href="https://arruda.github.io/wp-content/uploads/2011/05/2.png"><img alt="" class="wp-image-310 aligncenter img-fluid size-full" height="204" src="https://arruda.github.io/wp-content/uploads/2011/05/2.png" title="Cube Brush" width="74"/></a>
+<p><a href="https://arruda.github.io/wp-content/uploads/2011/05/2.png"><img alt="" class="aligncenter size-full wp-image-310 img-fluid" height="204" src="https://arruda.github.io/wp-content/uploads/2011/05/2.png" title="Cube Brush" width="74"/></a>
 Na pequena tela que vai abrir vamos setar as configurações do chão, ou uma plataforma, do nosso mapa, que iremos criar agora. Coloque as seguintes informações:</p>
-<p><a href="https://arruda.github.io/wp-content/uploads/2011/05/3.png"><img alt="" class="wp-image-312 aligncenter img-fluid size-full" height="330" src="https://arruda.github.io/wp-content/uploads/2011/05/3.png" title="Brush Properties" width="349"/></a>E clique em Build.</p>
+<p><a href="https://arruda.github.io/wp-content/uploads/2011/05/3.png"><img alt="" class="aligncenter size-full wp-image-312 img-fluid" height="330" src="https://arruda.github.io/wp-content/uploads/2011/05/3.png" title="Brush Properties" width="349"/></a>E clique em Build.</p>
 <p>:${IMAGE_TAG}</p>
 <p>Agora temos uma moldura da plataforma, entretanto, ainda falta mais um passo antes de construirmos ela de verdade.
 Abra o “Content Browser”(Ctrl+Shift+f) ou clique no icone:
-<a href="https://arruda.github.io/wp-content/uploads/2011/05/4.png"><img alt="" class="img-fluid aligncenter wp-image-313 size-full" height="27" src="https://arruda.github.io/wp-content/uploads/2011/05/4.png" title="Content Browser" width="210"/></a>Essa tela que se abriu se mostrará ainda muito útil, porém vamos direto ao que nos interessa, vamos dar uma textura, um material para nossa plataforma. Para isso clique no package “UDKGame” da lista de Packages. E no filtro marque “Materials”, e procure pelo nome: “M_LT_Base_03”.
+<a href="https://arruda.github.io/wp-content/uploads/2011/05/4.png"><img alt="" class="aligncenter wp-image-313 size-full img-fluid" height="27" src="https://arruda.github.io/wp-content/uploads/2011/05/4.png" title="Content Browser" width="210"/></a>Essa tela que se abriu se mostrará ainda muito útil, porém vamos direto ao que nos interessa, vamos dar uma textura, um material para nossa plataforma. Para isso clique no package “UDKGame” da lista de Packages. E no filtro marque “Materials”, e procure pelo nome: “M_LT_Base_03”.
 Isso lhe mostrará o material que vamos usar como base para nossa plataforma(se quiser você pode por outro, mas só para agilizar estou usando esse mesmo).
-<a href="https://arruda.github.io/wp-content/uploads/2011/05/5.png"><img alt="" class="aligncenter img-fluid size-full wp-image-314" height="555" src="https://arruda.github.io/wp-content/uploads/2011/05/5.png" title="Content Browser 2" width="814"/></a>Selecione o material e feche o Content Browser.</p>
+<a href="https://arruda.github.io/wp-content/uploads/2011/05/5.png"><img alt="" class="aligncenter wp-image-314 size-full img-fluid" height="555" src="https://arruda.github.io/wp-content/uploads/2011/05/5.png" title="Content Browser 2" width="814"/></a>Selecione o material e feche o Content Browser.</p>
 <p>Agora que nosso material já está selecionado, vamos criar de uma vez por todas a plataforma:
 Clique no botao CSG Add:
-<a href="https://arruda.github.io/wp-content/uploads/2011/05/61.png"><img alt="" class="wp-image-316 aligncenter img-fluid size-full" height="101" src="https://arruda.github.io/wp-content/uploads/2011/05/61.png" title="CSG Add" width="129"/></a>
+<a href="https://arruda.github.io/wp-content/uploads/2011/05/61.png"><img alt="" class="aligncenter wp-image-316 size-full img-fluid" height="101" src="https://arruda.github.io/wp-content/uploads/2011/05/61.png" title="CSG Add" width="129"/></a>
 E pronto, sua plataforma está feita.</p>
 <p>Agora vamos fazer com que possa ser possível jogar esse mapa.
 Para isso clique com o botão direito na plataforma, vá em Add Actor-&gt;Add PlayerStart:
-<a href="https://arruda.github.io/wp-content/uploads/2011/05/6.png"><img alt="" class="wp-image-315 aligncenter img-fluid size-full" height="446" src="https://arruda.github.io/wp-content/uploads/2011/05/6.png" title="Add PlayerStart" width="603"/></a>
+<a href="https://arruda.github.io/wp-content/uploads/2011/05/6.png"><img alt="" class="aligncenter wp-image-315 size-full img-fluid" height="446" src="https://arruda.github.io/wp-content/uploads/2011/05/6.png" title="Add PlayerStart" width="603"/></a>
 Agora vamos por uma iluminação básica no nosso mapa:
 Para isso clique com o botão direito na plataforma, vá em Add Actor-&gt;Add Light(Point):</p>
 <p>Depois clique e arraste na seta que aponta para cima na lampada que foi criada, para subir a luz no mapa:
-<a href="https://arruda.github.io/wp-content/uploads/2011/05/7.png"><img alt="" class="wp-image-318 aligncenter img-fluid size-full" height="583" src="https://arruda.github.io/wp-content/uploads/2011/05/7.png" title="Up Light" width="573"/></a>
+<a href="https://arruda.github.io/wp-content/uploads/2011/05/7.png"><img alt="" class="aligncenter wp-image-318 size-full img-fluid" height="583" src="https://arruda.github.io/wp-content/uploads/2011/05/7.png" title="Up Light" width="573"/></a>
 Lembre-se de salvar o mapa. Vamos salvá-lo como “TUT-mapa1.udk”:
-<a href="https://arruda.github.io/wp-content/uploads/2011/05/8.png"><img alt="" class="aligncenter img-fluid size-full wp-image-319" height="420" src="https://arruda.github.io/wp-content/uploads/2011/05/8.png" title="Save" width="564"/></a>
+<a href="https://arruda.github.io/wp-content/uploads/2011/05/8.png"><img alt="" class="aligncenter wp-image-319 size-full img-fluid" height="420" src="https://arruda.github.io/wp-content/uploads/2011/05/8.png" title="Save" width="564"/></a>
 Agora, para finalizar vamos dar “Build” na nossa geometria e nas luzes do mapa(apesar de serem poucas coisas para computar, é importante fazer isso).
 Clique em “Build Geometry”, e espere terminar(provavelmente dará uns erros, mas não tem problema, apenas clique em Ok).
-<a href="https://arruda.github.io/wp-content/uploads/2011/05/9.png"><img alt="" class="wp-image-320 aligncenter img-fluid size-full" height="48" src="https://arruda.github.io/wp-content/uploads/2011/05/9.png" title="Build Geometry" width="174"/></a>
+<a href="https://arruda.github.io/wp-content/uploads/2011/05/9.png"><img alt="" class="aligncenter img-fluid size-full wp-image-320" height="48" src="https://arruda.github.io/wp-content/uploads/2011/05/9.png" title="Build Geometry" width="174"/></a>
 Para a luz, clique em “Build Lighting”
-<a href="https://arruda.github.io/wp-content/uploads/2011/05/10.png"><img alt="" class="wp-image-321 aligncenter img-fluid size-full" height="51" src="https://arruda.github.io/wp-content/uploads/2011/05/10.png" title="Build Lighting" width="174"/></a>Isso irá abrir uma janela com informações do que você quer utilizar nesse build. Apenas clique em Ok, deixe tudo como está.
-<a href="https://arruda.github.io/wp-content/uploads/2011/05/11.png"><img alt="" class="wp-image-322 aligncenter img-fluid size-full" height="382" src="https://arruda.github.io/wp-content/uploads/2011/05/11.png" title="Build Lightning 2" width="280"/></a>Espere um tempo, depois que o SwarmAgent rodar, você verá uma janela provavelmente com erros, mas tudo bem, clique em Ok.</p>
+<a href="https://arruda.github.io/wp-content/uploads/2011/05/10.png"><img alt="" class="aligncenter size-full wp-image-321 img-fluid" height="51" src="https://arruda.github.io/wp-content/uploads/2011/05/10.png" title="Build Lighting" width="174"/></a>Isso irá abrir uma janela com informações do que você quer utilizar nesse build. Apenas clique em Ok, deixe tudo como está.
+<a href="https://arruda.github.io/wp-content/uploads/2011/05/11.png"><img alt="" class="aligncenter img-fluid size-full wp-image-322" height="382" src="https://arruda.github.io/wp-content/uploads/2011/05/11.png" title="Build Lightning 2" width="280"/></a>Espere um tempo, depois que o SwarmAgent rodar, você verá uma janela provavelmente com erros, mas tudo bem, clique em Ok.</p>
 <p>Salve o mapa.</p>
 <p>Agora nosso mapa de teste está pronto para ser executado. Você pode testa-lo de dentro do próprio UnrealEditor, usando o PIE(Play In Editor):
-<a href="https://arruda.github.io/wp-content/uploads/2011/05/12.png"><img alt="" class="wp-image-323 aligncenter img-fluid size-full" height="38" src="https://arruda.github.io/wp-content/uploads/2011/05/12.png" title="PIE" width="130"/></a>Ou aperte F8.
+<a href="https://arruda.github.io/wp-content/uploads/2011/05/12.png"><img alt="" class="aligncenter img-fluid size-full wp-image-323" height="38" src="https://arruda.github.io/wp-content/uploads/2011/05/12.png" title="PIE" width="130"/></a>Ou aperte F8.
 Pronto! Você já pode andar pelo seu grande e vasto mapa de teste:
-<a href="https://arruda.github.io/wp-content/uploads/2011/05/13.png"><img alt="" class="wp-image-324 aligncenter img-fluid size-full" height="801" src="https://arruda.github.io/wp-content/uploads/2011/05/13.png" title="PIE2" width="1031"/></a></p>
+<a href="https://arruda.github.io/wp-content/uploads/2011/05/13.png"><img alt="" class="aligncenter wp-image-324 size-full img-fluid" height="801" src="https://arruda.github.io/wp-content/uploads/2011/05/13.png" title="PIE2" width="1031"/></a></p>
 <p>Com isso concluo a primeira parte do tutorial, com um mapa de testes. Se quiser ampliar seu conhecimento na área de edição de mapas aconselho ver essa lista de vídeos do 3Dbuzz:
 <a href="http://www.3dbuzz.com/vbforum/sv_showvideo.php?v=3743">http://www.3dbuzz.com/vbforum/sv_showvideo.php?v=3743</a> (É preciso registrar para assistir, mas não tem problema, pois é de graça).</p>
 <p>Fique ligado para a parte 2 do tutorial, onde irei mostrar como criar um pacote para compilar seu próprio projeto.</p>
