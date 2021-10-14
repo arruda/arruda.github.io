@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>about on Arruda</title>
+    <link>https://arruda.github.io/pt-br/tags/about/</link>
+    <description>Recent content in about on Arruda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 14 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arruda.github.io/pt-br/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>O que eu ando fazendo</title>
+      <link>https://arruda.github.io/pt-br/now/</link>
+      <pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arruda.github.io/pt-br/now/</guid>
+      <description>Aqui você encontra sobre os projetos que estou envolvida atualmente (Terça, 14 de Outubro de 2021).
+No PhD Resto da minha vida A ideia dessa página foi inspirada pelo site da Annanda.</description>
+    </item>
+    
+  </channel>
+</rss>

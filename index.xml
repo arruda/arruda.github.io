@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arruda</title>
+    <link>https://arruda.github.io/</link>
+    <description>Recent content on Arruda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Oct 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://arruda.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contact me</title>
+      <link>https://arruda.github.io/contact/</link>
+      <pubDate>Thu, 14 Oct 2021 15:04:48 +0100</pubDate>
+      
+      <guid>https://arruda.github.io/contact/</guid>
+      
+        <description>&lt;p&gt;You can email me, I&amp;rsquo;ll be happy to hear from you.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;contato at arruda.blog.br&lt;/em&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://arruda.github.io/about/</link>
+      <pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arruda.github.io/about/</guid>
+      
+        <description>&lt;p&gt;Hello, my name is Felipe Arruda.&lt;/p&gt;
+&lt;p&gt;To check what I&amp;rsquo;m doing now, please go to my &lt;a href=&#34;https://arruda.github.io/now&#34;&gt;Now&lt;/a&gt; page.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>What I&#39;m doing now</title>
+      <link>https://arruda.github.io/now/</link>
+      <pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arruda.github.io/now/</guid>
+      
+        <description>&lt;p&gt;On this page, you can find projects I&amp;rsquo;m involved with as of Thursday, 14th October 2021.&lt;/p&gt;
+&lt;h1 id=&#34;on-my-phd&#34;&gt;On my PhD&lt;/h1&gt;
+&lt;h1 id=&#34;rest-of-my-life&#34;&gt;Rest of my life&lt;/h1&gt;
+&lt;p&gt;I got the idea of this page on &lt;a href=&#34;https://annanda.github.io&#34;&gt;Annanda&amp;rsquo;s website&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>My First Master Research Publication</title>
+      <link>https://arruda.github.io/post/first-to-be-master-publication/</link>
+      <pubDate>Thu, 14 Jan 2021 21:05:39 +0100</pubDate>
+      
+      <guid>https://arruda.github.io/post/first-to-be-master-publication/</guid>
+      
+        <description>&lt;p&gt;Finally, I got my first (short)paper accepted for publication during my Master research.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m posting it here a pre-print version just to keep it safe. The final version &lt;!-- raw HTML omitted --&gt;is yet to be  published&lt;!-- raw HTML omitted --&gt; (&lt;strong&gt;was already published, see edit note&lt;/strong&gt;) at the EdgeWays 2020 workshop, in European Conference on Service-Oriented and Cloud Computing. Springer, Cham, 2020 (or something like that, not sure exactly until it is published).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edited&lt;/strong&gt;: Yay! The paper is now published! Here is the link for the final print version: &lt;a href=&#34;https://link.springer.com/chapter/10.1007/978-3-030-71906-7_6&#34;&gt;Advances in Service-Oriented and Cloud Computing: &amp;ldquo;Cloud-Edge Microservice Architecture for DNN-based Distributed Multimedia Event Processing&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
