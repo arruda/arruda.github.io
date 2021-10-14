@@ -1,70 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Arruda</title>
-    <link>https://arruda.github.io/pt-br/</link>
-    <description>Recent content on Arruda</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Thu, 14 Oct 2021 00:00:00 +0000</lastBuildDate>
-    
-        <atom:link href="https://arruda.github.io/pt-br/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Entre em contato</title>
-      <link>https://arruda.github.io/pt-br/contact/</link>
-      <pubDate>Thu, 14 Oct 2021 15:04:48 +0100</pubDate>
-      
-      <guid>https://arruda.github.io/pt-br/contact/</guid>
-      
-        <description>&lt;p&gt;Você pode me escrever no email abaixo.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;contato at arruda.blog.br&lt;/em&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>O que eu ando fazendo</title>
-      <link>https://arruda.github.io/pt-br/now/</link>
-      <pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arruda.github.io/pt-br/now/</guid>
-      
-        <description>&lt;p&gt;Aqui você encontra sobre os projetos que estou envolvida atualmente (Terça, 14 de Outubro de 2021).&lt;/p&gt;
-&lt;h1 id=&#34;no-phd&#34;&gt;No PhD&lt;/h1&gt;
-&lt;h1 id=&#34;resto-da-minha-vida&#34;&gt;Resto da minha vida&lt;/h1&gt;
-&lt;p&gt;A ideia dessa página foi inspirada pelo site da &lt;a href=&#34;https://annanda.github.io&#34;&gt;Annanda&lt;/a&gt;.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Sobre Mim</title>
-      <link>https://arruda.github.io/pt-br/about/</link>
-      <pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arruda.github.io/pt-br/about/</guid>
-      
-        <description>&lt;p&gt;Olá, meu nome é Felipe Arruda.&lt;/p&gt;
-&lt;p&gt;Para ler sobre o que eu ando fazendo, vá &lt;a href=&#34;https://arruda.github.io/pt-br/now&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Minha primeira publicação do mestrado</title>
-      <link>https://arruda.github.io/pt-br/post/first-to-be-master-publication/</link>
-      <pubDate>Thu, 14 Jan 2021 21:05:39 +0100</pubDate>
-      
-      <guid>https://arruda.github.io/pt-br/post/first-to-be-master-publication/</guid>
-      
-        <description>&lt;p&gt;Finally, I got my first (short)paper accepted for publication during my Master research.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m posting it here a pre-print version just to keep it safe. The final version &lt;!-- raw HTML omitted --&gt;is yet to be  published&lt;!-- raw HTML omitted --&gt; (&lt;strong&gt;was already published, see edit note&lt;/strong&gt;) at the EdgeWays 2020 workshop, in European Conference on Service-Oriented and Cloud Computing. Springer, Cham, 2020 (or something like that, not sure exactly until it is published).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Edited&lt;/strong&gt;: Yay! The paper is now published! Here is the link for the final print version: &lt;a href=&#34;https://link.springer.com/chapter/10.1007/978-3-030-71906-7_6&#34;&gt;Advances in Service-Oriented and Cloud Computing: &amp;ldquo;Cloud-Edge Microservice Architecture for DNN-based Distributed Multimedia Event Processing&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arruda</title><link>https://arruda.github.io/pt-br/</link><description>Recent content on Arruda</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Thu, 14 Oct 2021 15:04:48 +0100</lastBuildDate><atom:link href="https://arruda.github.io/pt-br/index.xml" rel="self" type="application/rss+xml"/><item><title>Entre em contato</title><link>https://arruda.github.io/pt-br/contact/</link><pubDate>Thu, 14 Oct 2021 15:04:48 +0100</pubDate><guid>https://arruda.github.io/pt-br/contact/</guid><description>&lt;p>Você pode me escrever no email abaixo.&lt;/p>
+&lt;p>&lt;em>contato at arruda.blog.br&lt;/em>&lt;/p></description></item><item><title>O que eu ando fazendo</title><link>https://arruda.github.io/pt-br/now/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://arruda.github.io/pt-br/now/</guid><description>&lt;p>Aqui você encontra sobre os projetos que estou envolvida atualmente (Terça, 14 de Outubro de 2021).&lt;/p>
+&lt;h1 id="no-phd">No PhD&lt;/h1>
+&lt;h1 id="resto-da-minha-vida">Resto da minha vida&lt;/h1>
+&lt;p>A ideia dessa página foi inspirada pelo site da &lt;a href="https://annanda.github.io">Annanda&lt;/a>.&lt;/p></description></item><item><title>Sobre Mim</title><link>https://arruda.github.io/pt-br/about/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://arruda.github.io/pt-br/about/</guid><description>&lt;p>Olá, meu nome é Felipe Arruda.&lt;/p>
+&lt;p>Para ler sobre o que eu ando fazendo, vá &lt;a href="https://arruda.github.io/pt-br/now">aqui&lt;/a>.&lt;/p></description></item><item><title>Minha primeira publicação do mestrado</title><link>https://arruda.github.io/pt-br/post/first-to-be-master-publication/</link><pubDate>Thu, 14 Jan 2021 21:05:39 +0100</pubDate><guid>https://arruda.github.io/pt-br/post/first-to-be-master-publication/</guid><description>&lt;p>Finally, I got my first (short)paper accepted for publication during my Master research.&lt;/p>
+&lt;p>I&amp;rsquo;m posting it here a pre-print version just to keep it safe. The final version &lt;!-- raw HTML omitted -->is yet to be published&lt;!-- raw HTML omitted --> (&lt;strong>was already published, see edit note&lt;/strong>) at the EdgeWays 2020 workshop, in European Conference on Service-Oriented and Cloud Computing. Springer, Cham, 2020 (or something like that, not sure exactly until it is published).&lt;/p>
+&lt;p>&lt;strong>Edited&lt;/strong>: Yay! The paper is now published! Here is the link for the final print version: &lt;a href="https://link.springer.com/chapter/10.1007/978-3-030-71906-7_6">Advances in Service-Oriented and Cloud Computing: &amp;ldquo;Cloud-Edge Microservice Architecture for DNN-based Distributed Multimedia Event Processing&amp;rdquo;&lt;/a>&lt;/p></description></item></channel></rss>

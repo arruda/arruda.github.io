@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>now on Arruda</title>
-    <link>https://arruda.github.io/tags/now/</link>
-    <description>Recent content in now on Arruda</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 14 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arruda.github.io/tags/now/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>What I&#39;m doing now</title>
-      <link>https://arruda.github.io/now/</link>
-      <pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arruda.github.io/now/</guid>
-      <description>On this page, you can find projects I&amp;rsquo;m involved with as of Thursday, 14th October 2021.
-On my PhD Rest of my life I got the idea of this page on Annanda&amp;rsquo;s website.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>now on Arruda</title><link>https://arruda.github.io/tags/now/</link><description>Recent content in now on Arruda</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 14 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arruda.github.io/tags/now/index.xml" rel="self" type="application/rss+xml"/><item><title>What I'm doing now</title><link>https://arruda.github.io/now/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://arruda.github.io/now/</guid><description>On this page, you can find projects I&amp;rsquo;m involved with as of Thursday, 14th October 2021.
+On my PhD Rest of my life I got the idea of this page on Annanda&amp;rsquo;s website.</description></item></channel></rss>
